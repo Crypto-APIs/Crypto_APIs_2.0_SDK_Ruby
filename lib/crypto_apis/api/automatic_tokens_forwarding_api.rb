@@ -25,8 +25,8 @@ module CryptoApis
     # @param network [String] Network
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [AddTokensToExistingFromAddressRequestBody] :add_tokens_to_existing_from_address_request_body 
-    # @return [AddTokensToExistingFromAddressResponse]
+    # @option opts [AddTokensToExistingFromAddressRB] :add_tokens_to_existing_from_address_rb 
+    # @return [AddTokensToExistingFromAddressR]
     def add_tokens_to_existing_from_address(blockchain, network, opts = {})
       data, _status_code, _headers = add_tokens_to_existing_from_address_with_http_info(blockchain, network, opts)
       data
@@ -38,8 +38,8 @@ module CryptoApis
     # @param network [String] Network
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [AddTokensToExistingFromAddressRequestBody] :add_tokens_to_existing_from_address_request_body 
-    # @return [Array<(AddTokensToExistingFromAddressResponse, Integer, Hash)>] AddTokensToExistingFromAddressResponse data, response status code and response headers
+    # @option opts [AddTokensToExistingFromAddressRB] :add_tokens_to_existing_from_address_rb 
+    # @return [Array<(AddTokensToExistingFromAddressR, Integer, Hash)>] AddTokensToExistingFromAddressR data, response status code and response headers
     def add_tokens_to_existing_from_address_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticTokensForwardingApi.add_tokens_to_existing_from_address ...'
@@ -80,10 +80,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'add_tokens_to_existing_from_address_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'add_tokens_to_existing_from_address_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'AddTokensToExistingFromAddressResponse'
+      return_type = opts[:debug_return_type] || 'AddTokensToExistingFromAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -111,8 +111,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [CreateAutomaticTokensForwardingRequestBody] :create_automatic_tokens_forwarding_request_body 
-    # @return [CreateAutomaticTokensForwardingResponse]
+    # @option opts [CreateAutomaticTokensForwardingRB] :create_automatic_tokens_forwarding_rb 
+    # @return [CreateAutomaticTokensForwardingR]
     def create_automatic_tokens_forwarding(blockchain, network, opts = {})
       data, _status_code, _headers = create_automatic_tokens_forwarding_with_http_info(blockchain, network, opts)
       data
@@ -124,8 +124,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [CreateAutomaticTokensForwardingRequestBody] :create_automatic_tokens_forwarding_request_body 
-    # @return [Array<(CreateAutomaticTokensForwardingResponse, Integer, Hash)>] CreateAutomaticTokensForwardingResponse data, response status code and response headers
+    # @option opts [CreateAutomaticTokensForwardingRB] :create_automatic_tokens_forwarding_rb 
+    # @return [Array<(CreateAutomaticTokensForwardingR, Integer, Hash)>] CreateAutomaticTokensForwardingR data, response status code and response headers
     def create_automatic_tokens_forwarding_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticTokensForwardingApi.create_automatic_tokens_forwarding ...'
@@ -166,10 +166,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'create_automatic_tokens_forwarding_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'create_automatic_tokens_forwarding_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'CreateAutomaticTokensForwardingResponse'
+      return_type = opts[:debug_return_type] || 'CreateAutomaticTokensForwardingR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -198,7 +198,7 @@ module CryptoApis
     # @param reference_id [String] Represents a unique ID used to reference the specific callback subscription.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [DeleteAutomaticTokensForwardingResponse]
+    # @return [DeleteAutomaticTokensForwardingR]
     def delete_automatic_tokens_forwarding(blockchain, network, reference_id, opts = {})
       data, _status_code, _headers = delete_automatic_tokens_forwarding_with_http_info(blockchain, network, reference_id, opts)
       data
@@ -211,7 +211,7 @@ module CryptoApis
     # @param reference_id [String] Represents a unique ID used to reference the specific callback subscription.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(DeleteAutomaticTokensForwardingResponse, Integer, Hash)>] DeleteAutomaticTokensForwardingResponse data, response status code and response headers
+    # @return [Array<(DeleteAutomaticTokensForwardingR, Integer, Hash)>] DeleteAutomaticTokensForwardingR data, response status code and response headers
     def delete_automatic_tokens_forwarding_with_http_info(blockchain, network, reference_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticTokensForwardingApi.delete_automatic_tokens_forwarding ...'
@@ -257,7 +257,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'DeleteAutomaticTokensForwardingResponse'
+      return_type = opts[:debug_return_type] || 'DeleteAutomaticTokensForwardingR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -285,7 +285,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetFeeAddressDetailsResponse]
+    # @return [GetFeeAddressDetailsR]
     def get_fee_address_details(blockchain, network, opts = {})
       data, _status_code, _headers = get_fee_address_details_with_http_info(blockchain, network, opts)
       data
@@ -297,7 +297,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetFeeAddressDetailsResponse, Integer, Hash)>] GetFeeAddressDetailsResponse data, response status code and response headers
+    # @return [Array<(GetFeeAddressDetailsR, Integer, Hash)>] GetFeeAddressDetailsR data, response status code and response headers
     def get_fee_address_details_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticTokensForwardingApi.get_fee_address_details ...'
@@ -339,7 +339,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetFeeAddressDetailsResponse'
+      return_type = opts[:debug_return_type] || 'GetFeeAddressDetailsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -369,7 +369,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTokensForwardingAutomationsResponse]
+    # @return [ListTokensForwardingAutomationsR]
     def list_tokens_forwarding_automations(blockchain, network, opts = {})
       data, _status_code, _headers = list_tokens_forwarding_automations_with_http_info(blockchain, network, opts)
       data
@@ -383,7 +383,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTokensForwardingAutomationsResponse, Integer, Hash)>] ListTokensForwardingAutomationsResponse data, response status code and response headers
+    # @return [Array<(ListTokensForwardingAutomationsR, Integer, Hash)>] ListTokensForwardingAutomationsR data, response status code and response headers
     def list_tokens_forwarding_automations_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticTokensForwardingApi.list_tokens_forwarding_automations ...'
@@ -427,7 +427,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTokensForwardingAutomationsResponse'
+      return_type = opts[:debug_return_type] || 'ListTokensForwardingAutomationsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

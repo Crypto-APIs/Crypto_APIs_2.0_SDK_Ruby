@@ -39,7 +39,7 @@ describe 'ExchangeRatesApi' do
   # @param to_asset_symbol Defines the relation asset symbol in which the base asset rate will be displayed.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [GetExchangeRateByAssetSymbolsResponse]
+  # @return [GetExchangeRateByAssetSymbolsR]
   describe 'get_exchange_rate_by_asset_symbols test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -53,7 +53,7 @@ describe 'ExchangeRatesApi' do
   # @param to_asset_id Defines the relation asset Reference ID in which the base asset rate will be displayed.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [GetExchangeRateByAssetsIDsResponse]
+  # @return [GetExchangeRateByAssetsIDsR]
   describe 'get_exchange_rate_by_assets_ids test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

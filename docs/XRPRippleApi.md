@@ -15,7 +15,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## get_latest_mined_xrp__ripple_block
 
-> <GetLatestMinedXRPRippleBlockResponse> get_latest_mined_xrp__ripple_block(network, opts)
+> <GetLatestMinedXRPRippleBlockR> get_latest_mined_xrp__ripple_block(network, opts)
 
 Get Latest Mined XRP (Ripple) Block
 
@@ -53,7 +53,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetLatestMinedXRPRippleBlockResponse>, Integer, Hash)> get_latest_mined_xrp__ripple_block_with_http_info(network, opts)
+> <Array(<GetLatestMinedXRPRippleBlockR>, Integer, Hash)> get_latest_mined_xrp__ripple_block_with_http_info(network, opts)
 
 ```ruby
 begin
@@ -61,7 +61,7 @@ begin
   data, status_code, headers = api_instance.get_latest_mined_xrp__ripple_block_with_http_info(network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetLatestMinedXRPRippleBlockResponse>
+  p data # => <GetLatestMinedXRPRippleBlockR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_latest_mined_xrp__ripple_block_with_http_info: #{e}"
 end
@@ -76,7 +76,7 @@ end
 
 ### Return type
 
-[**GetLatestMinedXRPRippleBlockResponse**](GetLatestMinedXRPRippleBlockResponse.md)
+[**GetLatestMinedXRPRippleBlockR**](GetLatestMinedXRPRippleBlockR.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ end
 
 ## get_xrp__ripple_address_details
 
-> <GetXRPRippleAddressDetailsResponse> get_xrp__ripple_address_details(network, address, opts)
+> <GetXRPRippleAddressDetailsR> get_xrp__ripple_address_details(network, address, opts)
 
 Get XRP (Ripple) Address Details
 
@@ -129,7 +129,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetXRPRippleAddressDetailsResponse>, Integer, Hash)> get_xrp__ripple_address_details_with_http_info(network, address, opts)
+> <Array(<GetXRPRippleAddressDetailsR>, Integer, Hash)> get_xrp__ripple_address_details_with_http_info(network, address, opts)
 
 ```ruby
 begin
@@ -137,7 +137,7 @@ begin
   data, status_code, headers = api_instance.get_xrp__ripple_address_details_with_http_info(network, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetXRPRippleAddressDetailsResponse>
+  p data # => <GetXRPRippleAddressDetailsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_address_details_with_http_info: #{e}"
 end
@@ -153,7 +153,7 @@ end
 
 ### Return type
 
-[**GetXRPRippleAddressDetailsResponse**](GetXRPRippleAddressDetailsResponse.md)
+[**GetXRPRippleAddressDetailsR**](GetXRPRippleAddressDetailsR.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ end
 
 ## get_xrp__ripple_block_details_by_block_hash
 
-> <GetXRPRippleBlockDetailsByBlockHashResponse> get_xrp__ripple_block_details_by_block_hash(network, block_hash, opts)
+> <GetXRPRippleBlockDetailsByBlockHashR> get_xrp__ripple_block_details_by_block_hash(network, block_hash, opts)
 
 Get XRP (Ripple) Block Details By Block Hash
 
@@ -206,7 +206,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetXRPRippleBlockDetailsByBlockHashResponse>, Integer, Hash)> get_xrp__ripple_block_details_by_block_hash_with_http_info(network, block_hash, opts)
+> <Array(<GetXRPRippleBlockDetailsByBlockHashR>, Integer, Hash)> get_xrp__ripple_block_details_by_block_hash_with_http_info(network, block_hash, opts)
 
 ```ruby
 begin
@@ -214,7 +214,7 @@ begin
   data, status_code, headers = api_instance.get_xrp__ripple_block_details_by_block_hash_with_http_info(network, block_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetXRPRippleBlockDetailsByBlockHashResponse>
+  p data # => <GetXRPRippleBlockDetailsByBlockHashR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_hash_with_http_info: #{e}"
 end
@@ -230,7 +230,7 @@ end
 
 ### Return type
 
-[**GetXRPRippleBlockDetailsByBlockHashResponse**](GetXRPRippleBlockDetailsByBlockHashResponse.md)
+[**GetXRPRippleBlockDetailsByBlockHashR**](GetXRPRippleBlockDetailsByBlockHashR.md)
 
 ### Authorization
 
@@ -244,7 +244,7 @@ end
 
 ## get_xrp__ripple_block_details_by_block_height
 
-> <GetXRPRippleBlockDetailsByBlockHeightResponse> get_xrp__ripple_block_details_by_block_height(network, height, opts)
+> <GetXRPRippleBlockDetailsByBlockHeightR> get_xrp__ripple_block_details_by_block_height(network, height, opts)
 
 Get XRP (Ripple) Block Details By Block Height
 
@@ -283,7 +283,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetXRPRippleBlockDetailsByBlockHeightResponse>, Integer, Hash)> get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts)
+> <Array(<GetXRPRippleBlockDetailsByBlockHeightR>, Integer, Hash)> get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts)
 
 ```ruby
 begin
@@ -291,7 +291,7 @@ begin
   data, status_code, headers = api_instance.get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetXRPRippleBlockDetailsByBlockHeightResponse>
+  p data # => <GetXRPRippleBlockDetailsByBlockHeightR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_height_with_http_info: #{e}"
 end
@@ -307,7 +307,7 @@ end
 
 ### Return type
 
-[**GetXRPRippleBlockDetailsByBlockHeightResponse**](GetXRPRippleBlockDetailsByBlockHeightResponse.md)
+[**GetXRPRippleBlockDetailsByBlockHeightR**](GetXRPRippleBlockDetailsByBlockHeightR.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ end
 
 ## get_xrp__ripple_transaction_details_by_transaction_id
 
-> <GetXRPRippleTransactionDetailsByTransactionIDResponse> get_xrp__ripple_transaction_details_by_transaction_id(network, transaction_hash, opts)
+> <GetXRPRippleTransactionDetailsByTransactionIDR> get_xrp__ripple_transaction_details_by_transaction_id(network, transaction_hash, opts)
 
 Get XRP (Ripple) Transaction Details By Transaction ID
 
@@ -360,7 +360,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetXRPRippleTransactionDetailsByTransactionIDResponse>, Integer, Hash)> get_xrp__ripple_transaction_details_by_transaction_id_with_http_info(network, transaction_hash, opts)
+> <Array(<GetXRPRippleTransactionDetailsByTransactionIDR>, Integer, Hash)> get_xrp__ripple_transaction_details_by_transaction_id_with_http_info(network, transaction_hash, opts)
 
 ```ruby
 begin
@@ -368,7 +368,7 @@ begin
   data, status_code, headers = api_instance.get_xrp__ripple_transaction_details_by_transaction_id_with_http_info(network, transaction_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetXRPRippleTransactionDetailsByTransactionIDResponse>
+  p data # => <GetXRPRippleTransactionDetailsByTransactionIDR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_transaction_details_by_transaction_id_with_http_info: #{e}"
 end
@@ -384,7 +384,7 @@ end
 
 ### Return type
 
-[**GetXRPRippleTransactionDetailsByTransactionIDResponse**](GetXRPRippleTransactionDetailsByTransactionIDResponse.md)
+[**GetXRPRippleTransactionDetailsByTransactionIDR**](GetXRPRippleTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -398,7 +398,7 @@ end
 
 ## list_xrp__ripple_transactions_by_address
 
-> <ListXRPRippleTransactionsByAddressResponse> list_xrp__ripple_transactions_by_address(network, address, opts)
+> <ListXRPRippleTransactionsByAddressR> list_xrp__ripple_transactions_by_address(network, address, opts)
 
 List XRP (Ripple) Transactions by Address
 
@@ -439,7 +439,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListXRPRippleTransactionsByAddressResponse>, Integer, Hash)> list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts)
+> <Array(<ListXRPRippleTransactionsByAddressR>, Integer, Hash)> list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts)
 
 ```ruby
 begin
@@ -447,7 +447,7 @@ begin
   data, status_code, headers = api_instance.list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListXRPRippleTransactionsByAddressResponse>
+  p data # => <ListXRPRippleTransactionsByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_address_with_http_info: #{e}"
 end
@@ -465,7 +465,7 @@ end
 
 ### Return type
 
-[**ListXRPRippleTransactionsByAddressResponse**](ListXRPRippleTransactionsByAddressResponse.md)
+[**ListXRPRippleTransactionsByAddressR**](ListXRPRippleTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -479,7 +479,7 @@ end
 
 ## list_xrp__ripple_transactions_by_block_hash
 
-> <ListXRPRippleTransactionsByBlockHashResponse> list_xrp__ripple_transactions_by_block_hash(network, block_hash, opts)
+> <ListXRPRippleTransactionsByBlockHashR> list_xrp__ripple_transactions_by_block_hash(network, block_hash, opts)
 
 List XRP (Ripple) Transactions By Block Hash
 
@@ -520,7 +520,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListXRPRippleTransactionsByBlockHashResponse>, Integer, Hash)> list_xrp__ripple_transactions_by_block_hash_with_http_info(network, block_hash, opts)
+> <Array(<ListXRPRippleTransactionsByBlockHashR>, Integer, Hash)> list_xrp__ripple_transactions_by_block_hash_with_http_info(network, block_hash, opts)
 
 ```ruby
 begin
@@ -528,7 +528,7 @@ begin
   data, status_code, headers = api_instance.list_xrp__ripple_transactions_by_block_hash_with_http_info(network, block_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListXRPRippleTransactionsByBlockHashResponse>
+  p data # => <ListXRPRippleTransactionsByBlockHashR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_block_hash_with_http_info: #{e}"
 end
@@ -546,7 +546,7 @@ end
 
 ### Return type
 
-[**ListXRPRippleTransactionsByBlockHashResponse**](ListXRPRippleTransactionsByBlockHashResponse.md)
+[**ListXRPRippleTransactionsByBlockHashR**](ListXRPRippleTransactionsByBlockHashR.md)
 
 ### Authorization
 

@@ -27,7 +27,7 @@ module CryptoApis
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [String] :derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly.
-    # @return [GetHDWalletxPubYPubZPubDetailsResponse]
+    # @return [GetHDWalletXPubYPubZPubDetailsR]
     def get_hd_wallet__x_pub_y_pub_z_pub_details(blockchain, extended_public_key, network, opts = {})
       data, _status_code, _headers = get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info(blockchain, extended_public_key, network, opts)
       data
@@ -41,7 +41,7 @@ module CryptoApis
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [String] :derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly.
-    # @return [Array<(GetHDWalletxPubYPubZPubDetailsResponse, Integer, Hash)>] GetHDWalletxPubYPubZPubDetailsResponse data, response status code and response headers
+    # @return [Array<(GetHDWalletXPubYPubZPubDetailsR, Integer, Hash)>] GetHDWalletXPubYPubZPubDetailsR data, response status code and response headers
     def get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info(blockchain, extended_public_key, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UTXOBasedApi.get_hd_wallet__x_pub_y_pub_z_pub_details ...'
@@ -92,7 +92,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetHDWalletxPubYPubZPubDetailsResponse'
+      return_type = opts[:debug_return_type] || 'GetHDWalletXPubYPubZPubDetailsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -124,7 +124,7 @@ module CryptoApis
     # @option opts [String] :derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListHDWalletxPubYPubZPubTransactionsResponse]
+    # @return [ListHDWalletXPubYPubZPubTransactionsR]
     def list_hd_wallet__x_pub_y_pub_z_pub_transactions(blockchain, extended_public_key, network, opts = {})
       data, _status_code, _headers = list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info(blockchain, extended_public_key, network, opts)
       data
@@ -140,7 +140,7 @@ module CryptoApis
     # @option opts [String] :derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListHDWalletxPubYPubZPubTransactionsResponse, Integer, Hash)>] ListHDWalletxPubYPubZPubTransactionsResponse data, response status code and response headers
+    # @return [Array<(ListHDWalletXPubYPubZPubTransactionsR, Integer, Hash)>] ListHDWalletXPubYPubZPubTransactionsR data, response status code and response headers
     def list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info(blockchain, extended_public_key, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UTXOBasedApi.list_hd_wallet__x_pub_y_pub_z_pub_transactions ...'
@@ -193,7 +193,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListHDWalletxPubYPubZPubTransactionsResponse'
+      return_type = opts[:debug_return_type] || 'ListHDWalletXPubYPubZPubTransactionsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -221,8 +221,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [SyncHDWalletxPubYPubZPubRequestBody] :sync_hd_walletx_pub_y_pub_z_pub_request_body 
-    # @return [SyncHDWalletxPubYPubZPubResponse]
+    # @option opts [SyncHDWalletXPubYPubZPubRB] :sync_hd_wallet_x_pub_y_pub_z_pub_rb 
+    # @return [SyncHDWalletXPubYPubZPubR]
     def sync_hd_wallet__x_pub_y_pub_z_pub(blockchain, network, opts = {})
       data, _status_code, _headers = sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info(blockchain, network, opts)
       data
@@ -234,8 +234,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [SyncHDWalletxPubYPubZPubRequestBody] :sync_hd_walletx_pub_y_pub_z_pub_request_body 
-    # @return [Array<(SyncHDWalletxPubYPubZPubResponse, Integer, Hash)>] SyncHDWalletxPubYPubZPubResponse data, response status code and response headers
+    # @option opts [SyncHDWalletXPubYPubZPubRB] :sync_hd_wallet_x_pub_y_pub_z_pub_rb 
+    # @return [Array<(SyncHDWalletXPubYPubZPubR, Integer, Hash)>] SyncHDWalletXPubYPubZPubR data, response status code and response headers
     def sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UTXOBasedApi.sync_hd_wallet__x_pub_y_pub_z_pub ...'
@@ -276,10 +276,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'sync_hd_walletx_pub_y_pub_z_pub_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'sync_hd_wallet_x_pub_y_pub_z_pub_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'SyncHDWalletxPubYPubZPubResponse'
+      return_type = opts[:debug_return_type] || 'SyncHDWalletXPubYPubZPubR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

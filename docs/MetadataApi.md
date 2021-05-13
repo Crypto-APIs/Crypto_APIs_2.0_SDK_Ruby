@@ -9,7 +9,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## list_supported_assets
 
-> <ListSupportedAssetsResponse> list_supported_assets(opts)
+> <ListSupportedAssetsR> list_supported_assets(opts)
 
 List Supported Assets
 
@@ -49,7 +49,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListSupportedAssetsResponse>, Integer, Hash)> list_supported_assets_with_http_info(opts)
+> <Array(<ListSupportedAssetsR>, Integer, Hash)> list_supported_assets_with_http_info(opts)
 
 ```ruby
 begin
@@ -57,7 +57,7 @@ begin
   data, status_code, headers = api_instance.list_supported_assets_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListSupportedAssetsResponse>
+  p data # => <ListSupportedAssetsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling MetadataApi->list_supported_assets_with_http_info: #{e}"
 end
@@ -74,7 +74,7 @@ end
 
 ### Return type
 
-[**ListSupportedAssetsResponse**](ListSupportedAssetsResponse.md)
+[**ListSupportedAssetsR**](ListSupportedAssetsR.md)
 
 ### Authorization
 

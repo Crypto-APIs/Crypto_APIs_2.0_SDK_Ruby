@@ -26,7 +26,7 @@ module CryptoApis
     # @param transaction_id [String] Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetOmniTransactionDetailsByTransactionIDTxidResponse]
+    # @return [GetOmniTransactionDetailsByTransactionIDTxidR]
     def get_omni_transaction_details_by_transaction_id__txid(network, blockchain, transaction_id, opts = {})
       data, _status_code, _headers = get_omni_transaction_details_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
       data
@@ -39,7 +39,7 @@ module CryptoApis
     # @param transaction_id [String] Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetOmniTransactionDetailsByTransactionIDTxidResponse, Integer, Hash)>] GetOmniTransactionDetailsByTransactionIDTxidResponse data, response status code and response headers
+    # @return [Array<(GetOmniTransactionDetailsByTransactionIDTxidR, Integer, Hash)>] GetOmniTransactionDetailsByTransactionIDTxidR data, response status code and response headers
     def get_omni_transaction_details_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.get_omni_transaction_details_by_transaction_id__txid ...'
@@ -85,7 +85,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetOmniTransactionDetailsByTransactionIDTxidResponse'
+      return_type = opts[:debug_return_type] || 'GetOmniTransactionDetailsByTransactionIDTxidR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -114,7 +114,7 @@ module CryptoApis
     # @param transaction_id [String] Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetUnconfirmedOmniTransactionByTransactionIDTxidResponse]
+    # @return [GetUnconfirmedOmniTransactionByTransactionIDTxidR]
     def get_unconfirmed_omni_transaction_by_transaction_id__txid(network, blockchain, transaction_id, opts = {})
       data, _status_code, _headers = get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
       data
@@ -127,7 +127,7 @@ module CryptoApis
     # @param transaction_id [String] Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetUnconfirmedOmniTransactionByTransactionIDTxidResponse, Integer, Hash)>] GetUnconfirmedOmniTransactionByTransactionIDTxidResponse data, response status code and response headers
+    # @return [Array<(GetUnconfirmedOmniTransactionByTransactionIDTxidR, Integer, Hash)>] GetUnconfirmedOmniTransactionByTransactionIDTxidR data, response status code and response headers
     def get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.get_unconfirmed_omni_transaction_by_transaction_id__txid ...'
@@ -173,7 +173,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetUnconfirmedOmniTransactionByTransactionIDTxidResponse'
+      return_type = opts[:debug_return_type] || 'GetUnconfirmedOmniTransactionByTransactionIDTxidR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -202,7 +202,7 @@ module CryptoApis
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [ListOmniTokensByAddressResponse]
+    # @return [ListOmniTokensByAddressR]
     def list_omni_tokens_by_address(network, blockchain, address, opts = {})
       data, _status_code, _headers = list_omni_tokens_by_address_with_http_info(network, blockchain, address, opts)
       data
@@ -215,7 +215,7 @@ module CryptoApis
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(ListOmniTokensByAddressResponse, Integer, Hash)>] ListOmniTokensByAddressResponse data, response status code and response headers
+    # @return [Array<(ListOmniTokensByAddressR, Integer, Hash)>] ListOmniTokensByAddressR data, response status code and response headers
     def list_omni_tokens_by_address_with_http_info(network, blockchain, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.list_omni_tokens_by_address ...'
@@ -261,7 +261,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListOmniTokensByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListOmniTokensByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -292,7 +292,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListOmniTransactionsByAddressResponse]
+    # @return [ListOmniTransactionsByAddressR]
     def list_omni_transactions_by_address(network, blockchain, address, opts = {})
       data, _status_code, _headers = list_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
       data
@@ -307,7 +307,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListOmniTransactionsByAddressResponse, Integer, Hash)>] ListOmniTransactionsByAddressResponse data, response status code and response headers
+    # @return [Array<(ListOmniTransactionsByAddressR, Integer, Hash)>] ListOmniTransactionsByAddressR data, response status code and response headers
     def list_omni_transactions_by_address_with_http_info(network, blockchain, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.list_omni_transactions_by_address ...'
@@ -355,7 +355,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListOmniTransactionsByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListOmniTransactionsByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -386,7 +386,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListOmniTransactionsByBlockHashResponse]
+    # @return [ListOmniTransactionsByBlockHashR]
     def list_omni_transactions_by_block_hash(network, blockchain, block_hash, opts = {})
       data, _status_code, _headers = list_omni_transactions_by_block_hash_with_http_info(network, blockchain, block_hash, opts)
       data
@@ -401,7 +401,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListOmniTransactionsByBlockHashResponse, Integer, Hash)>] ListOmniTransactionsByBlockHashResponse data, response status code and response headers
+    # @return [Array<(ListOmniTransactionsByBlockHashR, Integer, Hash)>] ListOmniTransactionsByBlockHashR data, response status code and response headers
     def list_omni_transactions_by_block_hash_with_http_info(network, blockchain, block_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.list_omni_transactions_by_block_hash ...'
@@ -449,7 +449,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListOmniTransactionsByBlockHashResponse'
+      return_type = opts[:debug_return_type] || 'ListOmniTransactionsByBlockHashR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -480,7 +480,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListOmniTransactionsByBlockHeightResponse]
+    # @return [ListOmniTransactionsByBlockHeightR]
     def list_omni_transactions_by_block_height(network, blockchain, block_height, opts = {})
       data, _status_code, _headers = list_omni_transactions_by_block_height_with_http_info(network, blockchain, block_height, opts)
       data
@@ -495,7 +495,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListOmniTransactionsByBlockHeightResponse, Integer, Hash)>] ListOmniTransactionsByBlockHeightResponse data, response status code and response headers
+    # @return [Array<(ListOmniTransactionsByBlockHeightR, Integer, Hash)>] ListOmniTransactionsByBlockHeightR data, response status code and response headers
     def list_omni_transactions_by_block_height_with_http_info(network, blockchain, block_height, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.list_omni_transactions_by_block_height ...'
@@ -543,7 +543,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListOmniTransactionsByBlockHeightResponse'
+      return_type = opts[:debug_return_type] || 'ListOmniTransactionsByBlockHeightR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -574,7 +574,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListUnconfirmedOmniTransactionsByAddressResponse]
+    # @return [ListUnconfirmedOmniTransactionsByAddressR]
     def list_unconfirmed_omni_transactions_by_address(network, blockchain, address, opts = {})
       data, _status_code, _headers = list_unconfirmed_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
       data
@@ -589,7 +589,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListUnconfirmedOmniTransactionsByAddressResponse, Integer, Hash)>] ListUnconfirmedOmniTransactionsByAddressResponse data, response status code and response headers
+    # @return [Array<(ListUnconfirmedOmniTransactionsByAddressR, Integer, Hash)>] ListUnconfirmedOmniTransactionsByAddressR data, response status code and response headers
     def list_unconfirmed_omni_transactions_by_address_with_http_info(network, blockchain, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.list_unconfirmed_omni_transactions_by_address ...'
@@ -637,7 +637,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListUnconfirmedOmniTransactionsByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListUnconfirmedOmniTransactionsByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -668,7 +668,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListUnconfirmedOmniTransactionsByPropertyIDResponse]
+    # @return [ListUnconfirmedOmniTransactionsByPropertyIDR]
     def list_unconfirmed_omni_transactions_by_property_id(network, blockchain, property_id, opts = {})
       data, _status_code, _headers = list_unconfirmed_omni_transactions_by_property_id_with_http_info(network, blockchain, property_id, opts)
       data
@@ -683,7 +683,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListUnconfirmedOmniTransactionsByPropertyIDResponse, Integer, Hash)>] ListUnconfirmedOmniTransactionsByPropertyIDResponse data, response status code and response headers
+    # @return [Array<(ListUnconfirmedOmniTransactionsByPropertyIDR, Integer, Hash)>] ListUnconfirmedOmniTransactionsByPropertyIDR data, response status code and response headers
     def list_unconfirmed_omni_transactions_by_property_id_with_http_info(network, blockchain, property_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: OmniLayerApi.list_unconfirmed_omni_transactions_by_property_id ...'
@@ -731,7 +731,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListUnconfirmedOmniTransactionsByPropertyIDResponse'
+      return_type = opts[:debug_return_type] || 'ListUnconfirmedOmniTransactionsByPropertyIDR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

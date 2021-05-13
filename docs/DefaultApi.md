@@ -9,7 +9,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## get_contract_details_by_address
 
-> <GetContractDetailsByAddressResponse> get_contract_details_by_address(blockchain, network, contract_address, opts)
+> <GetContractDetailsByAddressR> get_contract_details_by_address(blockchain, network, contract_address, opts)
 
 Get Contract Details by Address
 
@@ -49,7 +49,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetContractDetailsByAddressResponse>, Integer, Hash)> get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts)
+> <Array(<GetContractDetailsByAddressR>, Integer, Hash)> get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts)
 
 ```ruby
 begin
@@ -57,7 +57,7 @@ begin
   data, status_code, headers = api_instance.get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetContractDetailsByAddressResponse>
+  p data # => <GetContractDetailsByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling DefaultApi->get_contract_details_by_address_with_http_info: #{e}"
 end
@@ -74,7 +74,7 @@ end
 
 ### Return type
 
-[**GetContractDetailsByAddressResponse**](GetContractDetailsByAddressResponse.md)
+[**GetContractDetailsByAddressR**](GetContractDetailsByAddressR.md)
 
 ### Authorization
 

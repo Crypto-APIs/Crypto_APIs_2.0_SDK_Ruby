@@ -25,8 +25,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [ValidateAddressRequestBody] :validate_address_request_body 
-    # @return [ValidateAddressResponse]
+    # @option opts [ValidateAddressRB] :validate_address_rb 
+    # @return [ValidateAddressR]
     def validate_address(blockchain, network, opts = {})
       data, _status_code, _headers = validate_address_with_http_info(blockchain, network, opts)
       data
@@ -38,8 +38,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [ValidateAddressRequestBody] :validate_address_request_body 
-    # @return [Array<(ValidateAddressResponse, Integer, Hash)>] ValidateAddressResponse data, response status code and response headers
+    # @option opts [ValidateAddressRB] :validate_address_rb 
+    # @return [Array<(ValidateAddressR, Integer, Hash)>] ValidateAddressR data, response status code and response headers
     def validate_address_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ValidatingApi.validate_address ...'
@@ -80,10 +80,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'validate_address_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'validate_address_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ValidateAddressResponse'
+      return_type = opts[:debug_return_type] || 'ValidateAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

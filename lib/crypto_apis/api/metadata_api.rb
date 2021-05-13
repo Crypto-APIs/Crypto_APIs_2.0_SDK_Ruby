@@ -26,7 +26,7 @@ module CryptoApis
     # @option opts [String] :asset_type Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListSupportedAssetsResponse]
+    # @return [ListSupportedAssetsR]
     def list_supported_assets(opts = {})
       data, _status_code, _headers = list_supported_assets_with_http_info(opts)
       data
@@ -39,7 +39,7 @@ module CryptoApis
     # @option opts [String] :asset_type Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListSupportedAssetsResponse, Integer, Hash)>] ListSupportedAssetsResponse data, response status code and response headers
+    # @return [Array<(ListSupportedAssetsR, Integer, Hash)>] ListSupportedAssetsR data, response status code and response headers
     def list_supported_assets_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: MetadataApi.list_supported_assets ...'
@@ -70,7 +70,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListSupportedAssetsResponse'
+      return_type = opts[:debug_return_type] || 'ListSupportedAssetsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

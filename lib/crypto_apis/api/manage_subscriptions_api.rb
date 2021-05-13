@@ -26,7 +26,7 @@ module CryptoApis
     # @param reference_id [String] Represents a unique ID used to reference the specific callback subscription.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [DeleteBlockchainEventSubscriptionResponse]
+    # @return [DeleteBlockchainEventSubscriptionR]
     def delete_blockchain_event_subscription(blockchain, network, reference_id, opts = {})
       data, _status_code, _headers = delete_blockchain_event_subscription_with_http_info(blockchain, network, reference_id, opts)
       data
@@ -39,7 +39,7 @@ module CryptoApis
     # @param reference_id [String] Represents a unique ID used to reference the specific callback subscription.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(DeleteBlockchainEventSubscriptionResponse, Integer, Hash)>] DeleteBlockchainEventSubscriptionResponse data, response status code and response headers
+    # @return [Array<(DeleteBlockchainEventSubscriptionR, Integer, Hash)>] DeleteBlockchainEventSubscriptionR data, response status code and response headers
     def delete_blockchain_event_subscription_with_http_info(blockchain, network, reference_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ManageSubscriptionsApi.delete_blockchain_event_subscription ...'
@@ -85,7 +85,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'DeleteBlockchainEventSubscriptionResponse'
+      return_type = opts[:debug_return_type] || 'DeleteBlockchainEventSubscriptionR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -115,7 +115,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListBlockchainEventsSubscriptionsResponse]
+    # @return [ListBlockchainEventsSubscriptionsR]
     def list_blockchain_events_subscriptions(blockchain, network, opts = {})
       data, _status_code, _headers = list_blockchain_events_subscriptions_with_http_info(blockchain, network, opts)
       data
@@ -129,7 +129,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListBlockchainEventsSubscriptionsResponse, Integer, Hash)>] ListBlockchainEventsSubscriptionsResponse data, response status code and response headers
+    # @return [Array<(ListBlockchainEventsSubscriptionsR, Integer, Hash)>] ListBlockchainEventsSubscriptionsR data, response status code and response headers
     def list_blockchain_events_subscriptions_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ManageSubscriptionsApi.list_blockchain_events_subscriptions ...'
@@ -173,7 +173,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListBlockchainEventsSubscriptionsResponse'
+      return_type = opts[:debug_return_type] || 'ListBlockchainEventsSubscriptionsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

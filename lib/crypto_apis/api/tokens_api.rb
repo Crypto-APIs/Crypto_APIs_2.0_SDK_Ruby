@@ -28,7 +28,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTokensByAddressResponse]
+    # @return [ListTokensByAddressR]
     def list_tokens_by_address(blockchain, network, address, opts = {})
       data, _status_code, _headers = list_tokens_by_address_with_http_info(blockchain, network, address, opts)
       data
@@ -43,7 +43,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTokensByAddressResponse, Integer, Hash)>] ListTokensByAddressResponse data, response status code and response headers
+    # @return [Array<(ListTokensByAddressR, Integer, Hash)>] ListTokensByAddressR data, response status code and response headers
     def list_tokens_by_address_with_http_info(blockchain, network, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TokensApi.list_tokens_by_address ...'
@@ -91,7 +91,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTokensByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListTokensByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -122,7 +122,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTokensTransfersByAddressResponse]
+    # @return [ListTokensTransfersByAddressR]
     def list_tokens_transfers_by_address(blockchain, network, address, opts = {})
       data, _status_code, _headers = list_tokens_transfers_by_address_with_http_info(blockchain, network, address, opts)
       data
@@ -137,7 +137,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTokensTransfersByAddressResponse, Integer, Hash)>] ListTokensTransfersByAddressResponse data, response status code and response headers
+    # @return [Array<(ListTokensTransfersByAddressR, Integer, Hash)>] ListTokensTransfersByAddressR data, response status code and response headers
     def list_tokens_transfers_by_address_with_http_info(blockchain, network, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TokensApi.list_tokens_transfers_by_address ...'
@@ -185,7 +185,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTokensTransfersByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListTokensTransfersByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -216,7 +216,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTokensTransfersByTransactionHashResponse]
+    # @return [ListTokensTransfersByTransactionHashR]
     def list_tokens_transfers_by_transaction_hash(blockchain, network, transaction_hash, opts = {})
       data, _status_code, _headers = list_tokens_transfers_by_transaction_hash_with_http_info(blockchain, network, transaction_hash, opts)
       data
@@ -231,7 +231,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTokensTransfersByTransactionHashResponse, Integer, Hash)>] ListTokensTransfersByTransactionHashResponse data, response status code and response headers
+    # @return [Array<(ListTokensTransfersByTransactionHashR, Integer, Hash)>] ListTokensTransfersByTransactionHashR data, response status code and response headers
     def list_tokens_transfers_by_transaction_hash_with_http_info(blockchain, network, transaction_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TokensApi.list_tokens_transfers_by_transaction_hash ...'
@@ -279,7 +279,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTokensTransfersByTransactionHashResponse'
+      return_type = opts[:debug_return_type] || 'ListTokensTransfersByTransactionHashR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

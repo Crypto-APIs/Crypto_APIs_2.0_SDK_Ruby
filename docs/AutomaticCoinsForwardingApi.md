@@ -11,7 +11,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## create_automatic_coins_forwarding
 
-> <CreateAutomaticCoinsForwardingResponse> create_automatic_coins_forwarding(blockchain, network, opts)
+> <CreateAutomaticCoinsForwardingR> create_automatic_coins_forwarding(blockchain, network, opts)
 
 Create Automatic Coins Forwarding
 
@@ -35,7 +35,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_automatic_coins_forwarding_request_body: CryptoApis::CreateAutomaticCoinsForwardingRequestBody.new({data: CryptoApis::CreateAutomaticCoinsForwardingRequestBodyData.new({item: CryptoApis::CreateAutomaticCoinsForwardingRequestBodyDataItem.new({callback_secret_key: 'yourSecretString', callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', minimum_transfer_amount: '0.0002', to_address: 'mzYijhgmzZrmuB7wBDazRKirnChKyow4M3'})})}) # CreateAutomaticCoinsForwardingRequestBody | 
+  create_automatic_coins_forwarding_rb: CryptoApis::CreateAutomaticCoinsForwardingRB.new({data: CryptoApis::CreateAutomaticCoinsForwardingRBData.new({item: CryptoApis::CreateAutomaticCoinsForwardingRBDataItem.new({callback_secret_key: 'yourSecretString', callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', minimum_transfer_amount: '0.0002', to_address: 'mzYijhgmzZrmuB7wBDazRKirnChKyow4M3'})})}) # CreateAutomaticCoinsForwardingRB | 
 }
 
 begin
@@ -51,7 +51,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CreateAutomaticCoinsForwardingResponse>, Integer, Hash)> create_automatic_coins_forwarding_with_http_info(blockchain, network, opts)
+> <Array(<CreateAutomaticCoinsForwardingR>, Integer, Hash)> create_automatic_coins_forwarding_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -59,7 +59,7 @@ begin
   data, status_code, headers = api_instance.create_automatic_coins_forwarding_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <CreateAutomaticCoinsForwardingResponse>
+  p data # => <CreateAutomaticCoinsForwardingR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticCoinsForwardingApi->create_automatic_coins_forwarding_with_http_info: #{e}"
 end
@@ -72,11 +72,11 @@ end
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **create_automatic_coins_forwarding_request_body** | [**CreateAutomaticCoinsForwardingRequestBody**](CreateAutomaticCoinsForwardingRequestBody.md) |  | [optional] |
+| **create_automatic_coins_forwarding_rb** | [**CreateAutomaticCoinsForwardingRB**](CreateAutomaticCoinsForwardingRB.md) |  | [optional] |
 
 ### Return type
 
-[**CreateAutomaticCoinsForwardingResponse**](CreateAutomaticCoinsForwardingResponse.md)
+[**CreateAutomaticCoinsForwardingR**](CreateAutomaticCoinsForwardingR.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ end
 
 ## delete_automatic_coins_forwarding
 
-> <DeleteAutomaticCoinsForwardingResponse> delete_automatic_coins_forwarding(blockchain, network, reference_id, opts)
+> <DeleteAutomaticCoinsForwardingR> delete_automatic_coins_forwarding(blockchain, network, reference_id, opts)
 
 Delete Automatic Coins Forwarding
 
@@ -130,7 +130,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<DeleteAutomaticCoinsForwardingResponse>, Integer, Hash)> delete_automatic_coins_forwarding_with_http_info(blockchain, network, reference_id, opts)
+> <Array(<DeleteAutomaticCoinsForwardingR>, Integer, Hash)> delete_automatic_coins_forwarding_with_http_info(blockchain, network, reference_id, opts)
 
 ```ruby
 begin
@@ -138,7 +138,7 @@ begin
   data, status_code, headers = api_instance.delete_automatic_coins_forwarding_with_http_info(blockchain, network, reference_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <DeleteAutomaticCoinsForwardingResponse>
+  p data # => <DeleteAutomaticCoinsForwardingR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticCoinsForwardingApi->delete_automatic_coins_forwarding_with_http_info: #{e}"
 end
@@ -155,7 +155,7 @@ end
 
 ### Return type
 
-[**DeleteAutomaticCoinsForwardingResponse**](DeleteAutomaticCoinsForwardingResponse.md)
+[**DeleteAutomaticCoinsForwardingR**](DeleteAutomaticCoinsForwardingR.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ end
 
 ## list_coins_forwarding_automations
 
-> <ListCoinsForwardingAutomationsResponse> list_coins_forwarding_automations(blockchain, network, opts)
+> <ListCoinsForwardingAutomationsR> list_coins_forwarding_automations(blockchain, network, opts)
 
 List Coins Forwarding Automations
 
@@ -210,7 +210,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListCoinsForwardingAutomationsResponse>, Integer, Hash)> list_coins_forwarding_automations_with_http_info(blockchain, network, opts)
+> <Array(<ListCoinsForwardingAutomationsR>, Integer, Hash)> list_coins_forwarding_automations_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -218,7 +218,7 @@ begin
   data, status_code, headers = api_instance.list_coins_forwarding_automations_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListCoinsForwardingAutomationsResponse>
+  p data # => <ListCoinsForwardingAutomationsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticCoinsForwardingApi->list_coins_forwarding_automations_with_http_info: #{e}"
 end
@@ -236,7 +236,7 @@ end
 
 ### Return type
 
-[**ListCoinsForwardingAutomationsResponse**](ListCoinsForwardingAutomationsResponse.md)
+[**ListCoinsForwardingAutomationsR**](ListCoinsForwardingAutomationsR.md)
 
 ### Authorization
 

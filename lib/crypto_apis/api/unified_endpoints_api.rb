@@ -26,7 +26,7 @@ module CryptoApis
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetAddressDetailsResponse]
+    # @return [GetAddressDetailsR]
     def get_address_details(blockchain, network, address, opts = {})
       data, _status_code, _headers = get_address_details_with_http_info(blockchain, network, address, opts)
       data
@@ -39,7 +39,7 @@ module CryptoApis
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetAddressDetailsResponse, Integer, Hash)>] GetAddressDetailsResponse data, response status code and response headers
+    # @return [Array<(GetAddressDetailsR, Integer, Hash)>] GetAddressDetailsR data, response status code and response headers
     def get_address_details_with_http_info(blockchain, network, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.get_address_details ...'
@@ -85,7 +85,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetAddressDetailsResponse'
+      return_type = opts[:debug_return_type] || 'GetAddressDetailsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -114,7 +114,7 @@ module CryptoApis
     # @param block_hash [String] Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetBlockDetailsByBlockHashResponse]
+    # @return [GetBlockDetailsByBlockHashR]
     def get_block_details_by_block_hash(blockchain, network, block_hash, opts = {})
       data, _status_code, _headers = get_block_details_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
       data
@@ -127,7 +127,7 @@ module CryptoApis
     # @param block_hash [String] Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetBlockDetailsByBlockHashResponse, Integer, Hash)>] GetBlockDetailsByBlockHashResponse data, response status code and response headers
+    # @return [Array<(GetBlockDetailsByBlockHashR, Integer, Hash)>] GetBlockDetailsByBlockHashR data, response status code and response headers
     def get_block_details_by_block_hash_with_http_info(blockchain, network, block_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.get_block_details_by_block_hash ...'
@@ -173,7 +173,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetBlockDetailsByBlockHashResponse'
+      return_type = opts[:debug_return_type] || 'GetBlockDetailsByBlockHashR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -202,7 +202,7 @@ module CryptoApis
     # @param height [Integer] Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetBlockDetailsByBlockHeightResponse]
+    # @return [GetBlockDetailsByBlockHeightR]
     def get_block_details_by_block_height(blockchain, network, height, opts = {})
       data, _status_code, _headers = get_block_details_by_block_height_with_http_info(blockchain, network, height, opts)
       data
@@ -215,7 +215,7 @@ module CryptoApis
     # @param height [Integer] Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetBlockDetailsByBlockHeightResponse, Integer, Hash)>] GetBlockDetailsByBlockHeightResponse data, response status code and response headers
+    # @return [Array<(GetBlockDetailsByBlockHeightR, Integer, Hash)>] GetBlockDetailsByBlockHeightR data, response status code and response headers
     def get_block_details_by_block_height_with_http_info(blockchain, network, height, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.get_block_details_by_block_height ...'
@@ -261,7 +261,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetBlockDetailsByBlockHeightResponse'
+      return_type = opts[:debug_return_type] || 'GetBlockDetailsByBlockHeightR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -289,7 +289,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetFeeRecommendationsResponse]
+    # @return [GetFeeRecommendationsR]
     def get_fee_recommendations(blockchain, network, opts = {})
       data, _status_code, _headers = get_fee_recommendations_with_http_info(blockchain, network, opts)
       data
@@ -301,7 +301,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetFeeRecommendationsResponse, Integer, Hash)>] GetFeeRecommendationsResponse data, response status code and response headers
+    # @return [Array<(GetFeeRecommendationsR, Integer, Hash)>] GetFeeRecommendationsR data, response status code and response headers
     def get_fee_recommendations_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.get_fee_recommendations ...'
@@ -343,7 +343,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetFeeRecommendationsResponse'
+      return_type = opts[:debug_return_type] || 'GetFeeRecommendationsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -371,7 +371,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetLatestMinedBlockResponse]
+    # @return [GetLatestMinedBlockR]
     def get_latest_mined_block(blockchain, network, opts = {})
       data, _status_code, _headers = get_latest_mined_block_with_http_info(blockchain, network, opts)
       data
@@ -383,7 +383,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetLatestMinedBlockResponse, Integer, Hash)>] GetLatestMinedBlockResponse data, response status code and response headers
+    # @return [Array<(GetLatestMinedBlockR, Integer, Hash)>] GetLatestMinedBlockR data, response status code and response headers
     def get_latest_mined_block_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.get_latest_mined_block ...'
@@ -425,7 +425,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetLatestMinedBlockResponse'
+      return_type = opts[:debug_return_type] || 'GetLatestMinedBlockR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -454,7 +454,7 @@ module CryptoApis
     # @param transaction_id [String] Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetTransactionDetailsByTransactionIDResponse]
+    # @return [GetTransactionDetailsByTransactionIDR]
     def get_transaction_details_by_transaction_id(blockchain, network, transaction_id, opts = {})
       data, _status_code, _headers = get_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts)
       data
@@ -467,7 +467,7 @@ module CryptoApis
     # @param transaction_id [String] Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetTransactionDetailsByTransactionIDResponse, Integer, Hash)>] GetTransactionDetailsByTransactionIDResponse data, response status code and response headers
+    # @return [Array<(GetTransactionDetailsByTransactionIDR, Integer, Hash)>] GetTransactionDetailsByTransactionIDR data, response status code and response headers
     def get_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.get_transaction_details_by_transaction_id ...'
@@ -513,7 +513,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetTransactionDetailsByTransactionIDResponse'
+      return_type = opts[:debug_return_type] || 'GetTransactionDetailsByTransactionIDR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -544,7 +544,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTransactionsByAddressResponse]
+    # @return [ListTransactionsByAddressR]
     def list_transactions_by_address(blockchain, network, address, opts = {})
       data, _status_code, _headers = list_transactions_by_address_with_http_info(blockchain, network, address, opts)
       data
@@ -559,7 +559,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTransactionsByAddressResponse, Integer, Hash)>] ListTransactionsByAddressResponse data, response status code and response headers
+    # @return [Array<(ListTransactionsByAddressR, Integer, Hash)>] ListTransactionsByAddressR data, response status code and response headers
     def list_transactions_by_address_with_http_info(blockchain, network, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.list_transactions_by_address ...'
@@ -607,7 +607,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTransactionsByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListTransactionsByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -638,7 +638,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTransactionsByBlockHashResponse]
+    # @return [ListTransactionsByBlockHashR]
     def list_transactions_by_block_hash(blockchain, network, block_hash, opts = {})
       data, _status_code, _headers = list_transactions_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
       data
@@ -653,7 +653,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTransactionsByBlockHashResponse, Integer, Hash)>] ListTransactionsByBlockHashResponse data, response status code and response headers
+    # @return [Array<(ListTransactionsByBlockHashR, Integer, Hash)>] ListTransactionsByBlockHashR data, response status code and response headers
     def list_transactions_by_block_hash_with_http_info(blockchain, network, block_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.list_transactions_by_block_hash ...'
@@ -701,7 +701,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTransactionsByBlockHashResponse'
+      return_type = opts[:debug_return_type] || 'ListTransactionsByBlockHashR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -732,7 +732,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListTransactionsByBlockHeightResponse]
+    # @return [ListTransactionsByBlockHeightR]
     def list_transactions_by_block_height(blockchain, network, height, opts = {})
       data, _status_code, _headers = list_transactions_by_block_height_with_http_info(blockchain, network, height, opts)
       data
@@ -747,7 +747,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListTransactionsByBlockHeightResponse, Integer, Hash)>] ListTransactionsByBlockHeightResponse data, response status code and response headers
+    # @return [Array<(ListTransactionsByBlockHeightR, Integer, Hash)>] ListTransactionsByBlockHeightR data, response status code and response headers
     def list_transactions_by_block_height_with_http_info(blockchain, network, height, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UnifiedEndpointsApi.list_transactions_by_block_height ...'
@@ -795,7 +795,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListTransactionsByBlockHeightResponse'
+      return_type = opts[:debug_return_type] || 'ListTransactionsByBlockHeightR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

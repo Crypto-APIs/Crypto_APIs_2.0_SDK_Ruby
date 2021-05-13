@@ -25,7 +25,7 @@ module CryptoApis
     # @param to_asset_symbol [String] Defines the relation asset symbol in which the base asset rate will be displayed.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetExchangeRateByAssetSymbolsResponse]
+    # @return [GetExchangeRateByAssetSymbolsR]
     def get_exchange_rate_by_asset_symbols(from_asset_symbol, to_asset_symbol, opts = {})
       data, _status_code, _headers = get_exchange_rate_by_asset_symbols_with_http_info(from_asset_symbol, to_asset_symbol, opts)
       data
@@ -37,7 +37,7 @@ module CryptoApis
     # @param to_asset_symbol [String] Defines the relation asset symbol in which the base asset rate will be displayed.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetExchangeRateByAssetSymbolsResponse, Integer, Hash)>] GetExchangeRateByAssetSymbolsResponse data, response status code and response headers
+    # @return [Array<(GetExchangeRateByAssetSymbolsR, Integer, Hash)>] GetExchangeRateByAssetSymbolsR data, response status code and response headers
     def get_exchange_rate_by_asset_symbols_with_http_info(from_asset_symbol, to_asset_symbol, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ExchangeRatesApi.get_exchange_rate_by_asset_symbols ...'
@@ -69,7 +69,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetExchangeRateByAssetSymbolsResponse'
+      return_type = opts[:debug_return_type] || 'GetExchangeRateByAssetSymbolsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -97,7 +97,7 @@ module CryptoApis
     # @param to_asset_id [String] Defines the relation asset Reference ID in which the base asset rate will be displayed.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetExchangeRateByAssetsIDsResponse]
+    # @return [GetExchangeRateByAssetsIDsR]
     def get_exchange_rate_by_assets_ids(from_asset_id, to_asset_id, opts = {})
       data, _status_code, _headers = get_exchange_rate_by_assets_ids_with_http_info(from_asset_id, to_asset_id, opts)
       data
@@ -109,7 +109,7 @@ module CryptoApis
     # @param to_asset_id [String] Defines the relation asset Reference ID in which the base asset rate will be displayed.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetExchangeRateByAssetsIDsResponse, Integer, Hash)>] GetExchangeRateByAssetsIDsResponse data, response status code and response headers
+    # @return [Array<(GetExchangeRateByAssetsIDsR, Integer, Hash)>] GetExchangeRateByAssetsIDsR data, response status code and response headers
     def get_exchange_rate_by_assets_ids_with_http_info(from_asset_id, to_asset_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ExchangeRatesApi.get_exchange_rate_by_assets_ids ...'
@@ -141,7 +141,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetExchangeRateByAssetsIDsResponse'
+      return_type = opts[:debug_return_type] || 'GetExchangeRateByAssetsIDsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

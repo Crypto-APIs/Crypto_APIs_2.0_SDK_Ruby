@@ -24,7 +24,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetLatestMinedXRPRippleBlockResponse]
+    # @return [GetLatestMinedXRPRippleBlockR]
     def get_latest_mined_xrp__ripple_block(network, opts = {})
       data, _status_code, _headers = get_latest_mined_xrp__ripple_block_with_http_info(network, opts)
       data
@@ -35,7 +35,7 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetLatestMinedXRPRippleBlockResponse, Integer, Hash)>] GetLatestMinedXRPRippleBlockResponse data, response status code and response headers
+    # @return [Array<(GetLatestMinedXRPRippleBlockR, Integer, Hash)>] GetLatestMinedXRPRippleBlockR data, response status code and response headers
     def get_latest_mined_xrp__ripple_block_with_http_info(network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.get_latest_mined_xrp__ripple_block ...'
@@ -68,7 +68,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetLatestMinedXRPRippleBlockResponse'
+      return_type = opts[:debug_return_type] || 'GetLatestMinedXRPRippleBlockR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -96,7 +96,7 @@ module CryptoApis
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetXRPRippleAddressDetailsResponse]
+    # @return [GetXRPRippleAddressDetailsR]
     def get_xrp__ripple_address_details(network, address, opts = {})
       data, _status_code, _headers = get_xrp__ripple_address_details_with_http_info(network, address, opts)
       data
@@ -108,7 +108,7 @@ module CryptoApis
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetXRPRippleAddressDetailsResponse, Integer, Hash)>] GetXRPRippleAddressDetailsResponse data, response status code and response headers
+    # @return [Array<(GetXRPRippleAddressDetailsR, Integer, Hash)>] GetXRPRippleAddressDetailsR data, response status code and response headers
     def get_xrp__ripple_address_details_with_http_info(network, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.get_xrp__ripple_address_details ...'
@@ -145,7 +145,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetXRPRippleAddressDetailsResponse'
+      return_type = opts[:debug_return_type] || 'GetXRPRippleAddressDetailsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -173,7 +173,7 @@ module CryptoApis
     # @param block_hash [String] Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetXRPRippleBlockDetailsByBlockHashResponse]
+    # @return [GetXRPRippleBlockDetailsByBlockHashR]
     def get_xrp__ripple_block_details_by_block_hash(network, block_hash, opts = {})
       data, _status_code, _headers = get_xrp__ripple_block_details_by_block_hash_with_http_info(network, block_hash, opts)
       data
@@ -185,7 +185,7 @@ module CryptoApis
     # @param block_hash [String] Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetXRPRippleBlockDetailsByBlockHashResponse, Integer, Hash)>] GetXRPRippleBlockDetailsByBlockHashResponse data, response status code and response headers
+    # @return [Array<(GetXRPRippleBlockDetailsByBlockHashR, Integer, Hash)>] GetXRPRippleBlockDetailsByBlockHashR data, response status code and response headers
     def get_xrp__ripple_block_details_by_block_hash_with_http_info(network, block_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.get_xrp__ripple_block_details_by_block_hash ...'
@@ -222,7 +222,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetXRPRippleBlockDetailsByBlockHashResponse'
+      return_type = opts[:debug_return_type] || 'GetXRPRippleBlockDetailsByBlockHashR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -250,7 +250,7 @@ module CryptoApis
     # @param height [String] Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetXRPRippleBlockDetailsByBlockHeightResponse]
+    # @return [GetXRPRippleBlockDetailsByBlockHeightR]
     def get_xrp__ripple_block_details_by_block_height(network, height, opts = {})
       data, _status_code, _headers = get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts)
       data
@@ -262,7 +262,7 @@ module CryptoApis
     # @param height [String] Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetXRPRippleBlockDetailsByBlockHeightResponse, Integer, Hash)>] GetXRPRippleBlockDetailsByBlockHeightResponse data, response status code and response headers
+    # @return [Array<(GetXRPRippleBlockDetailsByBlockHeightR, Integer, Hash)>] GetXRPRippleBlockDetailsByBlockHeightR data, response status code and response headers
     def get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.get_xrp__ripple_block_details_by_block_height ...'
@@ -299,7 +299,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetXRPRippleBlockDetailsByBlockHeightResponse'
+      return_type = opts[:debug_return_type] || 'GetXRPRippleBlockDetailsByBlockHeightR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -327,7 +327,7 @@ module CryptoApis
     # @param transaction_hash [String] Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetXRPRippleTransactionDetailsByTransactionIDResponse]
+    # @return [GetXRPRippleTransactionDetailsByTransactionIDR]
     def get_xrp__ripple_transaction_details_by_transaction_id(network, transaction_hash, opts = {})
       data, _status_code, _headers = get_xrp__ripple_transaction_details_by_transaction_id_with_http_info(network, transaction_hash, opts)
       data
@@ -339,7 +339,7 @@ module CryptoApis
     # @param transaction_hash [String] Represents the same as &#x60;transactionId&#x60; for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols &#x60;hash&#x60; is different from &#x60;transactionId&#x60; for SegWit transactions.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetXRPRippleTransactionDetailsByTransactionIDResponse, Integer, Hash)>] GetXRPRippleTransactionDetailsByTransactionIDResponse data, response status code and response headers
+    # @return [Array<(GetXRPRippleTransactionDetailsByTransactionIDR, Integer, Hash)>] GetXRPRippleTransactionDetailsByTransactionIDR data, response status code and response headers
     def get_xrp__ripple_transaction_details_by_transaction_id_with_http_info(network, transaction_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.get_xrp__ripple_transaction_details_by_transaction_id ...'
@@ -376,7 +376,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetXRPRippleTransactionDetailsByTransactionIDResponse'
+      return_type = opts[:debug_return_type] || 'GetXRPRippleTransactionDetailsByTransactionIDR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -406,7 +406,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListXRPRippleTransactionsByAddressResponse]
+    # @return [ListXRPRippleTransactionsByAddressR]
     def list_xrp__ripple_transactions_by_address(network, address, opts = {})
       data, _status_code, _headers = list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts)
       data
@@ -420,7 +420,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListXRPRippleTransactionsByAddressResponse, Integer, Hash)>] ListXRPRippleTransactionsByAddressResponse data, response status code and response headers
+    # @return [Array<(ListXRPRippleTransactionsByAddressR, Integer, Hash)>] ListXRPRippleTransactionsByAddressR data, response status code and response headers
     def list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.list_xrp__ripple_transactions_by_address ...'
@@ -459,7 +459,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListXRPRippleTransactionsByAddressResponse'
+      return_type = opts[:debug_return_type] || 'ListXRPRippleTransactionsByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -489,7 +489,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListXRPRippleTransactionsByBlockHashResponse]
+    # @return [ListXRPRippleTransactionsByBlockHashR]
     def list_xrp__ripple_transactions_by_block_hash(network, block_hash, opts = {})
       data, _status_code, _headers = list_xrp__ripple_transactions_by_block_hash_with_http_info(network, block_hash, opts)
       data
@@ -503,7 +503,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListXRPRippleTransactionsByBlockHashResponse, Integer, Hash)>] ListXRPRippleTransactionsByBlockHashResponse data, response status code and response headers
+    # @return [Array<(ListXRPRippleTransactionsByBlockHashR, Integer, Hash)>] ListXRPRippleTransactionsByBlockHashR data, response status code and response headers
     def list_xrp__ripple_transactions_by_block_hash_with_http_info(network, block_hash, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: XRPRippleApi.list_xrp__ripple_transactions_by_block_hash ...'
@@ -542,7 +542,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListXRPRippleTransactionsByBlockHashResponse'
+      return_type = opts[:debug_return_type] || 'ListXRPRippleTransactionsByBlockHashR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

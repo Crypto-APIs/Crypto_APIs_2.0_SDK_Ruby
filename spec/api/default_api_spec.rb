@@ -40,7 +40,7 @@ describe 'DefaultApi' do
   # @param contract_address String identifier of the token
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [GetContractDetailsByAddressResponse]
+  # @return [GetContractDetailsByAddressR]
   describe 'get_contract_details_by_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

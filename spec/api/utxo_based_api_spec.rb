@@ -41,7 +41,7 @@ describe 'UTXOBasedApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [String] :derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly.
-  # @return [GetHDWalletxPubYPubZPubDetailsResponse]
+  # @return [GetHDWalletXPubYPubZPubDetailsR]
   describe 'get_hd_wallet__x_pub_y_pub_z_pub_details test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -59,7 +59,7 @@ describe 'UTXOBasedApi' do
   # @option opts [String] :derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListHDWalletxPubYPubZPubTransactionsResponse]
+  # @return [ListHDWalletXPubYPubZPubTransactionsR]
   describe 'list_hd_wallet__x_pub_y_pub_z_pub_transactions test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -73,8 +73,8 @@ describe 'UTXOBasedApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [SyncHDWalletxPubYPubZPubRequestBody] :sync_hd_walletx_pub_y_pub_z_pub_request_body 
-  # @return [SyncHDWalletxPubYPubZPubResponse]
+  # @option opts [SyncHDWalletXPubYPubZPubRB] :sync_hd_wallet_x_pub_y_pub_z_pub_rb 
+  # @return [SyncHDWalletXPubYPubZPubR]
   describe 'sync_hd_wallet__x_pub_y_pub_z_pub test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

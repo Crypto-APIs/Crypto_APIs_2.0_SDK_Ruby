@@ -40,7 +40,7 @@ describe 'ManageSubscriptionsApi' do
   # @param reference_id Represents a unique ID used to reference the specific callback subscription.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [DeleteBlockchainEventSubscriptionResponse]
+  # @return [DeleteBlockchainEventSubscriptionR]
   describe 'delete_blockchain_event_subscription test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -56,7 +56,7 @@ describe 'ManageSubscriptionsApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListBlockchainEventsSubscriptionsResponse]
+  # @return [ListBlockchainEventsSubscriptionsR]
   describe 'list_blockchain_events_subscriptions test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

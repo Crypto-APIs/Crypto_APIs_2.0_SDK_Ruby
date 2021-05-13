@@ -11,7 +11,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## list_tokens_by_address
 
-> <ListTokensByAddressResponse> list_tokens_by_address(blockchain, network, address, opts)
+> <ListTokensByAddressR> list_tokens_by_address(blockchain, network, address, opts)
 
 List Tokens By Address
 
@@ -53,7 +53,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTokensByAddressResponse>, Integer, Hash)> list_tokens_by_address_with_http_info(blockchain, network, address, opts)
+> <Array(<ListTokensByAddressR>, Integer, Hash)> list_tokens_by_address_with_http_info(blockchain, network, address, opts)
 
 ```ruby
 begin
@@ -61,7 +61,7 @@ begin
   data, status_code, headers = api_instance.list_tokens_by_address_with_http_info(blockchain, network, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTokensByAddressResponse>
+  p data # => <ListTokensByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_by_address_with_http_info: #{e}"
 end
@@ -80,7 +80,7 @@ end
 
 ### Return type
 
-[**ListTokensByAddressResponse**](ListTokensByAddressResponse.md)
+[**ListTokensByAddressR**](ListTokensByAddressR.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ end
 
 ## list_tokens_transfers_by_address
 
-> <ListTokensTransfersByAddressResponse> list_tokens_transfers_by_address(blockchain, network, address, opts)
+> <ListTokensTransfersByAddressR> list_tokens_transfers_by_address(blockchain, network, address, opts)
 
 List Tokens Transfers By Address
 
@@ -136,7 +136,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTokensTransfersByAddressResponse>, Integer, Hash)> list_tokens_transfers_by_address_with_http_info(blockchain, network, address, opts)
+> <Array(<ListTokensTransfersByAddressR>, Integer, Hash)> list_tokens_transfers_by_address_with_http_info(blockchain, network, address, opts)
 
 ```ruby
 begin
@@ -144,7 +144,7 @@ begin
   data, status_code, headers = api_instance.list_tokens_transfers_by_address_with_http_info(blockchain, network, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTokensTransfersByAddressResponse>
+  p data # => <ListTokensTransfersByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_transfers_by_address_with_http_info: #{e}"
 end
@@ -163,7 +163,7 @@ end
 
 ### Return type
 
-[**ListTokensTransfersByAddressResponse**](ListTokensTransfersByAddressResponse.md)
+[**ListTokensTransfersByAddressR**](ListTokensTransfersByAddressR.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ end
 
 ## list_tokens_transfers_by_transaction_hash
 
-> <ListTokensTransfersByTransactionHashResponse> list_tokens_transfers_by_transaction_hash(blockchain, network, transaction_hash, opts)
+> <ListTokensTransfersByTransactionHashR> list_tokens_transfers_by_transaction_hash(blockchain, network, transaction_hash, opts)
 
 List Tokens Transfers By Transaction Hash
 
@@ -219,7 +219,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTokensTransfersByTransactionHashResponse>, Integer, Hash)> list_tokens_transfers_by_transaction_hash_with_http_info(blockchain, network, transaction_hash, opts)
+> <Array(<ListTokensTransfersByTransactionHashR>, Integer, Hash)> list_tokens_transfers_by_transaction_hash_with_http_info(blockchain, network, transaction_hash, opts)
 
 ```ruby
 begin
@@ -227,7 +227,7 @@ begin
   data, status_code, headers = api_instance.list_tokens_transfers_by_transaction_hash_with_http_info(blockchain, network, transaction_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTokensTransfersByTransactionHashResponse>
+  p data # => <ListTokensTransfersByTransactionHashR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_transfers_by_transaction_hash_with_http_info: #{e}"
 end
@@ -246,7 +246,7 @@ end
 
 ### Return type
 
-[**ListTokensTransfersByTransactionHashResponse**](ListTokensTransfersByTransactionHashResponse.md)
+[**ListTokensTransfersByTransactionHashR**](ListTokensTransfersByTransactionHashR.md)
 
 ### Authorization
 

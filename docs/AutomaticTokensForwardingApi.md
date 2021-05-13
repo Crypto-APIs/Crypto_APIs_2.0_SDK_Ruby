@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## add_tokens_to_existing_from_address
 
-> <AddTokensToExistingFromAddressResponse> add_tokens_to_existing_from_address(blockchain, network, opts)
+> <AddTokensToExistingFromAddressR> add_tokens_to_existing_from_address(blockchain, network, opts)
 
 Add Tokens To Existing fromAddress
 
@@ -37,7 +37,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Network
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  add_tokens_to_existing_from_address_request_body: CryptoApis::AddTokensToExistingFromAddressRequestBody.new({data: CryptoApis::AddTokensToExistingFromAddressRequestBodyData.new({item: CryptoApis::AddTokensToExistingFromAddressRequestBodyDataItem.new({callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', from_address: 'mizRduUBKEbJ6uzYJUegPh78gEGgM3WjAr', minimum_transfer_amount: '0.00001', to_address: 'mnumE76iEKN47bUsdni85oped5D1fRwKWi', token_data: CryptoApis::AddTokensToExistingFromAddressRequestBodyTokenDataBitcoinOmniToken.new({property_id: 2})})})}) # AddTokensToExistingFromAddressRequestBody | 
+  add_tokens_to_existing_from_address_rb: CryptoApis::AddTokensToExistingFromAddressRB.new({data: CryptoApis::AddTokensToExistingFromAddressRBData.new({item: CryptoApis::AddTokensToExistingFromAddressRBDataItem.new({callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', from_address: 'mizRduUBKEbJ6uzYJUegPh78gEGgM3WjAr', minimum_transfer_amount: '0.00001', to_address: 'mnumE76iEKN47bUsdni85oped5D1fRwKWi', token_data: CryptoApis::AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken.new({property_id: 2})})})}) # AddTokensToExistingFromAddressRB | 
 }
 
 begin
@@ -53,7 +53,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<AddTokensToExistingFromAddressResponse>, Integer, Hash)> add_tokens_to_existing_from_address_with_http_info(blockchain, network, opts)
+> <Array(<AddTokensToExistingFromAddressR>, Integer, Hash)> add_tokens_to_existing_from_address_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -61,7 +61,7 @@ begin
   data, status_code, headers = api_instance.add_tokens_to_existing_from_address_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <AddTokensToExistingFromAddressResponse>
+  p data # => <AddTokensToExistingFromAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->add_tokens_to_existing_from_address_with_http_info: #{e}"
 end
@@ -74,11 +74,11 @@ end
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Network |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **add_tokens_to_existing_from_address_request_body** | [**AddTokensToExistingFromAddressRequestBody**](AddTokensToExistingFromAddressRequestBody.md) |  | [optional] |
+| **add_tokens_to_existing_from_address_rb** | [**AddTokensToExistingFromAddressRB**](AddTokensToExistingFromAddressRB.md) |  | [optional] |
 
 ### Return type
 
-[**AddTokensToExistingFromAddressResponse**](AddTokensToExistingFromAddressResponse.md)
+[**AddTokensToExistingFromAddressR**](AddTokensToExistingFromAddressR.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ end
 
 ## create_automatic_tokens_forwarding
 
-> <CreateAutomaticTokensForwardingResponse> create_automatic_tokens_forwarding(blockchain, network, opts)
+> <CreateAutomaticTokensForwardingR> create_automatic_tokens_forwarding(blockchain, network, opts)
 
 Create Automatic Tokens Forwarding
 
@@ -116,7 +116,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_automatic_tokens_forwarding_request_body: CryptoApis::CreateAutomaticTokensForwardingRequestBody.new({data: CryptoApis::CreateAutomaticTokensForwardingRequestBodyData.new({item: CryptoApis::CreateAutomaticTokensForwardingRequestBodyDataItem.new({callback_url: 'https://example.com', confirmations_count: '3', fee_priority: 'slow', minimum_transfer_amount: '0.00002', to_address: 'tb1q54j7qcu7kgsrx87yn0r9zjdvsxrnvxg4qua2z6', token_data: CryptoApis::CreateAutomaticTokensForwardingRequestBodyTokenDataBitcoinOmniToken.new({property_id: 31})})})}) # CreateAutomaticTokensForwardingRequestBody | 
+  create_automatic_tokens_forwarding_rb: CryptoApis::CreateAutomaticTokensForwardingRB.new({data: CryptoApis::CreateAutomaticTokensForwardingRBData.new({item: CryptoApis::CreateAutomaticTokensForwardingRBDataItem.new({callback_url: 'https://example.com', confirmations_count: '3', fee_priority: 'slow', minimum_transfer_amount: '0.00002', to_address: 'tb1q54j7qcu7kgsrx87yn0r9zjdvsxrnvxg4qua2z6', token_data: CryptoApis::CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken.new({property_id: 31})})})}) # CreateAutomaticTokensForwardingRB | 
 }
 
 begin
@@ -132,7 +132,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CreateAutomaticTokensForwardingResponse>, Integer, Hash)> create_automatic_tokens_forwarding_with_http_info(blockchain, network, opts)
+> <Array(<CreateAutomaticTokensForwardingR>, Integer, Hash)> create_automatic_tokens_forwarding_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -140,7 +140,7 @@ begin
   data, status_code, headers = api_instance.create_automatic_tokens_forwarding_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <CreateAutomaticTokensForwardingResponse>
+  p data # => <CreateAutomaticTokensForwardingR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->create_automatic_tokens_forwarding_with_http_info: #{e}"
 end
@@ -153,11 +153,11 @@ end
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **create_automatic_tokens_forwarding_request_body** | [**CreateAutomaticTokensForwardingRequestBody**](CreateAutomaticTokensForwardingRequestBody.md) |  | [optional] |
+| **create_automatic_tokens_forwarding_rb** | [**CreateAutomaticTokensForwardingRB**](CreateAutomaticTokensForwardingRB.md) |  | [optional] |
 
 ### Return type
 
-[**CreateAutomaticTokensForwardingResponse**](CreateAutomaticTokensForwardingResponse.md)
+[**CreateAutomaticTokensForwardingR**](CreateAutomaticTokensForwardingR.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ end
 
 ## delete_automatic_tokens_forwarding
 
-> <DeleteAutomaticTokensForwardingResponse> delete_automatic_tokens_forwarding(blockchain, network, reference_id, opts)
+> <DeleteAutomaticTokensForwardingR> delete_automatic_tokens_forwarding(blockchain, network, reference_id, opts)
 
 Delete Automatic Tokens Forwarding
 
@@ -211,7 +211,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<DeleteAutomaticTokensForwardingResponse>, Integer, Hash)> delete_automatic_tokens_forwarding_with_http_info(blockchain, network, reference_id, opts)
+> <Array(<DeleteAutomaticTokensForwardingR>, Integer, Hash)> delete_automatic_tokens_forwarding_with_http_info(blockchain, network, reference_id, opts)
 
 ```ruby
 begin
@@ -219,7 +219,7 @@ begin
   data, status_code, headers = api_instance.delete_automatic_tokens_forwarding_with_http_info(blockchain, network, reference_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <DeleteAutomaticTokensForwardingResponse>
+  p data # => <DeleteAutomaticTokensForwardingR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->delete_automatic_tokens_forwarding_with_http_info: #{e}"
 end
@@ -236,7 +236,7 @@ end
 
 ### Return type
 
-[**DeleteAutomaticTokensForwardingResponse**](DeleteAutomaticTokensForwardingResponse.md)
+[**DeleteAutomaticTokensForwardingR**](DeleteAutomaticTokensForwardingR.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ end
 
 ## get_fee_address_details
 
-> <GetFeeAddressDetailsResponse> get_fee_address_details(blockchain, network, opts)
+> <GetFeeAddressDetailsR> get_fee_address_details(blockchain, network, opts)
 
 Get Fee Address Details
 
@@ -289,7 +289,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetFeeAddressDetailsResponse>, Integer, Hash)> get_fee_address_details_with_http_info(blockchain, network, opts)
+> <Array(<GetFeeAddressDetailsR>, Integer, Hash)> get_fee_address_details_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -297,7 +297,7 @@ begin
   data, status_code, headers = api_instance.get_fee_address_details_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetFeeAddressDetailsResponse>
+  p data # => <GetFeeAddressDetailsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->get_fee_address_details_with_http_info: #{e}"
 end
@@ -313,7 +313,7 @@ end
 
 ### Return type
 
-[**GetFeeAddressDetailsResponse**](GetFeeAddressDetailsResponse.md)
+[**GetFeeAddressDetailsR**](GetFeeAddressDetailsR.md)
 
 ### Authorization
 
@@ -327,7 +327,7 @@ end
 
 ## list_tokens_forwarding_automations
 
-> <ListTokensForwardingAutomationsResponse> list_tokens_forwarding_automations(blockchain, network, opts)
+> <ListTokensForwardingAutomationsR> list_tokens_forwarding_automations(blockchain, network, opts)
 
 List Tokens Forwarding Automations
 
@@ -368,7 +368,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTokensForwardingAutomationsResponse>, Integer, Hash)> list_tokens_forwarding_automations_with_http_info(blockchain, network, opts)
+> <Array(<ListTokensForwardingAutomationsR>, Integer, Hash)> list_tokens_forwarding_automations_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -376,7 +376,7 @@ begin
   data, status_code, headers = api_instance.list_tokens_forwarding_automations_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTokensForwardingAutomationsResponse>
+  p data # => <ListTokensForwardingAutomationsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->list_tokens_forwarding_automations_with_http_info: #{e}"
 end
@@ -394,7 +394,7 @@ end
 
 ### Return type
 
-[**ListTokensForwardingAutomationsResponse**](ListTokensForwardingAutomationsResponse.md)
+[**ListTokensForwardingAutomationsR**](ListTokensForwardingAutomationsR.md)
 
 ### Authorization
 

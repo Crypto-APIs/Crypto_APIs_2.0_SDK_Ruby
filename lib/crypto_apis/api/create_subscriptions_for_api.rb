@@ -25,8 +25,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [MinedTransactionRequestBody] :mined_transaction_request_body 
-    # @return [MinedTransactionResponse]
+    # @option opts [MinedTransactionRB] :mined_transaction_rb 
+    # @return [MinedTransactionR]
     def mined_transaction(blockchain, network, opts = {})
       data, _status_code, _headers = mined_transaction_with_http_info(blockchain, network, opts)
       data
@@ -38,8 +38,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [MinedTransactionRequestBody] :mined_transaction_request_body 
-    # @return [Array<(MinedTransactionResponse, Integer, Hash)>] MinedTransactionResponse data, response status code and response headers
+    # @option opts [MinedTransactionRB] :mined_transaction_rb 
+    # @return [Array<(MinedTransactionR, Integer, Hash)>] MinedTransactionR data, response status code and response headers
     def mined_transaction_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.mined_transaction ...'
@@ -80,10 +80,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'mined_transaction_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'mined_transaction_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'MinedTransactionResponse'
+      return_type = opts[:debug_return_type] || 'MinedTransactionR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -111,8 +111,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewBlockRequestBody] :new_block_request_body 
-    # @return [NewBlockResponse]
+    # @option opts [NewBlockRB] :new_block_rb 
+    # @return [NewBlockR]
     def new_block(blockchain, network, opts = {})
       data, _status_code, _headers = new_block_with_http_info(blockchain, network, opts)
       data
@@ -124,8 +124,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewBlockRequestBody] :new_block_request_body 
-    # @return [Array<(NewBlockResponse, Integer, Hash)>] NewBlockResponse data, response status code and response headers
+    # @option opts [NewBlockRB] :new_block_rb 
+    # @return [Array<(NewBlockR, Integer, Hash)>] NewBlockR data, response status code and response headers
     def new_block_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_block ...'
@@ -166,10 +166,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_block_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_block_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewBlockResponse'
+      return_type = opts[:debug_return_type] || 'NewBlockR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -197,8 +197,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedCoinsTransactionsRequestBody] :new_confirmed_coins_transactions_request_body 
-    # @return [NewConfirmedCoinsTransactionsResponse]
+    # @option opts [NewConfirmedCoinsTransactionsRB] :new_confirmed_coins_transactions_rb 
+    # @return [NewConfirmedCoinsTransactionsR]
     def new_confirmed_coins_transactions(blockchain, network, opts = {})
       data, _status_code, _headers = new_confirmed_coins_transactions_with_http_info(blockchain, network, opts)
       data
@@ -210,8 +210,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedCoinsTransactionsRequestBody] :new_confirmed_coins_transactions_request_body 
-    # @return [Array<(NewConfirmedCoinsTransactionsResponse, Integer, Hash)>] NewConfirmedCoinsTransactionsResponse data, response status code and response headers
+    # @option opts [NewConfirmedCoinsTransactionsRB] :new_confirmed_coins_transactions_rb 
+    # @return [Array<(NewConfirmedCoinsTransactionsR, Integer, Hash)>] NewConfirmedCoinsTransactionsR data, response status code and response headers
     def new_confirmed_coins_transactions_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_confirmed_coins_transactions ...'
@@ -252,10 +252,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_coins_transactions_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_coins_transactions_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewConfirmedCoinsTransactionsResponse'
+      return_type = opts[:debug_return_type] || 'NewConfirmedCoinsTransactionsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -283,8 +283,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody] :new_confirmed_coins_transactions_and_each_confirmation_request_body 
-    # @return [NewConfirmedCoinsTransactionsAndEachConfirmationResponse]
+    # @option opts [NewConfirmedCoinsTransactionsAndEachConfirmationRB] :new_confirmed_coins_transactions_and_each_confirmation_rb 
+    # @return [NewConfirmedCoinsTransactionsAndEachConfirmationR]
     def new_confirmed_coins_transactions_and_each_confirmation(blockchain, network, opts = {})
       data, _status_code, _headers = new_confirmed_coins_transactions_and_each_confirmation_with_http_info(blockchain, network, opts)
       data
@@ -296,8 +296,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody] :new_confirmed_coins_transactions_and_each_confirmation_request_body 
-    # @return [Array<(NewConfirmedCoinsTransactionsAndEachConfirmationResponse, Integer, Hash)>] NewConfirmedCoinsTransactionsAndEachConfirmationResponse data, response status code and response headers
+    # @option opts [NewConfirmedCoinsTransactionsAndEachConfirmationRB] :new_confirmed_coins_transactions_and_each_confirmation_rb 
+    # @return [Array<(NewConfirmedCoinsTransactionsAndEachConfirmationR, Integer, Hash)>] NewConfirmedCoinsTransactionsAndEachConfirmationR data, response status code and response headers
     def new_confirmed_coins_transactions_and_each_confirmation_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_confirmed_coins_transactions_and_each_confirmation ...'
@@ -338,10 +338,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_coins_transactions_and_each_confirmation_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_coins_transactions_and_each_confirmation_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewConfirmedCoinsTransactionsAndEachConfirmationResponse'
+      return_type = opts[:debug_return_type] || 'NewConfirmedCoinsTransactionsAndEachConfirmationR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -369,8 +369,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedTokensTransactionsRequestBody] :new_confirmed_tokens_transactions_request_body 
-    # @return [NewConfirmedTokensTransactionsResponse]
+    # @option opts [NewConfirmedTokensTransactionsRB] :new_confirmed_tokens_transactions_rb 
+    # @return [NewConfirmedTokensTransactionsR]
     def new_confirmed_tokens_transactions(blockchain, network, opts = {})
       data, _status_code, _headers = new_confirmed_tokens_transactions_with_http_info(blockchain, network, opts)
       data
@@ -382,8 +382,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedTokensTransactionsRequestBody] :new_confirmed_tokens_transactions_request_body 
-    # @return [Array<(NewConfirmedTokensTransactionsResponse, Integer, Hash)>] NewConfirmedTokensTransactionsResponse data, response status code and response headers
+    # @option opts [NewConfirmedTokensTransactionsRB] :new_confirmed_tokens_transactions_rb 
+    # @return [Array<(NewConfirmedTokensTransactionsR, Integer, Hash)>] NewConfirmedTokensTransactionsR data, response status code and response headers
     def new_confirmed_tokens_transactions_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_confirmed_tokens_transactions ...'
@@ -424,10 +424,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_tokens_transactions_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_tokens_transactions_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewConfirmedTokensTransactionsResponse'
+      return_type = opts[:debug_return_type] || 'NewConfirmedTokensTransactionsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -455,8 +455,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedTokensTransactionsAndEachConfirmationRequestBody] :new_confirmed_tokens_transactions_and_each_confirmation_request_body 
-    # @return [NewConfirmedTokensTransactionsAndEachConfirmationResponse]
+    # @option opts [NewConfirmedTokensTransactionsAndEachConfirmationRB] :new_confirmed_tokens_transactions_and_each_confirmation_rb 
+    # @return [NewConfirmedTokensTransactionsAndEachConfirmationR]
     def new_confirmed_tokens_transactions_and_each_confirmation(blockchain, network, opts = {})
       data, _status_code, _headers = new_confirmed_tokens_transactions_and_each_confirmation_with_http_info(blockchain, network, opts)
       data
@@ -468,8 +468,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewConfirmedTokensTransactionsAndEachConfirmationRequestBody] :new_confirmed_tokens_transactions_and_each_confirmation_request_body 
-    # @return [Array<(NewConfirmedTokensTransactionsAndEachConfirmationResponse, Integer, Hash)>] NewConfirmedTokensTransactionsAndEachConfirmationResponse data, response status code and response headers
+    # @option opts [NewConfirmedTokensTransactionsAndEachConfirmationRB] :new_confirmed_tokens_transactions_and_each_confirmation_rb 
+    # @return [Array<(NewConfirmedTokensTransactionsAndEachConfirmationR, Integer, Hash)>] NewConfirmedTokensTransactionsAndEachConfirmationR data, response status code and response headers
     def new_confirmed_tokens_transactions_and_each_confirmation_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_confirmed_tokens_transactions_and_each_confirmation ...'
@@ -510,10 +510,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_tokens_transactions_and_each_confirmation_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_confirmed_tokens_transactions_and_each_confirmation_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewConfirmedTokensTransactionsAndEachConfirmationResponse'
+      return_type = opts[:debug_return_type] || 'NewConfirmedTokensTransactionsAndEachConfirmationR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -541,8 +541,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewUnconfirmedCoinsTransactionsRequestBody] :new_unconfirmed_coins_transactions_request_body 
-    # @return [NewUnconfirmedCoinsTransactionsResponse]
+    # @option opts [NewUnconfirmedCoinsTransactionsRB] :new_unconfirmed_coins_transactions_rb 
+    # @return [NewUnconfirmedCoinsTransactionsR]
     def new_unconfirmed_coins_transactions(blockchain, network, opts = {})
       data, _status_code, _headers = new_unconfirmed_coins_transactions_with_http_info(blockchain, network, opts)
       data
@@ -554,8 +554,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewUnconfirmedCoinsTransactionsRequestBody] :new_unconfirmed_coins_transactions_request_body 
-    # @return [Array<(NewUnconfirmedCoinsTransactionsResponse, Integer, Hash)>] NewUnconfirmedCoinsTransactionsResponse data, response status code and response headers
+    # @option opts [NewUnconfirmedCoinsTransactionsRB] :new_unconfirmed_coins_transactions_rb 
+    # @return [Array<(NewUnconfirmedCoinsTransactionsR, Integer, Hash)>] NewUnconfirmedCoinsTransactionsR data, response status code and response headers
     def new_unconfirmed_coins_transactions_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_unconfirmed_coins_transactions ...'
@@ -596,10 +596,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_unconfirmed_coins_transactions_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_unconfirmed_coins_transactions_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewUnconfirmedCoinsTransactionsResponse'
+      return_type = opts[:debug_return_type] || 'NewUnconfirmedCoinsTransactionsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -627,8 +627,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewUnconfirmedTokensTransactionsRequestBody] :new_unconfirmed_tokens_transactions_request_body 
-    # @return [NewUnconfirmedTokensTransactionsResponse]
+    # @option opts [NewUnconfirmedTokensTransactionsRB] :new_unconfirmed_tokens_transactions_rb 
+    # @return [NewUnconfirmedTokensTransactionsR]
     def new_unconfirmed_tokens_transactions(blockchain, network, opts = {})
       data, _status_code, _headers = new_unconfirmed_tokens_transactions_with_http_info(blockchain, network, opts)
       data
@@ -640,8 +640,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [NewUnconfirmedTokensTransactionsRequestBody] :new_unconfirmed_tokens_transactions_request_body 
-    # @return [Array<(NewUnconfirmedTokensTransactionsResponse, Integer, Hash)>] NewUnconfirmedTokensTransactionsResponse data, response status code and response headers
+    # @option opts [NewUnconfirmedTokensTransactionsRB] :new_unconfirmed_tokens_transactions_rb 
+    # @return [Array<(NewUnconfirmedTokensTransactionsR, Integer, Hash)>] NewUnconfirmedTokensTransactionsR data, response status code and response headers
     def new_unconfirmed_tokens_transactions_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: CreateSubscriptionsForApi.new_unconfirmed_tokens_transactions ...'
@@ -682,10 +682,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_unconfirmed_tokens_transactions_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'new_unconfirmed_tokens_transactions_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'NewUnconfirmedTokensTransactionsResponse'
+      return_type = opts[:debug_return_type] || 'NewUnconfirmedTokensTransactionsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

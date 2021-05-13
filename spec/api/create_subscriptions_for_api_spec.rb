@@ -39,8 +39,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [MinedTransactionRequestBody] :mined_transaction_request_body 
-  # @return [MinedTransactionResponse]
+  # @option opts [MinedTransactionRB] :mined_transaction_rb 
+  # @return [MinedTransactionR]
   describe 'mined_transaction test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,8 +54,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewBlockRequestBody] :new_block_request_body 
-  # @return [NewBlockResponse]
+  # @option opts [NewBlockRB] :new_block_rb 
+  # @return [NewBlockR]
   describe 'new_block test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -69,8 +69,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewConfirmedCoinsTransactionsRequestBody] :new_confirmed_coins_transactions_request_body 
-  # @return [NewConfirmedCoinsTransactionsResponse]
+  # @option opts [NewConfirmedCoinsTransactionsRB] :new_confirmed_coins_transactions_rb 
+  # @return [NewConfirmedCoinsTransactionsR]
   describe 'new_confirmed_coins_transactions test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -84,8 +84,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody] :new_confirmed_coins_transactions_and_each_confirmation_request_body 
-  # @return [NewConfirmedCoinsTransactionsAndEachConfirmationResponse]
+  # @option opts [NewConfirmedCoinsTransactionsAndEachConfirmationRB] :new_confirmed_coins_transactions_and_each_confirmation_rb 
+  # @return [NewConfirmedCoinsTransactionsAndEachConfirmationR]
   describe 'new_confirmed_coins_transactions_and_each_confirmation test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -99,8 +99,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewConfirmedTokensTransactionsRequestBody] :new_confirmed_tokens_transactions_request_body 
-  # @return [NewConfirmedTokensTransactionsResponse]
+  # @option opts [NewConfirmedTokensTransactionsRB] :new_confirmed_tokens_transactions_rb 
+  # @return [NewConfirmedTokensTransactionsR]
   describe 'new_confirmed_tokens_transactions test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -114,8 +114,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewConfirmedTokensTransactionsAndEachConfirmationRequestBody] :new_confirmed_tokens_transactions_and_each_confirmation_request_body 
-  # @return [NewConfirmedTokensTransactionsAndEachConfirmationResponse]
+  # @option opts [NewConfirmedTokensTransactionsAndEachConfirmationRB] :new_confirmed_tokens_transactions_and_each_confirmation_rb 
+  # @return [NewConfirmedTokensTransactionsAndEachConfirmationR]
   describe 'new_confirmed_tokens_transactions_and_each_confirmation test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -129,8 +129,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewUnconfirmedCoinsTransactionsRequestBody] :new_unconfirmed_coins_transactions_request_body 
-  # @return [NewUnconfirmedCoinsTransactionsResponse]
+  # @option opts [NewUnconfirmedCoinsTransactionsRB] :new_unconfirmed_coins_transactions_rb 
+  # @return [NewUnconfirmedCoinsTransactionsR]
   describe 'new_unconfirmed_coins_transactions test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -144,8 +144,8 @@ describe 'CreateSubscriptionsForApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [NewUnconfirmedTokensTransactionsRequestBody] :new_unconfirmed_tokens_transactions_request_body 
-  # @return [NewUnconfirmedTokensTransactionsResponse]
+  # @option opts [NewUnconfirmedTokensTransactionsRB] :new_unconfirmed_tokens_transactions_rb 
+  # @return [NewUnconfirmedTokensTransactionsR]
   describe 'new_unconfirmed_tokens_transactions test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

@@ -9,7 +9,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## validate_address
 
-> <ValidateAddressResponse> validate_address(blockchain, network, opts)
+> <ValidateAddressR> validate_address(blockchain, network, opts)
 
 Validate Address
 
@@ -33,7 +33,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  validate_address_request_body: CryptoApis::ValidateAddressRequestBody.new({data: CryptoApis::ValidateAddressRequestBodyData.new({item: CryptoApis::ValidateAddressRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5'})})}) # ValidateAddressRequestBody | 
+  validate_address_rb: CryptoApis::ValidateAddressRB.new({data: CryptoApis::ValidateAddressRBData.new({item: CryptoApis::ValidateAddressRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5'})})}) # ValidateAddressRB | 
 }
 
 begin
@@ -49,7 +49,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ValidateAddressResponse>, Integer, Hash)> validate_address_with_http_info(blockchain, network, opts)
+> <Array(<ValidateAddressR>, Integer, Hash)> validate_address_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -57,7 +57,7 @@ begin
   data, status_code, headers = api_instance.validate_address_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ValidateAddressResponse>
+  p data # => <ValidateAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling ValidatingApi->validate_address_with_http_info: #{e}"
 end
@@ -70,11 +70,11 @@ end
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **validate_address_request_body** | [**ValidateAddressRequestBody**](ValidateAddressRequestBody.md) |  | [optional] |
+| **validate_address_rb** | [**ValidateAddressRB**](ValidateAddressRB.md) |  | [optional] |
 
 ### Return type
 
-[**ValidateAddressResponse**](ValidateAddressResponse.md)
+[**ValidateAddressR**](ValidateAddressR.md)
 
 ### Authorization
 

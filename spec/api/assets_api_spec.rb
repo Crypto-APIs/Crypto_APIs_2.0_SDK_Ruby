@@ -40,7 +40,7 @@ describe 'AssetsApi' do
   # @option opts [String] :asset_type Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListAssetsDetailsResponse]
+  # @return [ListAssetsDetailsR]
   describe 'list_assets_details test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

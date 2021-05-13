@@ -40,7 +40,7 @@ describe 'OmniLayerApi' do
   # @param transaction_id Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [GetOmniTransactionDetailsByTransactionIDTxidResponse]
+  # @return [GetOmniTransactionDetailsByTransactionIDTxidR]
   describe 'get_omni_transaction_details_by_transaction_id__txid test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -55,7 +55,7 @@ describe 'OmniLayerApi' do
   # @param transaction_id Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [GetUnconfirmedOmniTransactionByTransactionIDTxidResponse]
+  # @return [GetUnconfirmedOmniTransactionByTransactionIDTxidR]
   describe 'get_unconfirmed_omni_transaction_by_transaction_id__txid test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -70,7 +70,7 @@ describe 'OmniLayerApi' do
   # @param address Represents the public address, which is a compressed and shortened form of a public key.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [ListOmniTokensByAddressResponse]
+  # @return [ListOmniTokensByAddressR]
   describe 'list_omni_tokens_by_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -87,7 +87,7 @@ describe 'OmniLayerApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListOmniTransactionsByAddressResponse]
+  # @return [ListOmniTransactionsByAddressR]
   describe 'list_omni_transactions_by_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -104,7 +104,7 @@ describe 'OmniLayerApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListOmniTransactionsByBlockHashResponse]
+  # @return [ListOmniTransactionsByBlockHashR]
   describe 'list_omni_transactions_by_block_hash test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -121,7 +121,7 @@ describe 'OmniLayerApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListOmniTransactionsByBlockHeightResponse]
+  # @return [ListOmniTransactionsByBlockHeightR]
   describe 'list_omni_transactions_by_block_height test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -138,7 +138,7 @@ describe 'OmniLayerApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListUnconfirmedOmniTransactionsByAddressResponse]
+  # @return [ListUnconfirmedOmniTransactionsByAddressR]
   describe 'list_unconfirmed_omni_transactions_by_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -155,7 +155,7 @@ describe 'OmniLayerApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListUnconfirmedOmniTransactionsByPropertyIDResponse]
+  # @return [ListUnconfirmedOmniTransactionsByPropertyIDR]
   describe 'list_unconfirmed_omni_transactions_by_property_id test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

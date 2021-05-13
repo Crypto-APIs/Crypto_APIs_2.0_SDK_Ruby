@@ -9,7 +9,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## list_assets_details
 
-> <ListAssetsDetailsResponse> list_assets_details(opts)
+> <ListAssetsDetailsR> list_assets_details(opts)
 
 List Assets Details
 
@@ -49,7 +49,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListAssetsDetailsResponse>, Integer, Hash)> list_assets_details_with_http_info(opts)
+> <Array(<ListAssetsDetailsR>, Integer, Hash)> list_assets_details_with_http_info(opts)
 
 ```ruby
 begin
@@ -57,7 +57,7 @@ begin
   data, status_code, headers = api_instance.list_assets_details_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListAssetsDetailsResponse>
+  p data # => <ListAssetsDetailsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling AssetsApi->list_assets_details_with_http_info: #{e}"
 end
@@ -74,7 +74,7 @@ end
 
 ### Return type
 
-[**ListAssetsDetailsResponse**](ListAssetsDetailsResponse.md)
+[**ListAssetsDetailsR**](ListAssetsDetailsR.md)
 
 ### Authorization
 

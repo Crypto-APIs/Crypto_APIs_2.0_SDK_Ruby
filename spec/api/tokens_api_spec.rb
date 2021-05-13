@@ -42,7 +42,7 @@ describe 'TokensApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListTokensByAddressResponse]
+  # @return [ListTokensByAddressR]
   describe 'list_tokens_by_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -59,7 +59,7 @@ describe 'TokensApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListTokensTransfersByAddressResponse]
+  # @return [ListTokensTransfersByAddressR]
   describe 'list_tokens_transfers_by_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -76,7 +76,7 @@ describe 'TokensApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListTokensTransfersByTransactionHashResponse]
+  # @return [ListTokensTransfersByTransactionHashR]
   describe 'list_tokens_transfers_by_transaction_hash test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

@@ -25,8 +25,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [CreateAutomaticCoinsForwardingRequestBody] :create_automatic_coins_forwarding_request_body 
-    # @return [CreateAutomaticCoinsForwardingResponse]
+    # @option opts [CreateAutomaticCoinsForwardingRB] :create_automatic_coins_forwarding_rb 
+    # @return [CreateAutomaticCoinsForwardingR]
     def create_automatic_coins_forwarding(blockchain, network, opts = {})
       data, _status_code, _headers = create_automatic_coins_forwarding_with_http_info(blockchain, network, opts)
       data
@@ -38,8 +38,8 @@ module CryptoApis
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [CreateAutomaticCoinsForwardingRequestBody] :create_automatic_coins_forwarding_request_body 
-    # @return [Array<(CreateAutomaticCoinsForwardingResponse, Integer, Hash)>] CreateAutomaticCoinsForwardingResponse data, response status code and response headers
+    # @option opts [CreateAutomaticCoinsForwardingRB] :create_automatic_coins_forwarding_rb 
+    # @return [Array<(CreateAutomaticCoinsForwardingR, Integer, Hash)>] CreateAutomaticCoinsForwardingR data, response status code and response headers
     def create_automatic_coins_forwarding_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticCoinsForwardingApi.create_automatic_coins_forwarding ...'
@@ -80,10 +80,10 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'create_automatic_coins_forwarding_request_body'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'create_automatic_coins_forwarding_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'CreateAutomaticCoinsForwardingResponse'
+      return_type = opts[:debug_return_type] || 'CreateAutomaticCoinsForwardingR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -112,7 +112,7 @@ module CryptoApis
     # @param reference_id [String] Represents a unique ID used to reference the specific callback subscription.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [DeleteAutomaticCoinsForwardingResponse]
+    # @return [DeleteAutomaticCoinsForwardingR]
     def delete_automatic_coins_forwarding(blockchain, network, reference_id, opts = {})
       data, _status_code, _headers = delete_automatic_coins_forwarding_with_http_info(blockchain, network, reference_id, opts)
       data
@@ -125,7 +125,7 @@ module CryptoApis
     # @param reference_id [String] Represents a unique ID used to reference the specific callback subscription.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(DeleteAutomaticCoinsForwardingResponse, Integer, Hash)>] DeleteAutomaticCoinsForwardingResponse data, response status code and response headers
+    # @return [Array<(DeleteAutomaticCoinsForwardingR, Integer, Hash)>] DeleteAutomaticCoinsForwardingR data, response status code and response headers
     def delete_automatic_coins_forwarding_with_http_info(blockchain, network, reference_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticCoinsForwardingApi.delete_automatic_coins_forwarding ...'
@@ -171,7 +171,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'DeleteAutomaticCoinsForwardingResponse'
+      return_type = opts[:debug_return_type] || 'DeleteAutomaticCoinsForwardingR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
@@ -201,7 +201,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
-    # @return [ListCoinsForwardingAutomationsResponse]
+    # @return [ListCoinsForwardingAutomationsR]
     def list_coins_forwarding_automations(blockchain, network, opts = {})
       data, _status_code, _headers = list_coins_forwarding_automations_with_http_info(blockchain, network, opts)
       data
@@ -215,7 +215,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-    # @return [Array<(ListCoinsForwardingAutomationsResponse, Integer, Hash)>] ListCoinsForwardingAutomationsResponse data, response status code and response headers
+    # @return [Array<(ListCoinsForwardingAutomationsR, Integer, Hash)>] ListCoinsForwardingAutomationsR data, response status code and response headers
     def list_coins_forwarding_automations_with_http_info(blockchain, network, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutomaticCoinsForwardingApi.list_coins_forwarding_automations ...'
@@ -259,7 +259,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListCoinsForwardingAutomationsResponse'
+      return_type = opts[:debug_return_type] || 'ListCoinsForwardingAutomationsR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

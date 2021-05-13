@@ -26,7 +26,7 @@ module CryptoApis
     # @param contract_address [String] String identifier of the token
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [GetContractDetailsByAddressResponse]
+    # @return [GetContractDetailsByAddressR]
     def get_contract_details_by_address(blockchain, network, contract_address, opts = {})
       data, _status_code, _headers = get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts)
       data
@@ -39,7 +39,7 @@ module CryptoApis
     # @param contract_address [String] String identifier of the token
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(GetContractDetailsByAddressResponse, Integer, Hash)>] GetContractDetailsByAddressResponse data, response status code and response headers
+    # @return [Array<(GetContractDetailsByAddressR, Integer, Hash)>] GetContractDetailsByAddressR data, response status code and response headers
     def get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: DefaultApi.get_contract_details_by_address ...'
@@ -85,7 +85,7 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GetContractDetailsByAddressResponse'
+      return_type = opts[:debug_return_type] || 'GetContractDetailsByAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']

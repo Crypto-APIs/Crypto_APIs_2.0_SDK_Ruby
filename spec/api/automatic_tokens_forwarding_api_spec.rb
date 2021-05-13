@@ -39,8 +39,8 @@ describe 'AutomaticTokensForwardingApi' do
   # @param network Network
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [AddTokensToExistingFromAddressRequestBody] :add_tokens_to_existing_from_address_request_body 
-  # @return [AddTokensToExistingFromAddressResponse]
+  # @option opts [AddTokensToExistingFromAddressRB] :add_tokens_to_existing_from_address_rb 
+  # @return [AddTokensToExistingFromAddressR]
   describe 'add_tokens_to_existing_from_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,8 +54,8 @@ describe 'AutomaticTokensForwardingApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [CreateAutomaticTokensForwardingRequestBody] :create_automatic_tokens_forwarding_request_body 
-  # @return [CreateAutomaticTokensForwardingResponse]
+  # @option opts [CreateAutomaticTokensForwardingRB] :create_automatic_tokens_forwarding_rb 
+  # @return [CreateAutomaticTokensForwardingR]
   describe 'create_automatic_tokens_forwarding test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -70,7 +70,7 @@ describe 'AutomaticTokensForwardingApi' do
   # @param reference_id Represents a unique ID used to reference the specific callback subscription.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [DeleteAutomaticTokensForwardingResponse]
+  # @return [DeleteAutomaticTokensForwardingR]
   describe 'delete_automatic_tokens_forwarding test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -84,7 +84,7 @@ describe 'AutomaticTokensForwardingApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [GetFeeAddressDetailsResponse]
+  # @return [GetFeeAddressDetailsR]
   describe 'get_fee_address_details test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -100,7 +100,7 @@ describe 'AutomaticTokensForwardingApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
-  # @return [ListTokensForwardingAutomationsResponse]
+  # @return [ListTokensForwardingAutomationsR]
   describe 'list_tokens_forwarding_automations test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

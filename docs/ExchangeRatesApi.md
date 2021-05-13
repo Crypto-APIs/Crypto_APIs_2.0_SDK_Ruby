@@ -10,7 +10,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## get_exchange_rate_by_asset_symbols
 
-> <GetExchangeRateByAssetSymbolsResponse> get_exchange_rate_by_asset_symbols(from_asset_symbol, to_asset_symbol, opts)
+> <GetExchangeRateByAssetSymbolsR> get_exchange_rate_by_asset_symbols(from_asset_symbol, to_asset_symbol, opts)
 
 Get Exchange Rate By Asset Symbols
 
@@ -49,7 +49,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetExchangeRateByAssetSymbolsResponse>, Integer, Hash)> get_exchange_rate_by_asset_symbols_with_http_info(from_asset_symbol, to_asset_symbol, opts)
+> <Array(<GetExchangeRateByAssetSymbolsR>, Integer, Hash)> get_exchange_rate_by_asset_symbols_with_http_info(from_asset_symbol, to_asset_symbol, opts)
 
 ```ruby
 begin
@@ -57,7 +57,7 @@ begin
   data, status_code, headers = api_instance.get_exchange_rate_by_asset_symbols_with_http_info(from_asset_symbol, to_asset_symbol, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetExchangeRateByAssetSymbolsResponse>
+  p data # => <GetExchangeRateByAssetSymbolsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling ExchangeRatesApi->get_exchange_rate_by_asset_symbols_with_http_info: #{e}"
 end
@@ -73,7 +73,7 @@ end
 
 ### Return type
 
-[**GetExchangeRateByAssetSymbolsResponse**](GetExchangeRateByAssetSymbolsResponse.md)
+[**GetExchangeRateByAssetSymbolsR**](GetExchangeRateByAssetSymbolsR.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ end
 
 ## get_exchange_rate_by_assets_ids
 
-> <GetExchangeRateByAssetsIDsResponse> get_exchange_rate_by_assets_ids(from_asset_id, to_asset_id, opts)
+> <GetExchangeRateByAssetsIDsR> get_exchange_rate_by_assets_ids(from_asset_id, to_asset_id, opts)
 
 Get Exchange Rate By Assets IDs
 
@@ -126,7 +126,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetExchangeRateByAssetsIDsResponse>, Integer, Hash)> get_exchange_rate_by_assets_ids_with_http_info(from_asset_id, to_asset_id, opts)
+> <Array(<GetExchangeRateByAssetsIDsR>, Integer, Hash)> get_exchange_rate_by_assets_ids_with_http_info(from_asset_id, to_asset_id, opts)
 
 ```ruby
 begin
@@ -134,7 +134,7 @@ begin
   data, status_code, headers = api_instance.get_exchange_rate_by_assets_ids_with_http_info(from_asset_id, to_asset_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetExchangeRateByAssetsIDsResponse>
+  p data # => <GetExchangeRateByAssetsIDsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling ExchangeRatesApi->get_exchange_rate_by_assets_ids_with_http_info: #{e}"
 end
@@ -150,7 +150,7 @@ end
 
 ### Return type
 
-[**GetExchangeRateByAssetsIDsResponse**](GetExchangeRateByAssetsIDsResponse.md)
+[**GetExchangeRateByAssetsIDsR**](GetExchangeRateByAssetsIDsR.md)
 
 ### Authorization
 

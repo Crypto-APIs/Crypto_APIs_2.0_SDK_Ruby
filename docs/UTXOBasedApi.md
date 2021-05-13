@@ -11,7 +11,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## get_hd_wallet__x_pub_y_pub_z_pub_details
 
-> <GetHDWalletxPubYPubZPubDetailsResponse> get_hd_wallet__x_pub_y_pub_z_pub_details(blockchain, extended_public_key, network, opts)
+> <GetHDWalletXPubYPubZPubDetailsR> get_hd_wallet__x_pub_y_pub_z_pub_details(blockchain, extended_public_key, network, opts)
 
 Get HD Wallet (xPub, yPub, zPub) Details
 
@@ -52,7 +52,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetHDWalletxPubYPubZPubDetailsResponse>, Integer, Hash)> get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info(blockchain, extended_public_key, network, opts)
+> <Array(<GetHDWalletXPubYPubZPubDetailsR>, Integer, Hash)> get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info(blockchain, extended_public_key, network, opts)
 
 ```ruby
 begin
@@ -60,7 +60,7 @@ begin
   data, status_code, headers = api_instance.get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info(blockchain, extended_public_key, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetHDWalletxPubYPubZPubDetailsResponse>
+  p data # => <GetHDWalletXPubYPubZPubDetailsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info: #{e}"
 end
@@ -78,7 +78,7 @@ end
 
 ### Return type
 
-[**GetHDWalletxPubYPubZPubDetailsResponse**](GetHDWalletxPubYPubZPubDetailsResponse.md)
+[**GetHDWalletXPubYPubZPubDetailsR**](GetHDWalletXPubYPubZPubDetailsR.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ end
 
 ## list_hd_wallet__x_pub_y_pub_z_pub_transactions
 
-> <ListHDWalletxPubYPubZPubTransactionsResponse> list_hd_wallet__x_pub_y_pub_z_pub_transactions(blockchain, extended_public_key, network, opts)
+> <ListHDWalletXPubYPubZPubTransactionsR> list_hd_wallet__x_pub_y_pub_z_pub_transactions(blockchain, extended_public_key, network, opts)
 
 List HD Wallet (xPub, yPub, zPub) Transactions
 
@@ -135,7 +135,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListHDWalletxPubYPubZPubTransactionsResponse>, Integer, Hash)> list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info(blockchain, extended_public_key, network, opts)
+> <Array(<ListHDWalletXPubYPubZPubTransactionsR>, Integer, Hash)> list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info(blockchain, extended_public_key, network, opts)
 
 ```ruby
 begin
@@ -143,7 +143,7 @@ begin
   data, status_code, headers = api_instance.list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info(blockchain, extended_public_key, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListHDWalletxPubYPubZPubTransactionsResponse>
+  p data # => <ListHDWalletXPubYPubZPubTransactionsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info: #{e}"
 end
@@ -163,7 +163,7 @@ end
 
 ### Return type
 
-[**ListHDWalletxPubYPubZPubTransactionsResponse**](ListHDWalletxPubYPubZPubTransactionsResponse.md)
+[**ListHDWalletXPubYPubZPubTransactionsR**](ListHDWalletXPubYPubZPubTransactionsR.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ end
 
 ## sync_hd_wallet__x_pub_y_pub_z_pub
 
-> <SyncHDWalletxPubYPubZPubResponse> sync_hd_wallet__x_pub_y_pub_z_pub(blockchain, network, opts)
+> <SyncHDWalletXPubYPubZPubR> sync_hd_wallet__x_pub_y_pub_z_pub(blockchain, network, opts)
 
 Sync HD Wallet (xPub, yPub, zPub)
 
@@ -201,7 +201,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  sync_hd_walletx_pub_y_pub_z_pub_request_body: CryptoApis::SyncHDWalletxPubYPubZPubRequestBody.new({data: CryptoApis::SyncHDWalletxPubYPubZPubRequestBodyData.new({item: CryptoApis::SyncHDWalletxPubYPubZPubRequestBodyDataItem.new({extended_public_key: 'upub5Ei6bRNneqozk6smK7dvtXHC5PjUyEL4ynCfMKvjznLcXi9DQaikETzQjHvJC43XexMvQs64jxB1njMjCHpRZ4xQWAmv3ge9cVtjfsHmbvQ'})})}) # SyncHDWalletxPubYPubZPubRequestBody | 
+  sync_hd_wallet_x_pub_y_pub_z_pub_rb: CryptoApis::SyncHDWalletXPubYPubZPubRB.new({data: CryptoApis::SyncHDWalletXPubYPubZPubRBData.new({item: CryptoApis::SyncHDWalletXPubYPubZPubRBDataItem.new({extended_public_key: 'upub5Ei6bRNneqozk6smK7dvtXHC5PjUyEL4ynCfMKvjznLcXi9DQaikETzQjHvJC43XexMvQs64jxB1njMjCHpRZ4xQWAmv3ge9cVtjfsHmbvQ'})})}) # SyncHDWalletXPubYPubZPubRB | 
 }
 
 begin
@@ -217,7 +217,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SyncHDWalletxPubYPubZPubResponse>, Integer, Hash)> sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info(blockchain, network, opts)
+> <Array(<SyncHDWalletXPubYPubZPubR>, Integer, Hash)> sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -225,7 +225,7 @@ begin
   data, status_code, headers = api_instance.sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <SyncHDWalletxPubYPubZPubResponse>
+  p data # => <SyncHDWalletXPubYPubZPubR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info: #{e}"
 end
@@ -238,11 +238,11 @@ end
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **sync_hd_walletx_pub_y_pub_z_pub_request_body** | [**SyncHDWalletxPubYPubZPubRequestBody**](SyncHDWalletxPubYPubZPubRequestBody.md) |  | [optional] |
+| **sync_hd_wallet_x_pub_y_pub_z_pub_rb** | [**SyncHDWalletXPubYPubZPubRB**](SyncHDWalletXPubYPubZPubRB.md) |  | [optional] |
 
 ### Return type
 
-[**SyncHDWalletxPubYPubZPubResponse**](SyncHDWalletxPubYPubZPubResponse.md)
+[**SyncHDWalletXPubYPubZPubR**](SyncHDWalletXPubYPubZPubR.md)
 
 ### Authorization
 

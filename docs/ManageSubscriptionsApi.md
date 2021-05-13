@@ -10,7 +10,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## delete_blockchain_event_subscription
 
-> <DeleteBlockchainEventSubscriptionResponse> delete_blockchain_event_subscription(blockchain, network, reference_id, opts)
+> <DeleteBlockchainEventSubscriptionR> delete_blockchain_event_subscription(blockchain, network, reference_id, opts)
 
 Delete Blockchain Event Subscription
 
@@ -50,7 +50,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<DeleteBlockchainEventSubscriptionResponse>, Integer, Hash)> delete_blockchain_event_subscription_with_http_info(blockchain, network, reference_id, opts)
+> <Array(<DeleteBlockchainEventSubscriptionR>, Integer, Hash)> delete_blockchain_event_subscription_with_http_info(blockchain, network, reference_id, opts)
 
 ```ruby
 begin
@@ -58,7 +58,7 @@ begin
   data, status_code, headers = api_instance.delete_blockchain_event_subscription_with_http_info(blockchain, network, reference_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <DeleteBlockchainEventSubscriptionResponse>
+  p data # => <DeleteBlockchainEventSubscriptionR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling ManageSubscriptionsApi->delete_blockchain_event_subscription_with_http_info: #{e}"
 end
@@ -75,7 +75,7 @@ end
 
 ### Return type
 
-[**DeleteBlockchainEventSubscriptionResponse**](DeleteBlockchainEventSubscriptionResponse.md)
+[**DeleteBlockchainEventSubscriptionR**](DeleteBlockchainEventSubscriptionR.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ end
 
 ## list_blockchain_events_subscriptions
 
-> <ListBlockchainEventsSubscriptionsResponse> list_blockchain_events_subscriptions(blockchain, network, opts)
+> <ListBlockchainEventsSubscriptionsR> list_blockchain_events_subscriptions(blockchain, network, opts)
 
 List Blockchain Events Subscriptions
 
@@ -130,7 +130,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListBlockchainEventsSubscriptionsResponse>, Integer, Hash)> list_blockchain_events_subscriptions_with_http_info(blockchain, network, opts)
+> <Array(<ListBlockchainEventsSubscriptionsR>, Integer, Hash)> list_blockchain_events_subscriptions_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -138,7 +138,7 @@ begin
   data, status_code, headers = api_instance.list_blockchain_events_subscriptions_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListBlockchainEventsSubscriptionsResponse>
+  p data # => <ListBlockchainEventsSubscriptionsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling ManageSubscriptionsApi->list_blockchain_events_subscriptions_with_http_info: #{e}"
 end
@@ -156,7 +156,7 @@ end
 
 ### Return type
 
-[**ListBlockchainEventsSubscriptionsResponse**](ListBlockchainEventsSubscriptionsResponse.md)
+[**ListBlockchainEventsSubscriptionsR**](ListBlockchainEventsSubscriptionsR.md)
 
 ### Authorization
 

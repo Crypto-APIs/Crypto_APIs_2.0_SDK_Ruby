@@ -17,7 +17,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## get_address_details
 
-> <GetAddressDetailsResponse> get_address_details(blockchain, network, address, opts)
+> <GetAddressDetailsR> get_address_details(blockchain, network, address, opts)
 
 Get Address Details
 
@@ -57,7 +57,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetAddressDetailsResponse>, Integer, Hash)> get_address_details_with_http_info(blockchain, network, address, opts)
+> <Array(<GetAddressDetailsR>, Integer, Hash)> get_address_details_with_http_info(blockchain, network, address, opts)
 
 ```ruby
 begin
@@ -65,7 +65,7 @@ begin
   data, status_code, headers = api_instance.get_address_details_with_http_info(blockchain, network, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetAddressDetailsResponse>
+  p data # => <GetAddressDetailsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_address_details_with_http_info: #{e}"
 end
@@ -82,7 +82,7 @@ end
 
 ### Return type
 
-[**GetAddressDetailsResponse**](GetAddressDetailsResponse.md)
+[**GetAddressDetailsR**](GetAddressDetailsR.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ end
 
 ## get_block_details_by_block_hash
 
-> <GetBlockDetailsByBlockHashResponse> get_block_details_by_block_hash(blockchain, network, block_hash, opts)
+> <GetBlockDetailsByBlockHashR> get_block_details_by_block_hash(blockchain, network, block_hash, opts)
 
 Get Block Details By Block Hash
 
@@ -136,7 +136,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetBlockDetailsByBlockHashResponse>, Integer, Hash)> get_block_details_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
+> <Array(<GetBlockDetailsByBlockHashR>, Integer, Hash)> get_block_details_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
 
 ```ruby
 begin
@@ -144,7 +144,7 @@ begin
   data, status_code, headers = api_instance.get_block_details_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetBlockDetailsByBlockHashResponse>
+  p data # => <GetBlockDetailsByBlockHashR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_block_details_by_block_hash_with_http_info: #{e}"
 end
@@ -161,7 +161,7 @@ end
 
 ### Return type
 
-[**GetBlockDetailsByBlockHashResponse**](GetBlockDetailsByBlockHashResponse.md)
+[**GetBlockDetailsByBlockHashR**](GetBlockDetailsByBlockHashR.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ end
 
 ## get_block_details_by_block_height
 
-> <GetBlockDetailsByBlockHeightResponse> get_block_details_by_block_height(blockchain, network, height, opts)
+> <GetBlockDetailsByBlockHeightR> get_block_details_by_block_height(blockchain, network, height, opts)
 
 Get Block Details By Block Height
 
@@ -215,7 +215,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetBlockDetailsByBlockHeightResponse>, Integer, Hash)> get_block_details_by_block_height_with_http_info(blockchain, network, height, opts)
+> <Array(<GetBlockDetailsByBlockHeightR>, Integer, Hash)> get_block_details_by_block_height_with_http_info(blockchain, network, height, opts)
 
 ```ruby
 begin
@@ -223,7 +223,7 @@ begin
   data, status_code, headers = api_instance.get_block_details_by_block_height_with_http_info(blockchain, network, height, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetBlockDetailsByBlockHeightResponse>
+  p data # => <GetBlockDetailsByBlockHeightR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_block_details_by_block_height_with_http_info: #{e}"
 end
@@ -240,7 +240,7 @@ end
 
 ### Return type
 
-[**GetBlockDetailsByBlockHeightResponse**](GetBlockDetailsByBlockHeightResponse.md)
+[**GetBlockDetailsByBlockHeightR**](GetBlockDetailsByBlockHeightR.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ end
 
 ## get_fee_recommendations
 
-> <GetFeeRecommendationsResponse> get_fee_recommendations(blockchain, network, opts)
+> <GetFeeRecommendationsR> get_fee_recommendations(blockchain, network, opts)
 
 Get Fee Recommendations
 
@@ -293,7 +293,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetFeeRecommendationsResponse>, Integer, Hash)> get_fee_recommendations_with_http_info(blockchain, network, opts)
+> <Array(<GetFeeRecommendationsR>, Integer, Hash)> get_fee_recommendations_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -301,7 +301,7 @@ begin
   data, status_code, headers = api_instance.get_fee_recommendations_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetFeeRecommendationsResponse>
+  p data # => <GetFeeRecommendationsR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_fee_recommendations_with_http_info: #{e}"
 end
@@ -317,7 +317,7 @@ end
 
 ### Return type
 
-[**GetFeeRecommendationsResponse**](GetFeeRecommendationsResponse.md)
+[**GetFeeRecommendationsR**](GetFeeRecommendationsR.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ end
 
 ## get_latest_mined_block
 
-> <GetLatestMinedBlockResponse> get_latest_mined_block(blockchain, network, opts)
+> <GetLatestMinedBlockR> get_latest_mined_block(blockchain, network, opts)
 
 Get Latest Mined Block
 
@@ -370,7 +370,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetLatestMinedBlockResponse>, Integer, Hash)> get_latest_mined_block_with_http_info(blockchain, network, opts)
+> <Array(<GetLatestMinedBlockR>, Integer, Hash)> get_latest_mined_block_with_http_info(blockchain, network, opts)
 
 ```ruby
 begin
@@ -378,7 +378,7 @@ begin
   data, status_code, headers = api_instance.get_latest_mined_block_with_http_info(blockchain, network, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetLatestMinedBlockResponse>
+  p data # => <GetLatestMinedBlockR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_latest_mined_block_with_http_info: #{e}"
 end
@@ -394,7 +394,7 @@ end
 
 ### Return type
 
-[**GetLatestMinedBlockResponse**](GetLatestMinedBlockResponse.md)
+[**GetLatestMinedBlockR**](GetLatestMinedBlockR.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ end
 
 ## get_transaction_details_by_transaction_id
 
-> <GetTransactionDetailsByTransactionIDResponse> get_transaction_details_by_transaction_id(blockchain, network, transaction_id, opts)
+> <GetTransactionDetailsByTransactionIDR> get_transaction_details_by_transaction_id(blockchain, network, transaction_id, opts)
 
 Get Transaction Details By Transaction ID
 
@@ -448,7 +448,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetTransactionDetailsByTransactionIDResponse>, Integer, Hash)> get_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts)
+> <Array(<GetTransactionDetailsByTransactionIDR>, Integer, Hash)> get_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts)
 
 ```ruby
 begin
@@ -456,7 +456,7 @@ begin
   data, status_code, headers = api_instance.get_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetTransactionDetailsByTransactionIDResponse>
+  p data # => <GetTransactionDetailsByTransactionIDR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_transaction_details_by_transaction_id_with_http_info: #{e}"
 end
@@ -473,7 +473,7 @@ end
 
 ### Return type
 
-[**GetTransactionDetailsByTransactionIDResponse**](GetTransactionDetailsByTransactionIDResponse.md)
+[**GetTransactionDetailsByTransactionIDR**](GetTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ end
 
 ## list_transactions_by_address
 
-> <ListTransactionsByAddressResponse> list_transactions_by_address(blockchain, network, address, opts)
+> <ListTransactionsByAddressR> list_transactions_by_address(blockchain, network, address, opts)
 
 List Transactions By Address
 
@@ -529,7 +529,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTransactionsByAddressResponse>, Integer, Hash)> list_transactions_by_address_with_http_info(blockchain, network, address, opts)
+> <Array(<ListTransactionsByAddressR>, Integer, Hash)> list_transactions_by_address_with_http_info(blockchain, network, address, opts)
 
 ```ruby
 begin
@@ -537,7 +537,7 @@ begin
   data, status_code, headers = api_instance.list_transactions_by_address_with_http_info(blockchain, network, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTransactionsByAddressResponse>
+  p data # => <ListTransactionsByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_address_with_http_info: #{e}"
 end
@@ -556,7 +556,7 @@ end
 
 ### Return type
 
-[**ListTransactionsByAddressResponse**](ListTransactionsByAddressResponse.md)
+[**ListTransactionsByAddressR**](ListTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -570,7 +570,7 @@ end
 
 ## list_transactions_by_block_hash
 
-> <ListTransactionsByBlockHashResponse> list_transactions_by_block_hash(blockchain, network, block_hash, opts)
+> <ListTransactionsByBlockHashR> list_transactions_by_block_hash(blockchain, network, block_hash, opts)
 
 List Transactions by Block Hash
 
@@ -612,7 +612,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTransactionsByBlockHashResponse>, Integer, Hash)> list_transactions_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
+> <Array(<ListTransactionsByBlockHashR>, Integer, Hash)> list_transactions_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
 
 ```ruby
 begin
@@ -620,7 +620,7 @@ begin
   data, status_code, headers = api_instance.list_transactions_by_block_hash_with_http_info(blockchain, network, block_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTransactionsByBlockHashResponse>
+  p data # => <ListTransactionsByBlockHashR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_block_hash_with_http_info: #{e}"
 end
@@ -639,7 +639,7 @@ end
 
 ### Return type
 
-[**ListTransactionsByBlockHashResponse**](ListTransactionsByBlockHashResponse.md)
+[**ListTransactionsByBlockHashR**](ListTransactionsByBlockHashR.md)
 
 ### Authorization
 
@@ -653,7 +653,7 @@ end
 
 ## list_transactions_by_block_height
 
-> <ListTransactionsByBlockHeightResponse> list_transactions_by_block_height(blockchain, network, height, opts)
+> <ListTransactionsByBlockHeightR> list_transactions_by_block_height(blockchain, network, height, opts)
 
 List Transactions by Block Height
 
@@ -695,7 +695,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListTransactionsByBlockHeightResponse>, Integer, Hash)> list_transactions_by_block_height_with_http_info(blockchain, network, height, opts)
+> <Array(<ListTransactionsByBlockHeightR>, Integer, Hash)> list_transactions_by_block_height_with_http_info(blockchain, network, height, opts)
 
 ```ruby
 begin
@@ -703,7 +703,7 @@ begin
   data, status_code, headers = api_instance.list_transactions_by_block_height_with_http_info(blockchain, network, height, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListTransactionsByBlockHeightResponse>
+  p data # => <ListTransactionsByBlockHeightR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_block_height_with_http_info: #{e}"
 end
@@ -722,7 +722,7 @@ end
 
 ### Return type
 
-[**ListTransactionsByBlockHeightResponse**](ListTransactionsByBlockHeightResponse.md)
+[**ListTransactionsByBlockHeightR**](ListTransactionsByBlockHeightR.md)
 
 ### Authorization
 

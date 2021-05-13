@@ -39,8 +39,8 @@ describe 'ValidatingApi' do
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [ValidateAddressRequestBody] :validate_address_request_body 
-  # @return [ValidateAddressResponse]
+  # @option opts [ValidateAddressRB] :validate_address_rb 
+  # @return [ValidateAddressR]
   describe 'validate_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

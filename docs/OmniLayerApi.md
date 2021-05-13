@@ -16,7 +16,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 ## get_omni_transaction_details_by_transaction_id__txid
 
-> <GetOmniTransactionDetailsByTransactionIDTxidResponse> get_omni_transaction_details_by_transaction_id__txid(network, blockchain, transaction_id, opts)
+> <GetOmniTransactionDetailsByTransactionIDTxidR> get_omni_transaction_details_by_transaction_id__txid(network, blockchain, transaction_id, opts)
 
 Get Omni Transaction Details By Transaction ID (Txid)
 
@@ -56,7 +56,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetOmniTransactionDetailsByTransactionIDTxidResponse>, Integer, Hash)> get_omni_transaction_details_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
+> <Array(<GetOmniTransactionDetailsByTransactionIDTxidR>, Integer, Hash)> get_omni_transaction_details_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
 
 ```ruby
 begin
@@ -64,7 +64,7 @@ begin
   data, status_code, headers = api_instance.get_omni_transaction_details_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetOmniTransactionDetailsByTransactionIDTxidResponse>
+  p data # => <GetOmniTransactionDetailsByTransactionIDTxidR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->get_omni_transaction_details_by_transaction_id__txid_with_http_info: #{e}"
 end
@@ -81,7 +81,7 @@ end
 
 ### Return type
 
-[**GetOmniTransactionDetailsByTransactionIDTxidResponse**](GetOmniTransactionDetailsByTransactionIDTxidResponse.md)
+[**GetOmniTransactionDetailsByTransactionIDTxidR**](GetOmniTransactionDetailsByTransactionIDTxidR.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ end
 
 ## get_unconfirmed_omni_transaction_by_transaction_id__txid
 
-> <GetUnconfirmedOmniTransactionByTransactionIDTxidResponse> get_unconfirmed_omni_transaction_by_transaction_id__txid(network, blockchain, transaction_id, opts)
+> <GetUnconfirmedOmniTransactionByTransactionIDTxidR> get_unconfirmed_omni_transaction_by_transaction_id__txid(network, blockchain, transaction_id, opts)
 
 Get Unconfirmed Omni Transaction By Transaction ID (Txid)
 
@@ -135,7 +135,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetUnconfirmedOmniTransactionByTransactionIDTxidResponse>, Integer, Hash)> get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
+> <Array(<GetUnconfirmedOmniTransactionByTransactionIDTxidR>, Integer, Hash)> get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
 
 ```ruby
 begin
@@ -143,7 +143,7 @@ begin
   data, status_code, headers = api_instance.get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info(network, blockchain, transaction_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GetUnconfirmedOmniTransactionByTransactionIDTxidResponse>
+  p data # => <GetUnconfirmedOmniTransactionByTransactionIDTxidR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info: #{e}"
 end
@@ -160,7 +160,7 @@ end
 
 ### Return type
 
-[**GetUnconfirmedOmniTransactionByTransactionIDTxidResponse**](GetUnconfirmedOmniTransactionByTransactionIDTxidResponse.md)
+[**GetUnconfirmedOmniTransactionByTransactionIDTxidR**](GetUnconfirmedOmniTransactionByTransactionIDTxidR.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ end
 
 ## list_omni_tokens_by_address
 
-> <ListOmniTokensByAddressResponse> list_omni_tokens_by_address(network, blockchain, address, opts)
+> <ListOmniTokensByAddressR> list_omni_tokens_by_address(network, blockchain, address, opts)
 
 List Omni Tokens By Address
 
@@ -214,7 +214,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListOmniTokensByAddressResponse>, Integer, Hash)> list_omni_tokens_by_address_with_http_info(network, blockchain, address, opts)
+> <Array(<ListOmniTokensByAddressR>, Integer, Hash)> list_omni_tokens_by_address_with_http_info(network, blockchain, address, opts)
 
 ```ruby
 begin
@@ -222,7 +222,7 @@ begin
   data, status_code, headers = api_instance.list_omni_tokens_by_address_with_http_info(network, blockchain, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListOmniTokensByAddressResponse>
+  p data # => <ListOmniTokensByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_tokens_by_address_with_http_info: #{e}"
 end
@@ -239,7 +239,7 @@ end
 
 ### Return type
 
-[**ListOmniTokensByAddressResponse**](ListOmniTokensByAddressResponse.md)
+[**ListOmniTokensByAddressR**](ListOmniTokensByAddressR.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ end
 
 ## list_omni_transactions_by_address
 
-> <ListOmniTransactionsByAddressResponse> list_omni_transactions_by_address(network, blockchain, address, opts)
+> <ListOmniTransactionsByAddressR> list_omni_transactions_by_address(network, blockchain, address, opts)
 
 List Omni Transactions By Address
 
@@ -295,7 +295,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListOmniTransactionsByAddressResponse>, Integer, Hash)> list_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
+> <Array(<ListOmniTransactionsByAddressR>, Integer, Hash)> list_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
 
 ```ruby
 begin
@@ -303,7 +303,7 @@ begin
   data, status_code, headers = api_instance.list_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListOmniTransactionsByAddressResponse>
+  p data # => <ListOmniTransactionsByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_address_with_http_info: #{e}"
 end
@@ -322,7 +322,7 @@ end
 
 ### Return type
 
-[**ListOmniTransactionsByAddressResponse**](ListOmniTransactionsByAddressResponse.md)
+[**ListOmniTransactionsByAddressR**](ListOmniTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ end
 
 ## list_omni_transactions_by_block_hash
 
-> <ListOmniTransactionsByBlockHashResponse> list_omni_transactions_by_block_hash(network, blockchain, block_hash, opts)
+> <ListOmniTransactionsByBlockHashR> list_omni_transactions_by_block_hash(network, blockchain, block_hash, opts)
 
 List Omni Transactions By Block Hash
 
@@ -378,7 +378,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListOmniTransactionsByBlockHashResponse>, Integer, Hash)> list_omni_transactions_by_block_hash_with_http_info(network, blockchain, block_hash, opts)
+> <Array(<ListOmniTransactionsByBlockHashR>, Integer, Hash)> list_omni_transactions_by_block_hash_with_http_info(network, blockchain, block_hash, opts)
 
 ```ruby
 begin
@@ -386,7 +386,7 @@ begin
   data, status_code, headers = api_instance.list_omni_transactions_by_block_hash_with_http_info(network, blockchain, block_hash, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListOmniTransactionsByBlockHashResponse>
+  p data # => <ListOmniTransactionsByBlockHashR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_block_hash_with_http_info: #{e}"
 end
@@ -405,7 +405,7 @@ end
 
 ### Return type
 
-[**ListOmniTransactionsByBlockHashResponse**](ListOmniTransactionsByBlockHashResponse.md)
+[**ListOmniTransactionsByBlockHashR**](ListOmniTransactionsByBlockHashR.md)
 
 ### Authorization
 
@@ -419,7 +419,7 @@ end
 
 ## list_omni_transactions_by_block_height
 
-> <ListOmniTransactionsByBlockHeightResponse> list_omni_transactions_by_block_height(network, blockchain, block_height, opts)
+> <ListOmniTransactionsByBlockHeightR> list_omni_transactions_by_block_height(network, blockchain, block_height, opts)
 
 List Omni Transactions By Block Height
 
@@ -461,7 +461,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListOmniTransactionsByBlockHeightResponse>, Integer, Hash)> list_omni_transactions_by_block_height_with_http_info(network, blockchain, block_height, opts)
+> <Array(<ListOmniTransactionsByBlockHeightR>, Integer, Hash)> list_omni_transactions_by_block_height_with_http_info(network, blockchain, block_height, opts)
 
 ```ruby
 begin
@@ -469,7 +469,7 @@ begin
   data, status_code, headers = api_instance.list_omni_transactions_by_block_height_with_http_info(network, blockchain, block_height, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListOmniTransactionsByBlockHeightResponse>
+  p data # => <ListOmniTransactionsByBlockHeightR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_block_height_with_http_info: #{e}"
 end
@@ -488,7 +488,7 @@ end
 
 ### Return type
 
-[**ListOmniTransactionsByBlockHeightResponse**](ListOmniTransactionsByBlockHeightResponse.md)
+[**ListOmniTransactionsByBlockHeightR**](ListOmniTransactionsByBlockHeightR.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ end
 
 ## list_unconfirmed_omni_transactions_by_address
 
-> <ListUnconfirmedOmniTransactionsByAddressResponse> list_unconfirmed_omni_transactions_by_address(network, blockchain, address, opts)
+> <ListUnconfirmedOmniTransactionsByAddressR> list_unconfirmed_omni_transactions_by_address(network, blockchain, address, opts)
 
 List Unconfirmed Omni Transactions By Address
 
@@ -544,7 +544,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListUnconfirmedOmniTransactionsByAddressResponse>, Integer, Hash)> list_unconfirmed_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
+> <Array(<ListUnconfirmedOmniTransactionsByAddressR>, Integer, Hash)> list_unconfirmed_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
 
 ```ruby
 begin
@@ -552,7 +552,7 @@ begin
   data, status_code, headers = api_instance.list_unconfirmed_omni_transactions_by_address_with_http_info(network, blockchain, address, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListUnconfirmedOmniTransactionsByAddressResponse>
+  p data # => <ListUnconfirmedOmniTransactionsByAddressR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_unconfirmed_omni_transactions_by_address_with_http_info: #{e}"
 end
@@ -571,7 +571,7 @@ end
 
 ### Return type
 
-[**ListUnconfirmedOmniTransactionsByAddressResponse**](ListUnconfirmedOmniTransactionsByAddressResponse.md)
+[**ListUnconfirmedOmniTransactionsByAddressR**](ListUnconfirmedOmniTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -585,7 +585,7 @@ end
 
 ## list_unconfirmed_omni_transactions_by_property_id
 
-> <ListUnconfirmedOmniTransactionsByPropertyIDResponse> list_unconfirmed_omni_transactions_by_property_id(network, blockchain, property_id, opts)
+> <ListUnconfirmedOmniTransactionsByPropertyIDR> list_unconfirmed_omni_transactions_by_property_id(network, blockchain, property_id, opts)
 
 List Unconfirmed Omni Transactions By Property ID
 
@@ -627,7 +627,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListUnconfirmedOmniTransactionsByPropertyIDResponse>, Integer, Hash)> list_unconfirmed_omni_transactions_by_property_id_with_http_info(network, blockchain, property_id, opts)
+> <Array(<ListUnconfirmedOmniTransactionsByPropertyIDR>, Integer, Hash)> list_unconfirmed_omni_transactions_by_property_id_with_http_info(network, blockchain, property_id, opts)
 
 ```ruby
 begin
@@ -635,7 +635,7 @@ begin
   data, status_code, headers = api_instance.list_unconfirmed_omni_transactions_by_property_id_with_http_info(network, blockchain, property_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListUnconfirmedOmniTransactionsByPropertyIDResponse>
+  p data # => <ListUnconfirmedOmniTransactionsByPropertyIDR>
 rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_unconfirmed_omni_transactions_by_property_id_with_http_info: #{e}"
 end
@@ -654,7 +654,7 @@ end
 
 ### Return type
 
-[**ListUnconfirmedOmniTransactionsByPropertyIDResponse**](ListUnconfirmedOmniTransactionsByPropertyIDResponse.md)
+[**ListUnconfirmedOmniTransactionsByPropertyIDR**](ListUnconfirmedOmniTransactionsByPropertyIDR.md)
 
 ### Authorization
 
