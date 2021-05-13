@@ -1,4 +1,4 @@
-# OpenapiClient::TokensForwardingSuccessToken
+# CryptoApis::TokensForwardingSuccessToken
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::TokensForwardingSuccessToken.openapi_one_of
+CryptoApis::TokensForwardingSuccessToken.openapi_one_of
 # =>
 # [
 #   :'TokensForwardingSuccessEthereumerc20token',
@@ -27,12 +27,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::TokensForwardingSuccessToken.build(data)
+CryptoApis::TokensForwardingSuccessToken.build(data)
 # => #<TokensForwardingSuccessEthereumerc20token:0x00007fdd4aab02a0>
 
-OpenapiClient::TokensForwardingSuccessToken.build(data_that_doesnt_match)
+CryptoApis::TokensForwardingSuccessToken.build(data_that_doesnt_match)
 # => nil
 ```
 

@@ -1,4 +1,4 @@
-# OpenapiClient::BlockchainDataTransactionNotFoundError
+# CryptoApis::BlockchainDataTransactionNotFoundError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BlockchainDataTransactionNotFoundError.new(
+instance = CryptoApis::BlockchainDataTransactionNotFoundError.new(
   code: blockchain_data_transaction_not_found,
   message: The specified transaction has not been found on the specific blockchain.,
   details: null

@@ -1,4 +1,4 @@
-# OpenapiClient::AssetsApi
+# CryptoApis::AssetsApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -19,16 +19,16 @@ This endpoint will return details on a requested asset. The asset could be a cry
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AssetsApi.new
+api_instance = CryptoApis::AssetsApi.new
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   asset_type: 'fiat', # String | Defines the type of the supported asset. This could be either \"crypto\" or \"fiat\".
@@ -40,7 +40,7 @@ begin
   # List Assets Details
   result = api_instance.list_assets_details(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AssetsApi->list_assets_details: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListAssetsDetailsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AssetsApi->list_assets_details_with_http_info: #{e}"
 end
 ```

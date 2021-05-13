@@ -1,4 +1,4 @@
-# OpenapiClient::RequestLimitReachedError
+# CryptoApis::RequestLimitReachedError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::RequestLimitReachedError.new(
+instance = CryptoApis::RequestLimitReachedError.new(
   code: request_limit_reached,
   message: The request limit has been reached. There can be maximum {requests} requests per {seconds} second(s) made. Please contact our team via email if you need more or upgrade your plan.,
   details: null

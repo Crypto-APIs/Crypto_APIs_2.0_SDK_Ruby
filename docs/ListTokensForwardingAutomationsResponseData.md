@@ -1,4 +1,4 @@
-# OpenapiClient::ListTokensForwardingAutomationsResponseData
+# CryptoApis::ListTokensForwardingAutomationsResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTokensForwardingAutomationsResponseData.new(
+instance = CryptoApis::ListTokensForwardingAutomationsResponseData.new(
   offset: 0,
   limit: 50,
   total: 100,

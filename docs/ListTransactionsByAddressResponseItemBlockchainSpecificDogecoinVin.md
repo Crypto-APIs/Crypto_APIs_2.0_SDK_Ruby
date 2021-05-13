@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinVin
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinVin
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinVin.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinVin.new(
   addresses: null,
   coinbase: 0301352f0101,
   script_sig: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::ListTokensTransfersByTransactionHashResponseData
+# CryptoApis::ListTokensTransfersByTransactionHashResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTokensTransfersByTransactionHashResponseData.new(
+instance = CryptoApis::ListTokensTransfersByTransactionHashResponseData.new(
   offset: 0,
   limit: 50,
   total: 100,

@@ -1,4 +1,4 @@
-# OpenapiClient::CoinsForwardingSuccessData
+# CryptoApis::CoinsForwardingSuccessData
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CoinsForwardingSuccessData.new(
+instance = CryptoApis::CoinsForwardingSuccessData.new(
   product: Blockchain Automations,
   event: COINS_FORWARDING_SUCCESS,
   item: null

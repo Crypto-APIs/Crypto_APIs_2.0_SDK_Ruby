@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidBlockchainError
+# CryptoApis::InvalidBlockchainError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidBlockchainError.new(
+instance = CryptoApis::InvalidBlockchainError.new(
   code: invalid_blockchain,
   message: The provided blockchain is invalid. The blockchain **must** be a supported one. For the full list of supported blockchains please see our Documentation.,
   details: null

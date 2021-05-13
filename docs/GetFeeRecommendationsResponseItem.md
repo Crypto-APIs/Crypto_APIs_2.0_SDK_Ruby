@@ -1,4 +1,4 @@
-# OpenapiClient::GetFeeRecommendationsResponseItem
+# CryptoApis::GetFeeRecommendationsResponseItem
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetFeeRecommendationsResponseItem.new(
+instance = CryptoApis::GetFeeRecommendationsResponseItem.new(
   unit: BTC,
   fast: 0.00000476,
   slow: 0.00000049,

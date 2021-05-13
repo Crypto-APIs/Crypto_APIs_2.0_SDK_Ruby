@@ -1,4 +1,4 @@
-# OpenapiClient::MinedTransactionRequestBodyDataItem
+# CryptoApis::MinedTransactionRequestBodyDataItem
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::MinedTransactionRequestBodyDataItem.new(
+instance = CryptoApis::MinedTransactionRequestBodyDataItem.new(
   allow_duplicates: false,
   callback_secret_key: yourSecretKey,
   callback_url: http://example.com,

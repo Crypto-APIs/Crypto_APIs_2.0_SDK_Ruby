@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseItemRecipients
+# CryptoApis::ListTransactionsByBlockHashResponseItemRecipients
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseItemRecipients.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseItemRecipients.new(
   address: mvuvhgT5DUjpQ2LBWQhujiFGDZiDHGdHa7,
   amount: 0.00476076
 )

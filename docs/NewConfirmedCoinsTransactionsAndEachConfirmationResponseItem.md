@@ -1,4 +1,4 @@
-# OpenapiClient::NewConfirmedCoinsTransactionsAndEachConfirmationResponseItem
+# CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationResponseItem
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::NewConfirmedCoinsTransactionsAndEachConfirmationResponseItem.new(
+instance = CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationResponseItem.new(
   address: 15XyNC88pujwuuur8DCsXBCfEhJJMzHayU,
   callback_secret_key: yourSecretKey,
   callback_url: https://example.com,

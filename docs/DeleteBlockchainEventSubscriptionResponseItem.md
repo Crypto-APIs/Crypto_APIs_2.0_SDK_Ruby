@@ -1,4 +1,4 @@
-# OpenapiClient::DeleteBlockchainEventSubscriptionResponseItem
+# CryptoApis::DeleteBlockchainEventSubscriptionResponseItem
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::DeleteBlockchainEventSubscriptionResponseItem.new(
+instance = CryptoApis::DeleteBlockchainEventSubscriptionResponseItem.new(
   callback_secret_key: yourSecretKey,
   callback_url: http://example.com,
   created_timestamp: 1611238648,

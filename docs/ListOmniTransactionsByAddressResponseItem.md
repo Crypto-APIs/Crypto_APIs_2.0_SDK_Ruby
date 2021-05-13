@@ -1,4 +1,4 @@
-# OpenapiClient::ListOmniTransactionsByAddressResponseItem
+# CryptoApis::ListOmniTransactionsByAddressResponseItem
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListOmniTransactionsByAddressResponseItem.new(
+instance = CryptoApis::ListOmniTransactionsByAddressResponseItem.new(
   amount: 0.01788569,
   divisible: true,
   mined_in_block_hash: 00000000eafa33741ed67c863930df2af8c236568c4437c395543b5684f4f1ca,

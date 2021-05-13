@@ -1,4 +1,4 @@
-# OpenapiClient::ListAssetsDetailsResponseItemSpecificDataCryptoTypeData
+# CryptoApis::ListAssetsDetailsResponseItemSpecificDataCryptoTypeData
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListAssetsDetailsResponseItemSpecificDataCryptoTypeData.new(
+instance = CryptoApis::ListAssetsDetailsResponseItemSpecificDataCryptoTypeData.new(
   _1_hour_price_change_in_percentage: -2.52,
   _1_week_price_change_in_percentage: -10.18,
   _24_hours_price_change_in_percentage: -3.37,

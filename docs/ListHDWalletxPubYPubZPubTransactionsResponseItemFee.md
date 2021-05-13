@@ -1,4 +1,4 @@
-# OpenapiClient::ListHDWalletxPubYPubZPubTransactionsResponseItemFee
+# CryptoApis::ListHDWalletxPubYPubZPubTransactionsResponseItemFee
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListHDWalletxPubYPubZPubTransactionsResponseItemFee.new(
+instance = CryptoApis::ListHDWalletxPubYPubZPubTransactionsResponseItemFee.new(
   amount: 0.00016932
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::GetExchangeRateByAssetsIDsResponseItem
+# CryptoApis::GetExchangeRateByAssetsIDsResponseItem
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetExchangeRateByAssetsIDsResponseItem.new(
+instance = CryptoApis::GetExchangeRateByAssetsIDsResponseItem.new(
   calculation_timestamp: 1618577849,
   from_asset_id: 5b1ea92e584bf50020130612,
   from_asset_symbol: BTC,

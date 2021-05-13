@@ -1,4 +1,4 @@
-# OpenapiClient::ListCoinsForwardingAutomationsResponseItem
+# CryptoApis::ListCoinsForwardingAutomationsResponseItem
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListCoinsForwardingAutomationsResponseItem.new(
+instance = CryptoApis::ListCoinsForwardingAutomationsResponseItem.new(
   callback_url: https://example.com,
   confirmations_count_trigger: 3,
   created_timestamp: 1611238648,

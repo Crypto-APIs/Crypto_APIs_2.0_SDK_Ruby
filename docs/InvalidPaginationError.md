@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidPaginationError
+# CryptoApis::InvalidPaginationError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidPaginationError.new(
+instance = CryptoApis::InvalidPaginationError.new(
   code: invalid_pagination,
   message: The pagination attributes that have been used are invalid. Please check the Documentation to see details on pagination.,
   details: null

@@ -1,4 +1,4 @@
-# OpenapiClient::ListOmniTokensByAddressResponseData
+# CryptoApis::ListOmniTokensByAddressResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListOmniTokensByAddressResponseData.new(
+instance = CryptoApis::ListOmniTokensByAddressResponseData.new(
   offset: 0,
   limit: 50,
   total: 100,

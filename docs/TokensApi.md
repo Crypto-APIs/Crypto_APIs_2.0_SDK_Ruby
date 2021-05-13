@@ -1,4 +1,4 @@
-# OpenapiClient::TokensApi
+# CryptoApis::TokensApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -21,16 +21,16 @@ Through this endpoint customers can obtain token data by providing an attribute 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TokensApi.new
+api_instance = CryptoApis::TokensApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"ropsten\", \"rinkeby\" are test networks.
 address = '0x033ef6db9fbd0ee60e2931906b987fe0280471a0' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -44,7 +44,7 @@ begin
   # List Tokens By Address
   result = api_instance.list_tokens_by_address(blockchain, network, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_by_address: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTokensByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_by_address_with_http_info: #{e}"
 end
 ```
@@ -104,16 +104,16 @@ Through this endpoint customers can obtain a list with token transfers by the `a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TokensApi.new
+api_instance = CryptoApis::TokensApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"ropsten\", \"rinkeby\" are test networks.
 address = '0x033ef6db9fbd0ee60e2931906b987fe0280471a0' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -127,7 +127,7 @@ begin
   # List Tokens Transfers By Address
   result = api_instance.list_tokens_transfers_by_address(blockchain, network, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_transfers_by_address: #{e}"
 end
 ```
@@ -145,7 +145,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTokensTransfersByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_transfers_by_address_with_http_info: #{e}"
 end
 ```
@@ -187,16 +187,16 @@ Through this endpoint customers can obtain a list with token transfers by the `t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::TokensApi.new
+api_instance = CryptoApis::TokensApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"ropsten\", \"rinkeby\" are test networks.
 transaction_hash = '0xbe38781783b1b9d480219255ff98e20335a39e13979a66112efa33f05fde0a33' # String | Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -210,7 +210,7 @@ begin
   # List Tokens Transfers By Transaction Hash
   result = api_instance.list_tokens_transfers_by_transaction_hash(blockchain, network, transaction_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_transfers_by_transaction_hash: #{e}"
 end
 ```
@@ -228,7 +228,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTokensTransfersByTransactionHashResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling TokensApi->list_tokens_transfers_by_transaction_hash_with_http_info: #{e}"
 end
 ```

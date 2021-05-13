@@ -1,4 +1,4 @@
-# OpenapiClient::LimitGreaterThanAllowedError
+# CryptoApis::LimitGreaterThanAllowedError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::LimitGreaterThanAllowedError.new(
+instance = CryptoApis::LimitGreaterThanAllowedError.new(
   code: limit_greater_than_allowed,
   message: You have reached the allowed limit. The maximum number of items for this endpoint is {limit}, please use the specific pagination attributes to get the items in portions.,
   details: null

@@ -1,4 +1,4 @@
-# OpenapiClient::GetLatestMinedXRPRippleBlockResponseItem
+# CryptoApis::GetLatestMinedXRPRippleBlockResponseItem
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetLatestMinedXRPRippleBlockResponseItem.new(
+instance = CryptoApis::GetLatestMinedXRPRippleBlockResponseItem.new(
   block_hash: f9b304b7933ef298142fdd58ad2dec414a5267dcbbd8a4fe9fc2c0a5f9dde050,
   block_height: 15975748,
   previous_block_hash: de9f9e5b68a1322a16f0d1217cf31765e9101764e6e2f3c7aa058b8c641da37a,

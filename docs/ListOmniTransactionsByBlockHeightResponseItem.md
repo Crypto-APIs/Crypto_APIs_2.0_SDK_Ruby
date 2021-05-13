@@ -1,4 +1,4 @@
-# OpenapiClient::ListOmniTransactionsByBlockHeightResponseItem
+# CryptoApis::ListOmniTransactionsByBlockHeightResponseItem
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListOmniTransactionsByBlockHeightResponseItem.new(
+instance = CryptoApis::ListOmniTransactionsByBlockHeightResponseItem.new(
   amount: 798.483157,
   divisible: true,
   mined_in_block_hash: 000000000000000000061610767eaa0394cab83c70ff1c09dd6b2a2bdad5d1d1,

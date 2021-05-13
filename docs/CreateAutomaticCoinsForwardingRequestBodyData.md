@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomaticCoinsForwardingRequestBodyData
+# CryptoApis::CreateAutomaticCoinsForwardingRequestBodyData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CreateAutomaticCoinsForwardingRequestBodyData.new(
+instance = CryptoApis::CreateAutomaticCoinsForwardingRequestBodyData.new(
   item: null
 )
 ```

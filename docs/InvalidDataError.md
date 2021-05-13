@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidDataError
+# CryptoApis::InvalidDataError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidDataError.new(
+instance = CryptoApis::InvalidDataError.new(
   code: invalid_data,
   message: The data provided seems to be invalid.,
   details: null

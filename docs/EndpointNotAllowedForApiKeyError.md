@@ -1,4 +1,4 @@
-# OpenapiClient::EndpointNotAllowedForApiKeyError
+# CryptoApis::EndpointNotAllowedForApiKeyError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::EndpointNotAllowedForApiKeyError.new(
+instance = CryptoApis::EndpointNotAllowedForApiKeyError.new(
   code: endpoint_not_allowed_for_api_key,
   message: This endpoint is not available for your API key.,
   details: null

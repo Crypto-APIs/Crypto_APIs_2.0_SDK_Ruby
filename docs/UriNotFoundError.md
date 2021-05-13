@@ -1,4 +1,4 @@
-# OpenapiClient::UriNotFoundError
+# CryptoApis::UriNotFoundError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::UriNotFoundError.new(
+instance = CryptoApis::UriNotFoundError.new(
   code: uri_not_found,
   message: The specified URI has not been found. Check the URI and try again.,
   details: null

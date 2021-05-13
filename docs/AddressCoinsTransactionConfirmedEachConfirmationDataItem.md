@@ -1,4 +1,4 @@
-# OpenapiClient::AddressCoinsTransactionConfirmedEachConfirmationDataItem
+# CryptoApis::AddressCoinsTransactionConfirmedEachConfirmationDataItem
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddressCoinsTransactionConfirmedEachConfirmationDataItem.new(
+instance = CryptoApis::AddressCoinsTransactionConfirmedEachConfirmationDataItem.new(
   blockchain: bitcoin,
   network: testnet,
   address: 15282N4BYEwYh3j1dTgJu64Ey5qWn9Po9F,

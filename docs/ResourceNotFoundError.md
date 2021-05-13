@@ -1,4 +1,4 @@
-# OpenapiClient::ResourceNotFoundError
+# CryptoApis::ResourceNotFoundError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ResourceNotFoundError.new(
+instance = CryptoApis::ResourceNotFoundError.new(
   code: resource_not_found,
   message: Resource not found,
   details: null

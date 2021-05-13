@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidRequestBodyStructureError
+# CryptoApis::InvalidRequestBodyStructureError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidRequestBodyStructureError.new(
+instance = CryptoApis::InvalidRequestBodyStructureError.new(
   code: invalid_request_body_structure,
   message: Your request body for POST requests must have a structure of { data: { item: [...properties] } },
   details: null

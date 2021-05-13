@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseItemBlockchainSpecificDogecoinScriptPubKey
+# CryptoApis::ListTransactionsByBlockHashResponseItemBlockchainSpecificDogecoinScriptPubKey
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseItemBlockchainSpecificDogecoinScriptPubKey.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseItemBlockchainSpecificDogecoinScriptPubKey.new(
   addresses: null,
   asm: OP_DUP OP_HASH160 430158211605af1f0fa26d90405199621bdae5cd OP_EQUALVERIFY OP_CHECKSIG,
   hex: 76a914430158211605af1f0fa26d90405199621bdae5cd88ac,

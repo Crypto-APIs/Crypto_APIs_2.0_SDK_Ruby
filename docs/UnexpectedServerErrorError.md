@@ -1,4 +1,4 @@
-# OpenapiClient::UnexpectedServerErrorError
+# CryptoApis::UnexpectedServerErrorError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::UnexpectedServerErrorError.new(
+instance = CryptoApis::UnexpectedServerErrorError.new(
   code: unexpected_server_error,
   message: An unexpected server error has occurred, we are working to fix this. Please try again later and in case it occurs again please report it to our team via email.,
   details: null

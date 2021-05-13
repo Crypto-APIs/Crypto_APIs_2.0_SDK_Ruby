@@ -1,4 +1,4 @@
-# OpenapiClient::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific
+# CryptoApis::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific.openapi_one_of
+CryptoApis::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific.openapi_one_of
 # =>
 # [
 #   :'GetBlockDetailsByBlockHashResponseItemBlockchainSpecificBitcoin',
@@ -31,12 +31,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific.build(data)
+CryptoApis::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific.build(data)
 # => #<GetBlockDetailsByBlockHashResponseItemBlockchainSpecificBitcoin:0x00007fdd4aab02a0>
 
-OpenapiClient::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific.build(data_that_doesnt_match)
+CryptoApis::GetBlockDetailsByBlockHashResponseItemBlockchainSpecific.build(data_that_doesnt_match)
 # => nil
 ```
 

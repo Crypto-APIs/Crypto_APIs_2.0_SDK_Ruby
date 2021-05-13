@@ -1,4 +1,4 @@
-# OpenapiClient::SyncHDWalletxPubYPubZPubRequestBody
+# CryptoApis::SyncHDWalletxPubYPubZPubRequestBody
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::SyncHDWalletxPubYPubZPubRequestBody.new(
+instance = CryptoApis::SyncHDWalletxPubYPubZPubRequestBody.new(
   context: null,
   data: null
 )

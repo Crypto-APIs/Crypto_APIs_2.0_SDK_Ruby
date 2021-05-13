@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidNetworkError
+# CryptoApis::InvalidNetworkError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidNetworkError.new(
+instance = CryptoApis::InvalidNetworkError.new(
   code: invalid_network,
   message: The provided network is invalid. The network **must** be a supported one. For the full list of supported networks please see our Documentation.,
   details: null

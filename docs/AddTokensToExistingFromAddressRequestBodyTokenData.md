@@ -1,4 +1,4 @@
-# OpenapiClient::AddTokensToExistingFromAddressRequestBodyTokenData
+# CryptoApis::AddTokensToExistingFromAddressRequestBodyTokenData
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::AddTokensToExistingFromAddressRequestBodyTokenData.openapi_one_of
+CryptoApis::AddTokensToExistingFromAddressRequestBodyTokenData.openapi_one_of
 # =>
 # [
 #   :'AddTokensToExistingFromAddressRequestBodyTokenDataBitcoinOmniToken',
@@ -26,12 +26,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::AddTokensToExistingFromAddressRequestBodyTokenData.build(data)
+CryptoApis::AddTokensToExistingFromAddressRequestBodyTokenData.build(data)
 # => #<AddTokensToExistingFromAddressRequestBodyTokenDataBitcoinOmniToken:0x00007fdd4aab02a0>
 
-OpenapiClient::AddTokensToExistingFromAddressRequestBodyTokenData.build(data_that_doesnt_match)
+CryptoApis::AddTokensToExistingFromAddressRequestBodyTokenData.build(data_that_doesnt_match)
 # => nil
 ```
 

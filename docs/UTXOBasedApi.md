@@ -1,4 +1,4 @@
-# OpenapiClient::UTXOBasedApi
+# CryptoApis::UTXOBasedApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -21,16 +21,16 @@ HD wallet details is useful endpoint to get the most important data about HD wal
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UTXOBasedApi.new
+api_instance = CryptoApis::UTXOBasedApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 extended_public_key = 'upub5Ei6bRNneqozk6smK7dvtXHC5PjUyEL4ynCfMKvjznLcXi9DQaikETzQjHvJC43XexMvQs64jxB1njMjCHpRZ4xQWAmv3ge9cVtjfsHmbvQ' # String | Defines the account extended publicly known key which is used to derive all child public keys.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
@@ -43,7 +43,7 @@ begin
   # Get HD Wallet (xPub, yPub, zPub) Details
   result = api_instance.get_hd_wallet__x_pub_y_pub_z_pub_details(blockchain, extended_public_key, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->get_hd_wallet__x_pub_y_pub_z_pub_details: #{e}"
 end
 ```
@@ -61,7 +61,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetHDWalletxPubYPubZPubDetailsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->get_hd_wallet__x_pub_y_pub_z_pub_details_with_http_info: #{e}"
 end
 ```
@@ -102,16 +102,16 @@ This endpoint will list HD Wallet transactions.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UTXOBasedApi.new
+api_instance = CryptoApis::UTXOBasedApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain.
 extended_public_key = 'tpubD9GMECjiZHCaF9NHSMAeMbQMXnM7CviEJZsYBuztVwsUjPHWjxewWAUXWV2UExaAtoEvQGXDBmVWo6ZHGtj6TsH6Pop7D9DskQwGHA1gu1w' # String | Defines the master public key (xPub) of the account.
 network = 'mainnet' # String | Represents the specific network.
@@ -126,7 +126,7 @@ begin
   # List HD Wallet (xPub, yPub, zPub) Transactions
   result = api_instance.list_hd_wallet__x_pub_y_pub_z_pub_transactions(blockchain, extended_public_key, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->list_hd_wallet__x_pub_y_pub_z_pub_transactions: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListHDWalletxPubYPubZPubTransactionsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->list_hd_wallet__x_pub_y_pub_z_pub_transactions_with_http_info: #{e}"
 end
 ```
@@ -187,28 +187,28 @@ HD wallets usually have a lot of addresses and transactions, getting the data on
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UTXOBasedApi.new
+api_instance = CryptoApis::UTXOBasedApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  sync_hd_walletx_pub_y_pub_z_pub_request_body: OpenapiClient::SyncHDWalletxPubYPubZPubRequestBody.new({data: OpenapiClient::SyncHDWalletxPubYPubZPubRequestBodyData.new({item: OpenapiClient::SyncHDWalletxPubYPubZPubRequestBodyDataItem.new({extended_public_key: 'upub5Ei6bRNneqozk6smK7dvtXHC5PjUyEL4ynCfMKvjznLcXi9DQaikETzQjHvJC43XexMvQs64jxB1njMjCHpRZ4xQWAmv3ge9cVtjfsHmbvQ'})})}) # SyncHDWalletxPubYPubZPubRequestBody | 
+  sync_hd_walletx_pub_y_pub_z_pub_request_body: CryptoApis::SyncHDWalletxPubYPubZPubRequestBody.new({data: CryptoApis::SyncHDWalletxPubYPubZPubRequestBodyData.new({item: CryptoApis::SyncHDWalletxPubYPubZPubRequestBodyDataItem.new({extended_public_key: 'upub5Ei6bRNneqozk6smK7dvtXHC5PjUyEL4ynCfMKvjznLcXi9DQaikETzQjHvJC43XexMvQs64jxB1njMjCHpRZ4xQWAmv3ge9cVtjfsHmbvQ'})})}) # SyncHDWalletxPubYPubZPubRequestBody | 
 }
 
 begin
   # Sync HD Wallet (xPub, yPub, zPub)
   result = api_instance.sync_hd_wallet__x_pub_y_pub_z_pub(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->sync_hd_wallet__x_pub_y_pub_z_pub: #{e}"
 end
 ```
@@ -226,7 +226,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SyncHDWalletxPubYPubZPubResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UTXOBasedApi->sync_hd_wallet__x_pub_y_pub_z_pub_with_http_info: #{e}"
 end
 ```

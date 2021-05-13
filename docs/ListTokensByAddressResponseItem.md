@@ -1,4 +1,4 @@
-# OpenapiClient::ListTokensByAddressResponseItem
+# CryptoApis::ListTokensByAddressResponseItem
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTokensByAddressResponseItem.new(
+instance = CryptoApis::ListTokensByAddressResponseItem.new(
   confirmed_balance: 287090.926632,
   contract_address: 0xdac17f958d2ee523a2206206994597c13d831ec7,
   name: Tether USD,

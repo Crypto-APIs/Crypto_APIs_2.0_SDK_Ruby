@@ -1,4 +1,4 @@
-# OpenapiClient::GetExchangeRateByAssetsIDsResponseData
+# CryptoApis::GetExchangeRateByAssetsIDsResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetExchangeRateByAssetsIDsResponseData.new(
+instance = CryptoApis::GetExchangeRateByAssetsIDsResponseData.new(
   item: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::ListUnconfirmedOmniTransactionsByAddressResponseItem
+# CryptoApis::ListUnconfirmedOmniTransactionsByAddressResponseItem
 
 ## Properties
 
@@ -21,9 +21,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListUnconfirmedOmniTransactionsByAddressResponseItem.new(
+instance = CryptoApis::ListUnconfirmedOmniTransactionsByAddressResponseItem.new(
   amount: 14.915785,
   divisible: true,
   mined: true,

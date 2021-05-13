@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashScriptSig
+# CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashScriptSig
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashScriptSig.new(
+instance = CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashScriptSig.new(
   asm: OP_DUP OP_HASH160 1fd680935cd42f95702493d44c8de964a42656b5 OP_EQUALVERIFY OP_CHECKSIG,
   hex: null,
   type: scripthash

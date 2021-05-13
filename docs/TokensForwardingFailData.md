@@ -1,4 +1,4 @@
-# OpenapiClient::TokensForwardingFailData
+# CryptoApis::TokensForwardingFailData
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::TokensForwardingFailData.new(
+instance = CryptoApis::TokensForwardingFailData.new(
   product: Blockchain Automations,
   event: TOKENS_FORWARDING_FAIL,
   item: null

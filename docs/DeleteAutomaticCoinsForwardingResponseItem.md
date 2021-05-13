@@ -1,4 +1,4 @@
-# OpenapiClient::DeleteAutomaticCoinsForwardingResponseItem
+# CryptoApis::DeleteAutomaticCoinsForwardingResponseItem
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::DeleteAutomaticCoinsForwardingResponseItem.new(
+instance = CryptoApis::DeleteAutomaticCoinsForwardingResponseItem.new(
   callback_url: https://example.com,
   confirmations_count: 3,
   created_timestamp: 1611238648,

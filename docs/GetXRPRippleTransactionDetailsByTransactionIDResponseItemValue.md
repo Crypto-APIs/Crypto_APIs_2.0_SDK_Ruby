@@ -1,4 +1,4 @@
-# OpenapiClient::GetXRPRippleTransactionDetailsByTransactionIDResponseItemValue
+# CryptoApis::GetXRPRippleTransactionDetailsByTransactionIDResponseItemValue
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetXRPRippleTransactionDetailsByTransactionIDResponseItemValue.new(
+instance = CryptoApis::GetXRPRippleTransactionDetailsByTransactionIDResponseItemValue.new(
   amount: 3.0254,
   unit: XRP
 )

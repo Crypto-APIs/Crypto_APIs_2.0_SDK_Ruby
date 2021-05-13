@@ -1,4 +1,4 @@
-# OpenapiClient::ValidatingApi
+# CryptoApis::ValidatingApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -19,28 +19,28 @@ This endpoint checks user public addresses whether they are valid or not.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ValidatingApi.new
+api_instance = CryptoApis::ValidatingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  validate_address_request_body: OpenapiClient::ValidateAddressRequestBody.new({data: OpenapiClient::ValidateAddressRequestBodyData.new({item: OpenapiClient::ValidateAddressRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5'})})}) # ValidateAddressRequestBody | 
+  validate_address_request_body: CryptoApis::ValidateAddressRequestBody.new({data: CryptoApis::ValidateAddressRequestBodyData.new({item: CryptoApis::ValidateAddressRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5'})})}) # ValidateAddressRequestBody | 
 }
 
 begin
   # Validate Address
   result = api_instance.validate_address(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ValidatingApi->validate_address: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ValidateAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ValidatingApi->validate_address_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::TransactionMinedDataItem
+# CryptoApis::TransactionMinedDataItem
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::TransactionMinedDataItem.new(
+instance = CryptoApis::TransactionMinedDataItem.new(
   blockchain: bitcoin,
   network: testnet,
   transaction_id: e6439461e5bf8920e75740896d4b47730b844837295e8c3f2dbf441542aebcb6,

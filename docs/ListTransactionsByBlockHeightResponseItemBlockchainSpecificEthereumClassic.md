@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificEthereumClassic
+# CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificEthereumClassic
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificEthereumClassic.new(
+instance = CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificEthereumClassic.new(
   contract: null,
   gas_limit: 21000,
   gas_price: null,

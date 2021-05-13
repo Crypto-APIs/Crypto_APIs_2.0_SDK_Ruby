@@ -1,4 +1,4 @@
-# OpenapiClient::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificEthereumGasPrice
+# CryptoApis::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificEthereumGasPrice
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificEthereumGasPrice.new(
+instance = CryptoApis::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificEthereumGasPrice.new(
   amount: 2994782927,
   unit: WEI
 )

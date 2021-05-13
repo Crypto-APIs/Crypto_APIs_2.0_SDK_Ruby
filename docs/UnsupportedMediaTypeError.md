@@ -1,4 +1,4 @@
-# OpenapiClient::UnsupportedMediaTypeError
+# CryptoApis::UnsupportedMediaTypeError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::UnsupportedMediaTypeError.new(
+instance = CryptoApis::UnsupportedMediaTypeError.new(
   code: unsupported_media_type,
   message: The selected Media Type is unavailable. The Content-Type header should be &#39;application/json&#39;.,
   details: null

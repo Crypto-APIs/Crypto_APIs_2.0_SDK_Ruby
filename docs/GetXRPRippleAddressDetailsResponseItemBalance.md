@@ -1,4 +1,4 @@
-# OpenapiClient::GetXRPRippleAddressDetailsResponseItemBalance
+# CryptoApis::GetXRPRippleAddressDetailsResponseItemBalance
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetXRPRippleAddressDetailsResponseItemBalance.new(
+instance = CryptoApis::GetXRPRippleAddressDetailsResponseItemBalance.new(
   amount: 22.0000,
   unit: XRP
 )

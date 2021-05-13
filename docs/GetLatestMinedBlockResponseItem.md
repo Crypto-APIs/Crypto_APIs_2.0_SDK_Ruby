@@ -1,4 +1,4 @@
-# OpenapiClient::GetLatestMinedBlockResponseItem
+# CryptoApis::GetLatestMinedBlockResponseItem
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetLatestMinedBlockResponseItem.new(
+instance = CryptoApis::GetLatestMinedBlockResponseItem.new(
   hash: 00000000000000000002ad6f9c74faf503bb055c54e0d0746ef34f888f95890f,
   height: 673852,
   previous_block_hash: 00000000000000000008953625613e60b56194ea31f07aad43c7505fbddce77f,

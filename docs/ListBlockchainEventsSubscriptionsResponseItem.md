@@ -1,4 +1,4 @@
-# OpenapiClient::ListBlockchainEventsSubscriptionsResponseItem
+# CryptoApis::ListBlockchainEventsSubscriptionsResponseItem
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListBlockchainEventsSubscriptionsResponseItem.new(
+instance = CryptoApis::ListBlockchainEventsSubscriptionsResponseItem.new(
   address: tb1qtm44m6xmuasy4sc7nl7thvuxcerau2dfvkkgsc,
   callback_secret_key: yourSecretKey,
   callback_url: https://example.com,

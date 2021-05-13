@@ -1,4 +1,4 @@
-# OpenapiClient::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificBitcoinCashVout
+# CryptoApis::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificBitcoinCashVout
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificBitcoinCashVout.new(
+instance = CryptoApis::GetTransactionDetailsByTransactionIDResponseItemBlockchainSpecificBitcoinCashVout.new(
   is_spent: false,
   script_pub_key: null,
   value: 0.000122

@@ -1,4 +1,4 @@
-# OpenapiClient::UnifiedEndpointsApi
+# CryptoApis::UnifiedEndpointsApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -27,16 +27,16 @@ Through this endpoint the customer can receive basic information about a given a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 address = 'mzYijhgmzZrmuB7wBDazRKirnChKyow4M3' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -48,7 +48,7 @@ begin
   # Get Address Details
   result = api_instance.get_address_details(blockchain, network, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_address_details: #{e}"
 end
 ```
@@ -66,7 +66,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAddressDetailsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_address_details_with_http_info: #{e}"
 end
 ```
@@ -106,16 +106,16 @@ Through this endpoint customers can obtain basic information about a given mined
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 block_hash = '0000000006b3f483bec16b8a85c632bdd30a14a202c83a9148002c9ee441dd0c' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -127,7 +127,7 @@ begin
   # Get Block Details By Block Hash
   result = api_instance.get_block_details_by_block_hash(blockchain, network, block_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_block_details_by_block_hash: #{e}"
 end
 ```
@@ -145,7 +145,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBlockDetailsByBlockHashResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_block_details_by_block_hash_with_http_info: #{e}"
 end
 ```
@@ -185,16 +185,16 @@ Through this endpoint customers can obtain basic information about a given mined
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 height = 673852 # Integer | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
@@ -206,7 +206,7 @@ begin
   # Get Block Details By Block Height
   result = api_instance.get_block_details_by_block_height(blockchain, network, height, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_block_details_by_block_height: #{e}"
 end
 ```
@@ -224,7 +224,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetBlockDetailsByBlockHeightResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_block_details_by_block_height_with_http_info: #{e}"
 end
 ```
@@ -264,16 +264,16 @@ Through this endpoint customers can obtain fee recommendations. Our fees recomme
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
@@ -284,7 +284,7 @@ begin
   # Get Fee Recommendations
   result = api_instance.get_fee_recommendations(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_fee_recommendations: #{e}"
 end
 ```
@@ -302,7 +302,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetFeeRecommendationsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_fee_recommendations_with_http_info: #{e}"
 end
 ```
@@ -341,16 +341,16 @@ Through this endpoint customers can fetch the last mined block in a specific blo
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
@@ -361,7 +361,7 @@ begin
   # Get Latest Mined Block
   result = api_instance.get_latest_mined_block(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_latest_mined_block: #{e}"
 end
 ```
@@ -379,7 +379,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetLatestMinedBlockResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_latest_mined_block_with_http_info: #{e}"
 end
 ```
@@ -418,16 +418,16 @@ Through this endpoint customers can obtain details about a transaction by the tr
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 transaction_id = '4b66461bf88b61e1e4326356534c135129defb504c7acb2fd6c92697d79eb250' # String | Represents the unique identifier of a transaction, i.e. it could be `transactionId` in UTXO-based protocols like Bitcoin, and transaction `hash` in Ethereum blockchain.
@@ -439,7 +439,7 @@ begin
   # Get Transaction Details By Transaction ID
   result = api_instance.get_transaction_details_by_transaction_id(blockchain, network, transaction_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_transaction_details_by_transaction_id: #{e}"
 end
 ```
@@ -457,7 +457,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTransactionDetailsByTransactionIDResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->get_transaction_details_by_transaction_id_with_http_info: #{e}"
 end
 ```
@@ -497,16 +497,16 @@ This endpoint will list transactions by an attribute `address`. The transactions
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 address = 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -520,7 +520,7 @@ begin
   # List Transactions By Address
   result = api_instance.list_transactions_by_address(blockchain, network, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_address: #{e}"
 end
 ```
@@ -538,7 +538,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTransactionsByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_address_with_http_info: #{e}"
 end
 ```
@@ -580,16 +580,16 @@ This endpoint will list transactions by an attribute `transactionHash`. The tran
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'testnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 block_hash = '00000000000000127080d8bcf84f4ad830a71ea0aadce3632579b6b2f26cd94b' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -603,7 +603,7 @@ begin
   # List Transactions by Block Hash
   result = api_instance.list_transactions_by_block_hash(blockchain, network, block_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_block_hash: #{e}"
 end
 ```
@@ -621,7 +621,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTransactionsByBlockHashResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_block_hash_with_http_info: #{e}"
 end
 ```
@@ -663,16 +663,16 @@ This endpoint will list transactions by an attribute `blockHeight`. The transact
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::UnifiedEndpointsApi.new
+api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 height = 673852 # Integer | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
@@ -686,7 +686,7 @@ begin
   # List Transactions by Block Height
   result = api_instance.list_transactions_by_block_height(blockchain, network, height, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_block_height: #{e}"
 end
 ```
@@ -704,7 +704,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTransactionsByBlockHeightResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling UnifiedEndpointsApi->list_transactions_by_block_height_with_http_info: #{e}"
 end
 ```

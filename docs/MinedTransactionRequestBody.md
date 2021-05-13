@@ -1,4 +1,4 @@
-# OpenapiClient::MinedTransactionRequestBody
+# CryptoApis::MinedTransactionRequestBody
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::MinedTransactionRequestBody.new(
+instance = CryptoApis::MinedTransactionRequestBody.new(
   context: null,
   data: null
 )

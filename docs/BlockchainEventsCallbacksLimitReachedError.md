@@ -1,4 +1,4 @@
-# OpenapiClient::BlockchainEventsCallbacksLimitReachedError
+# CryptoApis::BlockchainEventsCallbacksLimitReachedError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BlockchainEventsCallbacksLimitReachedError.new(
+instance = CryptoApis::BlockchainEventsCallbacksLimitReachedError.new(
   code: blockchain_events_callbacks_limit_reached,
   message: You have reached the maximum number of active Blockchain Events subscriptions which is {callbacks_limit} now. Please upgrade your plan to be get higher number of active subscriptions.,
   details: null

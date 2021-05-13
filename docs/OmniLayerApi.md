@@ -1,4 +1,4 @@
-# OpenapiClient::OmniLayerApi
+# CryptoApis::OmniLayerApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -26,16 +26,16 @@ Through this endpoint customers can obtain details about an Omni transaction by 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 transaction_id = 'd237ff4a681617b767bf22c4e1e8f5115b95c8c168d6cf53bbdec68529f91ecb' # String | Represents the unique identifier of a transaction, i.e. it could be `transactionId` in UTXO-based protocols like Bitcoin, and transaction `hash` in Ethereum blockchain.
@@ -47,7 +47,7 @@ begin
   # Get Omni Transaction Details By Transaction ID (Txid)
   result = api_instance.get_omni_transaction_details_by_transaction_id__txid(network, blockchain, transaction_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->get_omni_transaction_details_by_transaction_id__txid: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOmniTransactionDetailsByTransactionIDTxidResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->get_omni_transaction_details_by_transaction_id__txid_with_http_info: #{e}"
 end
 ```
@@ -105,16 +105,16 @@ Through this endpoint customers can obtain information on unconfirmed Omni trans
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 transaction_id = '92f17d3d16a1baf7de570a86179cc263cb9866c66778feec2dce111430f41c08' # String | Represents the unique identifier of a transaction, i.e. it could be `transactionId` in UTXO-based protocols like Bitcoin, and transaction `hash` in Ethereum blockchain.
@@ -126,7 +126,7 @@ begin
   # Get Unconfirmed Omni Transaction By Transaction ID (Txid)
   result = api_instance.get_unconfirmed_omni_transaction_by_transaction_id__txid(network, blockchain, transaction_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->get_unconfirmed_omni_transaction_by_transaction_id__txid: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUnconfirmedOmniTransactionByTransactionIDTxidResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->get_unconfirmed_omni_transaction_by_transaction_id__txid_with_http_info: #{e}"
 end
 ```
@@ -184,16 +184,16 @@ Through this endpoint the customer can receive basic information about a given O
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 address = 'mi7iSsKcvyFYNsiYdDZqJmH75RmoHomwmo' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -205,7 +205,7 @@ begin
   # List Omni Tokens By Address
   result = api_instance.list_omni_tokens_by_address(network, blockchain, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_tokens_by_address: #{e}"
 end
 ```
@@ -223,7 +223,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOmniTokensByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_tokens_by_address_with_http_info: #{e}"
 end
 ```
@@ -263,16 +263,16 @@ This endpoint will list Omni transactions by an attribute `address`. The transac
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 address = 'mi7iSsKcvyFYNsiYdDZqJmH75RmoHomwmo' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -286,7 +286,7 @@ begin
   # List Omni Transactions By Address
   result = api_instance.list_omni_transactions_by_address(network, blockchain, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_address: #{e}"
 end
 ```
@@ -304,7 +304,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOmniTransactionsByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_address_with_http_info: #{e}"
 end
 ```
@@ -346,16 +346,16 @@ This endpoint will list Omni transactions by an attribute `transactionHash`. The
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 block_hash = '000000000000001f50c9d33d122562daa7fc9582df0b415e626216c37d015818' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -369,7 +369,7 @@ begin
   # List Omni Transactions By Block Hash
   result = api_instance.list_omni_transactions_by_block_hash(network, blockchain, block_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_block_hash: #{e}"
 end
 ```
@@ -387,7 +387,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOmniTransactionsByBlockHashResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_block_hash_with_http_info: #{e}"
 end
 ```
@@ -429,16 +429,16 @@ This endpoint will list Omni transactions by an attribute `blockHeight`. The tra
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 block_height = '1941222' # String | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
@@ -452,7 +452,7 @@ begin
   # List Omni Transactions By Block Height
   result = api_instance.list_omni_transactions_by_block_height(network, blockchain, block_height, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_block_height: #{e}"
 end
 ```
@@ -470,7 +470,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListOmniTransactionsByBlockHeightResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_omni_transactions_by_block_height_with_http_info: #{e}"
 end
 ```
@@ -512,16 +512,16 @@ This endpoint will list unconfirmed Omni transactions by an attribute `address`.
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 address = 'mi7iSsKcvyFYNsiYdDZqJmH75RmoHomwmo' # String | Represents the public address, which is a compressed and shortened form of a public key.
@@ -535,7 +535,7 @@ begin
   # List Unconfirmed Omni Transactions By Address
   result = api_instance.list_unconfirmed_omni_transactions_by_address(network, blockchain, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_unconfirmed_omni_transactions_by_address: #{e}"
 end
 ```
@@ -553,7 +553,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListUnconfirmedOmniTransactionsByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_unconfirmed_omni_transactions_by_address_with_http_info: #{e}"
 end
 ```
@@ -595,16 +595,16 @@ This endpoint will list unconfirmed Omni transactions by an attribute `propertyI
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::OmniLayerApi.new
+api_instance = CryptoApis::OmniLayerApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 property_id = '2' # String | Represents the identifier of the tokens to send.
@@ -618,7 +618,7 @@ begin
   # List Unconfirmed Omni Transactions By Property ID
   result = api_instance.list_unconfirmed_omni_transactions_by_property_id(network, blockchain, property_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_unconfirmed_omni_transactions_by_property_id: #{e}"
 end
 ```
@@ -636,7 +636,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListUnconfirmedOmniTransactionsByPropertyIDResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling OmniLayerApi->list_unconfirmed_omni_transactions_by_property_id_with_http_info: #{e}"
 end
 ```

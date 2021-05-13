@@ -1,4 +1,4 @@
-# OpenapiClient::CouldNotCalculateRateForPairError
+# CryptoApis::CouldNotCalculateRateForPairError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CouldNotCalculateRateForPairError.new(
+instance = CryptoApis::CouldNotCalculateRateForPairError.new(
   code: could_not_calculate_rate_for_pair,
   message: Rate could not be calculated due to not enough pair trades data.,
   details: null

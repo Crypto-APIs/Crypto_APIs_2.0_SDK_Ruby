@@ -1,4 +1,4 @@
-# OpenapiClient::XpubNotSyncedError
+# CryptoApis::XpubNotSyncedError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::XpubNotSyncedError.new(
+instance = CryptoApis::XpubNotSyncedError.new(
   code: xpub_not_synced,
   message: This xPub is not yet synced, please first use endpoint “Sync HD (xPub, yPub, zPub) wallet” to synchronize it.,
   details: null

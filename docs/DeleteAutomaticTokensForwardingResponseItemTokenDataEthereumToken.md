@@ -1,4 +1,4 @@
-# OpenapiClient::DeleteAutomaticTokensForwardingResponseItemTokenDataEthereumToken
+# CryptoApis::DeleteAutomaticTokensForwardingResponseItemTokenDataEthereumToken
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::DeleteAutomaticTokensForwardingResponseItemTokenDataEthereumToken.new(
+instance = CryptoApis::DeleteAutomaticTokensForwardingResponseItemTokenDataEthereumToken.new(
   contract_address: 0xdac17f958d2ee523a2206206994597c13d831ec7
 )
 ```

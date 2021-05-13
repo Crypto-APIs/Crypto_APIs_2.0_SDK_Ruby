@@ -1,4 +1,4 @@
-# OpenapiClient::TransactionMinedDataItemMinedInBlock
+# CryptoApis::TransactionMinedDataItemMinedInBlock
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::TransactionMinedDataItemMinedInBlock.new(
+instance = CryptoApis::TransactionMinedDataItemMinedInBlock.new(
   height: 667900,
   hash: e9da0c8ce1861050c20f40fb660df4d13399f50b882e85bcd98126eb1173cc50,
   timestamp: 1610355613

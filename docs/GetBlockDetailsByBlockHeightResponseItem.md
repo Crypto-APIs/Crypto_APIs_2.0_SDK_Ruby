@@ -1,4 +1,4 @@
-# OpenapiClient::GetBlockDetailsByBlockHeightResponseItem
+# CryptoApis::GetBlockDetailsByBlockHeightResponseItem
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetBlockDetailsByBlockHeightResponseItem.new(
+instance = CryptoApis::GetBlockDetailsByBlockHeightResponseItem.new(
   hash: 000000000000000cf507214c4f86a5048449230bc5c5dbbed59aa74421553f26,
   height: 1939743,
   next_block_hash: 000000000000000e2f2e4fab8eaaa6bb39632a79a825d34169d451a86959fe04,

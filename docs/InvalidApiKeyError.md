@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidApiKeyError
+# CryptoApis::InvalidApiKeyError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidApiKeyError.new(
+instance = CryptoApis::InvalidApiKeyError.new(
   code: invalid_api_key,
   message: The provided API key is invalid. Please, generate a new one from your Dashboard.,
   details: null

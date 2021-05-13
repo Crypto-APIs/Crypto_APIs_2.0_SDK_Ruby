@@ -1,4 +1,4 @@
-# OpenapiClient::ListXRPRippleTransactionsByBlockHashResponseItemSenders
+# CryptoApis::ListXRPRippleTransactionsByBlockHashResponseItemSenders
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListXRPRippleTransactionsByBlockHashResponseItemSenders.new(
+instance = CryptoApis::ListXRPRippleTransactionsByBlockHashResponseItemSenders.new(
   address: rPmPErQe4g9725pcNxJpuvKkdqTESTQ6Tu,
   amount: 0.0001
 )

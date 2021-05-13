@@ -1,4 +1,4 @@
-# OpenapiClient::GetOmniTransactionDetailsByTransactionIDTxidResponseItem
+# CryptoApis::GetOmniTransactionDetailsByTransactionIDTxidResponseItem
 
 ## Properties
 
@@ -22,9 +22,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetOmniTransactionDetailsByTransactionIDTxidResponseItem.new(
+instance = CryptoApis::GetOmniTransactionDetailsByTransactionIDTxidResponseItem.new(
   amount: 14.915785,
   divisible: true,
   mined_in_block_hash: 0000000049696aca62d2ea7db9e71aa4f1116ede1eb55f9932e758cc586eb8b6,

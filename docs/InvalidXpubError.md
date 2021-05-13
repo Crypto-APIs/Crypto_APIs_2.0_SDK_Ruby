@@ -1,4 +1,4 @@
-# OpenapiClient::InvalidXpubError
+# CryptoApis::InvalidXpubError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InvalidXpubError.new(
+instance = CryptoApis::InvalidXpubError.new(
   code: invalid_xpub,
   message: The provided Xpub is invalid.,
   details: null

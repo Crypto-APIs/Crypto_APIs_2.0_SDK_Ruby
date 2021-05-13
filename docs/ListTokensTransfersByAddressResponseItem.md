@@ -1,4 +1,4 @@
-# OpenapiClient::ListTokensTransfersByAddressResponseItem
+# CryptoApis::ListTokensTransfersByAddressResponseItem
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTokensTransfersByAddressResponseItem.new(
+instance = CryptoApis::ListTokensTransfersByAddressResponseItem.new(
   contract_address: 0xdac17f958d2ee523a2206206994597c13d831ec7,
   mined_in_block_height: 12046964,
   recipient_address: 0xdac17f958d2ee523a2206206994597c13d831ec7,

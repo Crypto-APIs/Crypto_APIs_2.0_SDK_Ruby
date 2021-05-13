@@ -1,4 +1,4 @@
-# OpenapiClient::CoinsForwardingSuccessDataItem
+# CryptoApis::CoinsForwardingSuccessDataItem
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CoinsForwardingSuccessDataItem.new(
+instance = CryptoApis::CoinsForwardingSuccessDataItem.new(
   blockchain: bitcoin,
   network: testnet,
   from_address: mmd963W1fECjLyaDCHcioSCZYHkRwjkGST,

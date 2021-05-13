@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificLitecoinScriptSig
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificLitecoinScriptSig
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificLitecoinScriptSig.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificLitecoinScriptSig.new(
   asm: 0 eab6ff0ee1158241737dfa5c78449dc06cf021cc,
   hex: 0014eab6ff0ee1158241737dfa5c78449dc06cf021cc,
   type: scripthash

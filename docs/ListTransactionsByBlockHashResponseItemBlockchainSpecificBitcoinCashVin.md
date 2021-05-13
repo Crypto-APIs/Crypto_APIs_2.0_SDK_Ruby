@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseItemBlockchainSpecificBitcoinCashVin
+# CryptoApis::ListTransactionsByBlockHashResponseItemBlockchainSpecificBitcoinCashVin
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseItemBlockchainSpecificBitcoinCashVin.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseItemBlockchainSpecificBitcoinCashVin.new(
   addresses: null,
   coinbase: 0399991d20706f6f6c2e656e6a6f79626f646965732e636f6d20393963336532346234374747a53e994c4a000001,
   script_sig: null,

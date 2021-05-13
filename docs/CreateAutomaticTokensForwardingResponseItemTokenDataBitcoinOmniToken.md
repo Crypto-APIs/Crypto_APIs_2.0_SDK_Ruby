@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomaticTokensForwardingResponseItemTokenDataBitcoinOmniToken
+# CryptoApis::CreateAutomaticTokensForwardingResponseItemTokenDataBitcoinOmniToken
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CreateAutomaticTokensForwardingResponseItemTokenDataBitcoinOmniToken.new(
+instance = CryptoApis::CreateAutomaticTokensForwardingResponseItemTokenDataBitcoinOmniToken.new(
   property_id: 31
 )
 ```

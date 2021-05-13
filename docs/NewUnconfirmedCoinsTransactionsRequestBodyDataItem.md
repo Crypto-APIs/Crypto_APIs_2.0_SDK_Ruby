@@ -1,4 +1,4 @@
-# OpenapiClient::NewUnconfirmedCoinsTransactionsRequestBodyDataItem
+# CryptoApis::NewUnconfirmedCoinsTransactionsRequestBodyDataItem
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::NewUnconfirmedCoinsTransactionsRequestBodyDataItem.new(
+instance = CryptoApis::NewUnconfirmedCoinsTransactionsRequestBodyDataItem.new(
   address: mho4jHBcrNCncKt38trJahXakuaBnS7LK5,
   allow_duplicates: true,
   callback_secret_key: yourSecretKey,

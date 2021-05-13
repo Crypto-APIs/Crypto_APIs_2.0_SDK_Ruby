@@ -1,4 +1,4 @@
-# OpenapiClient::NewConfirmedTokensTransactionsAndEachConfirmationResponseData
+# CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::NewConfirmedTokensTransactionsAndEachConfirmationResponseData.new(
+instance = CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationResponseData.new(
   item: null
 )
 ```

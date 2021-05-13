@@ -1,4 +1,4 @@
-# OpenapiClient::AddTokensToExistingFromAddressResponseItemTokenDataBitcoinOmniToken
+# CryptoApis::AddTokensToExistingFromAddressResponseItemTokenDataBitcoinOmniToken
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddTokensToExistingFromAddressResponseItemTokenDataBitcoinOmniToken.new(
+instance = CryptoApis::AddTokensToExistingFromAddressResponseItemTokenDataBitcoinOmniToken.new(
   property_id: 2
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashVout
+# CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashVout
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashVout.new(
+instance = CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificDashVout.new(
   is_spent: false,
   script_pub_key: null,
   value: Represents the sent/received amount.

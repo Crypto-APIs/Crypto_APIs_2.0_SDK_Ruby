@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDashVin
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDashVin
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDashVin.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDashVin.new(
   addresses: null,
   coinbase: 039312070108,
   script_sig: null,

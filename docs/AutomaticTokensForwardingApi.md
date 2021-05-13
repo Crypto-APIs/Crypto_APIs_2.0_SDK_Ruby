@@ -1,4 +1,4 @@
-# OpenapiClient::AutomaticTokensForwardingApi
+# CryptoApis::AutomaticTokensForwardingApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -23,28 +23,28 @@ Through this endpoint customers can add **Automatic Tokens forwardings** to an a
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomaticTokensForwardingApi.new
+api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Network
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  add_tokens_to_existing_from_address_request_body: OpenapiClient::AddTokensToExistingFromAddressRequestBody.new({data: OpenapiClient::AddTokensToExistingFromAddressRequestBodyData.new({item: OpenapiClient::AddTokensToExistingFromAddressRequestBodyDataItem.new({callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', from_address: 'mizRduUBKEbJ6uzYJUegPh78gEGgM3WjAr', minimum_transfer_amount: '0.00001', to_address: 'mnumE76iEKN47bUsdni85oped5D1fRwKWi', token_data: OpenapiClient::AddTokensToExistingFromAddressRequestBodyTokenDataBitcoinOmniToken.new({property_id: 2})})})}) # AddTokensToExistingFromAddressRequestBody | 
+  add_tokens_to_existing_from_address_request_body: CryptoApis::AddTokensToExistingFromAddressRequestBody.new({data: CryptoApis::AddTokensToExistingFromAddressRequestBodyData.new({item: CryptoApis::AddTokensToExistingFromAddressRequestBodyDataItem.new({callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', from_address: 'mizRduUBKEbJ6uzYJUegPh78gEGgM3WjAr', minimum_transfer_amount: '0.00001', to_address: 'mnumE76iEKN47bUsdni85oped5D1fRwKWi', token_data: CryptoApis::AddTokensToExistingFromAddressRequestBodyTokenDataBitcoinOmniToken.new({property_id: 2})})})}) # AddTokensToExistingFromAddressRequestBody | 
 }
 
 begin
   # Add Tokens To Existing fromAddress
   result = api_instance.add_tokens_to_existing_from_address(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->add_tokens_to_existing_from_address: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AddTokensToExistingFromAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->add_tokens_to_existing_from_address_with_http_info: #{e}"
 end
 ```
@@ -102,28 +102,28 @@ Through this endpoint customers can set up an automatic forwarding function spec
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomaticTokensForwardingApi.new
+api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_automatic_tokens_forwarding_request_body: OpenapiClient::CreateAutomaticTokensForwardingRequestBody.new({data: OpenapiClient::CreateAutomaticTokensForwardingRequestBodyData.new({item: OpenapiClient::CreateAutomaticTokensForwardingRequestBodyDataItem.new({callback_url: 'https://example.com', confirmations_count: '3', fee_priority: 'slow', minimum_transfer_amount: '0.00002', to_address: 'tb1q54j7qcu7kgsrx87yn0r9zjdvsxrnvxg4qua2z6', token_data: OpenapiClient::CreateAutomaticTokensForwardingRequestBodyTokenDataBitcoinOmniToken.new({property_id: 31})})})}) # CreateAutomaticTokensForwardingRequestBody | 
+  create_automatic_tokens_forwarding_request_body: CryptoApis::CreateAutomaticTokensForwardingRequestBody.new({data: CryptoApis::CreateAutomaticTokensForwardingRequestBodyData.new({item: CryptoApis::CreateAutomaticTokensForwardingRequestBodyDataItem.new({callback_url: 'https://example.com', confirmations_count: '3', fee_priority: 'slow', minimum_transfer_amount: '0.00002', to_address: 'tb1q54j7qcu7kgsrx87yn0r9zjdvsxrnvxg4qua2z6', token_data: CryptoApis::CreateAutomaticTokensForwardingRequestBodyTokenDataBitcoinOmniToken.new({property_id: 31})})})}) # CreateAutomaticTokensForwardingRequestBody | 
 }
 
 begin
   # Create Automatic Tokens Forwarding
   result = api_instance.create_automatic_tokens_forwarding(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->create_automatic_tokens_forwarding: #{e}"
 end
 ```
@@ -141,7 +141,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAutomaticTokensForwardingResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->create_automatic_tokens_forwarding_with_http_info: #{e}"
 end
 ```
@@ -181,16 +181,16 @@ Through this endpoint customers can delete a forwarding function they have set f
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomaticTokensForwardingApi.new
+api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 reference_id = '6017dd02a309213863be9e55' # String | Represents a unique ID used to reference the specific callback subscription.
@@ -202,7 +202,7 @@ begin
   # Delete Automatic Tokens Forwarding
   result = api_instance.delete_automatic_tokens_forwarding(blockchain, network, reference_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->delete_automatic_tokens_forwarding: #{e}"
 end
 ```
@@ -220,7 +220,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteAutomaticTokensForwardingResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->delete_automatic_tokens_forwarding_with_http_info: #{e}"
 end
 ```
@@ -260,16 +260,16 @@ Through this endpoint customers can obtain details about a fee address. Only one
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomaticTokensForwardingApi.new
+api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
@@ -280,7 +280,7 @@ begin
   # Get Fee Address Details
   result = api_instance.get_fee_address_details(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->get_fee_address_details: #{e}"
 end
 ```
@@ -298,7 +298,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetFeeAddressDetailsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->get_fee_address_details_with_http_info: #{e}"
 end
 ```
@@ -337,16 +337,16 @@ Through this endpoint customers can list all of their **tokens** forwarding auto
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::AutomaticTokensForwardingApi.new
+api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
@@ -359,7 +359,7 @@ begin
   # List Tokens Forwarding Automations
   result = api_instance.list_tokens_forwarding_automations(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->list_tokens_forwarding_automations: #{e}"
 end
 ```
@@ -377,7 +377,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListTokensForwardingAutomationsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling AutomaticTokensForwardingApi->list_tokens_forwarding_automations_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::NewBlockRequestBodyDataItem
+# CryptoApis::NewBlockRequestBodyDataItem
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::NewBlockRequestBodyDataItem.new(
+instance = CryptoApis::NewBlockRequestBodyDataItem.new(
   allow_duplicates: true,
   callback_secret_key: yourSecretKey,
   callback_url: http://example.com

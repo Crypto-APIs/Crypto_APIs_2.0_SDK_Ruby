@@ -1,4 +1,4 @@
-# OpenapiClient::ListOmniTransactionsByBlockHeightResponseItemSenders
+# CryptoApis::ListOmniTransactionsByBlockHeightResponseItemSenders
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListOmniTransactionsByBlockHeightResponseItemSenders.new(
+instance = CryptoApis::ListOmniTransactionsByBlockHeightResponseItemSenders.new(
   address: 1MRyVg2dyZNEFDy8G6i1hNcerkeZiXYK4S,
   amount: 0.1
 )

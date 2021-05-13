@@ -1,4 +1,4 @@
-# OpenapiClient::BannedIpAddressError
+# CryptoApis::BannedIpAddressError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BannedIpAddressError.new(
+instance = CryptoApis::BannedIpAddressError.new(
   code: banned_ip_address,
   message: This IP address has been banned. To check the reason for that, please contact our team via email.,
   details: null

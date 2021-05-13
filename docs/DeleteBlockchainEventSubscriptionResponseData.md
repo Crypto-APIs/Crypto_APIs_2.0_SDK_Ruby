@@ -1,4 +1,4 @@
-# OpenapiClient::DeleteBlockchainEventSubscriptionResponseData
+# CryptoApis::DeleteBlockchainEventSubscriptionResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::DeleteBlockchainEventSubscriptionResponseData.new(
+instance = CryptoApis::DeleteBlockchainEventSubscriptionResponseData.new(
   item: null
 )
 ```

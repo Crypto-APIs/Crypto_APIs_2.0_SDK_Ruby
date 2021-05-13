@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoin
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoin
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoin.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoin.new(
   locktime: 0,
   size: 266,
   version: 3,

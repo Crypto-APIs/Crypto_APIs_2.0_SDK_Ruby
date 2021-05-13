@@ -1,4 +1,4 @@
-# OpenapiClient::GetLatestMinedBlockResponseItemBlockchainSpecificEthereumClassic
+# CryptoApis::GetLatestMinedBlockResponseItemBlockchainSpecificEthereumClassic
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetLatestMinedBlockResponseItemBlockchainSpecificEthereumClassic.new(
+instance = CryptoApis::GetLatestMinedBlockResponseItemBlockchainSpecificEthereumClassic.new(
   difficulty: 21448277761059.71,
   nonce: 2113101077,
   size: 1408113,

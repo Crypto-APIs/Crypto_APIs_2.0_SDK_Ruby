@@ -1,4 +1,4 @@
-# OpenapiClient::SyncHDWalletxPubYPubZPubResponseItem
+# CryptoApis::SyncHDWalletxPubYPubZPubResponseItem
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::SyncHDWalletxPubYPubZPubResponseItem.new(
+instance = CryptoApis::SyncHDWalletxPubYPubZPubResponseItem.new(
   extended_public_key: upub5Ei6bRNneqozk6smK7dvtXHC5PjUyEL4ynCfMKvjznLcXi9DQaikETzQjHvJC43XexMvQs64jxB1njMjCHpRZ4xQWAmv3ge9cVtjfsHmbvQ
 )
 ```

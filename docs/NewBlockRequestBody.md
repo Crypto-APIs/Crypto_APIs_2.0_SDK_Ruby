@@ -1,4 +1,4 @@
-# OpenapiClient::NewBlockRequestBody
+# CryptoApis::NewBlockRequestBody
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::NewBlockRequestBody.new(
+instance = CryptoApis::NewBlockRequestBody.new(
   context: null,
   data: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificLitecoinScriptPubKey
+# CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificLitecoinScriptPubKey
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHeightResponseItemBlockchainSpecificLitecoinScriptPubKey.new(
+instance = CryptoApis::ListTransactionsByBlockHeightResponseItemBlockchainSpecificLitecoinScriptPubKey.new(
   addresses: null,
   asm: OP_HASH160 ca94af32587de4e5006685ffffc65a818ccd3fbc OP_EQUAL,
   hex: a914ca94af32587de4e5006685ffffc65a818ccd3fbc87,

@@ -1,4 +1,4 @@
-# OpenapiClient::GetUnconfirmedOmniTransactionByTransactionIDTxidResponseItemSenders
+# CryptoApis::GetUnconfirmedOmniTransactionByTransactionIDTxidResponseItemSenders
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetUnconfirmedOmniTransactionByTransactionIDTxidResponseItemSenders.new(
+instance = CryptoApis::GetUnconfirmedOmniTransactionByTransactionIDTxidResponseItemSenders.new(
   address: ms4KNsbNpoU8g424pzmEjbkFbfAHae1msB,
   amount: 0.1
 )

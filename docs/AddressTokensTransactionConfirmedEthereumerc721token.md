@@ -1,4 +1,4 @@
-# OpenapiClient::AddressTokensTransactionConfirmedEthereumerc721token
+# CryptoApis::AddressTokensTransactionConfirmedEthereumerc721token
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddressTokensTransactionConfirmedEthereumerc721token.new(
+instance = CryptoApis::AddressTokensTransactionConfirmedEthereumerc721token.new(
   name: CryptoKitties,
   symbol: CK,
   token_id: 1895557,

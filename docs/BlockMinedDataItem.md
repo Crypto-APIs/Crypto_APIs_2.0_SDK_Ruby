@@ -1,4 +1,4 @@
-# OpenapiClient::BlockMinedDataItem
+# CryptoApis::BlockMinedDataItem
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BlockMinedDataItem.new(
+instance = CryptoApis::BlockMinedDataItem.new(
   blockchain: bitcoin,
   network: testnet,
   height: 570008,

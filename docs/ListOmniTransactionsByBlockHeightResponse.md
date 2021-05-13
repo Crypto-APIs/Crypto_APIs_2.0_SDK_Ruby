@@ -1,4 +1,4 @@
-# OpenapiClient::ListOmniTransactionsByBlockHeightResponse
+# CryptoApis::ListOmniTransactionsByBlockHeightResponse
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListOmniTransactionsByBlockHeightResponse.new(
+instance = CryptoApis::ListOmniTransactionsByBlockHeightResponse.new(
   api_version: 2.0,
   request_id: 601c1710034ed6d407996b30,
   context: You can add any text here,

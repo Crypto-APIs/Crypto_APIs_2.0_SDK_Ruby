@@ -1,4 +1,4 @@
-# OpenapiClient::ListAssetsDetailsResponseItem
+# CryptoApis::ListAssetsDetailsResponseItem
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListAssetsDetailsResponseItem.new(
+instance = CryptoApis::ListAssetsDetailsResponseItem.new(
   asset_id: 5b1ea92e584bf50020130615,
   asset_logo: null,
   asset_name: Bitcoin,

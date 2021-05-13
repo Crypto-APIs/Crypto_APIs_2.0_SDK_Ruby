@@ -1,4 +1,4 @@
-# OpenapiClient::ListXRPRippleTransactionsByBlockHashResponseItemFee
+# CryptoApis::ListXRPRippleTransactionsByBlockHashResponseItemFee
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListXRPRippleTransactionsByBlockHashResponseItemFee.new(
+instance = CryptoApis::ListXRPRippleTransactionsByBlockHashResponseItemFee.new(
   amount: 2.0325,
   unit: XRP
 )

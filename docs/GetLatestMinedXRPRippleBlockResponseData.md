@@ -1,4 +1,4 @@
-# OpenapiClient::GetLatestMinedXRPRippleBlockResponseData
+# CryptoApis::GetLatestMinedXRPRippleBlockResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetLatestMinedXRPRippleBlockResponseData.new(
+instance = CryptoApis::GetLatestMinedXRPRippleBlockResponseData.new(
   item: null
 )
 ```

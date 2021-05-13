@@ -1,4 +1,4 @@
-# OpenapiClient::XpubSyncInProgress
+# CryptoApis::XpubSyncInProgress
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::XpubSyncInProgress.new(
+instance = CryptoApis::XpubSyncInProgress.new(
   api_version: 2.0,
   request_id: 601c1710034ed6d407996b30,
   context: You can add any text here,

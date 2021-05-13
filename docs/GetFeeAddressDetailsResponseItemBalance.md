@@ -1,4 +1,4 @@
-# OpenapiClient::GetFeeAddressDetailsResponseItemBalance
+# CryptoApis::GetFeeAddressDetailsResponseItemBalance
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetFeeAddressDetailsResponseItemBalance.new(
+instance = CryptoApis::GetFeeAddressDetailsResponseItemBalance.new(
   amount: 0.01,
   unit: ETH
 )

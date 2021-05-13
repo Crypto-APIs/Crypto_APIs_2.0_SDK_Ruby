@@ -1,4 +1,4 @@
-# OpenapiClient::AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken
+# CryptoApis::AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken.new(
+instance = CryptoApis::AddressTokensTransactionConfirmedEachConfirmationOmnilayertoken.new(
   name: TetherUS,
   property_id: #24,
   transaction_type: Simple Send, DEx Purchase etc.,

@@ -1,4 +1,4 @@
-# OpenapiClient::NewBlockResponseItem
+# CryptoApis::NewBlockResponseItem
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::NewBlockResponseItem.new(
+instance = CryptoApis::NewBlockResponseItem.new(
   callback_secret_key: yourSecretKey,
   callback_url: http://yourURL.com,
   created_timestamp: 1611238648,

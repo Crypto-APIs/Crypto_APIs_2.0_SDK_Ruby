@@ -1,4 +1,4 @@
-# OpenapiClient::GetXRPRippleTransactionDetailsByTransactionIDResponseItemSenders
+# CryptoApis::GetXRPRippleTransactionDetailsByTransactionIDResponseItemSenders
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetXRPRippleTransactionDetailsByTransactionIDResponseItemSenders.new(
+instance = CryptoApis::GetXRPRippleTransactionDetailsByTransactionIDResponseItemSenders.new(
   address: rNUY3X3HovAXuTesTbMh8PAX6CM5V2RzMY,
   amount: 0.00001
 )

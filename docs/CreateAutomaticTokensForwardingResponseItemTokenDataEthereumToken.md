@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomaticTokensForwardingResponseItemTokenDataEthereumToken
+# CryptoApis::CreateAutomaticTokensForwardingResponseItemTokenDataEthereumToken
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CreateAutomaticTokensForwardingResponseItemTokenDataEthereumToken.new(
+instance = CryptoApis::CreateAutomaticTokensForwardingResponseItemTokenDataEthereumToken.new(
   contract_address: 0xdac17f958d2ee523a2206206994597c13d831ec7
 )
 ```

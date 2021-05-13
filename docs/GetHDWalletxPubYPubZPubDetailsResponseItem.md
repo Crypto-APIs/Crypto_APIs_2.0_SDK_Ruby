@@ -1,4 +1,4 @@
-# OpenapiClient::GetHDWalletxPubYPubZPubDetailsResponseItem
+# CryptoApis::GetHDWalletxPubYPubZPubDetailsResponseItem
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetHDWalletxPubYPubZPubDetailsResponseItem.new(
+instance = CryptoApis::GetHDWalletxPubYPubZPubDetailsResponseItem.new(
   confirmed_balance: 0.0021,
   total_received: 0.0002,
   total_spent: 0.0001

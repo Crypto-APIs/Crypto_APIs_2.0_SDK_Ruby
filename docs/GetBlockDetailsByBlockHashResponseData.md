@@ -1,4 +1,4 @@
-# OpenapiClient::GetBlockDetailsByBlockHashResponseData
+# CryptoApis::GetBlockDetailsByBlockHashResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetBlockDetailsByBlockHashResponseData.new(
+instance = CryptoApis::GetBlockDetailsByBlockHashResponseData.new(
   item: null
 )
 ```

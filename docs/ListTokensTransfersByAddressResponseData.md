@@ -1,4 +1,4 @@
-# OpenapiClient::ListTokensTransfersByAddressResponseData
+# CryptoApis::ListTokensTransfersByAddressResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTokensTransfersByAddressResponseData.new(
+instance = CryptoApis::ListTokensTransfersByAddressResponseData.new(
   offset: 0,
   limit: 50,
   total: 100,

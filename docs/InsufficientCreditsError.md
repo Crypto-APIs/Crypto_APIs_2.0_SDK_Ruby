@@ -1,4 +1,4 @@
-# OpenapiClient::InsufficientCreditsError
+# CryptoApis::InsufficientCreditsError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::InsufficientCreditsError.new(
+instance = CryptoApis::InsufficientCreditsError.new(
   code: insufficient_credits,
   message: You have insufficient credits. Please upgrade your plan from your Dashboard or contact our team via email.,
   details: null

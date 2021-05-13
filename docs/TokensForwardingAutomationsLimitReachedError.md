@@ -1,4 +1,4 @@
-# OpenapiClient::TokensForwardingAutomationsLimitReachedError
+# CryptoApis::TokensForwardingAutomationsLimitReachedError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::TokensForwardingAutomationsLimitReachedError.new(
+instance = CryptoApis::TokensForwardingAutomationsLimitReachedError.new(
   code: tokens_forwarding_automations_limit_reached,
   message: Your current package plan tokens forwarding automations limit of {automations_limit} reached. Please contact us if you need more or upgrade your plan.,
   details: null

@@ -1,4 +1,4 @@
-# OpenapiClient::GetContractDetailsByAddressResponseItem
+# CryptoApis::GetContractDetailsByAddressResponseItem
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetContractDetailsByAddressResponseItem.new(
+instance = CryptoApis::GetContractDetailsByAddressResponseItem.new(
   confirmed_balance: null,
   creator_address: null,
   token_decimals: null,

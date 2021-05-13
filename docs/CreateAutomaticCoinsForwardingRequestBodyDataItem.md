@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomaticCoinsForwardingRequestBodyDataItem
+# CryptoApis::CreateAutomaticCoinsForwardingRequestBodyDataItem
 
 ## Properties
 
@@ -14,9 +14,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CreateAutomaticCoinsForwardingRequestBodyDataItem.new(
+instance = CryptoApis::CreateAutomaticCoinsForwardingRequestBodyDataItem.new(
   callback_secret_key: yourSecretString,
   callback_url: https://example.com,
   confirmations_count: 3,

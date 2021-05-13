@@ -1,4 +1,4 @@
-# OpenapiClient::DefaultApi
+# CryptoApis::DefaultApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -19,16 +19,16 @@ This endpoint will return a smart contract details by address, this address is t
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DefaultApi.new
+api_instance = CryptoApis::DefaultApi.new
 blockchain = 'ethereum' # String | 
 network = 'mainnet' # String | 
 contract_address = 'contract_address_example' # String | String identifier of the token
@@ -40,7 +40,7 @@ begin
   # Get Contract Details by Address
   result = api_instance.get_contract_details_by_address(blockchain, network, contract_address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling DefaultApi->get_contract_details_by_address: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetContractDetailsByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling DefaultApi->get_contract_details_by_address_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinScriptSig
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinScriptSig
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinScriptSig.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificDogecoinScriptSig.new(
   asm: 030483ff6271580681f4f7828c01df56d5aebfe982cbaa2922594be9eb6cf40206 OP_CHECKSIG,
   hex: 21030483ff6271580681f4f7828c01df56d5aebfe982cbaa2922594be9eb6cf40206ac,
   type: pubkey

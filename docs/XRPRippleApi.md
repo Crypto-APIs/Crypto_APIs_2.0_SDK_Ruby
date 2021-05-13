@@ -1,4 +1,4 @@
-# OpenapiClient::XRPRippleApi
+# CryptoApis::XRPRippleApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -25,16 +25,16 @@ Through this endpoint customers can fetch the last mined XRP block in the blockc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
@@ -44,7 +44,7 @@ begin
   # Get Latest Mined XRP (Ripple) Block
   result = api_instance.get_latest_mined_xrp__ripple_block(network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_latest_mined_xrp__ripple_block: #{e}"
 end
 ```
@@ -62,7 +62,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetLatestMinedXRPRippleBlockResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_latest_mined_xrp__ripple_block_with_http_info: #{e}"
 end
 ```
@@ -100,16 +100,16 @@ Through this endpoint the customer can receive basic information about a given X
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 address = 'rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z' # String | Represents the public address, which is a compressed and shortened form of a public key.
 opts = {
@@ -120,7 +120,7 @@ begin
   # Get XRP (Ripple) Address Details
   result = api_instance.get_xrp__ripple_address_details(network, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_address_details: #{e}"
 end
 ```
@@ -138,7 +138,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetXRPRippleAddressDetailsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_address_details_with_http_info: #{e}"
 end
 ```
@@ -177,16 +177,16 @@ Through this endpoint customers can obtain basic information about a given XRP b
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 block_hash = '1ab0614d2a438da8b23086cbceef7d443edbd295d9c7619fc8a19c7618bc22c9' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
 opts = {
@@ -197,7 +197,7 @@ begin
   # Get XRP (Ripple) Block Details By Block Hash
   result = api_instance.get_xrp__ripple_block_details_by_block_hash(network, block_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_hash: #{e}"
 end
 ```
@@ -215,7 +215,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetXRPRippleBlockDetailsByBlockHashResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_hash_with_http_info: #{e}"
 end
 ```
@@ -254,16 +254,16 @@ Through this endpoint customers can obtain basic information about a given XRP b
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 height = '15886156' # String | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
 opts = {
@@ -274,7 +274,7 @@ begin
   # Get XRP (Ripple) Block Details By Block Height
   result = api_instance.get_xrp__ripple_block_details_by_block_height(network, height, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_height: #{e}"
 end
 ```
@@ -292,7 +292,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetXRPRippleBlockDetailsByBlockHeightResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_height_with_http_info: #{e}"
 end
 ```
@@ -331,16 +331,16 @@ Through this endpoint customers can obtain details about a XRP transaction by th
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 transaction_hash = '36a1737481edec87bacc3101dfb752ae2c76f9171e7edebe587e330c1ea77c8d' # String | Represents the same as `transactionId` for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols `hash` is different from `transactionId` for SegWit transactions.
 opts = {
@@ -351,7 +351,7 @@ begin
   # Get XRP (Ripple) Transaction Details By Transaction ID
   result = api_instance.get_xrp__ripple_transaction_details_by_transaction_id(network, transaction_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_transaction_details_by_transaction_id: #{e}"
 end
 ```
@@ -369,7 +369,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetXRPRippleTransactionDetailsByTransactionIDResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_transaction_details_by_transaction_id_with_http_info: #{e}"
 end
 ```
@@ -408,16 +408,16 @@ This endpoint will list XRP transactions by a attribute `address`. The transacti
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 address = 'rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z' # String | Represents the public address, which is a compressed and shortened form of a public key.
 opts = {
@@ -430,7 +430,7 @@ begin
   # List XRP (Ripple) Transactions by Address
   result = api_instance.list_xrp__ripple_transactions_by_address(network, address, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_address: #{e}"
 end
 ```
@@ -448,7 +448,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListXRPRippleTransactionsByAddressResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_address_with_http_info: #{e}"
 end
 ```
@@ -489,16 +489,16 @@ This endpoint will list transactions by an attribute `blockHash`. The transactio
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XRPRippleApi.new
+api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 block_hash = '14754656235f865a74eba27791fd41a47bdfe07fe811ff6d78f53db32e129e39' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
 opts = {
@@ -511,7 +511,7 @@ begin
   # List XRP (Ripple) Transactions By Block Hash
   result = api_instance.list_xrp__ripple_transactions_by_block_hash(network, block_hash, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_block_hash: #{e}"
 end
 ```
@@ -529,7 +529,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListXRPRippleTransactionsByBlockHashResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_block_hash_with_http_info: #{e}"
 end
 ```

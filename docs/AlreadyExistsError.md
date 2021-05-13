@@ -1,4 +1,4 @@
-# OpenapiClient::AlreadyExistsError
+# CryptoApis::AlreadyExistsError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AlreadyExistsError.new(
+instance = CryptoApis::AlreadyExistsError.new(
   code: already_exists,
   message: The specified resource already exists.,
   details: null

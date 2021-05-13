@@ -1,4 +1,4 @@
-# OpenapiClient::BlockchainDataBlockNotFoundError
+# CryptoApis::BlockchainDataBlockNotFoundError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BlockchainDataBlockNotFoundError.new(
+instance = CryptoApis::BlockchainDataBlockNotFoundError.new(
   code: blockchain_data_block_not_found,
   message: The specified block has not been found on the specific blockchain.,
   details: null

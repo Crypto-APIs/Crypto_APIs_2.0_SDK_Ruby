@@ -1,4 +1,4 @@
-# OpenapiClient::GetAddressDetailsResponseItemTotalSpent
+# CryptoApis::GetAddressDetailsResponseItemTotalSpent
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetAddressDetailsResponseItemTotalSpent.new(
+instance = CryptoApis::GetAddressDetailsResponseItemTotalSpent.new(
   amount: 2.1,
   unit: BTC
 )

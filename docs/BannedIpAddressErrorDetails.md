@@ -1,4 +1,4 @@
-# OpenapiClient::BannedIpAddressErrorDetails
+# CryptoApis::BannedIpAddressErrorDetails
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BannedIpAddressErrorDetails.new(
+instance = CryptoApis::BannedIpAddressErrorDetails.new(
   attribute: attribute which content caused the error,
   message: message describing the error
 )

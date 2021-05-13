@@ -1,4 +1,4 @@
-# OpenapiClient::GetBlockDetailsByBlockHeightResponseItemBlockchainSpecificBitcoin
+# CryptoApis::GetBlockDetailsByBlockHeightResponseItemBlockchainSpecificBitcoin
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetBlockDetailsByBlockHeightResponseItemBlockchainSpecificBitcoin.new(
+instance = CryptoApis::GetBlockDetailsByBlockHeightResponseItemBlockchainSpecificBitcoin.new(
   difficulty: 209515044.4071968,
   nonce: 1535290446,
   size: 3892,

@@ -1,4 +1,4 @@
-# OpenapiClient::FeatureMainnetsNotAllowedForPlanError
+# CryptoApis::FeatureMainnetsNotAllowedForPlanError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::FeatureMainnetsNotAllowedForPlanError.new(
+instance = CryptoApis::FeatureMainnetsNotAllowedForPlanError.new(
   code: feature_mainnets_not_allowed_for_plan,
   message: Mainnets access is not available for your current subscription plan, please upgrade your plan to be able to use it.,
   details: null

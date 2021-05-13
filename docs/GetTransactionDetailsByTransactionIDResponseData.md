@@ -1,4 +1,4 @@
-# OpenapiClient::GetTransactionDetailsByTransactionIDResponseData
+# CryptoApis::GetTransactionDetailsByTransactionIDResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetTransactionDetailsByTransactionIDResponseData.new(
+instance = CryptoApis::GetTransactionDetailsByTransactionIDResponseData.new(
   item: null
 )
 ```

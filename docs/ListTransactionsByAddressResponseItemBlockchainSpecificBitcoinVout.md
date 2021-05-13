@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificBitcoinVout
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificBitcoinVout
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificBitcoinVout.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificBitcoinVout.new(
   is_spent: true,
   script_pub_key: null,
   value: 0.000144

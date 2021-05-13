@@ -1,4 +1,4 @@
-# OpenapiClient::GetXRPRippleBlockDetailsByBlockHashResponseItemTotalCoins
+# CryptoApis::GetXRPRippleBlockDetailsByBlockHashResponseItemTotalCoins
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetXRPRippleBlockDetailsByBlockHashResponseItemTotalCoins.new(
+instance = CryptoApis::GetXRPRippleBlockDetailsByBlockHashResponseItemTotalCoins.new(
   amount: 22.0012,
   unit: Drops
 )

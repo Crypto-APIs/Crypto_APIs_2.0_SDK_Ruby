@@ -1,4 +1,4 @@
-# OpenapiClient::ListAssetsDetailsResponseItemLatestRate
+# CryptoApis::ListAssetsDetailsResponseItemLatestRate
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListAssetsDetailsResponseItemLatestRate.new(
+instance = CryptoApis::ListAssetsDetailsResponseItemLatestRate.new(
   amount: 55249.960371879235,
   calculation_timestamp: 1618843796,
   unit: USD

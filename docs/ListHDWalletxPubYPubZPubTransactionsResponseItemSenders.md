@@ -1,4 +1,4 @@
-# OpenapiClient::ListHDWalletxPubYPubZPubTransactionsResponseItemSenders
+# CryptoApis::ListHDWalletxPubYPubZPubTransactionsResponseItemSenders
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListHDWalletxPubYPubZPubTransactionsResponseItemSenders.new(
+instance = CryptoApis::ListHDWalletxPubYPubZPubTransactionsResponseItemSenders.new(
   address: 2N5PcdirZUzKF9bWuGdugNuzcQrCbBudxv1,
   amount: 0.00873472,
   is_member: true

@@ -1,4 +1,4 @@
-# OpenapiClient::ListOmniTokensByAddressResponseItem
+# CryptoApis::ListOmniTokensByAddressResponseItem
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListOmniTokensByAddressResponseItem.new(
+instance = CryptoApis::ListOmniTokensByAddressResponseItem.new(
   balance: 29,
   frozen: 0,
   name: Omni tokens,

@@ -1,4 +1,4 @@
-# OpenapiClient::CreateSubscriptionsForApi
+# CryptoApis::CreateSubscriptionsForApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -26,28 +26,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  mined_transaction_request_body: OpenapiClient::MinedTransactionRequestBody.new({data: OpenapiClient::MinedTransactionRequestBodyData.new({item: OpenapiClient::MinedTransactionRequestBodyDataItem.new({callback_url: 'http://example.com', transaction_id: 'df2690ff97e72c1f8b0f2102a8cb5c1d0fa8fb8754d543c9bc0edc4d4bc34bfc'})})}) # MinedTransactionRequestBody | 
+  mined_transaction_request_body: CryptoApis::MinedTransactionRequestBody.new({data: CryptoApis::MinedTransactionRequestBodyData.new({item: CryptoApis::MinedTransactionRequestBodyDataItem.new({callback_url: 'http://example.com', transaction_id: 'df2690ff97e72c1f8b0f2102a8cb5c1d0fa8fb8754d543c9bc0edc4d4bc34bfc'})})}) # MinedTransactionRequestBody | 
 }
 
 begin
   # Mined transaction
   result = api_instance.mined_transaction(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->mined_transaction: #{e}"
 end
 ```
@@ -65,7 +65,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <MinedTransactionResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->mined_transaction_with_http_info: #{e}"
 end
 ```
@@ -105,28 +105,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_block_request_body: OpenapiClient::NewBlockRequestBody.new({data: OpenapiClient::NewBlockRequestBodyData.new({item: OpenapiClient::NewBlockRequestBodyDataItem.new({callback_url: 'http://example.com'})})}) # NewBlockRequestBody | 
+  new_block_request_body: CryptoApis::NewBlockRequestBody.new({data: CryptoApis::NewBlockRequestBodyData.new({item: CryptoApis::NewBlockRequestBodyDataItem.new({callback_url: 'http://example.com'})})}) # NewBlockRequestBody | 
 }
 
 begin
   # New Block
   result = api_instance.new_block(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_block: #{e}"
 end
 ```
@@ -144,7 +144,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewBlockResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_block_with_http_info: #{e}"
 end
 ```
@@ -184,28 +184,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_coins_transactions_request_body: OpenapiClient::NewConfirmedCoinsTransactionsRequestBody.new({data: OpenapiClient::NewConfirmedCoinsTransactionsRequestBodyData.new({item: OpenapiClient::NewConfirmedCoinsTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedCoinsTransactionsRequestBody | 
+  new_confirmed_coins_transactions_request_body: CryptoApis::NewConfirmedCoinsTransactionsRequestBody.new({data: CryptoApis::NewConfirmedCoinsTransactionsRequestBodyData.new({item: CryptoApis::NewConfirmedCoinsTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedCoinsTransactionsRequestBody | 
 }
 
 begin
   # New confirmed coins transactions
   result = api_instance.new_confirmed_coins_transactions(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_coins_transactions: #{e}"
 end
 ```
@@ -223,7 +223,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewConfirmedCoinsTransactionsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_coins_transactions_with_http_info: #{e}"
 end
 ```
@@ -263,28 +263,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_coins_transactions_and_each_confirmation_request_body: OpenapiClient::NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody.new({data: OpenapiClient::NewConfirmedCoinsTransactionsAndEachConfirmationRequestBodyData.new({item: OpenapiClient::NewConfirmedCoinsTransactionsAndEachConfirmationRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com', confirmations_count: 3})})}) # NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody | 
+  new_confirmed_coins_transactions_and_each_confirmation_request_body: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody.new({data: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRequestBodyData.new({item: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com', confirmations_count: 3})})}) # NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody | 
 }
 
 begin
   # New confirmed coins transactions and each confirmation
   result = api_instance.new_confirmed_coins_transactions_and_each_confirmation(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_coins_transactions_and_each_confirmation: #{e}"
 end
 ```
@@ -302,7 +302,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewConfirmedCoinsTransactionsAndEachConfirmationResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_coins_transactions_and_each_confirmation_with_http_info: #{e}"
 end
 ```
@@ -342,28 +342,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_tokens_transactions_request_body: OpenapiClient::NewConfirmedTokensTransactionsRequestBody.new({data: OpenapiClient::NewUnconfirmedTokensTransactionsRequestBodyData.new({item: OpenapiClient::NewUnconfirmedTokensTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedTokensTransactionsRequestBody | 
+  new_confirmed_tokens_transactions_request_body: CryptoApis::NewConfirmedTokensTransactionsRequestBody.new({data: CryptoApis::NewUnconfirmedTokensTransactionsRequestBodyData.new({item: CryptoApis::NewUnconfirmedTokensTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedTokensTransactionsRequestBody | 
 }
 
 begin
   # New confirmed tokens transactions
   result = api_instance.new_confirmed_tokens_transactions(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_tokens_transactions: #{e}"
 end
 ```
@@ -381,7 +381,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewConfirmedTokensTransactionsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_tokens_transactions_with_http_info: #{e}"
 end
 ```
@@ -421,28 +421,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_tokens_transactions_and_each_confirmation_request_body: OpenapiClient::NewConfirmedTokensTransactionsAndEachConfirmationRequestBody.new({data: OpenapiClient::NewConfirmedTokensTransactionsAndEachConfirmationRequestBodyData.new({item: OpenapiClient::NewConfirmedTokensTransactionsAndEachConfirmationRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedTokensTransactionsAndEachConfirmationRequestBody | 
+  new_confirmed_tokens_transactions_and_each_confirmation_request_body: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRequestBody.new({data: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRequestBodyData.new({item: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedTokensTransactionsAndEachConfirmationRequestBody | 
 }
 
 begin
   # New confirmed tokens transactions and each confirmation
   result = api_instance.new_confirmed_tokens_transactions_and_each_confirmation(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_tokens_transactions_and_each_confirmation: #{e}"
 end
 ```
@@ -460,7 +460,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewConfirmedTokensTransactionsAndEachConfirmationResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_confirmed_tokens_transactions_and_each_confirmation_with_http_info: #{e}"
 end
 ```
@@ -500,28 +500,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_unconfirmed_coins_transactions_request_body: OpenapiClient::NewUnconfirmedCoinsTransactionsRequestBody.new({data: OpenapiClient::NewUnconfirmedCoinsTransactionsRequestBodyData.new({item: OpenapiClient::NewUnconfirmedCoinsTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewUnconfirmedCoinsTransactionsRequestBody | 
+  new_unconfirmed_coins_transactions_request_body: CryptoApis::NewUnconfirmedCoinsTransactionsRequestBody.new({data: CryptoApis::NewUnconfirmedCoinsTransactionsRequestBodyData.new({item: CryptoApis::NewUnconfirmedCoinsTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewUnconfirmedCoinsTransactionsRequestBody | 
 }
 
 begin
   # New unconfirmed coins transactions
   result = api_instance.new_unconfirmed_coins_transactions(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_unconfirmed_coins_transactions: #{e}"
 end
 ```
@@ -539,7 +539,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewUnconfirmedCoinsTransactionsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_unconfirmed_coins_transactions_with_http_info: #{e}"
 end
 ```
@@ -579,28 +579,28 @@ Through this endpoint customers can create callback subscriptions for a specific
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::CreateSubscriptionsForApi.new
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_unconfirmed_tokens_transactions_request_body: OpenapiClient::NewUnconfirmedTokensTransactionsRequestBody.new({data: OpenapiClient::NewUnconfirmedTokensTransactionsRequestBodyData.new({item: OpenapiClient::NewUnconfirmedTokensTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewUnconfirmedTokensTransactionsRequestBody | 
+  new_unconfirmed_tokens_transactions_request_body: CryptoApis::NewUnconfirmedTokensTransactionsRequestBody.new({data: CryptoApis::NewUnconfirmedTokensTransactionsRequestBodyData.new({item: CryptoApis::NewUnconfirmedTokensTransactionsRequestBodyDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewUnconfirmedTokensTransactionsRequestBody | 
 }
 
 begin
   # New unconfirmed tokens transactions
   result = api_instance.new_unconfirmed_tokens_transactions(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_unconfirmed_tokens_transactions: #{e}"
 end
 ```
@@ -618,7 +618,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <NewUnconfirmedTokensTransactionsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling CreateSubscriptionsForApi->new_unconfirmed_tokens_transactions_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::XpubSyncInProgressError
+# CryptoApis::XpubSyncInProgressError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::XpubSyncInProgressError.new(
+instance = CryptoApis::XpubSyncInProgressError.new(
   code: xpub_sync_in_progress,
   message: Your wallet (xPub, yPub, zPub) is still syncing, it should take few seconds depending on how many transactions it has.,
   details: null

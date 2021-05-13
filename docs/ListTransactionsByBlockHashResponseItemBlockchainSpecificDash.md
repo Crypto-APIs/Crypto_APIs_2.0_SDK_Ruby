@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseItemBlockchainSpecificDash
+# CryptoApis::ListTransactionsByBlockHashResponseItemBlockchainSpecificDash
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseItemBlockchainSpecificDash.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseItemBlockchainSpecificDash.new(
   locktime: 0,
   size: 125,
   version: 1,

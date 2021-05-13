@@ -1,4 +1,4 @@
-# OpenapiClient::AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token
+# CryptoApis::AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token.new(
+instance = CryptoApis::AddressTokensTransactionConfirmedEachConfirmationEthereumerc20token.new(
   name: Tether USD,
   symbol: USDT,
   decimals: 9,

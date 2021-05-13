@@ -1,4 +1,4 @@
-# OpenapiClient::CreateAutomaticTokensForwardingResponseItem
+# CryptoApis::CreateAutomaticTokensForwardingResponseItem
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::CreateAutomaticTokensForwardingResponseItem.new(
+instance = CryptoApis::CreateAutomaticTokensForwardingResponseItem.new(
   callback_url: https://example.com,
   confirmations_count: 2,
   created_timestamp: 1611238648,

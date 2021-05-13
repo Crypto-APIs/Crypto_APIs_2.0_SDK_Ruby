@@ -1,4 +1,4 @@
-# OpenapiClient::EndpointNotAllowedForPlanError
+# CryptoApis::EndpointNotAllowedForPlanError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::EndpointNotAllowedForPlanError.new(
+instance = CryptoApis::EndpointNotAllowedForPlanError.new(
   code: endpoint_not_allowed_for_plan,
   message: This endpoint is not available for your current subscription plan, please upgrade your plan to be able to use it.,
   details: null

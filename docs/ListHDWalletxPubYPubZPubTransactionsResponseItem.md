@@ -1,4 +1,4 @@
-# OpenapiClient::ListHDWalletxPubYPubZPubTransactionsResponseItem
+# CryptoApis::ListHDWalletxPubYPubZPubTransactionsResponseItem
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListHDWalletxPubYPubZPubTransactionsResponseItem.new(
+instance = CryptoApis::ListHDWalletxPubYPubZPubTransactionsResponseItem.new(
   index: 1,
   mined_in_block_hash: 00000000407f119ecb74b44229228910400aaeb9f4e3b9869955b85a53e9b7db,
   mined_in_block_height: 1903849,

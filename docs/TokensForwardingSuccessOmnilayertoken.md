@@ -1,4 +1,4 @@
-# OpenapiClient::TokensForwardingSuccessOmnilayertoken
+# CryptoApis::TokensForwardingSuccessOmnilayertoken
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::TokensForwardingSuccessOmnilayertoken.new(
+instance = CryptoApis::TokensForwardingSuccessOmnilayertoken.new(
   name: TetherUS,
   property_id: 24,
   transaction_type: Simple Send, DEx Purchase etc.,

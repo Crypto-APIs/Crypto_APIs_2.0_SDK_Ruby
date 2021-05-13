@@ -1,4 +1,4 @@
-# OpenapiClient::ValidateAddressResponseData
+# CryptoApis::ValidateAddressResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ValidateAddressResponseData.new(
+instance = CryptoApis::ValidateAddressResponseData.new(
   item: null
 )
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::AddressTokensTransactionConfirmedToken
+# CryptoApis::AddressTokensTransactionConfirmedToken
 
 ## Class instance methods
 
@@ -9,9 +9,9 @@ Returns the list of classes defined in oneOf.
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::AddressTokensTransactionConfirmedToken.openapi_one_of
+CryptoApis::AddressTokensTransactionConfirmedToken.openapi_one_of
 # =>
 # [
 #   :'AddressTokensTransactionConfirmedEthereumerc20token',
@@ -27,12 +27,12 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 #### Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-OpenapiClient::AddressTokensTransactionConfirmedToken.build(data)
+CryptoApis::AddressTokensTransactionConfirmedToken.build(data)
 # => #<AddressTokensTransactionConfirmedEthereumerc20token:0x00007fdd4aab02a0>
 
-OpenapiClient::AddressTokensTransactionConfirmedToken.build(data_that_doesnt_match)
+CryptoApis::AddressTokensTransactionConfirmedToken.build(data_that_doesnt_match)
 # => nil
 ```
 

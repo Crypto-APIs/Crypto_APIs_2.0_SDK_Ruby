@@ -1,4 +1,4 @@
-# OpenapiClient::TokensForwardingSuccessEthereumerc20token
+# CryptoApis::TokensForwardingSuccessEthereumerc20token
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::TokensForwardingSuccessEthereumerc20token.new(
+instance = CryptoApis::TokensForwardingSuccessEthereumerc20token.new(
   name: Tether USD,
   symbol: USDT,
   decimals: 7,

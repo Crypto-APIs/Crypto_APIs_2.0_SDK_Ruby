@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseData
+# CryptoApis::ListTransactionsByBlockHashResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseData.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseData.new(
   offset: 0,
   limit: 50,
   total: 100,

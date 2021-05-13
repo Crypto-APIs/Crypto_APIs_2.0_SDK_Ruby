@@ -1,4 +1,4 @@
-# OpenapiClient::AddTokensToExistingFromAddressRequestBodyDataItem
+# CryptoApis::AddTokensToExistingFromAddressRequestBodyDataItem
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddTokensToExistingFromAddressRequestBodyDataItem.new(
+instance = CryptoApis::AddTokensToExistingFromAddressRequestBodyDataItem.new(
   callback_secret_key: yourSecretString,
   callback_url: https://example.com,
   confirmations_count: 3,

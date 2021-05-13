@@ -1,4 +1,4 @@
-# OpenapiClient::ExchangeRatesApi
+# CryptoApis::ExchangeRatesApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -20,16 +20,16 @@ Through this endpoint customers can obtain exchange rates by asset symbols. The 
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExchangeRatesApi.new
+api_instance = CryptoApis::ExchangeRatesApi.new
 from_asset_symbol = 'btc' # String | Defines the base asset symbol to get a rate for.
 to_asset_symbol = 'usd' # String | Defines the relation asset symbol in which the base asset rate will be displayed.
 opts = {
@@ -40,7 +40,7 @@ begin
   # Get Exchange Rate By Asset Symbols
   result = api_instance.get_exchange_rate_by_asset_symbols(from_asset_symbol, to_asset_symbol, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ExchangeRatesApi->get_exchange_rate_by_asset_symbols: #{e}"
 end
 ```
@@ -58,7 +58,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetExchangeRateByAssetSymbolsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ExchangeRatesApi->get_exchange_rate_by_asset_symbols_with_http_info: #{e}"
 end
 ```
@@ -97,16 +97,16 @@ Through this endpoint customers can obtain exchange rates by asset IDs. The proc
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ExchangeRatesApi.new
+api_instance = CryptoApis::ExchangeRatesApi.new
 from_asset_id = '5b1ea92e584bf50020130612' # String | Defines the base asset Reference ID to get a rate for.
 to_asset_id = '5b1ea92e584bf50020130615' # String | Defines the relation asset Reference ID in which the base asset rate will be displayed.
 opts = {
@@ -117,7 +117,7 @@ begin
   # Get Exchange Rate By Assets IDs
   result = api_instance.get_exchange_rate_by_assets_ids(from_asset_id, to_asset_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ExchangeRatesApi->get_exchange_rate_by_assets_ids: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetExchangeRateByAssetsIDsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ExchangeRatesApi->get_exchange_rate_by_assets_ids_with_http_info: #{e}"
 end
 ```

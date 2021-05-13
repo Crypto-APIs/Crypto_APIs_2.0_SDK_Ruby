@@ -1,4 +1,4 @@
-# OpenapiClient::GetOmniTransactionDetailsByTransactionIDTxidResponseItemSenders
+# CryptoApis::GetOmniTransactionDetailsByTransactionIDTxidResponseItemSenders
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetOmniTransactionDetailsByTransactionIDTxidResponseItemSenders.new(
+instance = CryptoApis::GetOmniTransactionDetailsByTransactionIDTxidResponseItemSenders.new(
   address: ms4KNsbNpoU8g424pzmEjbkFbfAHae1msB,
   amount: 0.00000546
 )

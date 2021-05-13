@@ -1,4 +1,4 @@
-# OpenapiClient::GetTransactionDetailsByTransactionIDResponseItemFee
+# CryptoApis::GetTransactionDetailsByTransactionIDResponseItemFee
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetTransactionDetailsByTransactionIDResponseItemFee.new(
+instance = CryptoApis::GetTransactionDetailsByTransactionIDResponseItemFee.new(
   amount: 0.00016932,
   unit: BTC
 )

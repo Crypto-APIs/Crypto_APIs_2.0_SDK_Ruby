@@ -1,4 +1,4 @@
-# OpenapiClient::AddressCoinsTransactionConfirmedDataItemMinedInBlock
+# CryptoApis::AddressCoinsTransactionConfirmedDataItemMinedInBlock
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::AddressCoinsTransactionConfirmedDataItemMinedInBlock.new(
+instance = CryptoApis::AddressCoinsTransactionConfirmedDataItemMinedInBlock.new(
   height: 667861,
   hash: b00d27cccd5e4f4fa1b28824d9a1e5fef88e6c37cdeb09e37eb39aa1d3d63448,
   timestamp: 1610365213

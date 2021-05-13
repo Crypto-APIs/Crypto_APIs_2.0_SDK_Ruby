@@ -1,4 +1,4 @@
-# OpenapiClient::GetLatestMinedBlockResponseData
+# CryptoApis::GetLatestMinedBlockResponseData
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetLatestMinedBlockResponseData.new(
+instance = CryptoApis::GetLatestMinedBlockResponseData.new(
   item: null
 )
 ```

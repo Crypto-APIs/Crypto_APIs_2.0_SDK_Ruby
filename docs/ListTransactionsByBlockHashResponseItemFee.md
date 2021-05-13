@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseItemFee
+# CryptoApis::ListTransactionsByBlockHashResponseItemFee
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseItemFee.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseItemFee.new(
   amount: 0.00016932,
   unit: BTC
 )

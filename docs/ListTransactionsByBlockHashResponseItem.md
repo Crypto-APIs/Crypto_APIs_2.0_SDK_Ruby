@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByBlockHashResponseItem
+# CryptoApis::ListTransactionsByBlockHashResponseItem
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByBlockHashResponseItem.new(
+instance = CryptoApis::ListTransactionsByBlockHashResponseItem.new(
   index: 1,
   mined_in_block_hash: 00000000000000127080d8bcf84f4ad830a71ea0aadce3632579b6b2f26cd94b,
   mined_in_block_height: 1971147,

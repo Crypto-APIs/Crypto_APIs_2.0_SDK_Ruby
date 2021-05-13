@@ -1,4 +1,4 @@
-# OpenapiClient::ListUnconfirmedOmniTransactionsByPropertyIDResponseData
+# CryptoApis::ListUnconfirmedOmniTransactionsByPropertyIDResponseData
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListUnconfirmedOmniTransactionsByPropertyIDResponseData.new(
+instance = CryptoApis::ListUnconfirmedOmniTransactionsByPropertyIDResponseData.new(
   offset: 0,
   limit: 50,
   total: 100,

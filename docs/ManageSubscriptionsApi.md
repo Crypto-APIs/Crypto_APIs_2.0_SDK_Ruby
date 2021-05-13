@@ -1,4 +1,4 @@
-# OpenapiClient::ManageSubscriptionsApi
+# CryptoApis::ManageSubscriptionsApi
 
 All URIs are relative to *https://rest.cryptoapis.io/v2*
 
@@ -20,16 +20,16 @@ Through this endpoint the customer can delete blockchain event subscriptions the
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ManageSubscriptionsApi.new
+api_instance = CryptoApis::ManageSubscriptionsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 reference_id = 'd3fd6a0e-f2b6-4bb5-9fd3-7944bcec9e9f' # String | Represents a unique ID used to reference the specific callback subscription.
@@ -41,7 +41,7 @@ begin
   # Delete Blockchain Event Subscription
   result = api_instance.delete_blockchain_event_subscription(blockchain, network, reference_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ManageSubscriptionsApi->delete_blockchain_event_subscription: #{e}"
 end
 ```
@@ -59,7 +59,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <DeleteBlockchainEventSubscriptionResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ManageSubscriptionsApi->delete_blockchain_event_subscription_with_http_info: #{e}"
 end
 ```
@@ -99,16 +99,16 @@ Through this endpoint the customer can obtain a list of their callback subscript
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'crypto_apis'
 # setup authorization
-OpenapiClient.configure do |config|
+CryptoApis.configure do |config|
   # Configure API key authorization: ApiKey
   config.api_key['ApiKey'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['ApiKey'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::ManageSubscriptionsApi.new
+api_instance = CryptoApis::ManageSubscriptionsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 opts = {
@@ -121,7 +121,7 @@ begin
   # List Blockchain Events Subscriptions
   result = api_instance.list_blockchain_events_subscriptions(blockchain, network, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ManageSubscriptionsApi->list_blockchain_events_subscriptions: #{e}"
 end
 ```
@@ -139,7 +139,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ListBlockchainEventsSubscriptionsResponse>
-rescue OpenapiClient::ApiError => e
+rescue CryptoApis::ApiError => e
   puts "Error when calling ManageSubscriptionsApi->list_blockchain_events_subscriptions_with_http_info: #{e}"
 end
 ```

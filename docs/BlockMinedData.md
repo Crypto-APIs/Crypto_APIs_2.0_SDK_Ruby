@@ -1,4 +1,4 @@
-# OpenapiClient::BlockMinedData
+# CryptoApis::BlockMinedData
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::BlockMinedData.new(
+instance = CryptoApis::BlockMinedData.new(
   product: Blockchain Events,
   event: BLOCK_MINED,
   item: null

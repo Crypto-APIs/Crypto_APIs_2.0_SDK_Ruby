@@ -1,4 +1,4 @@
-# OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificEthereumClassicGasPrice
+# CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificEthereumClassicGasPrice
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::ListTransactionsByAddressResponseItemBlockchainSpecificEthereumClassicGasPrice.new(
+instance = CryptoApis::ListTransactionsByAddressResponseItemBlockchainSpecificEthereumClassicGasPrice.new(
   amount: 21000,
   unit: BTC
 )

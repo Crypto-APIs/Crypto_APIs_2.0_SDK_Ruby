@@ -1,4 +1,4 @@
-# OpenapiClient::GetFeeAddressDetailsResponseItem
+# CryptoApis::GetFeeAddressDetailsResponseItem
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::GetFeeAddressDetailsResponseItem.new(
+instance = CryptoApis::GetFeeAddressDetailsResponseItem.new(
   address: 0xe2b5f5e885a268e4b6faae53f99a663f3bb3e036,
   balance: null,
   minimum_transfer_amount: 0.0002

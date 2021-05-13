@@ -1,4 +1,4 @@
-# OpenapiClient::MissingApiKeyError
+# CryptoApis::MissingApiKeyError
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'crypto_apis'
 
-instance = OpenapiClient::MissingApiKeyError.new(
+instance = CryptoApis::MissingApiKeyError.new(
   code: missing_api_key,
   message: The specific authorization header (API Key) is missing, please check our Authorization section in our Documentation.,
   details: null
