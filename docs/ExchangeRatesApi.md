@@ -33,7 +33,8 @@ api_instance = CryptoApis::ExchangeRatesApi.new
 from_asset_symbol = 'btc' # String | Defines the base asset symbol to get a rate for.
 to_asset_symbol = 'usd' # String | Defines the relation asset symbol in which the base asset rate will be displayed.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  calculation_timestamp: 1618577849 # Integer | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp.
 }
 
 begin
@@ -70,6 +71,7 @@ end
 | **from_asset_symbol** | **String** | Defines the base asset symbol to get a rate for. |  |
 | **to_asset_symbol** | **String** | Defines the relation asset symbol in which the base asset rate will be displayed. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **calculation_timestamp** | **Integer** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional] |
 
 ### Return type
 
@@ -110,7 +112,8 @@ api_instance = CryptoApis::ExchangeRatesApi.new
 from_asset_id = '5b1ea92e584bf50020130612' # String | Defines the base asset Reference ID to get a rate for.
 to_asset_id = '5b1ea92e584bf50020130615' # String | Defines the relation asset Reference ID in which the base asset rate will be displayed.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  calculation_timestamp: 1618577849 # Integer | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp.
 }
 
 begin
@@ -147,6 +150,7 @@ end
 | **from_asset_id** | **String** | Defines the base asset Reference ID to get a rate for. |  |
 | **to_asset_id** | **String** | Defines the relation asset Reference ID in which the base asset rate will be displayed. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **calculation_timestamp** | **Integer** | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional] |
 
 ### Return type
 

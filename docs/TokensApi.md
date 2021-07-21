@@ -4,9 +4,89 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**get_contract_details_by_address**](TokensApi.md#get_contract_details_by_address) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{contractAddress}/contract | Get Contract Details by Address |
 | [**list_tokens_by_address**](TokensApi.md#list_tokens_by_address) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens | List Tokens By Address |
 | [**list_tokens_transfers_by_address**](TokensApi.md#list_tokens_transfers_by_address) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers | List Tokens Transfers By Address |
 | [**list_tokens_transfers_by_transaction_hash**](TokensApi.md#list_tokens_transfers_by_transaction_hash) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/tokens-transfers | List Tokens Transfers By Transaction Hash |
+
+
+## get_contract_details_by_address
+
+> <GetContractDetailsByAddressR> get_contract_details_by_address(blockchain, network, contract_address, opts)
+
+Get Contract Details by Address
+
+Though this endpoint customers can obtain information about a smart contract and its details. This can be done by the `address` parameter, i.e. the address of the smart contract.    {note}This address is **not** the same as the smart contract creator address.{/note}
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::TokensApi.new
+blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+contract_address = '0x7495fede000c8a3b77eeae09cf70fa94cd2d53f5' # String | Defines the specific address of the contract.
+opts = {
+  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+}
+
+begin
+  # Get Contract Details by Address
+  result = api_instance.get_contract_details_by_address(blockchain, network, contract_address, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling TokensApi->get_contract_details_by_address: #{e}"
+end
+```
+
+#### Using the get_contract_details_by_address_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetContractDetailsByAddressR>, Integer, Hash)> get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts)
+
+```ruby
+begin
+  # Get Contract Details by Address
+  data, status_code, headers = api_instance.get_contract_details_by_address_with_http_info(blockchain, network, contract_address, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetContractDetailsByAddressR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling TokensApi->get_contract_details_by_address_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | [default to &#39;ethereum&#39;] |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
+| **contract_address** | **String** | Defines the specific address of the contract. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+
+### Return type
+
+[**GetContractDetailsByAddressR**](GetContractDetailsByAddressR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## list_tokens_by_address
@@ -15,7 +95,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 List Tokens By Address
 
-Through this endpoint customers can obtain token data by providing an attribute - `address`.  The information that can be returned can include the contract address, the token symbol, type and balance.
+Through this endpoint customers can obtain token data by providing an attribute - `address`.  The information that can be returned can include the contract address, the token symbol, type and balance.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Examples
 
@@ -98,7 +178,7 @@ end
 
 List Tokens Transfers By Address
 
-Through this endpoint customers can obtain a list with token transfers by the `address` attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+Through this endpoint customers can obtain a list with token transfers by the `address` attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Examples
 
@@ -181,7 +261,7 @@ end
 
 List Tokens Transfers By Transaction Hash
 
-Through this endpoint customers can obtain a list with token transfers by the `transactionHash` attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}
+Through this endpoint customers can obtain a list with token transfers by the `transactionHash` attribute. Token transfers may include information such as addresses of the sender and recipient, token name, token symbol, etc.    {note}This refers only to transfers done for **tokens** not coins.{/note}    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Examples
 

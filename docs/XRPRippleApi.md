@@ -4,13 +4,14 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**get_latest_mined_xrp__ripple_block**](XRPRippleApi.md#get_latest_mined_xrp__ripple_block) | **GET** /blockchain-data/xrp/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block |
-| [**get_xrp__ripple_address_details**](XRPRippleApi.md#get_xrp__ripple_address_details) | **GET** /blockchain-data/xrp/{network}/addresses/{address} | Get XRP (Ripple) Address Details |
-| [**get_xrp__ripple_block_details_by_block_hash**](XRPRippleApi.md#get_xrp__ripple_block_details_by_block_hash) | **GET** /blockchain-data/xrp/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash |
-| [**get_xrp__ripple_block_details_by_block_height**](XRPRippleApi.md#get_xrp__ripple_block_details_by_block_height) | **GET** /blockchain-data/xrp/{network}/blocks/height/{height} | Get XRP (Ripple) Block Details By Block Height |
-| [**get_xrp__ripple_transaction_details_by_transaction_id**](XRPRippleApi.md#get_xrp__ripple_transaction_details_by_transaction_id) | **GET** /blockchain-data/xrp/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID |
-| [**list_xrp__ripple_transactions_by_address**](XRPRippleApi.md#list_xrp__ripple_transactions_by_address) | **GET** /blockchain-data/xrp/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address |
-| [**list_xrp__ripple_transactions_by_block_hash**](XRPRippleApi.md#list_xrp__ripple_transactions_by_block_hash) | **GET** /blockchain-data/xrp/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash |
+| [**get_latest_mined_xrp__ripple_block**](XRPRippleApi.md#get_latest_mined_xrp__ripple_block) | **GET** /blockchain-data/xrp-specific/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block |
+| [**get_xrp__ripple_address_details**](XRPRippleApi.md#get_xrp__ripple_address_details) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address} | Get XRP (Ripple) Address Details |
+| [**get_xrp__ripple_block_details_by_block_hash**](XRPRippleApi.md#get_xrp__ripple_block_details_by_block_hash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash |
+| [**get_xrp__ripple_block_details_by_block_height**](XRPRippleApi.md#get_xrp__ripple_block_details_by_block_height) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height |
+| [**get_xrp__ripple_transaction_details_by_transaction_id**](XRPRippleApi.md#get_xrp__ripple_transaction_details_by_transaction_id) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID |
+| [**list_xrp__ripple_transactions_by_address**](XRPRippleApi.md#list_xrp__ripple_transactions_by_address) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address |
+| [**list_xrp__ripple_transactions_by_block_hash**](XRPRippleApi.md#list_xrp__ripple_transactions_by_block_hash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash |
+| [**list_xrp__ripple_transactions_by_block_height**](XRPRippleApi.md#list_xrp__ripple_transactions_by_block_height) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height |
 
 
 ## get_latest_mined_xrp__ripple_block
@@ -244,7 +245,7 @@ end
 
 ## get_xrp__ripple_block_details_by_block_height
 
-> <GetXRPRippleBlockDetailsByBlockHeightR> get_xrp__ripple_block_details_by_block_height(network, height, opts)
+> <GetXRPRippleBlockDetailsByBlockHeightR> get_xrp__ripple_block_details_by_block_height(network, block_height, opts)
 
 Get XRP (Ripple) Block Details By Block Height
 
@@ -265,14 +266,14 @@ end
 
 api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
-height = '15886156' # String | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
+block_height = '15886156' # String | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
 opts = {
   context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
   # Get XRP (Ripple) Block Details By Block Height
-  result = api_instance.get_xrp__ripple_block_details_by_block_height(network, height, opts)
+  result = api_instance.get_xrp__ripple_block_details_by_block_height(network, block_height, opts)
   p result
 rescue CryptoApis::ApiError => e
   puts "Error when calling XRPRippleApi->get_xrp__ripple_block_details_by_block_height: #{e}"
@@ -283,12 +284,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetXRPRippleBlockDetailsByBlockHeightR>, Integer, Hash)> get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts)
+> <Array(<GetXRPRippleBlockDetailsByBlockHeightR>, Integer, Hash)> get_xrp__ripple_block_details_by_block_height_with_http_info(network, block_height, opts)
 
 ```ruby
 begin
   # Get XRP (Ripple) Block Details By Block Height
-  data, status_code, headers = api_instance.get_xrp__ripple_block_details_by_block_height_with_http_info(network, height, opts)
+  data, status_code, headers = api_instance.get_xrp__ripple_block_details_by_block_height_with_http_info(network, block_height, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetXRPRippleBlockDetailsByBlockHeightR>
@@ -302,7 +303,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks. |  |
-| **height** | **String** | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. |  |
+| **block_height** | **String** | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
 
 ### Return type
@@ -402,7 +403,7 @@ end
 
 List XRP (Ripple) Transactions by Address
 
-This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
+This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Examples
 
@@ -483,7 +484,7 @@ end
 
 List XRP (Ripple) Transactions By Block Hash
 
-This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
+This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Examples
 
@@ -547,6 +548,87 @@ end
 ### Return type
 
 [**ListXRPRippleTransactionsByBlockHashR**](ListXRPRippleTransactionsByBlockHashR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## list_xrp__ripple_transactions_by_block_height
+
+> <ListXRPRippleTransactionsByBlockHeightR> list_xrp__ripple_transactions_by_block_height(network, block_height, opts)
+
+List XRP (Ripple) Transactions By Block Height
+
+This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::XRPRippleApi.new
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+block_height = 15971358 # Integer | 
+opts = {
+  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
+  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+}
+
+begin
+  # List XRP (Ripple) Transactions By Block Height
+  result = api_instance.list_xrp__ripple_transactions_by_block_height(network, block_height, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_block_height: #{e}"
+end
+```
+
+#### Using the list_xrp__ripple_transactions_by_block_height_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListXRPRippleTransactionsByBlockHeightR>, Integer, Hash)> list_xrp__ripple_transactions_by_block_height_with_http_info(network, block_height, opts)
+
+```ruby
+begin
+  # List XRP (Ripple) Transactions By Block Height
+  data, status_code, headers = api_instance.list_xrp__ripple_transactions_by_block_height_with_http_info(network, block_height, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListXRPRippleTransactionsByBlockHeightR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_block_height_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
+| **block_height** | **Integer** |  |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **limit** | **Integer** | Defines how many items should be returned in the response per page basis. | [optional][default to 50] |
+| **offset** | **Integer** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional][default to 0] |
+
+### Return type
+
+[**ListXRPRippleTransactionsByBlockHeightR**](ListXRPRippleTransactionsByBlockHeightR.md)
 
 ### Authorization
 

@@ -24,7 +24,7 @@ instance = CryptoApis::ListTransactionsByAddressRIBSEC.new(
   gas_used: 21000,
   input_data: 0xa9059cbb000000000000000000000000acc59ec2f7119dc7a9e69dcd124cff75caae05bf0000000000000000000000000000000000000000000000000000000000989680,
   nonce: 16,
-  transaction_status: null
+  transaction_status: 0x1
 )
 ```
 

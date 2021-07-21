@@ -4,14 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **confirmed_balance** | **String** | Token balance |  |
-| **creator_address** | **String** | Token creator |  |
-| **token_decimals** | **String** | Number of decimals | [optional] |
-| **token_name** | **String** | Token name | [optional] |
-| **token_symbol** | **String** | Token symbol | [optional] |
-| **token_type** | **String** | Token type | [optional] |
-| **tokens_balance** | **String** | Token balance |  |
-| **total_supply** | **String** | Token total supply |  |
+| **token_decimals** | **String** | Defines the number of decimals that the token possesses. |  |
+| **token_name** | **String** | Specifies the token&#39;s name. | [optional] |
+| **token_symbol** | **String** | Defines the unique symbol of the token. | [optional] |
+| **token_type** | **String** | Defines the type of the token. |  |
+| **total_supply** | **String** | Defines the total number of tokens created that exist on the market minus the ones that have been burned. |  |
 
 ## Example
 
@@ -19,14 +16,11 @@
 require 'crypto_apis'
 
 instance = CryptoApis::GetContractDetailsByAddressRI.new(
-  confirmed_balance: null,
-  creator_address: null,
-  token_decimals: null,
-  token_name: null,
-  token_symbol: null,
-  token_type: null,
-  tokens_balance: null,
-  total_supply: null
+  token_decimals: 18,
+  token_name: Band Protocol,
+  token_symbol: BAND,
+  token_type: ERC-20,
+  total_supply: 1000000
 )
 ```
 

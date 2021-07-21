@@ -11,7 +11,8 @@
 | **asset_symbol** | **String** | Specifies the asset&#39;s unique symbol in the Crypto APIs listings. |  |
 | **asset_type** | **String** | Defines the type of the supported asset. This could be either \&quot;crypto\&quot; or \&quot;fiat\&quot;. |  |
 | **latest_rate** | [**ListAssetsDetailsRILatestRate**](ListAssetsDetailsRILatestRate.md) |  |  |
-| **specific_data** | [**ListAssetsDetailsRISpecificData**](ListAssetsDetailsRISpecificData.md) |  |  |
+| **slug** | **String** | Asset&#x60;s unique slug string in Crypto APIs listings | [optional] |
+| **specific_data** | [**ListAssetsDetailsRIS**](ListAssetsDetailsRIS.md) |  |  |
 
 ## Example
 
@@ -26,6 +27,7 @@ instance = CryptoApis::ListAssetsDetailsRI.new(
   asset_symbol: BTC,
   asset_type: crypto,
   latest_rate: null,
+  slug: tether,
   specific_data: null
 )
 ```
