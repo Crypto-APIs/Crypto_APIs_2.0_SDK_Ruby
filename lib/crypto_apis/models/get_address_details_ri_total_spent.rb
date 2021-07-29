@@ -18,7 +18,6 @@ module CryptoApis
     # Defines the total amount of all spent by this address coins, based on confirmed transactions.
     attr_accessor :amount
 
-    # Defines the unit of the spent amount, e.g. BTC, ETH, XRP.
     attr_accessor :unit
 
     # Attribute mapping from ruby-style variable name to JSON key.

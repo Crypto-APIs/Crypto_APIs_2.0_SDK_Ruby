@@ -21,6 +21,7 @@ module CryptoApis
         [
           :'GetBlockDetailsByBlockHeightRIBSB',
           :'GetBlockDetailsByBlockHeightRIBSBC',
+          :'GetBlockDetailsByBlockHeightRIBSBSC',
           :'GetBlockDetailsByBlockHeightRIBSD',
           :'GetBlockDetailsByBlockHeightRIBSD2',
           :'GetBlockDetailsByBlockHeightRIBSE',

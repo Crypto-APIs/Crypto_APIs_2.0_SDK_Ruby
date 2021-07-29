@@ -211,36 +211,32 @@ module CryptoApis
 
     # Create Tokens Transaction Request from Address
     # Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn't happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
-    # @param address [String] Defines the specific source address for the transaction.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
+    # @param sender_address [String] Defines the specific source address for the transaction.
     # @param wallet_id [String] Defines the unique ID of the Wallet.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [CreateTokensTransactionRequestFromAddressRB] :create_tokens_transaction_request_from_address_rb 
     # @return [CreateTokensTransactionRequestFromAddressR]
-    def create_tokens_transaction_request_from_address(address, blockchain, network, wallet_id, opts = {})
-      data, _status_code, _headers = create_tokens_transaction_request_from_address_with_http_info(address, blockchain, network, wallet_id, opts)
+    def create_tokens_transaction_request_from_address(blockchain, network, sender_address, wallet_id, opts = {})
+      data, _status_code, _headers = create_tokens_transaction_request_from_address_with_http_info(blockchain, network, sender_address, wallet_id, opts)
       data
     end
 
     # Create Tokens Transaction Request from Address
     # Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn&#39;t happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
-    # @param address [String] Defines the specific source address for the transaction.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
+    # @param sender_address [String] Defines the specific source address for the transaction.
     # @param wallet_id [String] Defines the unique ID of the Wallet.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [CreateTokensTransactionRequestFromAddressRB] :create_tokens_transaction_request_from_address_rb 
     # @return [Array<(CreateTokensTransactionRequestFromAddressR, Integer, Hash)>] CreateTokensTransactionRequestFromAddressR data, response status code and response headers
-    def create_tokens_transaction_request_from_address_with_http_info(address, blockchain, network, wallet_id, opts = {})
+    def create_tokens_transaction_request_from_address_with_http_info(blockchain, network, sender_address, wallet_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TransactionsApi.create_tokens_transaction_request_from_address ...'
-      end
-      # verify the required parameter 'address' is set
-      if @api_client.config.client_side_validation && address.nil?
-        fail ArgumentError, "Missing the required parameter 'address' when calling TransactionsApi.create_tokens_transaction_request_from_address"
       end
       # verify the required parameter 'blockchain' is set
       if @api_client.config.client_side_validation && blockchain.nil?
@@ -260,12 +256,16 @@ module CryptoApis
       if @api_client.config.client_side_validation && !allowable_values.include?(network)
         fail ArgumentError, "invalid value for \"network\", must be one of #{allowable_values}"
       end
+      # verify the required parameter 'sender_address' is set
+      if @api_client.config.client_side_validation && sender_address.nil?
+        fail ArgumentError, "Missing the required parameter 'sender_address' when calling TransactionsApi.create_tokens_transaction_request_from_address"
+      end
       # verify the required parameter 'wallet_id' is set
       if @api_client.config.client_side_validation && wallet_id.nil?
         fail ArgumentError, "Missing the required parameter 'wallet_id' when calling TransactionsApi.create_tokens_transaction_request_from_address"
       end
       # resource path
-      local_var_path = '/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/token-transaction-requests'.sub('{' + 'address' + '}', CGI.escape(address.to_s)).sub('{' + 'blockchain' + '}', CGI.escape(blockchain.to_s)).sub('{' + 'network' + '}', CGI.escape(network.to_s)).sub('{' + 'walletId' + '}', CGI.escape(wallet_id.to_s))
+      local_var_path = '/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests'.sub('{' + 'blockchain' + '}', CGI.escape(blockchain.to_s)).sub('{' + 'network' + '}', CGI.escape(network.to_s)).sub('{' + 'senderAddress' + '}', CGI.escape(sender_address.to_s)).sub('{' + 'walletId' + '}', CGI.escape(wallet_id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}

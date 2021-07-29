@@ -16,6 +16,7 @@ CryptoApis::ListTransactionsByBlockHashRIBS.openapi_one_of
 # [
 #   :'ListTransactionsByBlockHashRIBSB',
 #   :'ListTransactionsByBlockHashRIBSBC',
+#   :'ListTransactionsByBlockHashRIBSBSC',
 #   :'ListTransactionsByBlockHashRIBSD',
 #   :'ListTransactionsByBlockHashRIBSD2',
 #   :'ListTransactionsByBlockHashRIBSE',
@@ -50,6 +51,7 @@ CryptoApis::ListTransactionsByBlockHashRIBS.build(data_that_doesnt_match)
 
 - `ListTransactionsByBlockHashRIBSB`
 - `ListTransactionsByBlockHashRIBSBC`
+- `ListTransactionsByBlockHashRIBSBSC`
 - `ListTransactionsByBlockHashRIBSD`
 - `ListTransactionsByBlockHashRIBSD2`
 - `ListTransactionsByBlockHashRIBSE`

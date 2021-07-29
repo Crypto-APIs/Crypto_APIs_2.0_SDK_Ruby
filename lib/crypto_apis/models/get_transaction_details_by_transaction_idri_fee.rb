@@ -18,7 +18,6 @@ module CryptoApis
     # Defines the amount of the transaction fee.
     attr_accessor :amount
 
-    # Defines the unit of the fee amount, e.g. BTC, ETH, XRP.
     attr_accessor :unit
 
     # Attribute mapping from ruby-style variable name to JSON key.

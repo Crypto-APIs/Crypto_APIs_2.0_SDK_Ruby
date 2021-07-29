@@ -31,6 +31,18 @@ describe CryptoApis::CreateCoinsTransactionRequestFromAddressRBDataItem do
     end
   end
 
+  describe 'test attribute "callback_secret_key"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "callback_url"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "fee_priority"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -41,7 +53,7 @@ describe CryptoApis::CreateCoinsTransactionRequestFromAddressRBDataItem do
     end
   end
 
-  describe 'test attribute "to_address"' do
+  describe 'test attribute "recipient_address"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

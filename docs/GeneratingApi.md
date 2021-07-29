@@ -4,14 +4,14 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**generate_receiving_address**](GeneratingApi.md#generate_receiving_address) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Receiving Address |
+| [**generate_deposit_address**](GeneratingApi.md#generate_deposit_address) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Deposit Address |
 
 
-## generate_receiving_address
+## generate_deposit_address
 
-> <GenerateReceivingAddressR> generate_receiving_address(blockchain, network, wallet_id, opts)
+> <GenerateDepositAddressR> generate_deposit_address(blockchain, network, wallet_id, opts)
 
-Generate Receiving Address
+Generate Deposit Address
 
 Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
 
@@ -34,33 +34,33 @@ network = 'mainnet' # String | Represents the name of the blockchain network use
 wallet_id = '60c9d9921c38030006675ff6' # String | Represents the unique ID of the specific Wallet.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  generate_receiving_address_rb: CryptoApis::GenerateReceivingAddressRB.new({data: CryptoApis::GenerateReceivingAddressRBData.new({item: CryptoApis::GenerateReceivingAddressRBDataItem.new({label: 'yourLabelStringHere'})})}) # GenerateReceivingAddressRB | 
+  generate_deposit_address_rb: CryptoApis::GenerateDepositAddressRB.new({data: CryptoApis::GenerateDepositAddressRBData.new({item: CryptoApis::GenerateDepositAddressRBDataItem.new({label: 'yourLabelStringHere'})})}) # GenerateDepositAddressRB | 
 }
 
 begin
-  # Generate Receiving Address
-  result = api_instance.generate_receiving_address(blockchain, network, wallet_id, opts)
+  # Generate Deposit Address
+  result = api_instance.generate_deposit_address(blockchain, network, wallet_id, opts)
   p result
 rescue CryptoApis::ApiError => e
-  puts "Error when calling GeneratingApi->generate_receiving_address: #{e}"
+  puts "Error when calling GeneratingApi->generate_deposit_address: #{e}"
 end
 ```
 
-#### Using the generate_receiving_address_with_http_info variant
+#### Using the generate_deposit_address_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GenerateReceivingAddressR>, Integer, Hash)> generate_receiving_address_with_http_info(blockchain, network, wallet_id, opts)
+> <Array(<GenerateDepositAddressR>, Integer, Hash)> generate_deposit_address_with_http_info(blockchain, network, wallet_id, opts)
 
 ```ruby
 begin
-  # Generate Receiving Address
-  data, status_code, headers = api_instance.generate_receiving_address_with_http_info(blockchain, network, wallet_id, opts)
+  # Generate Deposit Address
+  data, status_code, headers = api_instance.generate_deposit_address_with_http_info(blockchain, network, wallet_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <GenerateReceivingAddressR>
+  p data # => <GenerateDepositAddressR>
 rescue CryptoApis::ApiError => e
-  puts "Error when calling GeneratingApi->generate_receiving_address_with_http_info: #{e}"
+  puts "Error when calling GeneratingApi->generate_deposit_address_with_http_info: #{e}"
 end
 ```
 
@@ -72,11 +72,11 @@ end
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
 | **wallet_id** | **String** | Represents the unique ID of the specific Wallet. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **generate_receiving_address_rb** | [**GenerateReceivingAddressRB**](GenerateReceivingAddressRB.md) |  | [optional] |
+| **generate_deposit_address_rb** | [**GenerateDepositAddressRB**](GenerateDepositAddressRB.md) |  | [optional] |
 
 ### Return type
 
-[**GenerateReceivingAddressR**](GenerateReceivingAddressR.md)
+[**GenerateDepositAddressR**](GenerateDepositAddressR.md)
 
 ### Authorization
 

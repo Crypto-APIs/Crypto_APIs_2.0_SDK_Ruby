@@ -424,7 +424,8 @@ address = 'rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z' # String | Represents the public a
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 10, # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  transaction_type: 'account-set' # String | 
 }
 
 begin
@@ -463,6 +464,7 @@ end
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
 | **limit** | **Integer** | Defines how many items should be returned in the response per page basis. | [optional][default to 50] |
 | **offset** | **Integer** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional][default to 0] |
+| **transaction_type** | **String** |  | [optional] |
 
 ### Return type
 

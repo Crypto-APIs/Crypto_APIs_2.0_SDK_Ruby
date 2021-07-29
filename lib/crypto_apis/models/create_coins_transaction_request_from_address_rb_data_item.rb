@@ -18,11 +18,17 @@ module CryptoApis
     # Represents the specific amount of the transaction.
     attr_accessor :amount
 
+    # Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+    attr_accessor :callback_secret_key
+
+    # Verified URL for sending callbacks
+    attr_accessor :callback_url
+
     # Represents the fee priority of the automation, whether it is \"slow\", \"standard\" or \"fast\".
     attr_accessor :fee_priority
 
     # Defines the specific recipient address for the transaction.
-    attr_accessor :to_address
+    attr_accessor :recipient_address
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -50,8 +56,10 @@ module CryptoApis
     def self.attribute_map
       {
         :'amount' => :'amount',
+        :'callback_secret_key' => :'callbackSecretKey',
+        :'callback_url' => :'callbackUrl',
         :'fee_priority' => :'feePriority',
-        :'to_address' => :'toAddress'
+        :'recipient_address' => :'recipientAddress'
       }
     end
 
@@ -64,8 +72,10 @@ module CryptoApis
     def self.openapi_types
       {
         :'amount' => :'String',
+        :'callback_secret_key' => :'String',
+        :'callback_url' => :'String',
         :'fee_priority' => :'String',
-        :'to_address' => :'String'
+        :'recipient_address' => :'String'
       }
     end
 
@@ -94,12 +104,20 @@ module CryptoApis
         self.amount = attributes[:'amount']
       end
 
+      if attributes.key?(:'callback_secret_key')
+        self.callback_secret_key = attributes[:'callback_secret_key']
+      end
+
+      if attributes.key?(:'callback_url')
+        self.callback_url = attributes[:'callback_url']
+      end
+
       if attributes.key?(:'fee_priority')
         self.fee_priority = attributes[:'fee_priority']
       end
 
-      if attributes.key?(:'to_address')
-        self.to_address = attributes[:'to_address']
+      if attributes.key?(:'recipient_address')
+        self.recipient_address = attributes[:'recipient_address']
       end
     end
 
@@ -115,8 +133,8 @@ module CryptoApis
         invalid_properties.push('invalid value for "fee_priority", fee_priority cannot be nil.')
       end
 
-      if @to_address.nil?
-        invalid_properties.push('invalid value for "to_address", to_address cannot be nil.')
+      if @recipient_address.nil?
+        invalid_properties.push('invalid value for "recipient_address", recipient_address cannot be nil.')
       end
 
       invalid_properties
@@ -129,7 +147,7 @@ module CryptoApis
       return false if @fee_priority.nil?
       fee_priority_validator = EnumAttributeValidator.new('String', ["slow", "standard", "fast"])
       return false unless fee_priority_validator.valid?(@fee_priority)
-      return false if @to_address.nil?
+      return false if @recipient_address.nil?
       true
     end
 
@@ -149,8 +167,10 @@ module CryptoApis
       return true if self.equal?(o)
       self.class == o.class &&
           amount == o.amount &&
+          callback_secret_key == o.callback_secret_key &&
+          callback_url == o.callback_url &&
           fee_priority == o.fee_priority &&
-          to_address == o.to_address
+          recipient_address == o.recipient_address
     end
 
     # @see the `==` method
@@ -162,7 +182,7 @@ module CryptoApis
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [amount, fee_priority, to_address].hash
+      [amount, callback_secret_key, callback_url, fee_priority, recipient_address].hash
     end
 
     # Builds the object from hash

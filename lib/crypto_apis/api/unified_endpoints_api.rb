@@ -137,7 +137,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_block_details_by_block_hash"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash"]
+      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -225,7 +225,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_block_details_by_block_height"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash"]
+      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -393,7 +393,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_latest_mined_block"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash"]
+      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -477,7 +477,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_transaction_details_by_transaction_id"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -569,7 +569,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.list_transactions_by_address"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum-classic", "ethereum"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum-classic", "ethereum", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -663,7 +663,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.list_transactions_by_block_hash"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -757,7 +757,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.list_transactions_by_block_height"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "dash", "dogecoin", "litecoin", "bitcoin-cash", "ethereum-classic"]
+      allowable_values = ["bitcoin", "ethereum", "dash", "dogecoin", "litecoin", "bitcoin-cash", "ethereum-classic", "binance-smart-chain"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end

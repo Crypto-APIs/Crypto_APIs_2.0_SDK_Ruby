@@ -15,6 +15,12 @@ require 'time'
 
 module CryptoApis
   class CreateCoinsTransactionRequestFromWalletRI
+    # Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+    attr_accessor :callback_secret_key
+
+    # Verified URL for sending callbacks
+    attr_accessor :callback_url
+
     # Represents the fee priority of the automation, whether it is \"slow\", \"standard\" or \"fast\".
     attr_accessor :fee_priority
 
@@ -52,6 +58,8 @@ module CryptoApis
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'callback_secret_key' => :'callbackSecretKey',
+        :'callback_url' => :'callbackUrl',
         :'fee_priority' => :'feePriority',
         :'recipients' => :'recipients',
         :'total_transaction_amount' => :'totalTransactionAmount',
@@ -67,6 +75,8 @@ module CryptoApis
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'callback_secret_key' => :'String',
+        :'callback_url' => :'String',
         :'fee_priority' => :'String',
         :'recipients' => :'Array<CreateCoinsTransactionRequestFromWalletRIRecipients>',
         :'total_transaction_amount' => :'String',
@@ -94,6 +104,14 @@ module CryptoApis
         end
         h[k.to_sym] = v
       }
+
+      if attributes.key?(:'callback_secret_key')
+        self.callback_secret_key = attributes[:'callback_secret_key']
+      end
+
+      if attributes.key?(:'callback_url')
+        self.callback_url = attributes[:'callback_url']
+      end
 
       if attributes.key?(:'fee_priority')
         self.fee_priority = attributes[:'fee_priority']
@@ -176,6 +194,8 @@ module CryptoApis
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          callback_secret_key == o.callback_secret_key &&
+          callback_url == o.callback_url &&
           fee_priority == o.fee_priority &&
           recipients == o.recipients &&
           total_transaction_amount == o.total_transaction_amount &&
@@ -191,7 +211,7 @@ module CryptoApis
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [fee_priority, recipients, total_transaction_amount, transaction_request_status].hash
+      [callback_secret_key, callback_url, fee_priority, recipients, total_transaction_amount, transaction_request_status].hash
     end
 
     # Builds the object from hash

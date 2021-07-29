@@ -19,36 +19,36 @@ module CryptoApis
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Generate Receiving Address
+    # Generate Deposit Address
     # Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param wallet_id [String] Represents the unique ID of the specific Wallet.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [GenerateReceivingAddressRB] :generate_receiving_address_rb 
-    # @return [GenerateReceivingAddressR]
-    def generate_receiving_address(blockchain, network, wallet_id, opts = {})
-      data, _status_code, _headers = generate_receiving_address_with_http_info(blockchain, network, wallet_id, opts)
+    # @option opts [GenerateDepositAddressRB] :generate_deposit_address_rb 
+    # @return [GenerateDepositAddressR]
+    def generate_deposit_address(blockchain, network, wallet_id, opts = {})
+      data, _status_code, _headers = generate_deposit_address_with_http_info(blockchain, network, wallet_id, opts)
       data
     end
 
-    # Generate Receiving Address
+    # Generate Deposit Address
     # Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param wallet_id [String] Represents the unique ID of the specific Wallet.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @option opts [GenerateReceivingAddressRB] :generate_receiving_address_rb 
-    # @return [Array<(GenerateReceivingAddressR, Integer, Hash)>] GenerateReceivingAddressR data, response status code and response headers
-    def generate_receiving_address_with_http_info(blockchain, network, wallet_id, opts = {})
+    # @option opts [GenerateDepositAddressRB] :generate_deposit_address_rb 
+    # @return [Array<(GenerateDepositAddressR, Integer, Hash)>] GenerateDepositAddressR data, response status code and response headers
+    def generate_deposit_address_with_http_info(blockchain, network, wallet_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: GeneratingApi.generate_receiving_address ...'
+        @api_client.config.logger.debug 'Calling API: GeneratingApi.generate_deposit_address ...'
       end
       # verify the required parameter 'blockchain' is set
       if @api_client.config.client_side_validation && blockchain.nil?
-        fail ArgumentError, "Missing the required parameter 'blockchain' when calling GeneratingApi.generate_receiving_address"
+        fail ArgumentError, "Missing the required parameter 'blockchain' when calling GeneratingApi.generate_deposit_address"
       end
       # verify enum value
       allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum"]
@@ -57,7 +57,7 @@ module CryptoApis
       end
       # verify the required parameter 'network' is set
       if @api_client.config.client_side_validation && network.nil?
-        fail ArgumentError, "Missing the required parameter 'network' when calling GeneratingApi.generate_receiving_address"
+        fail ArgumentError, "Missing the required parameter 'network' when calling GeneratingApi.generate_deposit_address"
       end
       # verify enum value
       allowable_values = ["mainnet", "testnet"]
@@ -66,7 +66,7 @@ module CryptoApis
       end
       # verify the required parameter 'wallet_id' is set
       if @api_client.config.client_side_validation && wallet_id.nil?
-        fail ArgumentError, "Missing the required parameter 'wallet_id' when calling GeneratingApi.generate_receiving_address"
+        fail ArgumentError, "Missing the required parameter 'wallet_id' when calling GeneratingApi.generate_deposit_address"
       end
       # resource path
       local_var_path = '/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses'.sub('{' + 'blockchain' + '}', CGI.escape(blockchain.to_s)).sub('{' + 'network' + '}', CGI.escape(network.to_s)).sub('{' + 'walletId' + '}', CGI.escape(wallet_id.to_s))
@@ -86,16 +86,16 @@ module CryptoApis
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'generate_receiving_address_rb'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'generate_deposit_address_rb'])
 
       # return_type
-      return_type = opts[:debug_return_type] || 'GenerateReceivingAddressR'
+      return_type = opts[:debug_return_type] || 'GenerateDepositAddressR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
 
       new_options = opts.merge(
-        :operation => :"GeneratingApi.generate_receiving_address",
+        :operation => :"GeneratingApi.generate_deposit_address",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -106,7 +106,7 @@ module CryptoApis
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: GeneratingApi#generate_receiving_address\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: GeneratingApi#generate_deposit_address\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

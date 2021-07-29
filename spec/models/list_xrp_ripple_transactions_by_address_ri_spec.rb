@@ -25,12 +25,6 @@ describe CryptoApis::ListXRPRippleTransactionsByAddressRI do
       expect(instance).to be_instance_of(CryptoApis::ListXRPRippleTransactionsByAddressRI)
     end
   end
-  describe 'test attribute "additional_data"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   describe 'test attribute "index"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

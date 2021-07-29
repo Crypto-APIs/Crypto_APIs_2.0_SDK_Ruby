@@ -107,34 +107,34 @@ module CryptoApis
       return data, status_code, headers
     end
 
-    # List Receiving Addresses
-    # Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # List Deposit Addresses
+    # Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param wallet_id [String] Represents the unique ID of the specific Wallet.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [ListReceivingAddressesR]
-    def list_receiving_addresses(blockchain, network, wallet_id, opts = {})
-      data, _status_code, _headers = list_receiving_addresses_with_http_info(blockchain, network, wallet_id, opts)
+    # @return [ListDepositAddressesR]
+    def list_deposit_addresses(blockchain, network, wallet_id, opts = {})
+      data, _status_code, _headers = list_deposit_addresses_with_http_info(blockchain, network, wallet_id, opts)
       data
     end
 
-    # List Receiving Addresses
-    # Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # List Deposit Addresses
+    # Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param wallet_id [String] Represents the unique ID of the specific Wallet.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-    # @return [Array<(ListReceivingAddressesR, Integer, Hash)>] ListReceivingAddressesR data, response status code and response headers
-    def list_receiving_addresses_with_http_info(blockchain, network, wallet_id, opts = {})
+    # @return [Array<(ListDepositAddressesR, Integer, Hash)>] ListDepositAddressesR data, response status code and response headers
+    def list_deposit_addresses_with_http_info(blockchain, network, wallet_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: InformativeApi.list_receiving_addresses ...'
+        @api_client.config.logger.debug 'Calling API: InformativeApi.list_deposit_addresses ...'
       end
       # verify the required parameter 'blockchain' is set
       if @api_client.config.client_side_validation && blockchain.nil?
-        fail ArgumentError, "Missing the required parameter 'blockchain' when calling InformativeApi.list_receiving_addresses"
+        fail ArgumentError, "Missing the required parameter 'blockchain' when calling InformativeApi.list_deposit_addresses"
       end
       # verify enum value
       allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum"]
@@ -143,7 +143,7 @@ module CryptoApis
       end
       # verify the required parameter 'network' is set
       if @api_client.config.client_side_validation && network.nil?
-        fail ArgumentError, "Missing the required parameter 'network' when calling InformativeApi.list_receiving_addresses"
+        fail ArgumentError, "Missing the required parameter 'network' when calling InformativeApi.list_deposit_addresses"
       end
       # verify enum value
       allowable_values = ["mainnet", "testnet"]
@@ -152,7 +152,7 @@ module CryptoApis
       end
       # verify the required parameter 'wallet_id' is set
       if @api_client.config.client_side_validation && wallet_id.nil?
-        fail ArgumentError, "Missing the required parameter 'wallet_id' when calling InformativeApi.list_receiving_addresses"
+        fail ArgumentError, "Missing the required parameter 'wallet_id' when calling InformativeApi.list_deposit_addresses"
       end
       # resource path
       local_var_path = '/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses'.sub('{' + 'blockchain' + '}', CGI.escape(blockchain.to_s)).sub('{' + 'network' + '}', CGI.escape(network.to_s)).sub('{' + 'walletId' + '}', CGI.escape(wallet_id.to_s))
@@ -173,13 +173,13 @@ module CryptoApis
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ListReceivingAddressesR'
+      return_type = opts[:debug_return_type] || 'ListDepositAddressesR'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['ApiKey']
 
       new_options = opts.merge(
-        :operation => :"InformativeApi.list_receiving_addresses",
+        :operation => :"InformativeApi.list_deposit_addresses",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -190,7 +190,7 @@ module CryptoApis
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: InformativeApi#list_receiving_addresses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: InformativeApi#list_deposit_addresses\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -227,7 +227,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling InformativeApi.list_supported_tokens"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "xrp"]
+      allowable_values = ["bitcoin", "ethereum"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -236,7 +236,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'network' when calling InformativeApi.list_supported_tokens"
       end
       # verify enum value
-      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby", "mordor"]
+      allowable_values = ["mainnet", "testnet"]
       if @api_client.config.client_side_validation && !allowable_values.include?(network)
         fail ArgumentError, "invalid value for \"network\", must be one of #{allowable_values}"
       end

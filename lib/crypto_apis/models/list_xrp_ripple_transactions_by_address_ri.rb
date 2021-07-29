@@ -15,9 +15,6 @@ require 'time'
 
 module CryptoApis
   class ListXRPRippleTransactionsByAddressRI
-    # Represents any additional data that may be needed.
-    attr_accessor :additional_data
-
     # Represents the index position of the transaction in the block.
     attr_accessor :index
 
@@ -59,7 +56,6 @@ module CryptoApis
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'additional_data' => :'additionalData',
         :'index' => :'index',
         :'mined_in_block_hash' => :'minedInBlockHash',
         :'mined_in_block_height' => :'minedInBlockHeight',
@@ -85,7 +81,6 @@ module CryptoApis
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'additional_data' => :'String',
         :'index' => :'Integer',
         :'mined_in_block_hash' => :'String',
         :'mined_in_block_height' => :'Integer',
@@ -123,10 +118,6 @@ module CryptoApis
         end
         h[k.to_sym] = v
       }
-
-      if attributes.key?(:'additional_data')
-        self.additional_data = attributes[:'additional_data']
-      end
 
       if attributes.key?(:'index')
         self.index = attributes[:'index']
@@ -193,10 +184,6 @@ module CryptoApis
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @additional_data.nil?
-        invalid_properties.push('invalid value for "additional_data", additional_data cannot be nil.')
-      end
-
       if @index.nil?
         invalid_properties.push('invalid value for "index", index cannot be nil.')
       end
@@ -259,7 +246,6 @@ module CryptoApis
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @additional_data.nil?
       return false if @index.nil?
       return false if @mined_in_block_hash.nil?
       return false if @mined_in_block_height.nil?
@@ -282,7 +268,6 @@ module CryptoApis
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          additional_data == o.additional_data &&
           index == o.index &&
           mined_in_block_hash == o.mined_in_block_hash &&
           mined_in_block_height == o.mined_in_block_height &&
@@ -308,7 +293,7 @@ module CryptoApis
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [additional_data, index, mined_in_block_hash, mined_in_block_height, recipients, senders, sequence, status, timestamp, transaction_hash, type, fee, offer, receive, value].hash
+      [index, mined_in_block_hash, mined_in_block_height, recipients, senders, sequence, status, timestamp, transaction_hash, type, fee, offer, receive, value].hash
     end
 
     # Builds the object from hash

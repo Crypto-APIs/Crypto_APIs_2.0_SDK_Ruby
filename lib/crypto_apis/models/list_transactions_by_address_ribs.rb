@@ -21,6 +21,7 @@ module CryptoApis
         [
           :'ListTransactionsByAddressRIBSB',
           :'ListTransactionsByAddressRIBSBC',
+          :'ListTransactionsByAddressRIBSBSC',
           :'ListTransactionsByAddressRIBSD',
           :'ListTransactionsByAddressRIBSD2',
           :'ListTransactionsByAddressRIBSE',

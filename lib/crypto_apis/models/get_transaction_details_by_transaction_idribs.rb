@@ -21,6 +21,7 @@ module CryptoApis
         [
           :'GetTransactionDetailsByTransactionIDRIBSB',
           :'GetTransactionDetailsByTransactionIDRIBSBC',
+          :'GetTransactionDetailsByTransactionIDRIBSBSC',
           :'GetTransactionDetailsByTransactionIDRIBSD',
           :'GetTransactionDetailsByTransactionIDRIBSD2',
           :'GetTransactionDetailsByTransactionIDRIBSE',

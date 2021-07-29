@@ -4,7 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **additional_data** | **String** | Represents any additional data that may be needed. |  |
 | **index** | **Integer** | Represents the index position of the transaction in the block. |  |
 | **mined_in_block_hash** | **String** | Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. |  |
 | **mined_in_block_height** | **Integer** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. |  |
@@ -26,17 +25,16 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ListXRPRippleTransactionsByAddressRI.new(
-  additional_data: null,
   index: 3,
   mined_in_block_hash: 3dff3ab3697a0a3116062a92a499dc7b5c9c777b2035f79bb906894972d4573d,
   mined_in_block_height: 15949067,
   recipients: null,
   senders: null,
   sequence: 39673,
-  status: null,
+  status: tesSUCCESS,
   timestamp: 4256894,
   transaction_hash: 33684d38ccf56f5b10a25e60b11b251abe6288f41aadd03c7596dced895b282a,
-  type: null,
+  type: OfferCreate,
   fee: null,
   offer: null,
   receive: null,

@@ -406,6 +406,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis. (default to 50)
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items. (default to 0)
+    # @option opts [String] :transaction_type 
     # @return [ListXRPRippleTransactionsByAddressR]
     def list_xrp__ripple_transactions_by_address(network, address, opts = {})
       data, _status_code, _headers = list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts)
@@ -420,6 +421,7 @@ module CryptoApis
     # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
     # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
     # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
+    # @option opts [String] :transaction_type 
     # @return [Array<(ListXRPRippleTransactionsByAddressR, Integer, Hash)>] ListXRPRippleTransactionsByAddressR data, response status code and response headers
     def list_xrp__ripple_transactions_by_address_with_http_info(network, address, opts = {})
       if @api_client.config.debugging
@@ -438,6 +440,10 @@ module CryptoApis
       if @api_client.config.client_side_validation && address.nil?
         fail ArgumentError, "Missing the required parameter 'address' when calling XRPRippleApi.list_xrp__ripple_transactions_by_address"
       end
+      allowable_values = ["account-set", "account-delete", "check-cancel", "check-cash", "check-create", "deposit-preauth", "escrow-cancel", "escrow-create", "escrow-finish", "offer-cancel", "offer-create", "payment", "payment-channel-claim", "payment-channel-create", "payment-channel-fund", "set-regular-key", "signer-list-set", "ticket-create", "trust-set"]
+      if @api_client.config.client_side_validation && opts[:'transaction_type'] && !allowable_values.include?(opts[:'transaction_type'])
+        fail ArgumentError, "invalid value for \"transaction_type\", must be one of #{allowable_values}"
+      end
       # resource path
       local_var_path = '/blockchain-data/xrp-specific/{network}/addresses/{address}/transactions'.sub('{' + 'network' + '}', CGI.escape(network.to_s)).sub('{' + 'address' + '}', CGI.escape(address.to_s))
 
@@ -446,6 +452,7 @@ module CryptoApis
       query_params[:'context'] = opts[:'context'] if !opts[:'context'].nil?
       query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
       query_params[:'offset'] = opts[:'offset'] if !opts[:'offset'].nil?
+      query_params[:'transactionType'] = opts[:'transaction_type'] if !opts[:'transaction_type'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}

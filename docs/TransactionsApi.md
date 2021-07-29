@@ -6,7 +6,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | ------ | ------------ | ----------- |
 | [**create_coins_transaction_request_from_address**](TransactionsApi.md#create_coins_transaction_request_from_address) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/transaction-requests | Create Coins Transaction Request from Address |
 | [**create_coins_transaction_request_from_wallet**](TransactionsApi.md#create_coins_transaction_request_from_wallet) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transaction-requests | Create Coins Transaction Request from Wallet |
-| [**create_tokens_transaction_request_from_address**](TransactionsApi.md#create_tokens_transaction_request_from_address) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/token-transaction-requests | Create Tokens Transaction Request from Address |
+| [**create_tokens_transaction_request_from_address**](TransactionsApi.md#create_tokens_transaction_request_from_address) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests | Create Tokens Transaction Request from Address |
 
 
 ## create_coins_transaction_request_from_address
@@ -37,7 +37,7 @@ network = 'mainnet' # String | Represents the name of the blockchain network use
 wallet_id = '609e221675d04500068718dc' # String | Represents the sender's specific and unique Wallet ID of the sender.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_coins_transaction_request_from_address_rb: CryptoApis::CreateCoinsTransactionRequestFromAddressRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromAddressRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromAddressRBDataItem.new({amount: '0.2', fee_priority: 'slow', to_address: '0xc065b539490f81b6c297c37b1925c3be2f190732'})})}) # CreateCoinsTransactionRequestFromAddressRB | 
+  create_coins_transaction_request_from_address_rb: CryptoApis::CreateCoinsTransactionRequestFromAddressRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromAddressRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromAddressRBDataItem.new({amount: '0.2', fee_priority: 'slow', recipient_address: '0xc065b539490f81b6c297c37b1925c3be2f190732'})})}) # CreateCoinsTransactionRequestFromAddressRB | 
 }
 
 begin
@@ -119,7 +119,7 @@ network = 'mainnet' # String | Represents the name of the blockchain network use
 wallet_id = '609e221675d04500068718dc' # String | Represents the sender's specific and unique Wallet ID of the sender.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_coins_transaction_request_from_wallet_rb: CryptoApis::CreateCoinsTransactionRequestFromWalletRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromWalletRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem.new({destinations: [CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItemDestinations.new({address: '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5', amount: '0.125'})], fee_priority: 'slow'})})}) # CreateCoinsTransactionRequestFromWalletRB | 
+  create_coins_transaction_request_from_wallet_rb: CryptoApis::CreateCoinsTransactionRequestFromWalletRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromWalletRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem.new({fee_priority: 'slow', recipients: [CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItemRecipients.new({address: '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5', amount: '0.125'})]})})}) # CreateCoinsTransactionRequestFromWalletRB | 
 }
 
 begin
@@ -175,7 +175,7 @@ end
 
 ## create_tokens_transaction_request_from_address
 
-> <CreateTokensTransactionRequestFromAddressR> create_tokens_transaction_request_from_address(address, blockchain, network, wallet_id, opts)
+> <CreateTokensTransactionRequestFromAddressR> create_tokens_transaction_request_from_address(blockchain, network, sender_address, wallet_id, opts)
 
 Create Tokens Transaction Request from Address
 
@@ -195,18 +195,18 @@ CryptoApis.configure do |config|
 end
 
 api_instance = CryptoApis::TransactionsApi.new
-address = '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5' # String | Defines the specific source address for the transaction.
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+sender_address = '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5' # String | Defines the specific source address for the transaction.
 wallet_id = '609e221675d04500068718dc' # String | Defines the unique ID of the Wallet.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_tokens_transaction_request_from_address_rb: CryptoApis::CreateTokensTransactionRequestFromAddressRB.new({data: CryptoApis::CreateTokensTransactionRequestFromAddressRBData.new({item: CryptoApis::CreateTokensTransactionRequestFromAddressRBDataItem.new({amount: '0.2', fee_priority: 'slow', to_address: '0xc065b539490f81b6c297c37b1925c3be2f190732', token_identifier: '1'})})}) # CreateTokensTransactionRequestFromAddressRB | 
+  create_tokens_transaction_request_from_address_rb: CryptoApis::CreateTokensTransactionRequestFromAddressRB.new({data: CryptoApis::CreateTokensTransactionRequestFromAddressRBData.new({item: CryptoApis::CreateTokensTransactionRequestFromAddressRBDataItem.new({amount: '0.2', fee_priority: 'slow', recipient_address: '0xc065b539490f81b6c297c37b1925c3be2f190732', token_identifier: '1'})})}) # CreateTokensTransactionRequestFromAddressRB | 
 }
 
 begin
   # Create Tokens Transaction Request from Address
-  result = api_instance.create_tokens_transaction_request_from_address(address, blockchain, network, wallet_id, opts)
+  result = api_instance.create_tokens_transaction_request_from_address(blockchain, network, sender_address, wallet_id, opts)
   p result
 rescue CryptoApis::ApiError => e
   puts "Error when calling TransactionsApi->create_tokens_transaction_request_from_address: #{e}"
@@ -217,12 +217,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CreateTokensTransactionRequestFromAddressR>, Integer, Hash)> create_tokens_transaction_request_from_address_with_http_info(address, blockchain, network, wallet_id, opts)
+> <Array(<CreateTokensTransactionRequestFromAddressR>, Integer, Hash)> create_tokens_transaction_request_from_address_with_http_info(blockchain, network, sender_address, wallet_id, opts)
 
 ```ruby
 begin
   # Create Tokens Transaction Request from Address
-  data, status_code, headers = api_instance.create_tokens_transaction_request_from_address_with_http_info(address, blockchain, network, wallet_id, opts)
+  data, status_code, headers = api_instance.create_tokens_transaction_request_from_address_with_http_info(blockchain, network, sender_address, wallet_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateTokensTransactionRequestFromAddressR>
@@ -235,9 +235,9 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **address** | **String** | Defines the specific source address for the transaction. |  |
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | [default to &#39;ethereum&#39;] |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | [default to &#39;mainnet&#39;] |
+| **sender_address** | **String** | Defines the specific source address for the transaction. |  |
 | **wallet_id** | **String** | Defines the unique ID of the Wallet. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
 | **create_tokens_transaction_request_from_address_rb** | [**CreateTokensTransactionRequestFromAddressRB**](CreateTokensTransactionRequestFromAddressRB.md) |  | [optional] |

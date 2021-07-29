@@ -25,6 +25,18 @@ describe CryptoApis::CreateTokensTransactionRequestFromAddressRI do
       expect(instance).to be_instance_of(CryptoApis::CreateTokensTransactionRequestFromAddressRI)
     end
   end
+  describe 'test attribute "callback_secret_key"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "callback_url"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "fee_priority"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

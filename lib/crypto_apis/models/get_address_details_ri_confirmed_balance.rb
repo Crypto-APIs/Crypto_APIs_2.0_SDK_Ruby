@@ -18,7 +18,6 @@ module CryptoApis
     # Defines the total balance of the address that is confirmed. It doesn't include unconfirmed transactions.
     attr_accessor :amount
 
-    # Defines the unit of the confirmed balance amount, e.g. BTC, ETH, XRP.
     attr_accessor :unit
 
     # Attribute mapping from ruby-style variable name to JSON key.

@@ -16,6 +16,7 @@ CryptoApis::GetLatestMinedBlockRIBS.openapi_one_of
 # [
 #   :'GetLatestMinedBlockRIBSB',
 #   :'GetLatestMinedBlockRIBSBC',
+#   :'GetLatestMinedBlockRIBSBSC',
 #   :'GetLatestMinedBlockRIBSD',
 #   :'GetLatestMinedBlockRIBSD2',
 #   :'GetLatestMinedBlockRIBSE',
@@ -50,6 +51,7 @@ CryptoApis::GetLatestMinedBlockRIBS.build(data_that_doesnt_match)
 
 - `GetLatestMinedBlockRIBSB`
 - `GetLatestMinedBlockRIBSBC`
+- `GetLatestMinedBlockRIBSBSC`
 - `GetLatestMinedBlockRIBSD`
 - `GetLatestMinedBlockRIBSD2`
 - `GetLatestMinedBlockRIBSE`

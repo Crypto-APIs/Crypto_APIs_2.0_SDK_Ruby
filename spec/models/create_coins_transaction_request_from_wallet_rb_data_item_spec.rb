@@ -25,7 +25,13 @@ describe CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem do
       expect(instance).to be_instance_of(CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem)
     end
   end
-  describe 'test attribute "destinations"' do
+  describe 'test attribute "callback_secret_key"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "callback_url"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -38,6 +44,12 @@ describe CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem do
       # validator.allowable_values.each do |value|
       #   expect { instance.fee_priority = value }.not_to raise_error
       # end
+    end
+  end
+
+  describe 'test attribute "recipients"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 

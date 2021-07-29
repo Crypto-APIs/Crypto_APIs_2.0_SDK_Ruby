@@ -16,6 +16,7 @@ CryptoApis::ListTransactionsByBlockHeightRIBS.openapi_one_of
 # [
 #   :'ListTransactionsByBlockHeightRIBSB',
 #   :'ListTransactionsByBlockHeightRIBSBC',
+#   :'ListTransactionsByBlockHeightRIBSBSC',
 #   :'ListTransactionsByBlockHeightRIBSD',
 #   :'ListTransactionsByBlockHeightRIBSD2',
 #   :'ListTransactionsByBlockHeightRIBSE',
@@ -50,6 +51,7 @@ CryptoApis::ListTransactionsByBlockHeightRIBS.build(data_that_doesnt_match)
 
 - `ListTransactionsByBlockHeightRIBSB`
 - `ListTransactionsByBlockHeightRIBSBC`
+- `ListTransactionsByBlockHeightRIBSBSC`
 - `ListTransactionsByBlockHeightRIBSD`
 - `ListTransactionsByBlockHeightRIBSD2`
 - `ListTransactionsByBlockHeightRIBSE`

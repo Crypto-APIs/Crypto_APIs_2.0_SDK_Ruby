@@ -21,6 +21,7 @@ module CryptoApis
         [
           :'ListTransactionsByBlockHashRIBSB',
           :'ListTransactionsByBlockHashRIBSBC',
+          :'ListTransactionsByBlockHashRIBSBSC',
           :'ListTransactionsByBlockHashRIBSD',
           :'ListTransactionsByBlockHashRIBSD2',
           :'ListTransactionsByBlockHashRIBSE',

@@ -32,17 +32,17 @@ describe 'GeneratingApi' do
     end
   end
 
-  # unit tests for generate_receiving_address
-  # Generate Receiving Address
+  # unit tests for generate_deposit_address
+  # Generate Deposit Address
   # Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
   # @param blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param wallet_id Represents the unique ID of the specific Wallet.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @option opts [GenerateReceivingAddressRB] :generate_receiving_address_rb 
-  # @return [GenerateReceivingAddressR]
-  describe 'generate_receiving_address test' do
+  # @option opts [GenerateDepositAddressRB] :generate_deposit_address_rb 
+  # @return [GenerateDepositAddressR]
+  describe 'generate_deposit_address test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

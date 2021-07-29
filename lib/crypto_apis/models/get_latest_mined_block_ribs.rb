@@ -21,6 +21,7 @@ module CryptoApis
         [
           :'GetLatestMinedBlockRIBSB',
           :'GetLatestMinedBlockRIBSBC',
+          :'GetLatestMinedBlockRIBSBSC',
           :'GetLatestMinedBlockRIBSD',
           :'GetLatestMinedBlockRIBSD2',
           :'GetLatestMinedBlockRIBSE',

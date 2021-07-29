@@ -47,16 +47,16 @@ describe 'InformativeApi' do
     end
   end
 
-  # unit tests for list_receiving_addresses
-  # List Receiving Addresses
-  # Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+  # unit tests for list_deposit_addresses
+  # List Deposit Addresses
+  # Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
   # @param blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param wallet_id Represents the unique ID of the specific Wallet.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
-  # @return [ListReceivingAddressesR]
-  describe 'list_receiving_addresses test' do
+  # @return [ListDepositAddressesR]
+  describe 'list_deposit_addresses test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

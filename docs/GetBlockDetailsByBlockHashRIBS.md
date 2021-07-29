@@ -16,6 +16,7 @@ CryptoApis::GetBlockDetailsByBlockHashRIBS.openapi_one_of
 # [
 #   :'GetBlockDetailsByBlockHashRIBSB',
 #   :'GetBlockDetailsByBlockHashRIBSBC',
+#   :'GetBlockDetailsByBlockHashRIBSBSC',
 #   :'GetBlockDetailsByBlockHashRIBSD',
 #   :'GetBlockDetailsByBlockHashRIBSD2',
 #   :'GetBlockDetailsByBlockHashRIBSE',
@@ -50,6 +51,7 @@ CryptoApis::GetBlockDetailsByBlockHashRIBS.build(data_that_doesnt_match)
 
 - `GetBlockDetailsByBlockHashRIBSB`
 - `GetBlockDetailsByBlockHashRIBSBC`
+- `GetBlockDetailsByBlockHashRIBSBSC`
 - `GetBlockDetailsByBlockHashRIBSD`
 - `GetBlockDetailsByBlockHashRIBSD2`
 - `GetBlockDetailsByBlockHashRIBSE`

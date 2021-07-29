@@ -110,6 +110,7 @@ describe 'XRPRippleApi' do
   # @option opts [String] :context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user.
   # @option opts [Integer] :limit Defines how many items should be returned in the response per page basis.
   # @option opts [Integer] :offset The starting index of the response items, i.e. where the response should start listing the returned items.
+  # @option opts [String] :transaction_type 
   # @return [ListXRPRippleTransactionsByAddressR]
   describe 'list_xrp__ripple_transactions_by_address test' do
     it 'should work' do

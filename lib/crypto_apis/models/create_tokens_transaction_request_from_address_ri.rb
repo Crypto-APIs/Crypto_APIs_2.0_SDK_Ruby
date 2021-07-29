@@ -15,6 +15,12 @@ require 'time'
 
 module CryptoApis
   class CreateTokensTransactionRequestFromAddressRI
+    # Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+    attr_accessor :callback_secret_key
+
+    # Verified URL for sending callbacks
+    attr_accessor :callback_url
+
     # Represents the fee priority of the automation, whether it is \"slow\", \"standard\" or \"fast\".
     attr_accessor :fee_priority
 
@@ -50,6 +56,8 @@ module CryptoApis
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'callback_secret_key' => :'callbackSecretKey',
+        :'callback_url' => :'callbackUrl',
         :'fee_priority' => :'feePriority',
         :'recipients' => :'recipients',
         :'senders' => :'senders',
@@ -65,6 +73,8 @@ module CryptoApis
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'callback_secret_key' => :'String',
+        :'callback_url' => :'String',
         :'fee_priority' => :'String',
         :'recipients' => :'Array<CreateTokensTransactionRequestFromAddressRIRecipients>',
         :'senders' => :'CreateTokensTransactionRequestFromAddressRISenders',
@@ -93,6 +103,14 @@ module CryptoApis
         h[k.to_sym] = v
       }
 
+      if attributes.key?(:'callback_secret_key')
+        self.callback_secret_key = attributes[:'callback_secret_key']
+      end
+
+      if attributes.key?(:'callback_url')
+        self.callback_url = attributes[:'callback_url']
+      end
+
       if attributes.key?(:'fee_priority')
         self.fee_priority = attributes[:'fee_priority']
       end
@@ -116,6 +134,14 @@ module CryptoApis
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @callback_secret_key.nil?
+        invalid_properties.push('invalid value for "callback_secret_key", callback_secret_key cannot be nil.')
+      end
+
+      if @callback_url.nil?
+        invalid_properties.push('invalid value for "callback_url", callback_url cannot be nil.')
+      end
+
       if @fee_priority.nil?
         invalid_properties.push('invalid value for "fee_priority", fee_priority cannot be nil.')
       end
@@ -138,6 +164,8 @@ module CryptoApis
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      return false if @callback_secret_key.nil?
+      return false if @callback_url.nil?
       return false if @fee_priority.nil?
       fee_priority_validator = EnumAttributeValidator.new('String', ["slow", "standard", "fast"])
       return false unless fee_priority_validator.valid?(@fee_priority)
@@ -162,6 +190,8 @@ module CryptoApis
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          callback_secret_key == o.callback_secret_key &&
+          callback_url == o.callback_url &&
           fee_priority == o.fee_priority &&
           recipients == o.recipients &&
           senders == o.senders &&
@@ -177,7 +207,7 @@ module CryptoApis
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [fee_priority, recipients, senders, token_type_specific_data].hash
+      [callback_secret_key, callback_url, fee_priority, recipients, senders, token_type_specific_data].hash
     end
 
     # Builds the object from hash

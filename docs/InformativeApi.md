@@ -5,7 +5,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**get_wallet_asset_details**](InformativeApi.md#get_wallet_asset_details) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network} | Get Wallet Asset Details |
-| [**list_receiving_addresses**](InformativeApi.md#list_receiving_addresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Receiving Addresses |
+| [**list_deposit_addresses**](InformativeApi.md#list_deposit_addresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Deposit Addresses |
 | [**list_supported_tokens**](InformativeApi.md#list_supported_tokens) | **GET** /wallet-as-a-service/info/{blockchain}/{network}/supported-tokens | List Supported Tokens |
 
 
@@ -88,13 +88,13 @@ end
 - **Accept**: application/json
 
 
-## list_receiving_addresses
+## list_deposit_addresses
 
-> <ListReceivingAddressesR> list_receiving_addresses(blockchain, network, wallet_id, opts)
+> <ListDepositAddressesR> list_deposit_addresses(blockchain, network, wallet_id, opts)
 
-List Receiving Addresses
+List Deposit Addresses
 
-Through this endpoint customers can pull a list of Deposit Addresses they have already generated. Deposit addresses are listed with their specific details such as unique ID.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+Through this endpoint customers can pull a list of Deposit/Receiving Addresses they have already generated.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Examples
 
@@ -118,29 +118,29 @@ opts = {
 }
 
 begin
-  # List Receiving Addresses
-  result = api_instance.list_receiving_addresses(blockchain, network, wallet_id, opts)
+  # List Deposit Addresses
+  result = api_instance.list_deposit_addresses(blockchain, network, wallet_id, opts)
   p result
 rescue CryptoApis::ApiError => e
-  puts "Error when calling InformativeApi->list_receiving_addresses: #{e}"
+  puts "Error when calling InformativeApi->list_deposit_addresses: #{e}"
 end
 ```
 
-#### Using the list_receiving_addresses_with_http_info variant
+#### Using the list_deposit_addresses_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ListReceivingAddressesR>, Integer, Hash)> list_receiving_addresses_with_http_info(blockchain, network, wallet_id, opts)
+> <Array(<ListDepositAddressesR>, Integer, Hash)> list_deposit_addresses_with_http_info(blockchain, network, wallet_id, opts)
 
 ```ruby
 begin
-  # List Receiving Addresses
-  data, status_code, headers = api_instance.list_receiving_addresses_with_http_info(blockchain, network, wallet_id, opts)
+  # List Deposit Addresses
+  data, status_code, headers = api_instance.list_deposit_addresses_with_http_info(blockchain, network, wallet_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ListReceivingAddressesR>
+  p data # => <ListDepositAddressesR>
 rescue CryptoApis::ApiError => e
-  puts "Error when calling InformativeApi->list_receiving_addresses_with_http_info: #{e}"
+  puts "Error when calling InformativeApi->list_deposit_addresses_with_http_info: #{e}"
 end
 ```
 
@@ -155,7 +155,7 @@ end
 
 ### Return type
 
-[**ListReceivingAddressesR**](ListReceivingAddressesR.md)
+[**ListDepositAddressesR**](ListDepositAddressesR.md)
 
 ### Authorization
 
