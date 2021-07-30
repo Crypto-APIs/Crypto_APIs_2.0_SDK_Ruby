@@ -565,7 +565,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling CreateSubscriptionsForApi.new_confirmed_tokens_transactions"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "xrp", "zilliqa"]
+      allowable_values = ["bitcoin", "ethereum"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -574,7 +574,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'network' when calling CreateSubscriptionsForApi.new_confirmed_tokens_transactions"
       end
       # verify enum value
-      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby", "mordor", "kotti"]
+      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby"]
       if @api_client.config.client_side_validation && !allowable_values.include?(network)
         fail ArgumentError, "invalid value for \"network\", must be one of #{allowable_values}"
       end
@@ -651,7 +651,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling CreateSubscriptionsForApi.new_confirmed_tokens_transactions_and_each_confirmation"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "xrp", "zilliqa"]
+      allowable_values = ["bitcoin", "ethereum"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -660,7 +660,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'network' when calling CreateSubscriptionsForApi.new_confirmed_tokens_transactions_and_each_confirmation"
       end
       # verify enum value
-      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby", "mordor", "kotti"]
+      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby"]
       if @api_client.config.client_side_validation && !allowable_values.include?(network)
         fail ArgumentError, "invalid value for \"network\", must be one of #{allowable_values}"
       end
@@ -737,7 +737,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling CreateSubscriptionsForApi.new_unconfirmed_coins_transactions"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "xrp", "zilliqa"]
+      allowable_values = ["bitcoin", "litecoin", "bitcoin-cash", "dogecoin", "dash", "ethereum", "ethereum-classic"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -746,7 +746,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'network' when calling CreateSubscriptionsForApi.new_unconfirmed_coins_transactions"
       end
       # verify enum value
-      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby", "mordor", "kotti"]
+      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby", "mordor"]
       if @api_client.config.client_side_validation && !allowable_values.include?(network)
         fail ArgumentError, "invalid value for \"network\", must be one of #{allowable_values}"
       end
@@ -823,7 +823,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling CreateSubscriptionsForApi.new_unconfirmed_tokens_transactions"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "xrp", "zilliqa"]
+      allowable_values = ["bitcoin", "ethereum"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -832,7 +832,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'network' when calling CreateSubscriptionsForApi.new_unconfirmed_tokens_transactions"
       end
       # verify enum value
-      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby", "mordor", "kotti"]
+      allowable_values = ["mainnet", "testnet", "ropsten", "rinkeby"]
       if @api_client.config.client_side_validation && !allowable_values.include?(network)
         fail ArgumentError, "invalid value for \"network\", must be one of #{allowable_values}"
       end

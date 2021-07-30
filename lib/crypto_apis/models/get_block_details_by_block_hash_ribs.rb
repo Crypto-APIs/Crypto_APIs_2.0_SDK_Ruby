@@ -21,7 +21,6 @@ module CryptoApis
         [
           :'GetBlockDetailsByBlockHashRIBSB',
           :'GetBlockDetailsByBlockHashRIBSBC',
-          :'GetBlockDetailsByBlockHashRIBSBSC',
           :'GetBlockDetailsByBlockHashRIBSD',
           :'GetBlockDetailsByBlockHashRIBSD2',
           :'GetBlockDetailsByBlockHashRIBSE',

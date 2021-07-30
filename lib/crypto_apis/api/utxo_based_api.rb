@@ -115,7 +115,7 @@ module CryptoApis
     end
 
     # List HD Wallet (xPub, yPub, zPub) Transactions
-    # This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list HD Wallet transactions.
     # @param blockchain [String] Represents the specific blockchain.
     # @param extended_public_key [String] Defines the master public key (xPub) of the account.
     # @param network [String] Represents the specific network.
@@ -131,7 +131,7 @@ module CryptoApis
     end
 
     # List HD Wallet (xPub, yPub, zPub) Transactions
-    # This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list HD Wallet transactions.
     # @param blockchain [String] Represents the specific blockchain.
     # @param extended_public_key [String] Defines the master public key (xPub) of the account.
     # @param network [String] Represents the specific network.

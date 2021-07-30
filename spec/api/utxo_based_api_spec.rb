@@ -50,7 +50,7 @@ describe 'UTXOBasedApi' do
 
   # unit tests for list_hd_wallet__x_pub_y_pub_z_pub_transactions
   # List HD Wallet (xPub, yPub, zPub) Transactions
-  # This endpoint will list HD Wallet transactions.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+  # This endpoint will list HD Wallet transactions.
   # @param blockchain Represents the specific blockchain.
   # @param extended_public_key Defines the master public key (xPub) of the account.
   # @param network Represents the specific network.

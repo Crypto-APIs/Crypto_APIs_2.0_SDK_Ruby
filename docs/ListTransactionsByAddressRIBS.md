@@ -16,7 +16,6 @@ CryptoApis::ListTransactionsByAddressRIBS.openapi_one_of
 # [
 #   :'ListTransactionsByAddressRIBSB',
 #   :'ListTransactionsByAddressRIBSBC',
-#   :'ListTransactionsByAddressRIBSBSC',
 #   :'ListTransactionsByAddressRIBSD',
 #   :'ListTransactionsByAddressRIBSD2',
 #   :'ListTransactionsByAddressRIBSE',
@@ -51,7 +50,6 @@ CryptoApis::ListTransactionsByAddressRIBS.build(data_that_doesnt_match)
 
 - `ListTransactionsByAddressRIBSB`
 - `ListTransactionsByAddressRIBSBC`
-- `ListTransactionsByAddressRIBSBSC`
 - `ListTransactionsByAddressRIBSD`
 - `ListTransactionsByAddressRIBSD2`
 - `ListTransactionsByAddressRIBSE`

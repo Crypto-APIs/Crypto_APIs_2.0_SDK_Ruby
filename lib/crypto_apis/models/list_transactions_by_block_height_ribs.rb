@@ -21,7 +21,6 @@ module CryptoApis
         [
           :'ListTransactionsByBlockHeightRIBSB',
           :'ListTransactionsByBlockHeightRIBSBC',
-          :'ListTransactionsByBlockHeightRIBSBSC',
           :'ListTransactionsByBlockHeightRIBSD',
           :'ListTransactionsByBlockHeightRIBSD2',
           :'ListTransactionsByBlockHeightRIBSE',

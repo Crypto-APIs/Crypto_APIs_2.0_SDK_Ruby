@@ -103,7 +103,7 @@ describe 'ZilliqaApi' do
 
   # unit tests for list_zilliqa_transactions_by_address
   # List Zilliqa Transactions by Address
-  # Through this endpoint customers can list transactions on the Zilliqa blockchain by the address parameter.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+  # Through this endpoint customers can list transactions on the Zilliqa blockchain by the address parameter.
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param address Defines the specific address of the sender.
   # @param [Hash] opts the optional parameters
@@ -119,7 +119,7 @@ describe 'ZilliqaApi' do
 
   # unit tests for list_zilliqa_transactions_by_block_hash
   # List Zilliqa Transactions By Block Hash
-  # Through this endpoint customers can list transactions on the Zilliqa blockchain by the block hash parameter.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+  # Through this endpoint customers can list transactions on the Zilliqa blockchain by the block hash parameter.
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param block_hash Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
   # @param [Hash] opts the optional parameters
@@ -135,7 +135,7 @@ describe 'ZilliqaApi' do
 
   # unit tests for list_zilliqa_transactions_by_block_height
   # List Zilliqa Transactions By Block Height
-  # Through this endpoint customers can list transactions on the Zilliqa blockchain by the block height parameter.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+  # Through this endpoint customers can list transactions on the Zilliqa blockchain by the block height parameter.
   # @param network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
   # @param block_height Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
   # @param [Hash] opts the optional parameters

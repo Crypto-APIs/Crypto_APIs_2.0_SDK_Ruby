@@ -49,7 +49,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_address_details"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -137,7 +137,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_block_details_by_block_hash"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -225,7 +225,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_block_details_by_block_height"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -393,7 +393,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_latest_mined_block"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "ethereum", "ethereum-classic", "bitcoin-cash", "litecoin", "dogecoin", "dash"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -477,7 +477,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.get_transaction_details_by_transaction_id"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -536,7 +536,7 @@ module CryptoApis
     end
 
     # List Transactions By Address
-    # This endpoint will list transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
@@ -551,7 +551,7 @@ module CryptoApis
     end
 
     # List Transactions By Address
-    # This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list transactions by an attribute &#x60;address&#x60;. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param address [String] Represents the public address, which is a compressed and shortened form of a public key.
@@ -569,7 +569,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.list_transactions_by_address"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum-classic", "ethereum", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum-classic", "ethereum"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -630,7 +630,7 @@ module CryptoApis
     end
 
     # List Transactions by Block Hash
-    # This endpoint will list transactions by an attribute `transactionHash`. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list transactions by an attribute `transactionHash`. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param block_hash [String] Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -645,7 +645,7 @@ module CryptoApis
     end
 
     # List Transactions by Block Hash
-    # This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list transactions by an attribute &#x60;transactionHash&#x60;. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param block_hash [String] Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
@@ -663,7 +663,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.list_transactions_by_block_hash"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "bitcoin-cash", "litecoin", "dogecoin", "dash", "ethereum", "ethereum-classic"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
@@ -724,7 +724,7 @@ module CryptoApis
     end
 
     # List Transactions by Block Height
-    # This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param height [Integer] Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
@@ -739,7 +739,7 @@ module CryptoApis
     end
 
     # List Transactions by Block Height
-    # This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+    # This endpoint will list transactions by an attribute &#x60;blockHeight&#x60;. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
     # @param blockchain [String] Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
     # @param network [String] Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks.
     # @param height [Integer] Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;.
@@ -757,7 +757,7 @@ module CryptoApis
         fail ArgumentError, "Missing the required parameter 'blockchain' when calling UnifiedEndpointsApi.list_transactions_by_block_height"
       end
       # verify enum value
-      allowable_values = ["bitcoin", "ethereum", "dash", "dogecoin", "litecoin", "bitcoin-cash", "ethereum-classic", "binance-smart-chain"]
+      allowable_values = ["bitcoin", "ethereum", "dash", "dogecoin", "litecoin", "bitcoin-cash", "ethereum-classic"]
       if @api_client.config.client_side_validation && !allowable_values.include?(blockchain)
         fail ArgumentError, "invalid value for \"blockchain\", must be one of #{allowable_values}"
       end
