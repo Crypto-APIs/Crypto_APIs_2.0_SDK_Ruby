@@ -5,6 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **additional_data** | **String** | Represents any additional data that may be needed. | [optional] |
+| **destination_tag** | **Integer** |  | [optional] |
 | **index** | **Integer** | Represents the index position of the transaction in the specific block. |  |
 | **mined_in_block_height** | **Integer** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. |  |
 | **recipients** | [**Array&lt;ListXRPRippleTransactionsByBlockHashRIRecipients&gt;**](ListXRPRippleTransactionsByBlockHashRIRecipients.md) | Represents an object of addresses that receive the transactions. |  |
@@ -26,6 +27,7 @@ require 'crypto_apis'
 
 instance = CryptoApis::ListXRPRippleTransactionsByBlockHashRI.new(
   additional_data: r4CmvbkDWGt9AZmkfuubmiSdsxGZFxAKBY,
+  destination_tag: 3999472835,
   index: 3,
   mined_in_block_height: 15971358,
   recipients: null,

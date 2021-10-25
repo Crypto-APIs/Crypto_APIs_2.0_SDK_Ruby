@@ -14,7 +14,6 @@ require 'crypto_apis'
 CryptoApis::CreateTokensTransactionRequestFromAddressRIS.openapi_one_of
 # =>
 # [
-#   :'CreateTokensTransactionRequestFromAddressRISB',
 #   :'CreateTokensTransactionRequestFromAddressRISE'
 # ]
 ```
@@ -29,7 +28,7 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 require 'crypto_apis'
 
 CryptoApis::CreateTokensTransactionRequestFromAddressRIS.build(data)
-# => #<CreateTokensTransactionRequestFromAddressRISB:0x00007fdd4aab02a0>
+# => #<CreateTokensTransactionRequestFromAddressRISE:0x00007fdd4aab02a0>
 
 CryptoApis::CreateTokensTransactionRequestFromAddressRIS.build(data_that_doesnt_match)
 # => nil
@@ -43,7 +42,6 @@ CryptoApis::CreateTokensTransactionRequestFromAddressRIS.build(data_that_doesnt_
 
 #### Return type
 
-- `CreateTokensTransactionRequestFromAddressRISB`
 - `CreateTokensTransactionRequestFromAddressRISE`
 - `nil` (if no type matches)
 

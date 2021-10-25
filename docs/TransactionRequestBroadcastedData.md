@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::TransactionRequestBroadcastedData.new(
-  product: Wallet As A Service,
+  product: WALLET_AS_A_SERVICE,
   event: TRANSACTION_REQUEST_BROADCASTED,
   item: null
 )

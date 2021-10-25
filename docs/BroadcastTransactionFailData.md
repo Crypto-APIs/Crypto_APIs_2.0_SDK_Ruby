@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::BroadcastTransactionFailData.new(
-  product: Blockchain Tools,
+  product: BLOCKCHAIN_TOOLS,
   event: BROADCAST_TRANSACTION_FAIL,
   item: null
 )

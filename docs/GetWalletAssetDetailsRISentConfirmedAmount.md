@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **amount** | **String** |  |  |
-| **unit** | **String** |  |  |
+| **amount** | **String** | Specifies the confirmed amount that has been sent. |  |
+| **unit** | **String** | Specifies the unit of the confirmed amount that has been sent. |  |
 
 ## Example
 

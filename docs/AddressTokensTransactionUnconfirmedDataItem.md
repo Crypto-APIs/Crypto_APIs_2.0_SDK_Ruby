@@ -19,11 +19,11 @@
 require 'crypto_apis'
 
 instance = CryptoApis::AddressTokensTransactionUnconfirmedDataItem.new(
-  blockchain: bitcoin,
-  network: testnet,
-  address: bc1qj9k6mryqfyl9dghdwnxx29660nws90mfarld46,
-  transaction_id: ade174e0ff264094bfcf4a83789d3aa3e7d7ab423ffa89e21871aad849f302db,
-  token_type: ethereumERC20Token,
+  blockchain: ethereum,
+  network: ropsten,
+  address: 0x65b895f400dae5541d70cbbec07527210158f6e2,
+  transaction_id: 0x76670f3bb45c09e69173fe74834face446edf251c5f02ec30384a0957fce482b,
+  token_type: ERC-20,
   token: null,
   direction: incoming,
   first_seen_in_mempool_timestamp: 1210363220

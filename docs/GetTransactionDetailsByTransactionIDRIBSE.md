@@ -18,13 +18,13 @@
 require 'crypto_apis'
 
 instance = CryptoApis::GetTransactionDetailsByTransactionIDRIBSE.new(
-  contract: null,
+  contract: 0x20fe562d797a42dcb3399062ae9546cd06f63280,
   gas_limit: 552020,
   gas_price: null,
   gas_used: 24673,
   input_data: 0x67a5cd0600000000000000000000000031f42841c2db5173425b5223809cf3a38fede360,
   nonce: 16,
-  transaction_status: null
+  transaction_status: 0x1
 )
 ```
 

@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::AddressTokensTransactionUnconfirmedData.new(
-  product: Blockchain Events,
+  product: BLOCKCHAIN_EVENTS,
   event: ADDRESS_TOKENS_TRANSACTION_UNCONFIRMED,
   item: null
 )

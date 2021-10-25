@@ -15,7 +15,7 @@ CryptoApis::AddTokensToExistingFromAddressRITS.openapi_one_of
 # =>
 # [
 #   :'AddTokensToExistingFromAddressRITSBOT',
-#   :'AddTokensToExistingFromAddressRITSEET'
+#   :'AddTokensToExistingFromAddressRITSET'
 # ]
 ```
 
@@ -44,6 +44,6 @@ CryptoApis::AddTokensToExistingFromAddressRITS.build(data_that_doesnt_match)
 #### Return type
 
 - `AddTokensToExistingFromAddressRITSBOT`
-- `AddTokensToExistingFromAddressRITSEET`
+- `AddTokensToExistingFromAddressRITSET`
 - `nil` (if no type matches)
 

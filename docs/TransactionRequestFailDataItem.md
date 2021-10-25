@@ -18,8 +18,8 @@
 require 'crypto_apis'
 
 instance = CryptoApis::TransactionRequestFailDataItem.new(
-  blockchain: bitcoin,
-  network: testnet,
+  blockchain: ethereum,
+  network: ropsten,
   required_approvals: 2,
   required_rejections: 2,
   current_approvals: 0,

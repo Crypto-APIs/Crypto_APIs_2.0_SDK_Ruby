@@ -14,9 +14,10 @@ require 'crypto_apis'
 CryptoApis::AddressTokensTransactionConfirmedToken.openapi_one_of
 # =>
 # [
-#   :'AddressTokensTransactionConfirmedEthereumerc20token',
-#   :'AddressTokensTransactionConfirmedEthereumerc721token',
-#   :'AddressTokensTransactionConfirmedOmnilayertoken'
+#   :'AddressTokensTransactionConfirmedBep20',
+#   :'AddressTokensTransactionConfirmedErc20',
+#   :'AddressTokensTransactionConfirmedErc721',
+#   :'AddressTokensTransactionConfirmedOmni'
 # ]
 ```
 
@@ -30,7 +31,7 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 require 'crypto_apis'
 
 CryptoApis::AddressTokensTransactionConfirmedToken.build(data)
-# => #<AddressTokensTransactionConfirmedEthereumerc20token:0x00007fdd4aab02a0>
+# => #<AddressTokensTransactionConfirmedBep20:0x00007fdd4aab02a0>
 
 CryptoApis::AddressTokensTransactionConfirmedToken.build(data_that_doesnt_match)
 # => nil
@@ -44,8 +45,9 @@ CryptoApis::AddressTokensTransactionConfirmedToken.build(data_that_doesnt_match)
 
 #### Return type
 
-- `AddressTokensTransactionConfirmedEthereumerc20token`
-- `AddressTokensTransactionConfirmedEthereumerc721token`
-- `AddressTokensTransactionConfirmedOmnilayertoken`
+- `AddressTokensTransactionConfirmedBep20`
+- `AddressTokensTransactionConfirmedErc20`
+- `AddressTokensTransactionConfirmedErc721`
+- `AddressTokensTransactionConfirmedOmni`
 - `nil` (if no type matches)
 

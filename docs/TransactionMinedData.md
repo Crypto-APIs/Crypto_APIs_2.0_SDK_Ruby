@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::TransactionMinedData.new(
-  product: Blockchain Events,
+  product: BLOCKCHAIN_EVENTS,
   event: TRANSACTION_MINED,
   item: null
 )

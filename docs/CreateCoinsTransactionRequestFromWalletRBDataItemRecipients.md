@@ -13,7 +13,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItemRecipients.new(
-  address: 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5,
+  address: 2MtzNEqm2D9jcbPJ5mW7Z3AUNwqt3afZH66,
   amount: 0.125
 )
 ```

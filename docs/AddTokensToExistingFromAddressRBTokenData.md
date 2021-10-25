@@ -15,7 +15,7 @@ CryptoApis::AddTokensToExistingFromAddressRBTokenData.openapi_one_of
 # =>
 # [
 #   :'AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken',
-#   :'AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token'
+#   :'AddTokensToExistingFromAddressRBTokenDataEthereumToken'
 # ]
 ```
 
@@ -44,6 +44,6 @@ CryptoApis::AddTokensToExistingFromAddressRBTokenData.build(data_that_doesnt_mat
 #### Return type
 
 - `AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken`
-- `AddTokensToExistingFromAddressRBTokenDataEthereumErc20Token`
+- `AddTokensToExistingFromAddressRBTokenDataEthereumToken`
 - `nil` (if no type matches)
 

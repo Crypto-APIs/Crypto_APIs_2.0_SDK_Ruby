@@ -20,11 +20,11 @@ require 'crypto_apis'
 instance = CryptoApis::TokensForwardingFailDataItem.new(
   blockchain: bitcoin,
   network: testnet,
-  from_address: bc1qy4tncwfr6nw3rd8hcr6psxlrkufe6cq44tlfvv,
-  to_address: 32Dv1CCNFagLcEdmC1uamj2k2jVDdokVQL,
-  trigger_transaction_id: 044681d8571cb55047d9425b7095272fbb8fe4f325b0cd822d374b6153af12a1,
+  from_address: mizRduUBKEbJ6uzYJUegPh78gEGgM3WjAr,
+  to_address: mnumE76iEKN47bUsdni85oped5D1fRwKWi,
+  trigger_transaction_id: ba1a4e661d36457abc46ea0effef0105f639912119fc64df8fb866118ce7c0d8,
   error_code: FEE_ADDRESS_OUT_OF_FUNDS,
-  error_message: The specified URI has not been found. Check the URI and try again.
+  error_message: You have insufficient credits.
 )
 ```
 

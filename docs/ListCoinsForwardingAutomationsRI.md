@@ -22,7 +22,7 @@ instance = CryptoApis::ListCoinsForwardingAutomationsRI.new(
   callback_url: https://example.com,
   confirmations_count_trigger: 3,
   created_timestamp: 1611238648,
-  fee_priority: null,
+  fee_priority: standard,
   from_address: mzAsK3csTnozLnYVdca4gaoH1btBZBC6QB,
   minimum_transfer_amount: 0.0002,
   reference_id: 6017dd02a309213863be9e55,

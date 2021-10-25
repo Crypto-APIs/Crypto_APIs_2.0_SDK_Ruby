@@ -5,6 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **additional_data** | **String** |  | [optional] |
+| **destination_tag** | **Integer** |  | [optional] |
 | **index** | **Integer** |  |  |
 | **mined_in_block_hash** | **String** |  |  |
 | **recipients** | [**Array&lt;ListXRPRippleTransactionsByBlockHeightRIRecipients&gt;**](ListXRPRippleTransactionsByBlockHeightRIRecipients.md) | Object Array representation of transaction receivers |  |
@@ -26,6 +27,7 @@ require 'crypto_apis'
 
 instance = CryptoApis::ListXRPRippleTransactionsByBlockHeightRI.new(
   additional_data: r4CmvbkDWGt9AZmkfuubmiSdsxGZFxAKBY,
+  destination_tag: 3999472835,
   index: 3,
   mined_in_block_hash: 14754656235f865a74eba27791fd41a47bdfe07fe811ff6d78f53db32e129e39,
   recipients: null,

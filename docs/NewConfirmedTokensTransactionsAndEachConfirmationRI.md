@@ -16,7 +16,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRI.new(
-  address: mwDuExdjRewYKYoR454sZGvd15LnJVsmoR,
+  address: 0x7495fede000c8a3b77eeae09cf70fa94cd2d53f5,
   callback_url: https://example.com,
   created_timestamp: 1236238648,
   event_type: ADDRESS_TOKENS_TRANSACTION_CONFIRMED_EACH_CONFIRAMTION,

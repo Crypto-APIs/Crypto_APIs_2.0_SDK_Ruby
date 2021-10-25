@@ -5,6 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **additional_data** | **String** | Represents additional data that may be needed. |  |
+| **destination_tag** | **Integer** |  | [optional] |
 | **index** | **String** | Defines the index of the transaction, i.e. the consecutive place it takes in the blockchain. |  |
 | **mined_in_block_hash** | **String** | Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. |  |
 | **mined_in_block_height** | **String** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. |  |
@@ -27,6 +28,7 @@ require 'crypto_apis'
 
 instance = CryptoApis::GetXRPRippleTransactionDetailsByTransactionIDRI.new(
   additional_data: rPmPErQe4g9725pcNxJpuvKkdqTESTQ6Tu,
+  destination_tag: 3999472835,
   index: 2,
   mined_in_block_hash: 3f7af58d6cf1cd9020fb285d8e3e215131800d5109e42647ffd9b3aeae59df33,
   mined_in_block_height: 15973802,

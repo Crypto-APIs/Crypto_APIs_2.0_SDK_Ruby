@@ -25,7 +25,7 @@ instance = CryptoApis::DeleteAutomaticTokensForwardingRI.new(
   confirmations_count: 2,
   created_timestamp: 1611238648,
   fee_address: mojjR51gMXLJ4B3SBPhEXXRFDX7U5UWXNQ,
-  fee_priority: null,
+  fee_priority: standard,
   from_address: ms4KNsbNpoU8g424pzmEjbkFbfAHae1msB,
   minimum_transfer_amount: 0.5,
   reference_id: 6017dd02a309213863be9e55,

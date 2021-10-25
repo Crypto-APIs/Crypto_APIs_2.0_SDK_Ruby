@@ -14,9 +14,9 @@ require 'crypto_apis'
 CryptoApis::TokensForwardingSuccessToken.openapi_one_of
 # =>
 # [
-#   :'TokensForwardingSuccessEthereumerc20token',
-#   :'TokensForwardingSuccessEthereumerc721token',
-#   :'TokensForwardingSuccessOmnilayertoken'
+#   :'TokensForwardingSuccessErc20',
+#   :'TokensForwardingSuccessErc721',
+#   :'TokensForwardingSuccessOmni'
 # ]
 ```
 
@@ -30,7 +30,7 @@ Find the appropriate object from the `openapi_one_of` list and casts the data in
 require 'crypto_apis'
 
 CryptoApis::TokensForwardingSuccessToken.build(data)
-# => #<TokensForwardingSuccessEthereumerc20token:0x00007fdd4aab02a0>
+# => #<TokensForwardingSuccessErc20:0x00007fdd4aab02a0>
 
 CryptoApis::TokensForwardingSuccessToken.build(data_that_doesnt_match)
 # => nil
@@ -44,8 +44,8 @@ CryptoApis::TokensForwardingSuccessToken.build(data_that_doesnt_match)
 
 #### Return type
 
-- `TokensForwardingSuccessEthereumerc20token`
-- `TokensForwardingSuccessEthereumerc721token`
-- `TokensForwardingSuccessOmnilayertoken`
+- `TokensForwardingSuccessErc20`
+- `TokensForwardingSuccessErc721`
+- `TokensForwardingSuccessOmni`
 - `nil` (if no type matches)
 

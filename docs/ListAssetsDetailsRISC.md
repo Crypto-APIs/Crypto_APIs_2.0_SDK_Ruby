@@ -25,8 +25,8 @@ instance = CryptoApis::ListAssetsDetailsRISC.new(
   _24_hours_trading_volume: 2871630447,
   asset_type: coin,
   circulating_supply: 123564.25,
-  market_cap_in_usd: 1,056,050,713,184,
-  max_supply: 18,562,881
+  market_cap_in_usd: 10198150322.917389,
+  max_supply: 21000000
 )
 ```
 

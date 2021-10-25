@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::BroadcastTransactionSuccessData.new(
-  product: Blockchain Tools,
+  product: BLOCKCHAIN_TOOLS,
   event: BROADCAST_TRANSACTION_SUCCESS,
   item: null
 )

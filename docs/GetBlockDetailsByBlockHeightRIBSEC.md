@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **difficulty** | **String** | Represents a mathematical value of how hard it is to find a valid hash for this block. |  |
-| **nonce** | **Integer** | Represents a random value that can be adjusted to satisfy the Proof of Work |  |
+| **nonce** | **String** | Represents a random value that can be adjusted to satisfy the Proof of Work. |  |
 | **size** | **Integer** | Represents the total size of the block in Bytes. |  |
 | **extra_data** | **String** | Represents any data that can be included by the miner in the block. |  |
 | **gas_limit** | **String** | Defines the total gas limit of all transactions in the block. |  |
@@ -26,7 +26,7 @@ instance = CryptoApis::GetBlockDetailsByBlockHeightRIBSEC.new(
   extra_data: 0x307834383639373636353666366532303530366636663663,
   gas_limit: 3141592,
   gas_used: 21000,
-  mined_in_seconds: 8,
+  mined_in_seconds: 3,
   sha3_uncles: 0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347,
   total_difficulty: 20104747399762079739558
 )

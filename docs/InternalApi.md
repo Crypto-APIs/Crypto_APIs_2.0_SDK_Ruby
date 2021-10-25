@@ -6,6 +6,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | ------ | ------------ | ----------- |
 | [**get_internal_transaction_by_transaction_hash_and_operation_id**](InternalApi.md#get_internal_transaction_by_transaction_hash_and_operation_id) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/internal/{operationId} | Get Internal Transaction by Transaction Hash and Operation Id |
 | [**list_internal_transaction_details_by_transaction_hash**](InternalApi.md#list_internal_transaction_details_by_transaction_hash) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/internal | List Internal Transaction Details by Transaction Hash |
+| [**list_internal_transactions_by_address**](InternalApi.md#list_internal_transactions_by_address) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/internal | List Internal Transactions By Address |
 
 
 ## get_internal_transaction_by_transaction_hash_and_operation_id
@@ -31,7 +32,7 @@ end
 
 api_instance = CryptoApis::InternalApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
-network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 operation_id = 'call_4' # String | Represents the unique internal transaction ID in regards to the parent transaction (type trace address).
 transaction_hash = '0x92bb77e16444e0417c8b50dfab68e89c7ad27d4140a766c3bbd4d0ac195f12fc' # String | String identifier of the parent transaction of the internal transaction represented in CryptoAPIs.
 opts = {
@@ -69,8 +70,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | [default to &#39;ethereum&#39;] |
-| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | [default to &#39;ropsten&#39;] |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **operation_id** | **String** | Represents the unique internal transaction ID in regards to the parent transaction (type trace address). |  |
 | **transaction_hash** | **String** | String identifier of the parent transaction of the internal transaction represented in CryptoAPIs. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
@@ -112,7 +113,7 @@ end
 
 api_instance = CryptoApis::InternalApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
-network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 transaction_hash = '0x5d4ea0471b70de09fa3d6a4bc32f703ec44483bffa4d6169fa0a36c6a1dc108a' # String | String identifier of the parent transaction of the internal transaction represented in CryptoAPIs.
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
@@ -151,8 +152,8 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | [default to &#39;ethereum&#39;] |
-| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | [default to &#39;mainnet&#39;] |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **transaction_hash** | **String** | String identifier of the parent transaction of the internal transaction represented in CryptoAPIs. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
 | **limit** | **Integer** | Defines how many items should be returned in the response per page basis. | [optional][default to 50] |
@@ -161,6 +162,87 @@ end
 ### Return type
 
 [**ListInternalTransactionDetailsByTransactionHashR**](ListInternalTransactionDetailsByTransactionHashR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## list_internal_transactions_by_address
+
+> <ListInternalTransactionsByAddressR> list_internal_transactions_by_address(blockchain, network, address, opts)
+
+List Internal Transactions By Address
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::InternalApi.new
+blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+address = '0xc8fe2ceac93ad50e496b497357ae5385192dd28d' # String | String identifier of the address document represented in CryptoAPIs
+opts = {
+  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
+  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+}
+
+begin
+  # List Internal Transactions By Address
+  result = api_instance.list_internal_transactions_by_address(blockchain, network, address, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling InternalApi->list_internal_transactions_by_address: #{e}"
+end
+```
+
+#### Using the list_internal_transactions_by_address_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListInternalTransactionsByAddressR>, Integer, Hash)> list_internal_transactions_by_address_with_http_info(blockchain, network, address, opts)
+
+```ruby
+begin
+  # List Internal Transactions By Address
+  data, status_code, headers = api_instance.list_internal_transactions_by_address_with_http_info(blockchain, network, address, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListInternalTransactionsByAddressR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling InternalApi->list_internal_transactions_by_address_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |  |
+| **address** | **String** | String identifier of the address document represented in CryptoAPIs |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **limit** | **Integer** | Defines how many items should be returned in the response per page basis. | [optional][default to 50] |
+| **offset** | **Integer** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional][default to 0] |
+
+### Return type
+
+[**ListInternalTransactionsByAddressR**](ListInternalTransactionsByAddressR.md)
 
 ### Authorization
 

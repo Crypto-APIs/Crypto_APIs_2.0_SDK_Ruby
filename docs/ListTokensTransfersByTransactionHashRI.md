@@ -26,11 +26,11 @@ instance = CryptoApis::ListTokensTransfersByTransactionHashRI.new(
   mined_in_block_height: 9841271,
   recipient_address: 0x9e91eb3a35b96f0f0fe71f3c17fe8d29eb406b16,
   sender_address: 0x9df8a6441e8a3dda75019595d431f9aa0dec475c,
-  token_decimals: 18,
-  token_name: Band Protocol,
+  token_decimals: 6,
+  token_name: Tether USD,
   token_symbol: BAND,
   token_type: ERC-20,
-  tokens_amount: 0.001,
+  tokens_amount: 0.0012,
   transaction_hash: 0x60ba3dded833e61f63b6b6d62afe5c7526c5ca09c6744749f13eef11afde2cb4,
   transaction_timestamp: 1615818368
 )

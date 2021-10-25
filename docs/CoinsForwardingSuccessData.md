@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::CoinsForwardingSuccessData.new(
-  product: Blockchain Automations,
+  product: BLOCKCHAIN_AUTOMATIONS,
   event: COINS_FORWARDING_SUCCESS,
   item: null
 )

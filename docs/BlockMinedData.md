@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::BlockMinedData.new(
-  product: Blockchain Events,
+  product: BLOCKCHAIN_EVENTS,
   event: BLOCK_MINED,
   item: null
 )

@@ -17,7 +17,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ListTransactionsByBlockHeightRIBSEC.new(
-  contract: null,
+  contract: 0x20fe562d797a42dcb3399062ae9546cd06f63280,
   gas_limit: 21000,
   gas_price: null,
   gas_used: 21000,
