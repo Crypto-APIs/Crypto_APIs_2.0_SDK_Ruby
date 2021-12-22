@@ -14,7 +14,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::AddressCoinsTransactionConfirmedData.new(
-  product: BLOCKCHAIN_DATA,
+  product: BLOCKCHAIN_EVENTS,
   event: ADDRESS_COINS_TRANSACTION_CONFIRMED,
   item: null
 )

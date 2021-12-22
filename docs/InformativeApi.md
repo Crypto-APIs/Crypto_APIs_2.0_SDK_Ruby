@@ -6,6 +6,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | ------ | ------------ | ----------- |
 | [**get_transaction_request_details**](InformativeApi.md#get_transaction_request_details) | **GET** /wallet-as-a-service/transactionRequests/{transactionRequestId} | Get Transaction Request Details |
 | [**get_wallet_asset_details**](InformativeApi.md#get_wallet_asset_details) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network} | Get Wallet Asset Details |
+| [**get_wallet_transaction_details_by_transaction_id**](InformativeApi.md#get_wallet_transaction_details_by_transaction_id) | **GET** /wallet-as-a-service/wallets/{blockchain}/{network}/transactions/{transactionId} | Get Wallet Transaction Details By Transaction ID |
 | [**list_deposit_addresses**](InformativeApi.md#list_deposit_addresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Deposit Addresses |
 | [**list_supported_tokens**](InformativeApi.md#list_supported_tokens) | **GET** /wallet-as-a-service/info/{blockchain}/{network}/supported-tokens | List Supported Tokens |
 | [**list_wallet_transactions**](InformativeApi.md#list_wallet_transactions) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transactions | List Wallet Transactions |
@@ -154,6 +155,85 @@ end
 ### Return type
 
 [**GetWalletAssetDetailsR**](GetWalletAssetDetailsR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_wallet_transaction_details_by_transaction_id
+
+> <GetWalletTransactionDetailsByTransactionIDR> get_wallet_transaction_details_by_transaction_id(blockchain, network, transaction_id, opts)
+
+Get Wallet Transaction Details By Transaction ID
+
+Through this endpoint users can obtain Wallet transaction information by providing a `transactionId`. Customers can receive information only for a transaction that has been made from their own wallet.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::InformativeApi.new
+blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+transaction_id = '3e081861494aed897e589cdeab5d9e628d985e571ed1c19896d1aa698cce9d80' # String | Represents the unique identifier of a transaction, i.e. it could be `transactionId` in UTXO-based protocols like Bitcoin, and transaction `hash` in Ethereum blockchain.
+opts = {
+  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+}
+
+begin
+  # Get Wallet Transaction Details By Transaction ID
+  result = api_instance.get_wallet_transaction_details_by_transaction_id(blockchain, network, transaction_id, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling InformativeApi->get_wallet_transaction_details_by_transaction_id: #{e}"
+end
+```
+
+#### Using the get_wallet_transaction_details_by_transaction_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetWalletTransactionDetailsByTransactionIDR>, Integer, Hash)> get_wallet_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts)
+
+```ruby
+begin
+  # Get Wallet Transaction Details By Transaction ID
+  data, status_code, headers = api_instance.get_wallet_transaction_details_by_transaction_id_with_http_info(blockchain, network, transaction_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetWalletTransactionDetailsByTransactionIDR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling InformativeApi->get_wallet_transaction_details_by_transaction_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **transaction_id** | **String** | Represents the unique identifier of a transaction, i.e. it could be &#x60;transactionId&#x60; in UTXO-based protocols like Bitcoin, and transaction &#x60;hash&#x60; in Ethereum blockchain. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+
+### Return type
+
+[**GetWalletTransactionDetailsByTransactionIDR**](GetWalletTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -353,7 +433,7 @@ wallet_id = '60c9d9921c38030006675ff6' # String | Represents the unique ID of th
 opts = {
   context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
 }
 
 begin

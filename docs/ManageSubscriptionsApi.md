@@ -4,8 +4,86 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**activate_blockchain_event_subscription**](ManageSubscriptionsApi.md#activate_blockchain_event_subscription) | **POST** /blockchain-events/subscriptions/{referenceId}/activate | Activate Blockchain Event Subscription |
 | [**delete_blockchain_event_subscription**](ManageSubscriptionsApi.md#delete_blockchain_event_subscription) | **DELETE** /blockchain-events/{blockchain}/{network}/subscriptions/{referenceId} | Delete Blockchain Event Subscription |
 | [**list_blockchain_events_subscriptions**](ManageSubscriptionsApi.md#list_blockchain_events_subscriptions) | **GET** /blockchain-events/{blockchain}/{network}/subscriptions | List Blockchain Events Subscriptions |
+
+
+## activate_blockchain_event_subscription
+
+> <ActivateBlockchainEventSubscriptionR> activate_blockchain_event_subscription(reference_id, opts)
+
+Activate Blockchain Event Subscription
+
+Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \"maximum retry attempts reached\".
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::ManageSubscriptionsApi.new
+reference_id = 'bc243c86-0902-4386-b30d-e6b30fa1f2aa' # String | Represents a unique ID used to reference the specific callback subscription.
+opts = {
+  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  activate_blockchain_event_subscription_rb: CryptoApis::ActivateBlockchainEventSubscriptionRB.new({data: CryptoApis::ActivateBlockchainEventSubscriptionRBData.new({item: 3.56})}) # ActivateBlockchainEventSubscriptionRB | 
+}
+
+begin
+  # Activate Blockchain Event Subscription
+  result = api_instance.activate_blockchain_event_subscription(reference_id, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling ManageSubscriptionsApi->activate_blockchain_event_subscription: #{e}"
+end
+```
+
+#### Using the activate_blockchain_event_subscription_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ActivateBlockchainEventSubscriptionR>, Integer, Hash)> activate_blockchain_event_subscription_with_http_info(reference_id, opts)
+
+```ruby
+begin
+  # Activate Blockchain Event Subscription
+  data, status_code, headers = api_instance.activate_blockchain_event_subscription_with_http_info(reference_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ActivateBlockchainEventSubscriptionR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling ManageSubscriptionsApi->activate_blockchain_event_subscription_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **reference_id** | **String** | Represents a unique ID used to reference the specific callback subscription. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **activate_blockchain_event_subscription_rb** | [**ActivateBlockchainEventSubscriptionRB**](ActivateBlockchainEventSubscriptionRB.md) |  | [optional] |
+
+### Return type
+
+[**ActivateBlockchainEventSubscriptionR**](ActivateBlockchainEventSubscriptionR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## delete_blockchain_event_subscription

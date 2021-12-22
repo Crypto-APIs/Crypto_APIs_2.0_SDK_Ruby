@@ -7,7 +7,7 @@
 | **addresses** | **Array&lt;String&gt;** |  |  |
 | **coinbase** | **String** | Represents the coinbase hex. | [optional] |
 | **script_sig** | [**GetTransactionDetailsByTransactionIDRIBSDScriptSig**](GetTransactionDetailsByTransactionIDRIBSDScriptSig.md) |  |  |
-| **sequence** | **String** | Represents the script sequence number. |  |
+| **sequence** | **Integer** | Represents the script sequence number. |  |
 | **txid** | **String** | Represents the reference transaction identifier. | [optional] |
 | **txinwitness** | **Array&lt;String&gt;** |  |  |
 | **value** | **String** | Represents the sent/received amount. |  |

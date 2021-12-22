@@ -12,7 +12,6 @@
 | **event_type** | **String** | Defines the type of the specific event available for the customer to subscribe to for callback notification. |  |
 | **is_active** | **Boolean** | Defines whether the subscription is active or not. Set as boolean. |  |
 | **reference_id** | **String** | Represents a unique ID used to reference the specific callback subscription. |  |
-| **transaction_id** | **String** | Represents the unique identification string that defines the transaction. |  |
 
 ## Example
 
@@ -23,12 +22,11 @@ instance = CryptoApis::NewConfirmedInternalTransactionsAndEachConfirmationRI.new
   address: 0xe2b5f5e885a268e4b6faae53f99a663f3bb3e036,
   callback_secret_key: yourSecretKey,
   callback_url: https://example.com,
-  confirmations_count: 2,
+  confirmations_count: 3,
   created_timestamp: 1611238648,
   event_type: ADDRESS_INTERNAL_TRANSACTION_CONFIRMED_EACH_CONFIRMATION,
   is_active: true,
-  reference_id: bc243c86-0902-4386-b30d-e6b30fa1f2aa,
-  transaction_id: 0xe67f98e281c303dbefa8c6b3e1441ff06742a914ae240e4829629abe7e464960
+  reference_id: bc243c86-0902-4386-b30d-e6b30fa1f2aa
 )
 ```
 

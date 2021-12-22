@@ -21,7 +21,7 @@ instance = CryptoApis::CreateAutomaticCoinsForwardingRBDataItem.new(
   callback_url: https://example.com,
   confirmations_count: 3,
   fee_priority: standard,
-  minimum_transfer_amount: 0.0002,
+  minimum_transfer_amount: 0.02,
   to_address: mzYijhgmzZrmuB7wBDazRKirnChKyow4M3
 )
 ```

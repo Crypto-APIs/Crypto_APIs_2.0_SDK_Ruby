@@ -14,7 +14,7 @@ require 'crypto_apis'
 
 instance = CryptoApis::GetLatestMinedXRPRippleBlockRITotalCoins.new(
   amount: 22.0012,
-  unit: XRP
+  unit: Drops
 )
 ```
 

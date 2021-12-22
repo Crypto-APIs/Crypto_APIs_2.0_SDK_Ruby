@@ -4,6 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **difficulty** | **String** | Represents a mathematical value of how hard it is to find a valid hash for this block. |  |
 | **ds_block** | **Integer** | Represents the Directory Service block which contains metadata about the miners who participate in the consensus protocol. |  |
 | **ds_difficulty** | **String** | Defines how difficult it is to mine the dsBlocks. |  |
 | **ds_leader** | **String** | Represents a part of the DS Committee which leads the consensus protocol for the epoch. |  |
@@ -17,6 +18,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ListLatestMinedBlocksRIBSZ.new(
+  difficulty: 21448277761059.71,
   ds_block: 12443,
   ds_difficulty: 48.625,
   ds_leader: zil1k9hne0uu86wuj2n7qdqwhrm9uma0xn7ut42tsj,

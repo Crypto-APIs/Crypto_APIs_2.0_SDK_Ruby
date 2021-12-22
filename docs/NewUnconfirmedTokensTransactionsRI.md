@@ -11,7 +11,6 @@
 | **event_type** | **String** | Defines the type of the specific event available for the customer to subscribe to for callback notification. |  |
 | **is_active** | **Boolean** | Defines whether the subscription is active or not. Set as boolean. |  |
 | **reference_id** | **String** | Represents a unique ID used to reference the specific callback subscription. |  |
-| **transaction_id** | **String** | Represents the unique identification string that defines the transaction. |  |
 
 ## Example
 
@@ -25,8 +24,7 @@ instance = CryptoApis::NewUnconfirmedTokensTransactionsRI.new(
   created_timestamp: 1611238648,
   event_type: ADDRESS_TOKENS_TRANSACTION_UNCONFIRMED,
   is_active: true,
-  reference_id: c748624f-1843-4738-a7de-8258ada0f524,
-  transaction_id: 0x32de09d747bcbed41e8162681a72b2a6c760cf2116ce372fcd357c260909838a
+  reference_id: c748624f-1843-4738-a7de-8258ada0f524
 )
 ```
 

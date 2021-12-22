@@ -21,7 +21,8 @@ CryptoApis::GetTransactionDetailsByTransactionIDRIBS.openapi_one_of
 #   :'GetTransactionDetailsByTransactionIDRIBSD2',
 #   :'GetTransactionDetailsByTransactionIDRIBSE',
 #   :'GetTransactionDetailsByTransactionIDRIBSEC',
-#   :'GetTransactionDetailsByTransactionIDRIBSL'
+#   :'GetTransactionDetailsByTransactionIDRIBSL',
+#   :'GetTransactionDetailsByTransactionIDRIBSZ'
 # ]
 ```
 
@@ -57,5 +58,6 @@ CryptoApis::GetTransactionDetailsByTransactionIDRIBS.build(data_that_doesnt_matc
 - `GetTransactionDetailsByTransactionIDRIBSE`
 - `GetTransactionDetailsByTransactionIDRIBSEC`
 - `GetTransactionDetailsByTransactionIDRIBSL`
+- `GetTransactionDetailsByTransactionIDRIBSZ`
 - `nil` (if no type matches)
 

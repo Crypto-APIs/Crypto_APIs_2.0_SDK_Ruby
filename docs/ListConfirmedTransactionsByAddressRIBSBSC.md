@@ -18,7 +18,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ListConfirmedTransactionsByAddressRIBSBSC.new(
-  contract: null,
+  contract: 0x0000000000000000000000000000000000001000,
   gas_limit: 21000,
   gas_price: null,
   gas_used: 21000,

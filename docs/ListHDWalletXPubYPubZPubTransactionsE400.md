@@ -1,0 +1,59 @@
+# CryptoApis::ListHDWalletXPubYPubZPubTransactionsE400
+
+## Class instance methods
+
+### `openapi_one_of`
+
+Returns the list of classes defined in oneOf.
+
+#### Example
+
+```ruby
+require 'crypto_apis'
+
+CryptoApis::ListHDWalletXPubYPubZPubTransactionsE400.openapi_one_of
+# =>
+# [
+#   :'InvalidBlockchain',
+#   :'InvalidNetwork',
+#   :'InvalidPagination',
+#   :'InvalidXpub',
+#   :'LimitGreaterThanAllowed',
+#   :'UriNotFound',
+#   :'XpubNotSynced'
+# ]
+```
+
+### build
+
+Find the appropriate object from the `openapi_one_of` list and casts the data into it.
+
+#### Example
+
+```ruby
+require 'crypto_apis'
+
+CryptoApis::ListHDWalletXPubYPubZPubTransactionsE400.build(data)
+# => #<InvalidBlockchain:0x00007fdd4aab02a0>
+
+CryptoApis::ListHDWalletXPubYPubZPubTransactionsE400.build(data_that_doesnt_match)
+# => nil
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| **data** | **Mixed** | data to be matched against the list of oneOf items |
+
+#### Return type
+
+- `InvalidBlockchain`
+- `InvalidNetwork`
+- `InvalidPagination`
+- `InvalidXpub`
+- `LimitGreaterThanAllowed`
+- `UriNotFound`
+- `XpubNotSynced`
+- `nil` (if no type matches)
+

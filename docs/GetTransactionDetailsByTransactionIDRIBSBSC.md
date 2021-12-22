@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **contract** | **String** | Represents the specific transaction contract | [optional] |
+| **contract** | **String** | Represents the specific transaction contract |  |
 | **gas_limit** | **String** | Represents the amount of gas used by this specific transaction alone. |  |
 | **gas_price** | [**GetTransactionDetailsByTransactionIDRIBSBSCGasPrice**](GetTransactionDetailsByTransactionIDRIBSBSCGasPrice.md) |  |  |
 | **gas_used** | **String** | Defines the unit of the gas price amount, e.g. BTC, ETH, XRP. |  |
@@ -17,7 +17,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::GetTransactionDetailsByTransactionIDRIBSBSC.new(
-  contract: null,
+  contract: 0x0000000000000000000000000000000000001000,
   gas_limit: 21000,
   gas_price: null,
   gas_used: 21000,

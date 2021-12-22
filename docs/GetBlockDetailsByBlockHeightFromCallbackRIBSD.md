@@ -1,0 +1,32 @@
+# CryptoApis::GetBlockDetailsByBlockHeightFromCallbackRIBSD
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **bits** | **String** | Represents a specific sub-unit of Dash. Bits have two-decimal precision. |  |
+| **chainwork** | **String** | Represents a hexadecimal number of all the hashes necessary to produce the current chain. E.g., when converting 0000000000000000000000000000000000000000000086859f7a841475b236fd to a decimal you get 635262017308958427068157 hashes, or 635262 exahashes. |  |
+| **difficulty** | **String** | Represents a mathematical value of how hard it is to find a valid hash for this block. |  |
+| **merkle_root** | **String** | Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. |  |
+| **nonce** | **Integer** | Represents a random value that can be adjusted to satisfy the proof of work |  |
+| **size** | **Integer** | Represents the total size of the block in Bytes. |  |
+| **version** | **Integer** | Represents the version of the specific block on the blockchain. |  |
+| **version_hex** | **String** | Is the hexadecimal string representation of the block&#39;s version. |  |
+
+## Example
+
+```ruby
+require 'crypto_apis'
+
+instance = CryptoApis::GetBlockDetailsByBlockHeightFromCallbackRIBSD.new(
+  bits: 421808151,
+  chainwork: 0000000000000000000000000000000000000000000065cbab6e72cb49a0c2f7,
+  difficulty: 118376853.4818659,
+  merkle_root: 1cee8c0df02427cbcfd2d2a88678848b4c08eb89d580df34a52464a6fed4df7f,
+  nonce: 3850564744,
+  size: 26171,
+  version: 536870912,
+  version_hex: 20000000
+)
+```
+

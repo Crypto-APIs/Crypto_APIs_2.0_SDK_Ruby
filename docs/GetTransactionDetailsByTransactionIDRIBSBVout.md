@@ -14,9 +14,9 @@
 require 'crypto_apis'
 
 instance = CryptoApis::GetTransactionDetailsByTransactionIDRIBSBVout.new(
-  is_spent: true,
+  is_spent: false,
   script_pub_key: null,
-  value: 0.000144
+  value: 0.00014400
 )
 ```
 

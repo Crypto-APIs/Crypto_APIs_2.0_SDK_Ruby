@@ -13,7 +13,7 @@
 | **size** | **Integer** | Represents the total size of this transaction. |  |
 | **v_join_split** | [**Array&lt;ListTransactionsByBlockHeightRIBSZVJoinSplit&gt;**](ListTransactionsByBlockHeightRIBSZVJoinSplit.md) | Represents a sequence of JoinSplit descriptions using BCTV14 proofs. |  |
 | **v_shielded_output** | [**Array&lt;ListTransactionsByBlockHeightRIBSZVShieldedOutput&gt;**](ListTransactionsByBlockHeightRIBSZVShieldedOutput.md) | Object Array representation of transaction output descriptions |  |
-| **v_shielded_spend** | [**Array&lt;ListConfirmedTransactionsByAddressRIBSZVShieldedSpend&gt;**](ListConfirmedTransactionsByAddressRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions |  |
+| **v_shielded_spend** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend&gt;**](GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions |  |
 | **value_balance** | **String** | Defines the transaction value balance. |  |
 | **version** | **Integer** | Represents the transaction version number. |  |
 | **version_group_id** | **String** | Represents the transaction version group ID. |  |

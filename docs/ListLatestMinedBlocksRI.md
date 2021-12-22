@@ -9,8 +9,8 @@
 | **previous_block_hash** | **String** | Represents the hash of the previous block, also known as the parent block. |  |
 | **timestamp** | **Integer** | Defines the exact date/time when this block was mined in Unix Timestamp. |  |
 | **transactions_count** | **Integer** | Represents the total number of all transactions as part of this block. |  |
-| **total_coins** | [**GetLatestMinedXRPRippleBlockRITotalCoins**](GetLatestMinedXRPRippleBlockRITotalCoins.md) |  |  |
-| **total_fees** | [**GetLatestMinedXRPRippleBlockRITotalFees**](GetLatestMinedXRPRippleBlockRITotalFees.md) |  |  |
+| **total_coins** | [**ListLatestMinedBlocksRITotalCoins**](ListLatestMinedBlocksRITotalCoins.md) |  |  |
+| **total_fees** | [**ListLatestMinedBlocksRITotalFees**](ListLatestMinedBlocksRITotalFees.md) |  |  |
 | **blockchain_specific** | [**ListLatestMinedBlocksRIBS**](ListLatestMinedBlocksRIBS.md) |  |  |
 
 ## Example
