@@ -15,6 +15,7 @@
 | **tokens_amount** | **String** | Defines the token amount of the transfer. |  |
 | **transaction_hash** | **String** | Represents the hash of the transaction, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. |  |
 | **transaction_timestamp** | **Integer** | Defines the specific time/date when the transaction was created in Unix Timestamp. |  |
+| **transaction_fee** | [**ListTokensTransfersByTransactionHashRITransactionFee**](ListTokensTransfersByTransactionHashRITransactionFee.md) |  |  |
 
 ## Example
 
@@ -32,7 +33,8 @@ instance = CryptoApis::ListTokensTransfersByTransactionHashRI.new(
   token_type: ERC-20,
   tokens_amount: 0.0012,
   transaction_hash: 0x60ba3dded833e61f63b6b6d62afe5c7526c5ca09c6744749f13eef11afde2cb4,
-  transaction_timestamp: 1615818368
+  transaction_timestamp: 1615818368,
+  transaction_fee: null
 )
 ```
 

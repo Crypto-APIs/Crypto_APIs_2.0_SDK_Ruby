@@ -15,6 +15,7 @@ CryptoApis::CreateCoinsTransactionRequestFromWalletE409.openapi_one_of
 # =>
 # [
 #   :'InvalidData',
+#   :'WalletAsAServiceAddressBalanceNotEnough',
 #   :'WalletAsAServiceNoDepositAddressesFound',
 #   :'WalletAsAServiceWalletBalanceNotEnough'
 # ]
@@ -45,6 +46,7 @@ CryptoApis::CreateCoinsTransactionRequestFromWalletE409.build(data_that_doesnt_m
 #### Return type
 
 - `InvalidData`
+- `WalletAsAServiceAddressBalanceNotEnough`
 - `WalletAsAServiceNoDepositAddressesFound`
 - `WalletAsAServiceWalletBalanceNotEnough`
 - `nil` (if no type matches)

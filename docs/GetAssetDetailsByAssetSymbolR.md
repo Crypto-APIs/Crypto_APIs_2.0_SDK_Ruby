@@ -15,9 +15,9 @@
 require 'crypto_apis'
 
 instance = CryptoApis::GetAssetDetailsByAssetSymbolR.new(
-  api_version: 2.0,
+  api_version: 2.0.0,
   request_id: 601c1710034ed6d407996b30,
-  context: You can add any text here,
+  context: yourExampleString,
   data: null
 )
 ```

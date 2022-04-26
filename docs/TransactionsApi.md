@@ -37,7 +37,7 @@ blockchain = 'ethereum' # String | Represents the specific blockchain protocol n
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 wallet_id = '609e221675d04500068718dc' # String | Represents the sender's specific and unique Wallet ID of the sender.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   create_coins_transaction_from_address_for_whole_amount_rb: CryptoApis::CreateCoinsTransactionFromAddressForWholeAmountRB.new({data: CryptoApis::CreateCoinsTransactionFromAddressForWholeAmountRBData.new({item: CryptoApis::CreateCoinsTransactionFromAddressForWholeAmountRBDataItem.new({fee_priority: 'slow', recipient_address: '0xc065b539490f81b6c297c37b1925c3be2f190732'})})}) # CreateCoinsTransactionFromAddressForWholeAmountRB | 
 }
 
@@ -115,12 +115,12 @@ CryptoApis.configure do |config|
 end
 
 api_instance = CryptoApis::TransactionsApi.new
-address = '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5' # String | Defines the specific source address for the transaction.
+address = '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5' # String | Defines the specific source address for the transaction. For XRP we also support the X-address format.
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 wallet_id = '609e221675d04500068718dc' # String | Represents the sender's specific and unique Wallet ID of the sender.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   create_coins_transaction_request_from_address_rb: CryptoApis::CreateCoinsTransactionRequestFromAddressRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromAddressRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromAddressRBDataItem.new({amount: '0.2', fee_priority: 'slow', recipient_address: '0xc065b539490f81b6c297c37b1925c3be2f190732'})})}) # CreateCoinsTransactionRequestFromAddressRB | 
 }
 
@@ -155,7 +155,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **address** | **String** | Defines the specific source address for the transaction. |  |
+| **address** | **String** | Defines the specific source address for the transaction. For XRP we also support the X-address format. |  |
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
 | **wallet_id** | **String** | Represents the sender&#39;s specific and unique Wallet ID of the sender. |  |
@@ -202,7 +202,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 wallet_id = '609e221675d04500068718dc' # String | Represents the sender's specific and unique Wallet ID of the sender.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   create_coins_transaction_request_from_wallet_rb: CryptoApis::CreateCoinsTransactionRequestFromWalletRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromWalletRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem.new({fee_priority: 'slow', recipients: [CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItemRecipients.new({address: '2MtzNEqm2D9jcbPJ5mW7Z3AUNwqt3afZH66', amount: '0.125'})]})})}) # CreateCoinsTransactionRequestFromWalletRB | 
 }
 
@@ -284,7 +284,7 @@ network = 'mainnet' # String | Represents the name of the blockchain network use
 sender_address = '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5' # String | Defines the specific source address for the transaction.
 wallet_id = '609e221675d04500068718dc' # String | Defines the unique ID of the Wallet.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   create_fungible_tokens_transaction_request_from_address_rb: CryptoApis::CreateFungibleTokensTransactionRequestFromAddressRB.new({data: CryptoApis::CreateFungibleTokensTransactionRequestFromAddressRBData.new({item: CryptoApis::CreateFungibleTokensTransactionRequestFromAddressRBDataItem.new({amount: '0.2', fee_priority: 'slow', recipient_address: '0xc065b539490f81b6c297c37b1925c3be2f190732', token_identifier: '0xdac17f958d2ee523a2206206994597c13d831ec7'})})}) # CreateFungibleTokensTransactionRequestFromAddressRB | 
 }
 

@@ -8,8 +8,8 @@
 | **confirmed_balance** | [**GetAddressDetailsRIConfirmedBalance**](GetAddressDetailsRIConfirmedBalance.md) |  |  |
 | **total_received** | [**GetAddressDetailsRITotalReceived**](GetAddressDetailsRITotalReceived.md) |  |  |
 | **total_spent** | [**GetAddressDetailsRITotalSpent**](GetAddressDetailsRITotalSpent.md) |  |  |
-| **incoming_transactions_count** | **Integer** | Defines the count of the incoming transactions. |  |
-| **outgoing_transactions_count** | **Integer** | Defines the count of the outgoing transactions. |  |
+| **incoming_transactions_count** | **Integer** | Defines the received transaction count to the address. |  |
+| **outgoing_transactions_count** | **Integer** | Defines the sent transaction count from the address. |  |
 
 ## Example
 
@@ -21,8 +21,8 @@ instance = CryptoApis::GetAddressDetailsRI.new(
   confirmed_balance: null,
   total_received: null,
   total_spent: null,
-  incoming_transactions_count: 1,
-  outgoing_transactions_count: 2
+  incoming_transactions_count: 2,
+  outgoing_transactions_count: 6
 )
 ```
 

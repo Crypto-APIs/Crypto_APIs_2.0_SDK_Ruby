@@ -30,10 +30,10 @@ end
 
 api_instance = CryptoApis::MetadataApi.new
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   asset_type: 'fiat', # String | Defines the type of the supported asset. This could be either \"crypto\" or \"fiat\".
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
 }
 
 begin

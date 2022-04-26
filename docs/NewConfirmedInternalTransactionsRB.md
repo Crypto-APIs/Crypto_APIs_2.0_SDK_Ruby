@@ -13,7 +13,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::NewConfirmedInternalTransactionsRB.new(
-  context: null,
+  context: yourExampleString,
   data: null
 )
 ```

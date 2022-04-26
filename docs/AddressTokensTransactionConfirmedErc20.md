@@ -16,7 +16,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::AddressTokensTransactionConfirmedErc20.new(
-  name: Tether-USD,
+  name: Tether USD,
   symbol: USDT,
   decimals: 6,
   amount: 0.00039,

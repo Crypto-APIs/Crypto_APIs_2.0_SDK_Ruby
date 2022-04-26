@@ -13,7 +13,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::CreateAutomaticCoinsForwardingRB.new(
-  context: null,
+  context: yourExampleString,
   data: null
 )
 ```

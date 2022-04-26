@@ -36,7 +36,7 @@ api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   add_tokens_to_existing_from_address_rb: CryptoApis::AddTokensToExistingFromAddressRB.new({data: CryptoApis::AddTokensToExistingFromAddressRBData.new({item: CryptoApis::AddTokensToExistingFromAddressRBDataItem.new({callback_url: 'https://example.com', confirmations_count: 3, fee_priority: 'slow', from_address: 'mizRduUBKEbJ6uzYJUegPh78gEGgM3WjAr', minimum_transfer_amount: '0.00001', to_address: 'mnumE76iEKN47bUsdni85oped5D1fRwKWi', token_data: CryptoApis::AddTokensToExistingFromAddressRBTokenDataBitcoinOmniToken.new({property_id: 2})})})}) # AddTokensToExistingFromAddressRB | 
 }
 
@@ -115,7 +115,7 @@ api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   create_automatic_tokens_forwarding_rb: CryptoApis::CreateAutomaticTokensForwardingRB.new({data: CryptoApis::CreateAutomaticTokensForwardingRBData.new({item: CryptoApis::CreateAutomaticTokensForwardingRBDataItem.new({callback_url: 'https://example.com', confirmations_count: '3', fee_priority: 'slow', minimum_transfer_amount: '0.00002', to_address: 'tb1q54j7qcu7kgsrx87yn0r9zjdvsxrnvxg4qua2z6', token_data: CryptoApis::CreateAutomaticTokensForwardingRBTokenDataBitcoinOmniToken.new({property_id: 31})})})}) # CreateAutomaticTokensForwardingRB | 
 }
 
@@ -195,7 +195,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 reference_id = '6017dd02a309213863be9e55' # String | Represents a unique ID used to reference the specific callback subscription.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -273,7 +273,7 @@ api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -350,9 +350,9 @@ api_instance = CryptoApis::AutomaticTokensForwardingApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
 }
 
 begin

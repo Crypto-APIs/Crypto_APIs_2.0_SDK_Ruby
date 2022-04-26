@@ -6,6 +6,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | ------ | ------------ | ----------- |
 | [**activate_blockchain_event_subscription**](ManageSubscriptionsApi.md#activate_blockchain_event_subscription) | **POST** /blockchain-events/subscriptions/{referenceId}/activate | Activate Blockchain Event Subscription |
 | [**delete_blockchain_event_subscription**](ManageSubscriptionsApi.md#delete_blockchain_event_subscription) | **DELETE** /blockchain-events/{blockchain}/{network}/subscriptions/{referenceId} | Delete Blockchain Event Subscription |
+| [**get_blockchain_event_subscription_details_by_reference_id**](ManageSubscriptionsApi.md#get_blockchain_event_subscription_details_by_reference_id) | **GET** /blockchain-events/subscriptions/{referenceId} | Get Blockchain Event Subscription Details By Reference ID |
 | [**list_blockchain_events_subscriptions**](ManageSubscriptionsApi.md#list_blockchain_events_subscriptions) | **GET** /blockchain-events/{blockchain}/{network}/subscriptions | List Blockchain Events Subscriptions |
 
 
@@ -33,7 +34,7 @@ end
 api_instance = CryptoApis::ManageSubscriptionsApi.new
 reference_id = 'bc243c86-0902-4386-b30d-e6b30fa1f2aa' # String | Represents a unique ID used to reference the specific callback subscription.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   activate_blockchain_event_subscription_rb: CryptoApis::ActivateBlockchainEventSubscriptionRB.new({data: CryptoApis::ActivateBlockchainEventSubscriptionRBData.new({item: 3.56})}) # ActivateBlockchainEventSubscriptionRB | 
 }
 
@@ -112,7 +113,7 @@ blockchain = 'bitcoin' # String | Represents the specific blockchain protocol na
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 reference_id = 'd3fd6a0e-f2b6-4bb5-9fd3-7944bcec9e9f' # String | Represents a unique ID used to reference the specific callback subscription.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -165,6 +166,81 @@ end
 - **Accept**: application/json
 
 
+## get_blockchain_event_subscription_details_by_reference_id
+
+> <GetBlockchainEventSubscriptionDetailsByReferenceIDR> get_blockchain_event_subscription_details_by_reference_id(reference_id, opts)
+
+Get Blockchain Event Subscription Details By Reference ID
+
+Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::ManageSubscriptionsApi.new
+reference_id = 'bc243c86-0902-4386-b30d-e6b30fa1f2aa' # String | Represents a unique ID used to reference the specific callback subscription.
+opts = {
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+}
+
+begin
+  # Get Blockchain Event Subscription Details By Reference ID
+  result = api_instance.get_blockchain_event_subscription_details_by_reference_id(reference_id, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling ManageSubscriptionsApi->get_blockchain_event_subscription_details_by_reference_id: #{e}"
+end
+```
+
+#### Using the get_blockchain_event_subscription_details_by_reference_id_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetBlockchainEventSubscriptionDetailsByReferenceIDR>, Integer, Hash)> get_blockchain_event_subscription_details_by_reference_id_with_http_info(reference_id, opts)
+
+```ruby
+begin
+  # Get Blockchain Event Subscription Details By Reference ID
+  data, status_code, headers = api_instance.get_blockchain_event_subscription_details_by_reference_id_with_http_info(reference_id, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetBlockchainEventSubscriptionDetailsByReferenceIDR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling ManageSubscriptionsApi->get_blockchain_event_subscription_details_by_reference_id_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **reference_id** | **String** | Represents a unique ID used to reference the specific callback subscription. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+
+### Return type
+
+[**GetBlockchainEventSubscriptionDetailsByReferenceIDR**](GetBlockchainEventSubscriptionDetailsByReferenceIDR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## list_blockchain_events_subscriptions
 
 > <ListBlockchainEventsSubscriptionsR> list_blockchain_events_subscriptions(blockchain, network, opts)
@@ -190,9 +266,9 @@ api_instance = CryptoApis::ManageSubscriptionsApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
 }
 
 begin

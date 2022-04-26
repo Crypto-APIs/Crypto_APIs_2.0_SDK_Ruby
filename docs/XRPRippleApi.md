@@ -10,6 +10,7 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | [**get_xrp__ripple_block_details_by_block_height**](XRPRippleApi.md#get_xrp__ripple_block_details_by_block_height) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height |
 | [**get_xrp__ripple_transaction_details_by_transaction_id**](XRPRippleApi.md#get_xrp__ripple_transaction_details_by_transaction_id) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID |
 | [**list_xrp__ripple_transactions_by_address**](XRPRippleApi.md#list_xrp__ripple_transactions_by_address) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address |
+| [**list_xrp__ripple_transactions_by_address_and_time_range**](XRPRippleApi.md#list_xrp__ripple_transactions_by_address_and_time_range) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions-by-time-range | List XRP (Ripple) Transactions By Address And Time Range |
 | [**list_xrp__ripple_transactions_by_block_hash**](XRPRippleApi.md#list_xrp__ripple_transactions_by_block_hash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash |
 | [**list_xrp__ripple_transactions_by_block_height**](XRPRippleApi.md#list_xrp__ripple_transactions_by_block_height) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height |
 
@@ -38,7 +39,7 @@ end
 api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -114,7 +115,7 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 address = 'rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z' # String | Represents the public address, which is a compressed and shortened form of a public key.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -191,7 +192,7 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 block_hash = '1ab0614d2a438da8b23086cbceef7d443edbd295d9c7619fc8a19c7618bc22c9' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -268,7 +269,7 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 block_height = '15886156' # String | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -345,7 +346,7 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 transaction_hash = '36a1737481edec87bacc3101dfb752ae2c76f9171e7edebe587e330c1ea77c8d' # String | Represents the same as `transactionId` for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols `hash` is different from `transactionId` for SegWit transactions.
 opts = {
-  context: 'context_example' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
 
 begin
@@ -422,9 +423,9 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 address = 'rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z' # String | Represents the public address, which is a compressed and shortened form of a public key.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10, # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0, # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
   transaction_type: 'account-set' # String | 
 }
 
@@ -480,6 +481,93 @@ end
 - **Accept**: application/json
 
 
+## list_xrp__ripple_transactions_by_address_and_time_range
+
+> <ListXRPRippleTransactionsByAddressAndTimeRangeR> list_xrp__ripple_transactions_by_address_and_time_range(network, address, from_timestamp, to_timestamp, opts)
+
+List XRP (Ripple) Transactions By Address And Time Range
+
+Тhis endpoint lists XRP transactions by the attribute `address` and the query parameters `fromTimestamp` and `toTimestamp`  which gives customers the opportunity to filter the results by a specified time period.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::XRPRippleApi.new
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+address = 'rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z' # String | Represents the public address, which is a compressed and shortened form of a public key.
+from_timestamp = 1616347862 # Integer | Defines the specific time/date from which the results will start being listed.
+to_timestamp = 1616347870 # Integer | Defines the specific time/date to which the results will be listed.
+opts = {
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
+  offset: 0, # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  transaction_type: 'account-set' # String | Defines the transaction type.
+}
+
+begin
+  # List XRP (Ripple) Transactions By Address And Time Range
+  result = api_instance.list_xrp__ripple_transactions_by_address_and_time_range(network, address, from_timestamp, to_timestamp, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_address_and_time_range: #{e}"
+end
+```
+
+#### Using the list_xrp__ripple_transactions_by_address_and_time_range_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ListXRPRippleTransactionsByAddressAndTimeRangeR>, Integer, Hash)> list_xrp__ripple_transactions_by_address_and_time_range_with_http_info(network, address, from_timestamp, to_timestamp, opts)
+
+```ruby
+begin
+  # List XRP (Ripple) Transactions By Address And Time Range
+  data, status_code, headers = api_instance.list_xrp__ripple_transactions_by_address_and_time_range_with_http_info(network, address, from_timestamp, to_timestamp, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ListXRPRippleTransactionsByAddressAndTimeRangeR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling XRPRippleApi->list_xrp__ripple_transactions_by_address_and_time_range_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **address** | **String** | Represents the public address, which is a compressed and shortened form of a public key. |  |
+| **from_timestamp** | **Integer** | Defines the specific time/date from which the results will start being listed. |  |
+| **to_timestamp** | **Integer** | Defines the specific time/date to which the results will be listed. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **limit** | **Integer** | Defines how many items should be returned in the response per page basis. | [optional][default to 50] |
+| **offset** | **Integer** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional][default to 0] |
+| **transaction_type** | **String** | Defines the transaction type. | [optional] |
+
+### Return type
+
+[**ListXRPRippleTransactionsByAddressAndTimeRangeR**](ListXRPRippleTransactionsByAddressAndTimeRangeR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## list_xrp__ripple_transactions_by_block_hash
 
 > <ListXRPRippleTransactionsByBlockHashR> list_xrp__ripple_transactions_by_block_hash(network, block_hash, opts)
@@ -505,9 +593,9 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 block_hash = '14754656235f865a74eba27791fd41a47bdfe07fe811ff6d78f53db32e129e39' # String | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
 }
 
 begin
@@ -586,9 +674,9 @@ api_instance = CryptoApis::XRPRippleApi.new
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 block_height = 15971358 # Integer | 
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 10 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
+  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
 }
 
 begin

@@ -15,7 +15,7 @@ require 'crypto_apis'
 
 instance = CryptoApis::WalletAsAServiceAddressBalanceNotEnough.new(
   code: wallet_as_a_service_address_balance_not_enough,
-  message: Your address balance is insufficient to complete the action. Please, deposit funds to your address and try again.,
+  message: Your address balance is insufficient to complete this action. Please check for any pending transaction requests or add more funds.,
   details: null
 )
 ```

@@ -13,7 +13,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::BroadcastLocallySignedTransactionRB.new(
-  context: null,
+  context: yourExampleString,
   data: null
 )
 ```

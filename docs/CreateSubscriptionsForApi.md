@@ -41,8 +41,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  mined_transaction_rb: CryptoApis::MinedTransactionRB.new({data: CryptoApis::MinedTransactionRBData.new({item: CryptoApis::MinedTransactionRBDataItem.new({callback_url: 'http://example.com', transaction_id: 'df2690ff97e72c1f8b0f2102a8cb5c1d0fa8fb8754d543c9bc0edc4d4bc34bfc'})})}) # MinedTransactionRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  mined_transaction_rb: CryptoApis::MinedTransactionRB.new({data: CryptoApis::MinedTransactionRBData.new({item: CryptoApis::MinedTransactionRBDataItem.new({callback_url: 'https://example.com', transaction_id: 'df2690ff97e72c1f8b0f2102a8cb5c1d0fa8fb8754d543c9bc0edc4d4bc34bfc'})})}) # MinedTransactionRB | 
 }
 
 begin
@@ -120,8 +120,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_block_rb: CryptoApis::NewBlockRB.new({data: CryptoApis::NewBlockRBData.new({item: CryptoApis::NewBlockRBDataItem.new({callback_url: 'http://example.com'})})}) # NewBlockRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_block_rb: CryptoApis::NewBlockRB.new({data: CryptoApis::NewBlockRBData.new({item: CryptoApis::NewBlockRBDataItem.new({callback_url: 'https://example.com'})})}) # NewBlockRB | 
 }
 
 begin
@@ -199,8 +199,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_coins_transactions_rb: CryptoApis::NewConfirmedCoinsTransactionsRB.new({data: CryptoApis::NewConfirmedCoinsTransactionsRBData.new({item: CryptoApis::NewConfirmedCoinsTransactionsRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewConfirmedCoinsTransactionsRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_coins_transactions_rb: CryptoApis::NewConfirmedCoinsTransactionsRB.new({data: CryptoApis::NewConfirmedCoinsTransactionsRBData.new({item: CryptoApis::NewConfirmedCoinsTransactionsRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'https://example.com'})})}) # NewConfirmedCoinsTransactionsRB | 
 }
 
 begin
@@ -278,8 +278,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_coins_transactions_and_each_confirmation_rb: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRB.new({data: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRBData.new({item: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com', confirmations_count: 3})})}) # NewConfirmedCoinsTransactionsAndEachConfirmationRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_coins_transactions_and_each_confirmation_rb: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRB.new({data: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRBData.new({item: CryptoApis::NewConfirmedCoinsTransactionsAndEachConfirmationRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'https://example.com', confirmations_count: 3})})}) # NewConfirmedCoinsTransactionsAndEachConfirmationRB | 
 }
 
 begin
@@ -357,8 +357,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_internal_transactions_rb: CryptoApis::NewConfirmedInternalTransactionsRB.new({data: CryptoApis::NewConfirmedInternalTransactionsRBData.new({item: CryptoApis::NewConfirmedInternalTransactionsRBDataItem.new({address: '0xbcc817f057950b0df41206c5d7125e6225cae18e', allow_duplicates: true, callback_secret_key: 'yourSecretKey', callback_url: 'http://example.com'})})}) # NewConfirmedInternalTransactionsRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_internal_transactions_rb: CryptoApis::NewConfirmedInternalTransactionsRB.new({data: CryptoApis::NewConfirmedInternalTransactionsRBData.new({item: CryptoApis::NewConfirmedInternalTransactionsRBDataItem.new({address: '0xbcc817f057950b0df41206c5d7125e6225cae18e', allow_duplicates: true, callback_secret_key: 'yourSecretKey', callback_url: 'https://example.com'})})}) # NewConfirmedInternalTransactionsRB | 
 }
 
 begin
@@ -436,7 +436,7 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   new_confirmed_internal_transactions_and_each_confirmation_rb: CryptoApis::NewConfirmedInternalTransactionsAndEachConfirmationRB.new({data: CryptoApis::NewConfirmedInternalTransactionsAndEachConfirmationRBData.new({item: CryptoApis::NewConfirmedInternalTransactionsAndEachConfirmationRBDataItem.new({address: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', allow_duplicates: true, callback_secret_key: 'yourSecretString', callback_url: 'https://example.com', confirmations_count: 3})})}) # NewConfirmedInternalTransactionsAndEachConfirmationRB | 
 }
 
@@ -515,8 +515,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_tokens_transactions_rb: CryptoApis::NewConfirmedTokensTransactionsRB.new({data: CryptoApis::NewConfirmedTokensTransactionsRBData.new({item: CryptoApis::NewConfirmedTokensTransactionsRBDataItem.new({address: '0xbf16582e53d6fd892f11de8a3e29e8c3b65d77c2', callback_url: 'http://example.com'})})}) # NewConfirmedTokensTransactionsRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_tokens_transactions_rb: CryptoApis::NewConfirmedTokensTransactionsRB.new({data: CryptoApis::NewConfirmedTokensTransactionsRBData.new({item: CryptoApis::NewConfirmedTokensTransactionsRBDataItem.new({address: '0xbf16582e53d6fd892f11de8a3e29e8c3b65d77c2', callback_url: 'https://example.com'})})}) # NewConfirmedTokensTransactionsRB | 
 }
 
 begin
@@ -594,8 +594,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_confirmed_tokens_transactions_and_each_confirmation_rb: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRB.new({data: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRBData.new({item: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRBDataItem.new({address: '0x033ef6db9fbd0ee60e2931906b987fe0280471a0', callback_url: 'http://example.com'})})}) # NewConfirmedTokensTransactionsAndEachConfirmationRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_tokens_transactions_and_each_confirmation_rb: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRB.new({data: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRBData.new({item: CryptoApis::NewConfirmedTokensTransactionsAndEachConfirmationRBDataItem.new({address: '0x033ef6db9fbd0ee60e2931906b987fe0280471a0', callback_url: 'https://example.com'})})}) # NewConfirmedTokensTransactionsAndEachConfirmationRB | 
 }
 
 begin
@@ -673,8 +673,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_unconfirmed_coins_transactions_rb: CryptoApis::NewUnconfirmedCoinsTransactionsRB.new({data: CryptoApis::NewUnconfirmedCoinsTransactionsRBData.new({item: CryptoApis::NewUnconfirmedCoinsTransactionsRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'http://example.com'})})}) # NewUnconfirmedCoinsTransactionsRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_unconfirmed_coins_transactions_rb: CryptoApis::NewUnconfirmedCoinsTransactionsRB.new({data: CryptoApis::NewUnconfirmedCoinsTransactionsRBData.new({item: CryptoApis::NewUnconfirmedCoinsTransactionsRBDataItem.new({address: 'mho4jHBcrNCncKt38trJahXakuaBnS7LK5', callback_url: 'https://example.com'})})}) # NewUnconfirmedCoinsTransactionsRB | 
 }
 
 begin
@@ -752,8 +752,8 @@ api_instance = CryptoApis::CreateSubscriptionsForApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
-  context: 'context_example', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  new_unconfirmed_tokens_transactions_rb: CryptoApis::NewUnconfirmedTokensTransactionsRB.new({data: CryptoApis::NewUnconfirmedTokensTransactionsRBData.new({item: CryptoApis::NewUnconfirmedTokensTransactionsRBDataItem.new({address: '0x033ef6db9fbd0ee60e2931906b987fe0280471a0', callback_url: 'http://example.com'})})}) # NewUnconfirmedTokensTransactionsRB | 
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_unconfirmed_tokens_transactions_rb: CryptoApis::NewUnconfirmedTokensTransactionsRB.new({data: CryptoApis::NewUnconfirmedTokensTransactionsRBData.new({item: CryptoApis::NewUnconfirmedTokensTransactionsRBDataItem.new({address: '0x033ef6db9fbd0ee60e2931906b987fe0280471a0', callback_url: 'https://example.com'})})}) # NewUnconfirmedTokensTransactionsRB | 
 }
 
 begin

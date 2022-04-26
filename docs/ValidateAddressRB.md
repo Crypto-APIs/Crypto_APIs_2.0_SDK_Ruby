@@ -13,7 +13,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ValidateAddressRB.new(
-  context: null,
+  context: yourExampleString,
   data: null
 )
 ```
