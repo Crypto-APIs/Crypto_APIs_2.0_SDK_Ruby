@@ -8,8 +8,8 @@
 | **size** | **Integer** | Represents the total size of this transaction. |  |
 | **v_size** | **Integer** | Represents the virtual size of this transaction. |  |
 | **version** | **Integer** | Represents transaction version number. |  |
-| **vin** | [**Array&lt;ListTransactionsByBlockHashRIBSLVin&gt;**](ListTransactionsByBlockHashRIBSLVin.md) | Represents the transaction inputs. |  |
-| **vout** | [**Array&lt;ListTransactionsByBlockHashRIBSLVout&gt;**](ListTransactionsByBlockHashRIBSLVout.md) | Represents the transaction outputs. |  |
+| **vin** | [**Array&lt;ListTransactionsByBlockHashRIBSLVinInner&gt;**](ListTransactionsByBlockHashRIBSLVinInner.md) | Represents the transaction inputs. |  |
+| **vout** | [**Array&lt;ListTransactionsByBlockHashRIBSLVoutInner&gt;**](ListTransactionsByBlockHashRIBSLVoutInner.md) | Represents the transaction outputs. |  |
 
 ## Example
 

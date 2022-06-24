@@ -8,8 +8,8 @@
 | **size** | **Integer** | Represents the total size of this transaction. |  |
 | **v_size** | **Integer** | Represents the virtual size of this transaction. |  |
 | **version** | **Integer** | Represents the transaction version number. |  |
-| **vin** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVin&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVin.md) | Object Array representation of transaction inputs |  |
-| **vout** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVout&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVout.md) | Represents the transaction outputs. |  |
+| **vin** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVinInner&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVinInner.md) | Object Array representation of transaction inputs |  |
+| **vout** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSBVoutInner.md) | Represents the transaction outputs. |  |
 
 ## Example
 

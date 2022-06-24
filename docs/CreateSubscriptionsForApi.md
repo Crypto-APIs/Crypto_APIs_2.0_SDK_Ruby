@@ -8,8 +8,11 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | [**new_block**](CreateSubscriptionsForApi.md#new_block) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/block-mined | New Block |
 | [**new_confirmed_coins_transactions**](CreateSubscriptionsForApi.md#new_confirmed_coins_transactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed | New confirmed coins transactions |
 | [**new_confirmed_coins_transactions_and_each_confirmation**](CreateSubscriptionsForApi.md#new_confirmed_coins_transactions_and_each_confirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed-each-confirmation | New confirmed coins transactions and each confirmation |
+| [**new_confirmed_coins_transactions_for_specific_amount**](CreateSubscriptionsForApi.md#new_confirmed_coins_transactions_for_specific_amount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/coins-transactions-for-specific-amount | New Confirmed Coins Transactions For Specific Amount |
 | [**new_confirmed_internal_transactions**](CreateSubscriptionsForApi.md#new_confirmed_internal_transactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed | New confirmed internal transactions |
 | [**new_confirmed_internal_transactions_and_each_confirmation**](CreateSubscriptionsForApi.md#new_confirmed_internal_transactions_and_each_confirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed-each-confirmation | New confirmed internal transactions and each confirmation |
+| [**new_confirmed_internal_transactions_for_specific_amount**](CreateSubscriptionsForApi.md#new_confirmed_internal_transactions_for_specific_amount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/internal-transactions-for-specific-amount | New Confirmed Internal Transactions For Specific Amount |
+| [**new_confirmed_token_transactions_for_specific_amount**](CreateSubscriptionsForApi.md#new_confirmed_token_transactions_for_specific_amount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/tokens-transfers-for-specific-amount | New Confirmed Token Transactions For Specific Amount |
 | [**new_confirmed_tokens_transactions**](CreateSubscriptionsForApi.md#new_confirmed_tokens_transactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed | New confirmed tokens transactions |
 | [**new_confirmed_tokens_transactions_and_each_confirmation**](CreateSubscriptionsForApi.md#new_confirmed_tokens_transactions_and_each_confirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed-each-confirmation | New confirmed tokens transactions and each confirmation |
 | [**new_unconfirmed_coins_transactions**](CreateSubscriptionsForApi.md#new_unconfirmed_coins_transactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-unconfirmed | New unconfirmed coins transactions |
@@ -332,6 +335,85 @@ end
 - **Accept**: application/json
 
 
+## new_confirmed_coins_transactions_for_specific_amount
+
+> <NewConfirmedCoinsTransactionsForSpecificAmountR> new_confirmed_coins_transactions_for_specific_amount(blockchain, network, opts)
+
+New Confirmed Coins Transactions For Specific Amount
+
+Through this endpoint customers can create callback subscriptions for a specific event and \"amountHigherThan\" value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
+blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+opts = {
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_coins_transactions_for_specific_amount_rb: CryptoApis::NewConfirmedCoinsTransactionsForSpecificAmountRB.new({data: CryptoApis::NewConfirmedCoinsTransactionsForSpecificAmountRBData.new({item: CryptoApis::NewConfirmedCoinsTransactionsForSpecificAmountRBDataItem.new({amount_higher_than: 2, callback_url: 'https://example.com'})})}) # NewConfirmedCoinsTransactionsForSpecificAmountRB | 
+}
+
+begin
+  # New Confirmed Coins Transactions For Specific Amount
+  result = api_instance.new_confirmed_coins_transactions_for_specific_amount(blockchain, network, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling CreateSubscriptionsForApi->new_confirmed_coins_transactions_for_specific_amount: #{e}"
+end
+```
+
+#### Using the new_confirmed_coins_transactions_for_specific_amount_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<NewConfirmedCoinsTransactionsForSpecificAmountR>, Integer, Hash)> new_confirmed_coins_transactions_for_specific_amount_with_http_info(blockchain, network, opts)
+
+```ruby
+begin
+  # New Confirmed Coins Transactions For Specific Amount
+  data, status_code, headers = api_instance.new_confirmed_coins_transactions_for_specific_amount_with_http_info(blockchain, network, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <NewConfirmedCoinsTransactionsForSpecificAmountR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling CreateSubscriptionsForApi->new_confirmed_coins_transactions_for_specific_amount_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **new_confirmed_coins_transactions_for_specific_amount_rb** | [**NewConfirmedCoinsTransactionsForSpecificAmountRB**](NewConfirmedCoinsTransactionsForSpecificAmountRB.md) |  | [optional] |
+
+### Return type
+
+[**NewConfirmedCoinsTransactionsForSpecificAmountR**](NewConfirmedCoinsTransactionsForSpecificAmountR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## new_confirmed_internal_transactions
 
 > <NewConfirmedInternalTransactionsR> new_confirmed_internal_transactions(blockchain, network, opts)
@@ -479,6 +561,164 @@ end
 ### Return type
 
 [**NewConfirmedInternalTransactionsAndEachConfirmationR**](NewConfirmedInternalTransactionsAndEachConfirmationR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## new_confirmed_internal_transactions_for_specific_amount
+
+> <NewConfirmedInternalTransactionsForSpecificAmountR> new_confirmed_internal_transactions_for_specific_amount(blockchain, network, opts)
+
+New Confirmed Internal Transactions For Specific Amount
+
+Through this endpoint customers can create callback subscriptions for a specific event and \"amountHigherThan\" value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
+blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+opts = {
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_internal_transactions_for_specific_amount_rb: CryptoApis::NewConfirmedInternalTransactionsForSpecificAmountRB.new({data: CryptoApis::NewConfirmedInternalTransactionsForSpecificAmountRBData.new({item: CryptoApis::NewConfirmedInternalTransactionsForSpecificAmountRBDataItem.new({amount_higher_than: 3, callback_url: 'https://example.com'})})}) # NewConfirmedInternalTransactionsForSpecificAmountRB | 
+}
+
+begin
+  # New Confirmed Internal Transactions For Specific Amount
+  result = api_instance.new_confirmed_internal_transactions_for_specific_amount(blockchain, network, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling CreateSubscriptionsForApi->new_confirmed_internal_transactions_for_specific_amount: #{e}"
+end
+```
+
+#### Using the new_confirmed_internal_transactions_for_specific_amount_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<NewConfirmedInternalTransactionsForSpecificAmountR>, Integer, Hash)> new_confirmed_internal_transactions_for_specific_amount_with_http_info(blockchain, network, opts)
+
+```ruby
+begin
+  # New Confirmed Internal Transactions For Specific Amount
+  data, status_code, headers = api_instance.new_confirmed_internal_transactions_for_specific_amount_with_http_info(blockchain, network, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <NewConfirmedInternalTransactionsForSpecificAmountR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling CreateSubscriptionsForApi->new_confirmed_internal_transactions_for_specific_amount_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **new_confirmed_internal_transactions_for_specific_amount_rb** | [**NewConfirmedInternalTransactionsForSpecificAmountRB**](NewConfirmedInternalTransactionsForSpecificAmountRB.md) |  | [optional] |
+
+### Return type
+
+[**NewConfirmedInternalTransactionsForSpecificAmountR**](NewConfirmedInternalTransactionsForSpecificAmountR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## new_confirmed_token_transactions_for_specific_amount
+
+> <NewConfirmedTokenTransactionsForSpecificAmountR> new_confirmed_token_transactions_for_specific_amount(blockchain, network, opts)
+
+New Confirmed Token Transactions For Specific Amount
+
+Through this endpoint customers can create callback subscriptions for a specific event and \"amountHigherThan\" value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::CreateSubscriptionsForApi.new
+blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+opts = {
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  new_confirmed_token_transactions_for_specific_amount_rb: CryptoApis::NewConfirmedTokenTransactionsForSpecificAmountRB.new({data: CryptoApis::NewConfirmedTokenTransactionsForSpecificAmountRBData.new({item: CryptoApis::NewConfirmedTokenTransactionsForSpecificAmountRBDataItem.new({amount_higher_than: 2, callback_url: 'https://example.com', contract_address: '0x7495fede000c8a3b77eeae09cf70fa94cd2d53f5'})})}) # NewConfirmedTokenTransactionsForSpecificAmountRB | 
+}
+
+begin
+  # New Confirmed Token Transactions For Specific Amount
+  result = api_instance.new_confirmed_token_transactions_for_specific_amount(blockchain, network, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling CreateSubscriptionsForApi->new_confirmed_token_transactions_for_specific_amount: #{e}"
+end
+```
+
+#### Using the new_confirmed_token_transactions_for_specific_amount_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<NewConfirmedTokenTransactionsForSpecificAmountR>, Integer, Hash)> new_confirmed_token_transactions_for_specific_amount_with_http_info(blockchain, network, opts)
+
+```ruby
+begin
+  # New Confirmed Token Transactions For Specific Amount
+  data, status_code, headers = api_instance.new_confirmed_token_transactions_for_specific_amount_with_http_info(blockchain, network, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <NewConfirmedTokenTransactionsForSpecificAmountR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling CreateSubscriptionsForApi->new_confirmed_token_transactions_for_specific_amount_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **new_confirmed_token_transactions_for_specific_amount_rb** | [**NewConfirmedTokenTransactionsForSpecificAmountRB**](NewConfirmedTokenTransactionsForSpecificAmountRB.md) |  | [optional] |
+
+### Return type
+
+[**NewConfirmedTokenTransactionsForSpecificAmountR**](NewConfirmedTokenTransactionsForSpecificAmountR.md)
 
 ### Authorization
 

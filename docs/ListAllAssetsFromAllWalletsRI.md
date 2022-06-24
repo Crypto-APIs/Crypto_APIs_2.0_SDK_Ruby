@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **coins** | [**Array&lt;ListAllAssetsFromAllWalletsRICoins&gt;**](ListAllAssetsFromAllWalletsRICoins.md) |  |  |
-| **fungible_tokens** | [**Array&lt;ListAllAssetsFromAllWalletsRIFungibleTokens&gt;**](ListAllAssetsFromAllWalletsRIFungibleTokens.md) | Represents fungible tokens&#39;es detailed information |  |
-| **non_fungible_tokens** | [**Array&lt;ListAllAssetsFromAllWalletsRINonFungibleTokens&gt;**](ListAllAssetsFromAllWalletsRINonFungibleTokens.md) | Represents non-fungible tokens&#39;es detailed information. |  |
+| **coins** | [**Array&lt;ListAllAssetsFromAllWalletsRICoinsInner&gt;**](ListAllAssetsFromAllWalletsRICoinsInner.md) |  |  |
+| **fungible_tokens** | [**Array&lt;ListAllAssetsFromAllWalletsRIFungibleTokensInner&gt;**](ListAllAssetsFromAllWalletsRIFungibleTokensInner.md) | Represents fungible tokens&#39;es detailed information |  |
+| **non_fungible_tokens** | [**Array&lt;ListAllAssetsFromAllWalletsRINonFungibleTokensInner&gt;**](ListAllAssetsFromAllWalletsRINonFungibleTokensInner.md) | Represents non-fungible tokens&#39;es detailed information. |  |
 | **wallet_id** | **String** | Defines the unique ID of the Wallet. |  |
 | **wallet_name** | **String** | Represents the name of the wallet. |  |
 

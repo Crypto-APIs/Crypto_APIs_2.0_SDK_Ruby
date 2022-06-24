@@ -9,7 +9,7 @@
 | **callback_url** | **String** | Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. &#x60;We support ONLY httpS type of protocol&#x60;. |  |
 | **confirmations_count** | **Integer** | Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block. |  |
 | **created_timestamp** | **Integer** | Defines the specific time/date when the subscription was created in Unix Timestamp. |  |
-| **deactivation_reasons** | [**Array&lt;ListBlockchainEventsSubscriptionsRIDeactivationReasons&gt;**](ListBlockchainEventsSubscriptionsRIDeactivationReasons.md) | Represents the deactivation reason details, available when a blockchain event subscription has status isActive - false. | [optional] |
+| **deactivation_reasons** | [**Array&lt;ListBlockchainEventsSubscriptionsRIDeactivationReasonsInner&gt;**](ListBlockchainEventsSubscriptionsRIDeactivationReasonsInner.md) | Represents the deactivation reason details, available when a blockchain event subscription has status isActive - false. | [optional] |
 | **event_type** | **String** | Defines the type of the specific event available for the customer to subscribe to for callback notification. |  |
 | **is_active** | **Boolean** | Defines whether the subscription is active or not. Set as boolean. |  |
 | **reference_id** | **String** | Represents a unique ID used to reference the specific callback subscription. |  |

@@ -10,8 +10,8 @@
 | **gas_used** | **Integer** | Defines how much of the gas for the block has been used. |  |
 | **mined_in_block_hash** | **String** | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. |  |
 | **nonce** | **Integer** | Represents a random value that can be adjusted to satisfy the Proof of Work. |  |
-| **recipients** | [**Array&lt;ListZilliqaTransactionsByAddressRIRecipients&gt;**](ListZilliqaTransactionsByAddressRIRecipients.md) | Defines an object array of the transaction recipients. |  |
-| **senders** | [**Array&lt;ListZilliqaTransactionsByAddressRISenders&gt;**](ListZilliqaTransactionsByAddressRISenders.md) | Represents an object of addresses that provide the funds. |  |
+| **recipients** | [**Array&lt;ListZilliqaTransactionsByAddressRIRecipientsInner&gt;**](ListZilliqaTransactionsByAddressRIRecipientsInner.md) | Defines an object array of the transaction recipients. |  |
+| **senders** | [**Array&lt;ListZilliqaTransactionsByAddressRISendersInner&gt;**](ListZilliqaTransactionsByAddressRISendersInner.md) | Represents an object of addresses that provide the funds. |  |
 | **timestamp** | **Integer** | Defines the exact date/time when this block was mined in Unix Timestamp. |  |
 | **transaction_hash** | **String** | Represents the hash of the transaction, which is its unique identifier. |  |
 | **transaction_index** | **Integer** | Defines the numeric representation of the transaction index. |  |

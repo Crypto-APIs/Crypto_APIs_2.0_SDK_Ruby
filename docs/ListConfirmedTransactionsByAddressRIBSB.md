@@ -8,8 +8,8 @@
 | **size** | **Integer** | Represents the total size of this transaction. |  |
 | **v_size** | **Integer** | Defines the transaction&#39;s virtual size. |  |
 | **version** | **Integer** | Defines the version of the transaction. |  |
-| **vin** | [**Array&lt;ListConfirmedTransactionsByAddressRIBSBVin&gt;**](ListConfirmedTransactionsByAddressRIBSBVin.md) | Represents the transaction inputs. |  |
-| **vout** | [**Array&lt;ListConfirmedTransactionsByAddressRIBSBVout&gt;**](ListConfirmedTransactionsByAddressRIBSBVout.md) | Represents the transaction outputs. |  |
+| **vin** | [**Array&lt;ListConfirmedTransactionsByAddressRIBSBVinInner&gt;**](ListConfirmedTransactionsByAddressRIBSBVinInner.md) | Represents the transaction inputs. |  |
+| **vout** | [**Array&lt;ListConfirmedTransactionsByAddressRIBSBVoutInner&gt;**](ListConfirmedTransactionsByAddressRIBSBVoutInner.md) | Represents the transaction outputs. |  |
 
 ## Example
 

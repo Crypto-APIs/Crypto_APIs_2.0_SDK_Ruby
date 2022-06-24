@@ -7,10 +7,10 @@
 | **address** | **String** | Specifies the specific address&#39;s unique string value. |  |
 | **confirmed_balance** | [**ListDepositAddressesRIConfirmedBalance**](ListDepositAddressesRIConfirmedBalance.md) |  |  |
 | **created_timestamp** | **Integer** | Defines the specific UNIX time when the deposit address was created. |  |
-| **fungible_tokens** | [**Array&lt;ListDepositAddressesRIFungibleTokens&gt;**](ListDepositAddressesRIFungibleTokens.md) | Represents fungible tokens&#39;es detailed information |  |
+| **fungible_tokens** | [**Array&lt;ListDepositAddressesRIFungibleTokensInner&gt;**](ListDepositAddressesRIFungibleTokensInner.md) | Represents fungible tokens&#39;es detailed information |  |
 | **index** | **String** | Represents the index of the address in the wallet. |  |
 | **label** | **String** | Represents a custom tag that customers can set up for their Wallets and addresses. E.g. custom label named \&quot;Special addresses\&quot;. |  |
-| **non_fungible_tokens** | [**Array&lt;ListDepositAddressesRINonFungibleTokens&gt;**](ListDepositAddressesRINonFungibleTokens.md) | Represents non-fungible tokens&#39;es detailed information. |  |
+| **non_fungible_tokens** | [**Array&lt;ListDepositAddressesRINonFungibleTokensInner&gt;**](ListDepositAddressesRINonFungibleTokensInner.md) | Represents non-fungible tokens&#39;es detailed information. |  |
 
 ## Example
 

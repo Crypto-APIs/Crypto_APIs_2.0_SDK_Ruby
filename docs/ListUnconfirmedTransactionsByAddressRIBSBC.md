@@ -7,8 +7,8 @@
 | **locktime** | **Integer** | Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid. |  |
 | **size** | **Integer** | Represents the total size of this transaction. |  |
 | **version** | **Integer** | Represents the transaction&#39;s version number. |  |
-| **vin** | [**Array&lt;ListUnconfirmedTransactionsByAddressRIBSBCVin&gt;**](ListUnconfirmedTransactionsByAddressRIBSBCVin.md) | Represents the transaction inputs. |  |
-| **vout** | [**Array&lt;ListUnconfirmedTransactionsByAddressRIBSBCVout&gt;**](ListUnconfirmedTransactionsByAddressRIBSBCVout.md) | Represents the transaction outputs. |  |
+| **vin** | [**Array&lt;ListUnconfirmedTransactionsByAddressRIBSBCVinInner&gt;**](ListUnconfirmedTransactionsByAddressRIBSBCVinInner.md) | Represents the transaction inputs. |  |
+| **vout** | [**Array&lt;ListUnconfirmedTransactionsByAddressRIBSBCVoutInner&gt;**](ListUnconfirmedTransactionsByAddressRIBSBCVoutInner.md) | Represents the transaction outputs. |  |
 
 ## Example
 

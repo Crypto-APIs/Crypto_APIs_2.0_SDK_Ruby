@@ -12,8 +12,8 @@
 | **value_balance** | **String** | Defines the transaction value balance. |  |
 | **version** | **Integer** | Represents the transaction version number. |  |
 | **version_group_id** | **String** | Represents the transaction version group ID |  |
-| **vin** | [**Array&lt;DecodeRawTransactionHexRISZVin&gt;**](DecodeRawTransactionHexRISZVin.md) | Represents the Inputs of the transaction |  |
-| **vout** | [**Array&lt;DecodeRawTransactionHexRISZVout&gt;**](DecodeRawTransactionHexRISZVout.md) | Represents the Inputs of the transaction |  |
+| **vin** | [**Array&lt;DecodeRawTransactionHexRISZVinInner&gt;**](DecodeRawTransactionHexRISZVinInner.md) | Represents the Inputs of the transaction |  |
+| **vout** | [**Array&lt;DecodeRawTransactionHexRISZVoutInner&gt;**](DecodeRawTransactionHexRISZVoutInner.md) | Represents the Inputs of the transaction |  |
 
 ## Example
 

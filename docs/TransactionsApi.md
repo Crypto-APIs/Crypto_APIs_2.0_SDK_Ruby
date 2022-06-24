@@ -203,7 +203,7 @@ network = 'mainnet' # String | Represents the name of the blockchain network use
 wallet_id = '609e221675d04500068718dc' # String | Represents the sender's specific and unique Wallet ID of the sender.
 opts = {
   context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  create_coins_transaction_request_from_wallet_rb: CryptoApis::CreateCoinsTransactionRequestFromWalletRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromWalletRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem.new({fee_priority: 'slow', recipients: [CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItemRecipients.new({address: '2MtzNEqm2D9jcbPJ5mW7Z3AUNwqt3afZH66', amount: '0.125'})]})})}) # CreateCoinsTransactionRequestFromWalletRB | 
+  create_coins_transaction_request_from_wallet_rb: CryptoApis::CreateCoinsTransactionRequestFromWalletRB.new({data: CryptoApis::CreateCoinsTransactionRequestFromWalletRBData.new({item: CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItem.new({fee_priority: 'slow', recipients: [CryptoApis::CreateCoinsTransactionRequestFromWalletRBDataItemRecipientsInner.new({address: '2MtzNEqm2D9jcbPJ5mW7Z3AUNwqt3afZH66', amount: '0.125'})]})})}) # CreateCoinsTransactionRequestFromWalletRB | 
 }
 
 begin

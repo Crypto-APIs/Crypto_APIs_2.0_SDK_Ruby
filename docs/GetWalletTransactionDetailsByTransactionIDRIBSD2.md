@@ -7,8 +7,8 @@
 | **locktime** | **Integer** | Represents the time at which a particular transaction can be added to the blockchain. |  |
 | **size** | **Integer** | Represents the total size of this transaction. |  |
 | **version** | **Integer** | Represents the transaction version number. |  |
-| **vin** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSD2Vin&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSD2Vin.md) | Object Array representation of transaction inputs |  |
-| **vout** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSD2Vout&gt;**](GetTransactionDetailsByTransactionIDRIBSD2Vout.md) | Object Array representation of transaction outputs |  |
+| **vin** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSD2VinInner&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSD2VinInner.md) | Object Array representation of transaction inputs |  |
+| **vout** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSD2VoutInner&gt;**](GetTransactionDetailsByTransactionIDRIBSD2VoutInner.md) | Object Array representation of transaction outputs |  |
 
 ## Example
 

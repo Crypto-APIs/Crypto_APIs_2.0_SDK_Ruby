@@ -11,14 +11,14 @@
 | **locktime** | **Integer** | Represents the time at which a particular transaction can be added to the blockchain. |  |
 | **overwintered** | **Boolean** | \&quot;Overwinter\&quot; is the network upgrade for the Zcash blockchain. |  |
 | **size** | **Integer** | Represents the total size of this transaction. |  |
-| **v_join_split** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVJoinSplit&gt;**](GetTransactionDetailsByTransactionIDRIBSZVJoinSplit.md) | Represents a sequence of JoinSplit descriptions using BCTV14 proofs. | [optional] |
-| **v_shielded_output** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput&gt;**](GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput.md) | Object Array representation of transaction output descriptions | [optional] |
-| **v_shielded_spend** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend&gt;**](GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions | [optional] |
+| **v_join_split** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVJoinSplitInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVJoinSplitInner.md) | Represents a sequence of JoinSplit descriptions using BCTV14 proofs. | [optional] |
+| **v_shielded_output** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVShieldedOutputInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVShieldedOutputInner.md) | Object Array representation of transaction output descriptions | [optional] |
+| **v_shielded_spend** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendInner.md) | Object Array representation of transaction spend descriptions | [optional] |
 | **value_balance** | **String** | String representation of the transaction value balance |  |
 | **version** | **Integer** | Represents the transaction version number. |  |
 | **version_group_id** | **String** | Represents the transaction version group ID. |  |
-| **vin** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSZVin&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSZVin.md) | Object Array representation of transaction inputs |  |
-| **vout** | [**Array&lt;ListTransactionsByBlockHeightRIBSZVout&gt;**](ListTransactionsByBlockHeightRIBSZVout.md) | Object Array representation of transaction outputs |  |
+| **vin** | [**Array&lt;GetWalletTransactionDetailsByTransactionIDRIBSZVinInner&gt;**](GetWalletTransactionDetailsByTransactionIDRIBSZVinInner.md) | Object Array representation of transaction inputs |  |
+| **vout** | [**Array&lt;ListTransactionsByBlockHeightRIBSZVoutInner&gt;**](ListTransactionsByBlockHeightRIBSZVoutInner.md) | Object Array representation of transaction outputs |  |
 
 ## Example
 
