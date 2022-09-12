@@ -1,6 +1,6 @@
 # CryptoApis::TokensApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -362,7 +362,7 @@ end
 
 api_instance = CryptoApis::TokensApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Ethereum Classic, etc.
-network = 'ropsten' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 address = '0x033ef6db9fbd0ee60e2931906b987fe0280471a0' # String | Represents the public address, which is a compressed and shortened form of a public key.
 opts = {
   context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.

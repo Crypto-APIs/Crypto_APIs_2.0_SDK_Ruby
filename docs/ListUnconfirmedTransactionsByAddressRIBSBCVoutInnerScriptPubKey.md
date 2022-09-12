@@ -7,7 +7,7 @@
 | **addresses** | **Array&lt;String&gt;** |  |  |
 | **asm** | **String** | Represents the assembly of the script public key of the address. |  |
 | **hex** | **String** | Represents the hex of the script public key of the address. |  |
-| **req_sigs** | **Integer** | Represents the required signatures. |  |
+| **req_sigs** | **Integer** | Represents the required signatures. | [optional] |
 | **type** | **String** | String representation of the type |  |
 
 ## Example

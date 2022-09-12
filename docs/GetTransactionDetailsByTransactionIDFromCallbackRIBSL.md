@@ -9,7 +9,7 @@
 | **v_size** | **Integer** | Represents the virtual size of this transaction. |  |
 | **version** | **Integer** | Represents transaction version number. |  |
 | **vin** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSLVinInner&gt;**](GetTransactionDetailsByTransactionIDRIBSLVinInner.md) | Represents the transaction inputs. |  |
-| **vout** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSLVoutInner&gt;**](GetTransactionDetailsByTransactionIDRIBSLVoutInner.md) | Represents the transaction outputs. |  |
+| **vout** | [**Array&lt;GetTransactionDetailsByTransactionIDFromCallbackRIBSLVoutInner&gt;**](GetTransactionDetailsByTransactionIDFromCallbackRIBSLVoutInner.md) | Represents the transaction outputs. |  |
 
 ## Example
 

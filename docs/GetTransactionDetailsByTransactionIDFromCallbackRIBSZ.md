@@ -18,7 +18,7 @@
 | **version** | **Integer** | Defines the version of the transaction. |  |
 | **version_group_id** | **String** | Represents the transaction version group ID |  |
 | **vin** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVinInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVinInner.md) | Object Array representation of transaction inputs |  |
-| **vout** | [**Array&lt;GetTransactionDetailsByTransactionIDRIBSZVoutInner&gt;**](GetTransactionDetailsByTransactionIDRIBSZVoutInner.md) | Object Array representation of transaction outputs |  |
+| **vout** | [**Array&lt;GetTransactionDetailsByTransactionIDFromCallbackRIBSZVoutInner&gt;**](GetTransactionDetailsByTransactionIDFromCallbackRIBSZVoutInner.md) | Object Array representation of transaction outputs |  |
 
 ## Example
 

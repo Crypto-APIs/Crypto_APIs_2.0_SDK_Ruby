@@ -22,6 +22,8 @@ CryptoApis::GetTransactionDetailsByTransactionIDFromCallbackRIBS.openapi_one_of
 #   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSE',
 #   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSEC',
 #   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSL',
+#   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSP',
+#   :'GetTransactionDetailsByTransactionIDFromCallbackRIBST',
 #   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSX',
 #   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSZ',
 #   :'GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2'
@@ -60,6 +62,8 @@ CryptoApis::GetTransactionDetailsByTransactionIDFromCallbackRIBS.build(data_that
 - `GetTransactionDetailsByTransactionIDFromCallbackRIBSE`
 - `GetTransactionDetailsByTransactionIDFromCallbackRIBSEC`
 - `GetTransactionDetailsByTransactionIDFromCallbackRIBSL`
+- `GetTransactionDetailsByTransactionIDFromCallbackRIBSP`
+- `GetTransactionDetailsByTransactionIDFromCallbackRIBST`
 - `GetTransactionDetailsByTransactionIDFromCallbackRIBSX`
 - `GetTransactionDetailsByTransactionIDFromCallbackRIBSZ`
 - `GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2`

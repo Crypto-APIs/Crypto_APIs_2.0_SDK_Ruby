@@ -22,7 +22,8 @@ CryptoApis::GetLastMinedBlockRIBS.openapi_one_of
 #   :'GetLastMinedBlockRIBSE',
 #   :'GetLastMinedBlockRIBSEC',
 #   :'GetLastMinedBlockRIBSL',
-#   :'GetLastMinedBlockRIBSZ'
+#   :'GetLastMinedBlockRIBSZ',
+#   :'GetLastMinedBlockRIBSZ2'
 # ]
 ```
 
@@ -59,5 +60,6 @@ CryptoApis::GetLastMinedBlockRIBS.build(data_that_doesnt_match)
 - `GetLastMinedBlockRIBSEC`
 - `GetLastMinedBlockRIBSL`
 - `GetLastMinedBlockRIBSZ`
+- `GetLastMinedBlockRIBSZ2`
 - `nil` (if no type matches)
 

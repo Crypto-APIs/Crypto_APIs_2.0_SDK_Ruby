@@ -22,6 +22,8 @@ CryptoApis::GetWalletTransactionDetailsByTransactionIDRIBS.openapi_one_of
 #   :'GetWalletTransactionDetailsByTransactionIDRIBSE',
 #   :'GetWalletTransactionDetailsByTransactionIDRIBSEC',
 #   :'GetWalletTransactionDetailsByTransactionIDRIBSL',
+#   :'GetWalletTransactionDetailsByTransactionIDRIBSP',
+#   :'GetWalletTransactionDetailsByTransactionIDRIBST',
 #   :'GetWalletTransactionDetailsByTransactionIDRIBSZ'
 # ]
 ```
@@ -58,6 +60,8 @@ CryptoApis::GetWalletTransactionDetailsByTransactionIDRIBS.build(data_that_doesn
 - `GetWalletTransactionDetailsByTransactionIDRIBSE`
 - `GetWalletTransactionDetailsByTransactionIDRIBSEC`
 - `GetWalletTransactionDetailsByTransactionIDRIBSL`
+- `GetWalletTransactionDetailsByTransactionIDRIBSP`
+- `GetWalletTransactionDetailsByTransactionIDRIBST`
 - `GetWalletTransactionDetailsByTransactionIDRIBSZ`
 - `nil` (if no type matches)
 

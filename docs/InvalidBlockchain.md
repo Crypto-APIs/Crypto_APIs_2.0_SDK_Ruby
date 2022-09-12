@@ -15,7 +15,7 @@ require 'crypto_apis'
 
 instance = CryptoApis::InvalidBlockchain.new(
   code: invalid_blockchain,
-  message: The provided blockchain is invalid. The blockchain **must** be a supported one. For the full list of supported blockchains please see our Documentation.,
+  message: Invalid blockchain! Blockchain MUST be one of: {validBlockchains},
   details: null
 )
 ```

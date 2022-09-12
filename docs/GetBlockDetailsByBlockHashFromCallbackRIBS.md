@@ -22,6 +22,7 @@ CryptoApis::GetBlockDetailsByBlockHashFromCallbackRIBS.openapi_one_of
 #   :'GetBlockDetailsByBlockHashFromCallbackRIBSE',
 #   :'GetBlockDetailsByBlockHashFromCallbackRIBSEC',
 #   :'GetBlockDetailsByBlockHashFromCallbackRIBSL',
+#   :'GetBlockDetailsByBlockHashFromCallbackRIBST',
 #   :'GetBlockDetailsByBlockHashFromCallbackRIBSX',
 #   :'GetBlockDetailsByBlockHashFromCallbackRIBSZ',
 #   :'GetBlockDetailsByBlockHashFromCallbackRIBSZ2'
@@ -60,6 +61,7 @@ CryptoApis::GetBlockDetailsByBlockHashFromCallbackRIBS.build(data_that_doesnt_ma
 - `GetBlockDetailsByBlockHashFromCallbackRIBSE`
 - `GetBlockDetailsByBlockHashFromCallbackRIBSEC`
 - `GetBlockDetailsByBlockHashFromCallbackRIBSL`
+- `GetBlockDetailsByBlockHashFromCallbackRIBST`
 - `GetBlockDetailsByBlockHashFromCallbackRIBSX`
 - `GetBlockDetailsByBlockHashFromCallbackRIBSZ`
 - `GetBlockDetailsByBlockHashFromCallbackRIBSZ2`

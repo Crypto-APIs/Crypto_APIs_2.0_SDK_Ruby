@@ -18,7 +18,8 @@ CryptoApis::GenerateDepositAddressE403.openapi_one_of
 #   :'EndpointNotAllowedForApiKey',
 #   :'EndpointNotAllowedForPlan',
 #   :'FeatureMainnetsNotAllowedForPlan',
-#   :'WalletAsAServiceDepositAddressesLimitReached'
+#   :'WalletAsAServiceDepositAddressesLimitReached',
+#   :'WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType'
 # ]
 ```
 
@@ -51,5 +52,6 @@ CryptoApis::GenerateDepositAddressE403.build(data_that_doesnt_match)
 - `EndpointNotAllowedForPlan`
 - `FeatureMainnetsNotAllowedForPlan`
 - `WalletAsAServiceDepositAddressesLimitReached`
+- `WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType`
 - `nil` (if no type matches)
 

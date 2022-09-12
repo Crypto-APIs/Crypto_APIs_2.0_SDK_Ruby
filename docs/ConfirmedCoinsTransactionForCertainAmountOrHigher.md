@@ -15,7 +15,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ConfirmedCoinsTransactionForCertainAmountOrHigher.new(
-  api_version: 2.0.0,
+  api_version: 2021-03-20,
   reference_id: 6038d09050653d1f0e40584c,
   idempotency_key: e55bf7a4a7188855f1c27541a6c387d04cc3b22ee34d1304b0e6ecad61c9906c,
   data: null

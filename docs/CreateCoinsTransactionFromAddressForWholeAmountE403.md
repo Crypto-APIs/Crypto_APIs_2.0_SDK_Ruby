@@ -17,7 +17,8 @@ CryptoApis::CreateCoinsTransactionFromAddressForWholeAmountE403.openapi_one_of
 #   :'BannedIpAddress',
 #   :'EndpointNotAllowedForApiKey',
 #   :'EndpointNotAllowedForPlan',
-#   :'FeatureMainnetsNotAllowedForPlan'
+#   :'FeatureMainnetsNotAllowedForPlan',
+#   :'WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType'
 # ]
 ```
 
@@ -49,5 +50,6 @@ CryptoApis::CreateCoinsTransactionFromAddressForWholeAmountE403.build(data_that_
 - `EndpointNotAllowedForApiKey`
 - `EndpointNotAllowedForPlan`
 - `FeatureMainnetsNotAllowedForPlan`
+- `WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType`
 - `nil` (if no type matches)
 

@@ -15,7 +15,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::ListSupportedTokens400Response.new(
-  api_version: 2.0.0,
+  api_version: 2021-03-20,
   request_id: 601c1710034ed6d407996b30,
   context: yourExampleString,
   error: null

@@ -17,7 +17,8 @@ CryptoApis::CreateFungibleTokensTransactionRequestFromAddressE403.openapi_one_of
 #   :'BannedIpAddress',
 #   :'EndpointNotAllowedForApiKey',
 #   :'EndpointNotAllowedForPlan',
-#   :'FeatureMainnetsNotAllowedForPlan'
+#   :'FeatureMainnetsNotAllowedForPlan',
+#   :'WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType'
 # ]
 ```
 
@@ -49,5 +50,6 @@ CryptoApis::CreateFungibleTokensTransactionRequestFromAddressE403.build(data_tha
 - `EndpointNotAllowedForApiKey`
 - `EndpointNotAllowedForPlan`
 - `FeatureMainnetsNotAllowedForPlan`
+- `WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType`
 - `nil` (if no type matches)
 

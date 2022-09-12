@@ -1,6 +1,6 @@
 # CryptoApis::CallbackDataApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -192,7 +192,7 @@ end
 api_instance = CryptoApis::CallbackDataApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-block_height = 'block_height_example' # String | Numeric representation of the block height
+block_height = '673852' # String | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
 opts = {
   context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
@@ -230,7 +230,7 @@ end
 | ---- | ---- | ----------- | ----- |
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
-| **block_height** | **String** | Numeric representation of the block height |  |
+| **block_height** | **String** | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
 
 ### Return type
@@ -271,7 +271,7 @@ end
 api_instance = CryptoApis::CallbackDataApi.new
 blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-transaction_id = '8888f6c8168ff69aaf6438ab185c690e8c76c63e5f9c472c1c86f08406ea74f2' # String | String identifier of the transaction
+transaction_id = '8888f6c8168ff69aaf6438ab185c690e8c76c63e5f9c472c1c86f08406ea74f2' # String | Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.
 opts = {
   context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 }
@@ -309,7 +309,7 @@ end
 | ---- | ---- | ----------- | ----- |
 | **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
 | **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
-| **transaction_id** | **String** | String identifier of the transaction |  |
+| **transaction_id** | **String** | Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain. |  |
 | **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
 
 ### Return type

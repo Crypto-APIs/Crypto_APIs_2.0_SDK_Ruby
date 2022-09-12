@@ -22,7 +22,8 @@ CryptoApis::GetBlockDetailsByBlockHeightRIBS.openapi_one_of
 #   :'GetBlockDetailsByBlockHeightRIBSE',
 #   :'GetBlockDetailsByBlockHeightRIBSEC',
 #   :'GetBlockDetailsByBlockHeightRIBSL',
-#   :'GetBlockDetailsByBlockHeightRIBSZ'
+#   :'GetBlockDetailsByBlockHeightRIBSZ',
+#   :'GetBlockDetailsByBlockHeightRIBSZ2'
 # ]
 ```
 
@@ -59,5 +60,6 @@ CryptoApis::GetBlockDetailsByBlockHeightRIBS.build(data_that_doesnt_match)
 - `GetBlockDetailsByBlockHeightRIBSEC`
 - `GetBlockDetailsByBlockHeightRIBSL`
 - `GetBlockDetailsByBlockHeightRIBSZ`
+- `GetBlockDetailsByBlockHeightRIBSZ2`
 - `nil` (if no type matches)
 

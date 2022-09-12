@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **amount** | **String** | Defines the total balance of the address that is confirmed. It doesn&#39;t include unconfirmed transactions. |  |
+| **amount** | **String** | Object representation of the total balance of the address |  |
 | **unit** | **String** | Represents the unit of the confirmed balance. |  |
 
 ## Example
@@ -13,7 +13,7 @@
 require 'crypto_apis'
 
 instance = CryptoApis::GetAddressDetailsRIConfirmedBalance.new(
-  amount: 3.5,
+  amount: null,
   unit: BTC
 )
 ```

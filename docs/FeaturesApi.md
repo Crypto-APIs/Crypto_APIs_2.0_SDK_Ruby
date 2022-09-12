@@ -1,10 +1,11 @@
 # CryptoApis::FeaturesApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**broadcast_locally_signed_transaction**](FeaturesApi.md#broadcast_locally_signed_transaction) | **POST** /blockchain-tools/{blockchain}/{network}/transactions/broadcast | Broadcast Locally Signed Transaction |
+| [**convert_bitcoin_cash_address**](FeaturesApi.md#convert_bitcoin_cash_address) | **POST** /blockchain-tools/{blockchain}/{network}/address/convert | Convert Bitcoin Cash Address |
 | [**decode_raw_transaction_hex**](FeaturesApi.md#decode_raw_transaction_hex) | **POST** /blockchain-tools/{blockchain}/{network}/decode-raw-transaction | Decode Raw Transaction Hex |
 | [**decode_x_address**](FeaturesApi.md#decode_x_address) | **GET** /blockchain-tools/{blockchain}/{network}/decode-x-address/{xAddress} | Decode X-Address |
 | [**derive_hd_wallet__x_pub_y_pub_z_pub_change_or_receiving_addresses**](FeaturesApi.md#derive_hd_wallet__x_pub_y_pub_z_pub_change_or_receiving_addresses) | **GET** /blockchain-tools/{blockchain}/{network}/hd/{extendedPublicKey}/addresses/derive-address | Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses |
@@ -83,6 +84,85 @@ end
 ### Return type
 
 [**BroadcastLocallySignedTransactionR**](BroadcastLocallySignedTransactionR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## convert_bitcoin_cash_address
+
+> <ConvertBitcoinCashAddressR> convert_bitcoin_cash_address(blockchain, network, opts)
+
+Convert Bitcoin Cash Address
+
+Through this endpoint customers will be able to convert addresses for the BCH (Bitcoin Cash) protocol from BCH legacy to cash address and vice versa.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::FeaturesApi.new
+blockchain = 'bitcoin-cash' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+opts = {
+  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+  convert_bitcoin_cash_address_rb: CryptoApis::ConvertBitcoinCashAddressRB.new({data: CryptoApis::ConvertBitcoinCashAddressRBData.new({item: CryptoApis::ConvertBitcoinCashAddressRBDataItem.new({address: 'bchtest:qpcgz3zt5zp5dj7vd9ms24xquamncvhnxvlz97eee8'})})}) # ConvertBitcoinCashAddressRB | 
+}
+
+begin
+  # Convert Bitcoin Cash Address
+  result = api_instance.convert_bitcoin_cash_address(blockchain, network, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling FeaturesApi->convert_bitcoin_cash_address: #{e}"
+end
+```
+
+#### Using the convert_bitcoin_cash_address_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<ConvertBitcoinCashAddressR>, Integer, Hash)> convert_bitcoin_cash_address_with_http_info(blockchain, network, opts)
+
+```ruby
+begin
+  # Convert Bitcoin Cash Address
+  data, status_code, headers = api_instance.convert_bitcoin_cash_address_with_http_info(blockchain, network, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <ConvertBitcoinCashAddressR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling FeaturesApi->convert_bitcoin_cash_address_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+| **convert_bitcoin_cash_address_rb** | [**ConvertBitcoinCashAddressRB**](ConvertBitcoinCashAddressRB.md) |  | [optional] |
+
+### Return type
+
+[**ConvertBitcoinCashAddressR**](ConvertBitcoinCashAddressR.md)
 
 ### Authorization
 
@@ -443,7 +523,7 @@ end
 
 api_instance = CryptoApis::FeaturesApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum.
-network = 'ropsten' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
   context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   estimate_gas_limit_rb: CryptoApis::EstimateGasLimitRB.new({data: CryptoApis::EstimateGasLimitRBData.new({item: CryptoApis::EstimateGasLimitRBDataItem.new({amount: '0.002', recipient: '0xc065b539490f81b6c297c37b1925c3be2f190738', sender: '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5'})})}) # EstimateGasLimitRB | 
@@ -522,7 +602,7 @@ end
 
 api_instance = CryptoApis::FeaturesApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum.
-network = 'ropsten' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 opts = {
   context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
   estimate_token_gas_limit_rb: CryptoApis::EstimateTokenGasLimitRB.new({data: CryptoApis::EstimateTokenGasLimitRBData.new({item: CryptoApis::EstimateTokenGasLimitRBDataItem.new({amount: '0.12', contract: '0x092de782a7e1e0a92991ad829a0a33aef3c7545e', contract_type: 'ERC-20', recipient: '0xc065b539490f81b6c297c37b1925c3be2f190738', sender: '0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5'})})}) # EstimateTokenGasLimitRB | 

@@ -17,7 +17,8 @@ CryptoApis::ListDepositAddressesE403.openapi_one_of
 #   :'BannedIpAddress',
 #   :'EndpointNotAllowedForApiKey',
 #   :'EndpointNotAllowedForPlan',
-#   :'FeatureMainnetsNotAllowedForPlan'
+#   :'FeatureMainnetsNotAllowedForPlan',
+#   :'WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType'
 # ]
 ```
 
@@ -49,5 +50,6 @@ CryptoApis::ListDepositAddressesE403.build(data_that_doesnt_match)
 - `EndpointNotAllowedForApiKey`
 - `EndpointNotAllowedForPlan`
 - `FeatureMainnetsNotAllowedForPlan`
+- `WalletAsAServiceProvidedNetworkIsNotSuitableForThisWalletType`
 - `nil` (if no type matches)
 

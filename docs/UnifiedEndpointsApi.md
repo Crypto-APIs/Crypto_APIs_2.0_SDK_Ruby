@@ -1,10 +1,11 @@
 # CryptoApis::UnifiedEndpointsApi
 
-All URIs are relative to *https://rest.cryptoapis.io/v2*
+All URIs are relative to *https://rest.cryptoapis.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
 | [**estimate_transaction_smart_fee**](UnifiedEndpointsApi.md#estimate_transaction_smart_fee) | **GET** /blockchain-data/{blockchain}/{network}/estimate-transaction-smart-fee | Estimate Transaction Smart Fee |
+| [**get_address_balance**](UnifiedEndpointsApi.md#get_address_balance) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/balance | Get Address Balance |
 | [**get_address_details**](UnifiedEndpointsApi.md#get_address_details) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address} | Get Address Details |
 | [**get_block_details_by_block_hash**](UnifiedEndpointsApi.md#get_block_details_by_block_hash) | **GET** /blockchain-data/{blockchain}/{network}/blocks/hash/{blockHash} | Get Block Details By Block Hash |
 | [**get_block_details_by_block_height**](UnifiedEndpointsApi.md#get_block_details_by_block_height) | **GET** /blockchain-data/{blockchain}/{network}/blocks/height/{height} | Get Block Details By Block Height |
@@ -13,7 +14,6 @@ All URIs are relative to *https://rest.cryptoapis.io/v2*
 | [**get_next_available_nonce**](UnifiedEndpointsApi.md#get_next_available_nonce) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/next-available-nonce | Get Next Available Nonce |
 | [**get_raw_transaction_data**](UnifiedEndpointsApi.md#get_raw_transaction_data) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionId}/raw-data | Get Raw Transaction Data |
 | [**get_transaction_details_by_transaction_id**](UnifiedEndpointsApi.md#get_transaction_details_by_transaction_id) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionId} | Get Transaction Details By Transaction ID |
-| [**list_all_unconfirmed_transactions**](UnifiedEndpointsApi.md#list_all_unconfirmed_transactions) | **GET** /blockchain-data/{blockchain}/{network}/address-transactions-unconfirmed | List All Unconfirmed Transactions |
 | [**list_confirmed_tokens_transfers_by_address_and_time_range**](UnifiedEndpointsApi.md#list_confirmed_tokens_transfers_by_address_and_time_range) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers-by-time-range | List Confirmed Tokens Transfers By Address And Time Range |
 | [**list_confirmed_transactions_by_address**](UnifiedEndpointsApi.md#list_confirmed_transactions_by_address) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/transactions | List Confirmed Transactions By Address |
 | [**list_confirmed_transactions_by_address_and_time_range**](UnifiedEndpointsApi.md#list_confirmed_transactions_by_address_and_time_range) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/transactions-by-time-range | List Confirmed Transactions By Address And Time Range |
@@ -95,6 +95,85 @@ end
 ### Return type
 
 [**EstimateTransactionSmartFeeR**](EstimateTransactionSmartFeeR.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_address_balance
+
+> <GetAddressBalanceR> get_address_balance(blockchain, network, address, opts)
+
+Get Address Balance
+
+Through this endpoint the customer can receive the balance of a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing unconfirmed transactions for the specific address, they will not be counted or calculated here. Applies only for coins.
+
+### Examples
+
+```ruby
+require 'time'
+require 'crypto_apis'
+# setup authorization
+CryptoApis.configure do |config|
+  # Configure API key authorization: ApiKey
+  config.api_key['ApiKey'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKey'] = 'Bearer'
+end
+
+api_instance = CryptoApis::UnifiedEndpointsApi.new
+blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+address = '0x0902a667d6a3f287835e0a4593cae4167384abc6' # String | Represents the public address, which is a compressed and shortened form of a public key.
+opts = {
+  context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+}
+
+begin
+  # Get Address Balance
+  result = api_instance.get_address_balance(blockchain, network, address, opts)
+  p result
+rescue CryptoApis::ApiError => e
+  puts "Error when calling UnifiedEndpointsApi->get_address_balance: #{e}"
+end
+```
+
+#### Using the get_address_balance_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<GetAddressBalanceR>, Integer, Hash)> get_address_balance_with_http_info(blockchain, network, address, opts)
+
+```ruby
+begin
+  # Get Address Balance
+  data, status_code, headers = api_instance.get_address_balance_with_http_info(blockchain, network, address, opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <GetAddressBalanceR>
+rescue CryptoApis::ApiError => e
+  puts "Error when calling UnifiedEndpointsApi->get_address_balance_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
+| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
+| **address** | **String** | Represents the public address, which is a compressed and shortened form of a public key. |  |
+| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
+
+### Return type
+
+[**GetAddressBalanceR**](GetAddressBalanceR.md)
 
 ### Authorization
 
@@ -520,7 +599,7 @@ end
 
 api_instance = CryptoApis::UnifiedEndpointsApi.new
 blockchain = 'ethereum' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
-network = 'ropsten' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 address = '0x626b046b0ce356f248b215b01b459f8b8d59e1a4' # String | Represents the public address, which is a compressed and shortened form of a public key.
 opts = {
   context: 'yourExampleString' # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
@@ -723,87 +802,6 @@ end
 ### Return type
 
 [**GetTransactionDetailsByTransactionIDR**](GetTransactionDetailsByTransactionIDR.md)
-
-### Authorization
-
-[ApiKey](../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## list_all_unconfirmed_transactions
-
-> <ListAllUnconfirmedTransactionsR> list_all_unconfirmed_transactions(blockchain, network, opts)
-
-List All Unconfirmed Transactions
-
-Through this endpoint customers can list all **unconfirmed**  transactions for a specified blockchain and network.
-
-### Examples
-
-```ruby
-require 'time'
-require 'crypto_apis'
-# setup authorization
-CryptoApis.configure do |config|
-  # Configure API key authorization: ApiKey
-  config.api_key['ApiKey'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['ApiKey'] = 'Bearer'
-end
-
-api_instance = CryptoApis::UnifiedEndpointsApi.new
-blockchain = 'bitcoin' # String | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
-network = 'mainnet' # String | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-opts = {
-  context: 'yourExampleString', # String | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-  limit: 50, # Integer | Defines how many items should be returned in the response per page basis.
-  offset: 0 # Integer | The starting index of the response items, i.e. where the response should start listing the returned items.
-}
-
-begin
-  # List All Unconfirmed Transactions
-  result = api_instance.list_all_unconfirmed_transactions(blockchain, network, opts)
-  p result
-rescue CryptoApis::ApiError => e
-  puts "Error when calling UnifiedEndpointsApi->list_all_unconfirmed_transactions: #{e}"
-end
-```
-
-#### Using the list_all_unconfirmed_transactions_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<ListAllUnconfirmedTransactionsR>, Integer, Hash)> list_all_unconfirmed_transactions_with_http_info(blockchain, network, opts)
-
-```ruby
-begin
-  # List All Unconfirmed Transactions
-  data, status_code, headers = api_instance.list_all_unconfirmed_transactions_with_http_info(blockchain, network, opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <ListAllUnconfirmedTransactionsR>
-rescue CryptoApis::ApiError => e
-  puts "Error when calling UnifiedEndpointsApi->list_all_unconfirmed_transactions_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **blockchain** | **String** | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |  |
-| **network** | **String** | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |  |
-| **context** | **String** | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional] |
-| **limit** | **Integer** | Defines how many items should be returned in the response per page basis. | [optional][default to 50] |
-| **offset** | **Integer** | The starting index of the response items, i.e. where the response should start listing the returned items. | [optional][default to 0] |
-
-### Return type
-
-[**ListAllUnconfirmedTransactionsR**](ListAllUnconfirmedTransactionsR.md)
 
 ### Authorization
 

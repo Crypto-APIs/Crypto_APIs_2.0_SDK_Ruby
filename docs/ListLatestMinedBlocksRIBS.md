@@ -19,9 +19,9 @@ CryptoApis::ListLatestMinedBlocksRIBS.openapi_one_of
 #   :'ListLatestMinedBlocksRIBSBSC',
 #   :'ListLatestMinedBlocksRIBSD',
 #   :'ListLatestMinedBlocksRIBSD2',
-#   :'ListLatestMinedBlocksRIBSE',
 #   :'ListLatestMinedBlocksRIBSEC',
 #   :'ListLatestMinedBlocksRIBSL',
+#   :'ListLatestMinedBlocksRIBSX',
 #   :'ListLatestMinedBlocksRIBSZ',
 #   :'ListLatestMinedBlocksRIBSZ2'
 # ]
@@ -56,9 +56,9 @@ CryptoApis::ListLatestMinedBlocksRIBS.build(data_that_doesnt_match)
 - `ListLatestMinedBlocksRIBSBSC`
 - `ListLatestMinedBlocksRIBSD`
 - `ListLatestMinedBlocksRIBSD2`
-- `ListLatestMinedBlocksRIBSE`
 - `ListLatestMinedBlocksRIBSEC`
 - `ListLatestMinedBlocksRIBSL`
+- `ListLatestMinedBlocksRIBSX`
 - `ListLatestMinedBlocksRIBSZ`
 - `ListLatestMinedBlocksRIBSZ2`
 - `nil` (if no type matches)

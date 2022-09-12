@@ -22,6 +22,8 @@ CryptoApis::GetBlockDetailsByBlockHeightFromCallbackRIBS.openapi_one_of
 #   :'GetBlockDetailsByBlockHeightFromCallbackRIBSE',
 #   :'GetBlockDetailsByBlockHeightFromCallbackRIBSEC',
 #   :'GetBlockDetailsByBlockHeightFromCallbackRIBSL',
+#   :'GetBlockDetailsByBlockHeightFromCallbackRIBSP',
+#   :'GetBlockDetailsByBlockHeightFromCallbackRIBST',
 #   :'GetBlockDetailsByBlockHeightFromCallbackRIBSX',
 #   :'GetBlockDetailsByBlockHeightFromCallbackRIBSZ',
 #   :'GetBlockDetailsByBlockHeightFromCallbackRIBSZ2'
@@ -60,6 +62,8 @@ CryptoApis::GetBlockDetailsByBlockHeightFromCallbackRIBS.build(data_that_doesnt_
 - `GetBlockDetailsByBlockHeightFromCallbackRIBSE`
 - `GetBlockDetailsByBlockHeightFromCallbackRIBSEC`
 - `GetBlockDetailsByBlockHeightFromCallbackRIBSL`
+- `GetBlockDetailsByBlockHeightFromCallbackRIBSP`
+- `GetBlockDetailsByBlockHeightFromCallbackRIBST`
 - `GetBlockDetailsByBlockHeightFromCallbackRIBSX`
 - `GetBlockDetailsByBlockHeightFromCallbackRIBSZ`
 - `GetBlockDetailsByBlockHeightFromCallbackRIBSZ2`

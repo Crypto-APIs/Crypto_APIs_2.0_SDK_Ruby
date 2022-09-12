@@ -9,8 +9,6 @@
 | **previous_block_hash** | **String** | Represents the hash of the previous block, also known as the parent block. |  |
 | **timestamp** | **Integer** | Defines the exact date/time when this block was mined in Unix Timestamp. |  |
 | **transactions_count** | **Integer** | Represents the total number of all transactions as part of this block. |  |
-| **total_coins** | [**ListLatestMinedBlocksRITotalCoins**](ListLatestMinedBlocksRITotalCoins.md) |  |  |
-| **total_fees** | [**ListLatestMinedBlocksRITotalFees**](ListLatestMinedBlocksRITotalFees.md) |  |  |
 | **blockchain_specific** | [**ListLatestMinedBlocksRIBS**](ListLatestMinedBlocksRIBS.md) |  |  |
 
 ## Example
@@ -24,8 +22,6 @@ instance = CryptoApis::ListLatestMinedBlocksRI.new(
   previous_block_hash: 000000000000001e592591fc762bd2bf4d37d0b75e29c49b41576507a501cbc3,
   timestamp: 1634642334,
   transactions_count: 3,
-  total_coins: null,
-  total_fees: null,
   blockchain_specific: null
 )
 ```
